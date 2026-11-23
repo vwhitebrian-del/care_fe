@@ -60,7 +60,7 @@
   xxl: px(24),
 )
 
-#let fonts = ("Figtree",)
+#let fonts = ("Figtree", "Noto Sans Arabic")
 #let mono-fonts = ("Geist Mono",) + fonts
 
 /// An image at most `max-width` wide and `max-height` tall, keeping its aspect
