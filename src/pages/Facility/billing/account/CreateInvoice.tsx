@@ -353,9 +353,9 @@ export function CreateInvoicePage({
     return () => clearTimeout(timer);
   }, [canAddChargeItems, autoOpenPicker, hasPendingItem, chargeItems.length]);
 
-  const tableHeadClass = "border-r border-gray-200 font-semibold text-center";
+  const tableHeadClass = "border-e border-gray-200 font-semibold text-center";
   const tableCellClass =
-    "border-r border-gray-200 font-medium text-gray-950 text-sm";
+    "border-e border-gray-200 font-medium text-gray-950 text-sm";
 
   return (
     <div className="space-y-8 relative">
@@ -383,7 +383,7 @@ export function CreateInvoicePage({
                   >
                     <div className="font-semibold text-gray-950 underline">
                       {account.name}
-                      <SquareArrowOutUpRight className="ml-1 size-4 inline" />
+                      <SquareArrowOutUpRight className="ms-1 size-4 inline" />
                     </div>
                   </Link>
                 </div>
@@ -418,7 +418,7 @@ export function CreateInvoicePage({
                 variant="outline"
                 onClick={() => setIsQuickAddOpen(true)}
               >
-                <Package className="size-4 mr-2" />
+                <Package className="size-4 me-2" />
                 {t("quick_add")}
               </Button>
               <Button
@@ -426,7 +426,7 @@ export function CreateInvoicePage({
                 variant="outline"
                 onClick={() => setIsAddChargeItemsOpen(true)}
               >
-                <PlusIcon className="size-4 mr-2" />
+                <PlusIcon className="size-4 me-2" />
                 {t("add_charge_items")}
               </Button>
             </div>
@@ -456,7 +456,7 @@ export function CreateInvoicePage({
                             />
                           </div>
                         </TableHead>
-                        <TableHead className={cn(tableHeadClass, "text-left")}>
+                        <TableHead className={cn(tableHeadClass, "text-start")}>
                           {t("items")}
                         </TableHead>
                         <TableHead className={tableHeadClass}>
@@ -465,7 +465,7 @@ export function CreateInvoicePage({
                         <TableHead className={tableHeadClass}>
                           {t("unit_price")} ({getCurrencySymbol()})
                         </TableHead>
-                        <TableHead className={cn(tableHeadClass, "text-left")}>
+                        <TableHead className={cn(tableHeadClass, "text-start")}>
                           {t("performer")}
                         </TableHead>
                         <TableHead className="font-semibold text-center">
@@ -532,7 +532,7 @@ export function CreateInvoicePage({
                                 {round(item.quantity)}
                               </TableCell>
                               <TableCell
-                                className={cn(tableCellClass, "text-right")}
+                                className={cn(tableCellClass, "text-end")}
                               >
                                 <MonetaryDisplay amount={baseAmount} />
                               </TableCell>
@@ -544,7 +544,7 @@ export function CreateInvoicePage({
                               >
                                 {formatName(item.performer_actor)}
                               </TableCell>
-                              <TableCell className="text-right">
+                              <TableCell className="text-end">
                                 <MonetaryDisplay
                                   amount={item.total_price}
                                   hideCurrency

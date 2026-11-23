@@ -34,7 +34,7 @@ export const MedicationStatementTable = ({
     <Table className="border-separate border-gray-200 border-spacing-y-0.5 min-w-5xl">
       <TableHeader>
         <TableRow className="rounded-md overflow-hidden bg-gray-100">
-          <TableHead className="first:rounded-l-md h-auto py-1 px-2 text-gray-600">
+          <TableHead className="first:rounded-s-md h-auto py-1 px-2 text-gray-600">
             {t("medication")}
           </TableHead>
           <TableHead className="h-auto py-1 px-2 text-gray-600">
@@ -52,7 +52,7 @@ export const MedicationStatementTable = ({
           <TableHead className="h-auto py-1 px-2 text-gray-600">
             {t("notes")}
           </TableHead>
-          <TableHead className="last:rounded-r-md h-auto py-1 px-2 text-gray-600">
+          <TableHead className="last:rounded-e-md h-auto py-1 px-2 text-gray-600">
             {t("logged_by")}
           </TableHead>
         </TableRow>
@@ -65,7 +65,7 @@ export const MedicationStatementTable = ({
               statement.status === "entered_in_error" ? "opacity-50" : ""
             }`}
           >
-            <TableCell className="font-medium first:rounded-l-md break-words whitespace-normal">
+            <TableCell className="font-medium first:rounded-s-md break-words whitespace-normal">
               {statement.medication.display ?? statement.medication.code}
             </TableCell>
             <TableCell className="break-words whitespace-normal">
@@ -116,7 +116,7 @@ export const MedicationStatementTable = ({
                 "-"
               )}
             </TableCell>
-            <TableCell className="last:rounded-r-md">
+            <TableCell className="last:rounded-e-md">
               <div className="flex items-center gap-2">
                 <Avatar
                   name={formatName(statement.created_by, true)}

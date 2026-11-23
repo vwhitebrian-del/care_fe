@@ -131,7 +131,7 @@ export function PatientHeader({
                     className="flex min-w-0 flex-wrap items-baseline gap-x-1 text-xs"
                   >
                     <dt className="text-gray-500">
-                      <span aria-hidden="true" className="mr-2 text-gray-300">
+                      <span aria-hidden="true" className="me-2 text-gray-300">
                         ·
                       </span>
                       {identifier.config.config.display}:

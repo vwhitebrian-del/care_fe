@@ -68,8 +68,8 @@ export function NoteMessage({ message, onEdit, children }: NoteMessageProps) {
           className={cn(
             "min-w-0 space-y-2 p-3 rounded-lg break-words w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg border border-gray-200",
             isCurrentUser
-              ? "bg-white text-black rounded-tr-none"
-              : "bg-gray-100 rounded-tl-none",
+              ? "bg-white text-black rounded-se-none"
+              : "bg-gray-100 rounded-ss-none",
           )}
         >
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
@@ -105,7 +105,7 @@ export function NoteMessage({ message, onEdit, children }: NoteMessageProps) {
               <summary className="cursor-pointer">
                 {t("notes__message_history", { count: history.length })}
               </summary>
-              <ol className="mt-3 space-y-3 border-l border-gray-200 pl-3">
+              <ol className="mt-3 space-y-3 border-s border-gray-200 ps-3">
                 {[...history].reverse().map((revision, index) => (
                   <li
                     key={`${revision.edited_at}-${index}`}

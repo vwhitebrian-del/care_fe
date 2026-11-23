@@ -32,7 +32,7 @@ export function ReferralFormResponseCard({
       >
         <summary
           ref={summaryRef}
-          className="cursor-pointer list-none rounded-md pr-10 focus-visible:outline-ring [&::-webkit-details-marker]:hidden"
+          className="cursor-pointer list-none rounded-md pe-10 focus-visible:outline-ring [&::-webkit-details-marker]:hidden"
         >
           <div className="flex items-center justify-between gap-3 py-2">
             <div className="min-w-0 space-y-1">
@@ -68,7 +68,7 @@ export function ReferralFormResponseCard({
         </div>
       </details>
       {canWrite && response.status !== "entered_in_error" && (
-        <div className="absolute right-0 top-1">
+        <div className="absolute end-0 top-1">
           <ReferralVoidResponseDialog
             referralId={referralId}
             responseId={response.id}

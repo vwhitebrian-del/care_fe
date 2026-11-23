@@ -265,7 +265,7 @@ function SymptomActionsMenu({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={onToggleNotes}>
-          <Pencil2Icon className="size-4 mr-2" />
+          <Pencil2Icon className="size-4 me-2" />
           {showNotes
             ? t("hide_notes")
             : symptom.note
@@ -278,7 +278,7 @@ function SymptomActionsMenu({
           onClick={onRemove}
           disabled={verificationStatus === "entered_in_error"}
         >
-          <MinusCircledIcon className="size-4 mr-2" />
+          <MinusCircledIcon className="size-4 me-2" />
           {verificationStatus === "entered_in_error"
             ? t("already_marked_as_error")
             : t("remove_symptom")}
@@ -433,7 +433,7 @@ const SymptomRow = React.memo(function SymptomRow({
               >
                 <div className="flex flex-col space-y-1">
                   <div className="flex items-center justify-between">
-                    <div className="flex-1 min-w-0 mr-2">
+                    <div className="flex-1 min-w-0 me-2">
                       <CardTitle
                         className="text-base text-gray-950 break-words"
                         title={symptom.code.display}

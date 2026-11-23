@@ -265,7 +265,7 @@ export default function ObservationDefinitionView({
               goBack(`/facility/${facilityId}/settings/observation_definitions`)
             }
           >
-            <CareIcon icon="l-arrow-left" className="mr-2 size-4" />
+            <CareIcon icon="l-arrow-left" className="me-2 size-4" />
             {t("back_to_list")}
           </Button>
         </div>
@@ -311,7 +311,7 @@ export default function ObservationDefinitionView({
                 onClick={() => setShowDeleteDialog(true)}
                 disabled={isDeleting}
               >
-                <CareIcon icon="l-trash" className="mr-2 size-4" />
+                <CareIcon icon="l-trash" className="me-2 size-4" />
                 {t("delete")}
               </Button>
             )}
@@ -324,7 +324,7 @@ export default function ObservationDefinitionView({
                 })
               }
             >
-              <CareIcon icon="l-pen" className="mr-2 size-4" />
+              <CareIcon icon="l-pen" className="me-2 size-4" />
               {t("edit")}
             </Button>
           </div>

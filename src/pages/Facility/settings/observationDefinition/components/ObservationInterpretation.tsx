@@ -369,7 +369,7 @@ export function ObservationInterpretation<
           )}
         </div>
         {(conditionCount > 0 || rangeCount > 0 || valuesetCount > 0) && (
-          <div className="flex flex-col gap-1 sm:pl-8 text-xs text-gray-500">
+          <div className="flex flex-col gap-1 sm:ps-8 text-xs text-gray-500">
             {range.conditions?.map((condition, i) => (
               <div key={`condition-${i}`} className="text-gray-600">
                 <ConditionOperationSummary condition={condition} shortDisplay />

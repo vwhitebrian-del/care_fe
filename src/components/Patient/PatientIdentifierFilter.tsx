@@ -152,7 +152,7 @@ function PatientSearchSelector({
       <div className="flex min-h-0 flex-1 flex-col">
         {allIdentifierConfigs.length > 2 ? (
           <div className="p-2">
-            <label className="text-xs text-gray-600 mb-1.5 ml-1 block">
+            <label className="text-xs text-gray-600 mb-1.5 ms-1 block">
               {t("search_by")}
             </label>
             <Select value={searchType} onValueChange={setSearchType}>
@@ -216,14 +216,14 @@ function PatientSearchSelector({
               value={searchTerm}
               onValueChange={setSearchTerm}
               wrapperClassName="p-2 pt-0 md:pt-0"
-              className="pr-8 text-base sm:text-sm"
+              className="pe-8 text-base sm:text-sm"
             />
           )}
           {searchTerm && (
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-1/2 size-6 -translate-y-1/2 text-gray-400 hover:bg-transparent"
+              className="absolute end-4 top-1/2 size-6 -translate-y-1/2 text-gray-400 hover:bg-transparent"
               onClick={() => setSearchTerm("")}
               aria-label="Clear search input"
             >
@@ -490,7 +490,7 @@ export default function PatientIdentifierFilter({
           {placeholder || t("filter_by_identifier")}
         </span>
       )}
-      <Search className="ml-2 size-4 shrink-0 opacity-50" />
+      <Search className="ms-2 size-4 shrink-0 opacity-50" />
     </Button>
   );
 

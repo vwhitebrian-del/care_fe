@@ -21,11 +21,11 @@ const LabelValue = ({
   id?: string;
   icon?: LucideIcon;
 }) => (
-  <div className={cn("min-w-0 space-y-1.5", Icon && "relative pl-12")}>
+  <div className={cn("min-w-0 space-y-1.5", Icon && "relative ps-12")}>
     <dt className="text-xs text-soft-foreground">
       {Icon && (
         <span
-          className="absolute left-0 top-0 flex size-9 items-center justify-center rounded-lg bg-soft-background text-soft-foreground"
+          className="absolute start-0 top-0 flex size-9 items-center justify-center rounded-lg bg-soft-background text-soft-foreground"
           aria-hidden="true"
         >
           <Icon className="size-4" strokeWidth={1.5} />

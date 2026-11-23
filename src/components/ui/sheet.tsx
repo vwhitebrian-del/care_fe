@@ -166,8 +166,8 @@ const sheetSizeClasses = {
 const sheetSideClasses = {
   top: "inset-x-0 top-0 h-auto border-b",
   bottom: "inset-x-0 bottom-0 h-auto border-t",
-  left: "inset-y-0 left-0 h-dvh w-full border-r",
-  right: "inset-y-0 right-0 h-dvh w-full border-l",
+  left: "inset-y-0 start-0 h-dvh w-full border-e",
+  right: "inset-y-0 end-0 h-dvh w-full border-s",
 } as const;
 
 type SheetSize = keyof typeof sheetSizeClasses;
@@ -336,7 +336,7 @@ function SheetContent({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute z-20 top-2 right-2"
+                  className="absolute z-20 top-2 end-2"
                 >
                   <XIcon />
                   <span className="sr-only">{t("close")}</span>

@@ -190,7 +190,7 @@ export default function TagConfigView({
             facilityId={facilityId}
             trigger={
               <Button>
-                <CareIcon icon="l-edit" className="size-4 mr-2" />
+                <CareIcon icon="l-edit" className="size-4 me-2" />
                 {t("edit_tag")}
               </Button>
             }
@@ -325,7 +325,7 @@ export default function TagConfigView({
                   facilityId={facilityId}
                   trigger={
                     <Button variant="outline" size="sm">
-                      <CareIcon icon="l-plus" className="size-4 mr-2" />
+                      <CareIcon icon="l-plus" className="size-4 me-2" />
                       {t("add_child_tag")}
                     </Button>
                   }

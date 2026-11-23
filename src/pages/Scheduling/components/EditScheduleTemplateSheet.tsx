@@ -559,7 +559,7 @@ const AvailabilityEditor = ({
           <span className="text-sm font-medium text-gray-500">
             {t("schedule")}
           </span>
-          <div className="mt-2 space-y-1 pl-2">
+          <div className="mt-2 space-y-1 ps-2">
             {Object.entries(availabilitiesByDay).map(([day, times]) => (
               <p key={day} className="flex items-center gap-2 text-sm">
                 <span className="font-medium w-24 text-gray-600">

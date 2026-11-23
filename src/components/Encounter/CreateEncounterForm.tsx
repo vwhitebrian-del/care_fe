@@ -240,7 +240,7 @@ export default function CreateEncounterForm({
             variant="secondary"
             className="justify-start w-full text-lg h-14"
           >
-            <Stethoscope className="mr-4 size-6" />
+            <Stethoscope className="me-4 size-6" />
             {t("create_encounter")}
           </Button>
         )}

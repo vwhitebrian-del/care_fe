@@ -226,14 +226,14 @@ export default function MedicationValueSetSelect({
               className={cn(
                 "w-full justify-between",
                 wrapTextForSmallScreen
-                  ? "h-auto whitespace-normal text-left"
+                  ? "h-auto whitespace-normal text-start"
                   : "truncate",
                 !value?.display && "text-gray-400",
               )}
               disabled={disabled}
             >
               <span>{value?.display || placeholder}</span>
-              <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+              <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
             </Button>
           )}
         </DrawerTrigger>
@@ -277,7 +277,7 @@ export default function MedicationValueSetSelect({
           disabled={disabled}
         >
           <span className="truncate">{value?.display || placeholder}</span>
-          <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+          <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-150 p-0 gap-1 overflow-clip" align="start">

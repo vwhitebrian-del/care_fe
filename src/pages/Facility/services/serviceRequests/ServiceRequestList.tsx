@@ -359,7 +359,7 @@ export default function ServiceRequestList({
               >
                 <ScanQrCode className="size-4" />
                 {t("scan_qr")}
-                <ShortcutBadge actionId="scan-button" className="ml-2" />
+                <ShortcutBadge actionId="scan-button" className="ms-2" />
               </Button>
             </div>
           </div>

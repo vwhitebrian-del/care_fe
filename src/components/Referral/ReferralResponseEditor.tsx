@@ -722,7 +722,7 @@ export function ReferralResponseEditor({
           className="flex h-[90dvh] max-h-[90dvh] flex-col gap-0 overflow-hidden p-0 sm:max-w-4xl"
           onCloseAutoFocus={onCloseAutoFocus}
         >
-          <DialogHeader className="shrink-0 border-b border-border p-4 pr-12 text-left sm:p-5 sm:pr-12">
+          <DialogHeader className="shrink-0 border-b border-border p-4 pe-12 text-start sm:p-5 sm:pe-12">
             <DialogTitle>
               {t(
                 responseOnly

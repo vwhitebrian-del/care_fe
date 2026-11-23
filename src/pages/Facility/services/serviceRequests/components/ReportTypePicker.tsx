@@ -83,7 +83,7 @@ export function ReportTypePicker({
           </SelectContent>
         </Select>
       </div>
-      <div className="flex ml-auto items-center gap-2">
+      <div className="flex ms-auto items-center gap-2">
         {availableReportCodes.length !== 1 && (
           <Button
             variant="link"
@@ -104,7 +104,7 @@ export function ReportTypePicker({
           }
           className="w-full sm:w-auto"
         >
-          <Plus className="size-4 mr-2" />
+          <Plus className="size-4 me-2" />
           {t("create_report")}
         </Button>
       </div>

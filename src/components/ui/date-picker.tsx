@@ -39,13 +39,13 @@ export function DatePicker({
       <PopoverTrigger
         appearance="field"
         className={cn(
-          "w-full justify-start text-left font-normal sm:w-auto",
+          "w-full justify-start text-start font-normal sm:w-auto",
           !date && "text-placeholder-foreground",
           className,
         )}
         disabled={disablePicker}
       >
-        <CareIcon icon="l-calender" className="mr-0 size-4 shrink-0" />
+        <CareIcon icon="l-calender" className="me-0 size-4 shrink-0" />
         <span className="truncate">
           {date ? (
             <>

@@ -17,9 +17,9 @@ const separatorVariants = cva(
       variant: {
         solid: "bg-border data-horizontal:h-px data-vertical:w-px",
         dashed:
-          "border-border border-dashed data-horizontal:h-0 data-horizontal:border-t data-vertical:w-0 data-vertical:border-l",
+          "border-border border-dashed data-horizontal:h-0 data-horizontal:border-t data-vertical:w-0 data-vertical:border-s",
         inset:
-          "border-border border-t data-horizontal:h-0 data-horizontal:w-full data-horizontal:[box-shadow:0_1px_0_0_var(--background)] data-vertical:w-0 data-vertical:border-l data-vertical:[box-shadow:1px_0_0_0_var(--background)]",
+          "border-border border-t data-horizontal:h-0 data-horizontal:w-full data-horizontal:[box-shadow:0_1px_0_0_var(--background)] data-vertical:w-0 data-vertical:border-s data-vertical:[box-shadow:1px_0_0_0_var(--background)]",
         dotted:
           "[background:radial-gradient(circle,var(--border)_1px,transparent_1px)_0_0/8px_8px] data-horizontal:h-2 data-vertical:w-2",
       },

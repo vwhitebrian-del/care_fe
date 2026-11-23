@@ -80,7 +80,7 @@ export default function ManageServicePointSheet({
               onSuccess={handleSuccess}
               trigger={
                 <Button size="sm" className="h-8">
-                  <Plus className="size-4 mr-2" />
+                  <Plus className="size-4 me-2" />
                   {t("add_service_point")}
                 </Button>
               }

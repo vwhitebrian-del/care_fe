@@ -81,14 +81,14 @@ export function WorkspaceSectionPicker({
           </DialogDescription>
         </DialogHeader>
         <div className="relative mx-6 mb-4">
-          <Search className="absolute top-3 left-3 size-4 text-placeholder-foreground" />
+          <Search className="absolute top-3 start-3 size-4 text-placeholder-foreground" />
           <Input
             autoFocus
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             aria-label={t("workspace_studio_search_sections")}
             placeholder={t("workspace_studio_search_sections")}
-            className="pl-9"
+            className="ps-9"
           />
         </div>
         <div className="max-h-[55dvh] space-y-6 overflow-y-auto border-t bg-soft-background/70 p-6">
@@ -128,7 +128,7 @@ export function WorkspaceSectionPicker({
                             : undefined
                         }
                         onClick={() => onAdd(item.type)}
-                        className="group h-auto min-h-24 justify-start gap-3 bg-background p-3 text-left whitespace-normal shadow-none hover:border-primary-400 hover:bg-primary-50/50"
+                        className="group h-auto min-h-24 justify-start gap-3 bg-background p-3 text-start whitespace-normal shadow-none hover:border-primary-400 hover:bg-primary-50/50"
                       >
                         <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted-background text-soft-foreground group-hover:bg-primary-100 group-hover:text-primary-700">
                           <Icon className="size-4" />

@@ -84,14 +84,14 @@ export default function TemplateList({
           <div className="relative flex-3 w-full sm:w-auto">
             <CareIcon
               icon="l-search"
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              className="absolute start-3 top-1/2 transform -translate-y-1/2 text-gray-400"
             />
             <Input
               type="search"
               placeholder={t("search_templates")}
               value={qParams.name || ""}
               onChange={(e) => updateQuery({ name: e.target.value })}
-              className="pl-10 w-full sm:w-auto"
+              className="ps-10 w-full sm:w-auto"
             />
           </div>
 
@@ -163,7 +163,7 @@ export default function TemplateList({
                   to="/facility/$facilityId/template/builder"
                   params={{ facilityId }}
                 >
-                  <CareIcon icon="l-plus" className="mr-1" />
+                  <CareIcon icon="l-plus" className="me-1" />
                   <span>{t("create_first_template")}</span>
                 </Link>
               </Button>

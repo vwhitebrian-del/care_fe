@@ -275,7 +275,7 @@ export function PlugConfigList() {
   return (
     <div className="mx-auto max-w-7xl space-y-4 p-4">
       <section className="relative overflow-hidden rounded-2xl border border-gray-200 bg-linear-to-br from-primary/5 to-transparent px-6 py-7">
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 bg-linear-to-l from-primary/5 to-transparent" />
+        <div className="pointer-events-none absolute end-0 top-0 h-full w-1/3 bg-linear-to-l from-primary/5 to-transparent" />
         <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-3">
             <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -298,12 +298,12 @@ export function PlugConfigList() {
             </div>
           </div>
           <div className="relative w-full sm:w-64">
-            <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder={t("app_store_search_placeholder")}
-              className="bg-white pl-9"
+              className="bg-white ps-9"
             />
           </div>
         </div>
@@ -330,7 +330,7 @@ export function PlugConfigList() {
           </TabsList>
           <Button size="sm" variant="outline" asChild>
             <Link to="/admin/apps/$slug" params={{ slug: "new" }}>
-              <Plus className="mr-1 size-4" />
+              <Plus className="me-1 size-4" />
               {t("manual_setup")}
             </Link>
           </Button>

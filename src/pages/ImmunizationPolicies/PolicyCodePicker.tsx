@@ -42,7 +42,7 @@ export function PolicyCodePicker({
           {codes.map((code, index) => (
             <li
               key={`${code.system}|${code.code}|${code.version}|${index}`}
-              className="inline-flex max-w-full items-center gap-1 rounded-md border border-gray-200 bg-gray-50 py-1 pl-2 pr-1 text-sm"
+              className="inline-flex max-w-full items-center gap-1 rounded-md border border-gray-200 bg-gray-50 py-1 ps-2 pe-1 text-sm"
             >
               <span
                 className="min-w-0 break-words"
@@ -93,7 +93,7 @@ export function PolicyCodePicker({
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-error` : undefined}
         disabled={disabled}
-        className="h-9 w-full justify-between text-left font-normal"
+        className="h-9 w-full justify-between text-start font-normal"
         onSelect={(code) => {
           if (
             !codes.some(

@@ -239,7 +239,7 @@ export const AppointmentEncounterHeader = ({
           aria-label={t("appointment")}
           className="flex min-w-0 flex-wrap items-center gap-y-1 divide-x divide-gray-300"
         >
-          <div className="flex items-center pr-1.5">
+          <div className="flex items-center pe-1.5">
             <PatientScanButton
               facilityId={encounter.facility.id}
               appointment={appointment}
@@ -373,7 +373,7 @@ const AppointmentEncounterHeaderActions = ({
       <div
         role="group"
         aria-label={t("encounter_actions")}
-        className="ml-auto flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1"
+        className="ms-auto flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1"
       >
         <span className="hidden text-sm text-gray-700 xl:inline">
           {t("do_you_want_to_start_this_encounter")}
@@ -396,7 +396,7 @@ const AppointmentEncounterHeaderActions = ({
     <div
       role="group"
       aria-label={t("encounter_actions")}
-      className="ml-auto flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1"
+      className="ms-auto flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1"
     >
       {encounter.appointment?.status !== AppointmentStatus.FULFILLED && (
         <span className="hidden text-sm text-gray-700 xl:inline">
@@ -544,7 +544,7 @@ const TokenActions = ({
                 <CalendarCheck className="size-4" aria-hidden="true" />
                 {t("view_appointment")}
                 {token && (
-                  <span className="ml-auto text-xs text-gray-500">
+                  <span className="ms-auto text-xs text-gray-500">
                     {renderTokenNumber(token)}
                   </span>
                 )}

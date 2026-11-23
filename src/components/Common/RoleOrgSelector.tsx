@@ -171,7 +171,7 @@ export default function RoleOrgSelector(props: RoleOrgSelectorProps) {
             {isLoadingAvailableOrganizations ? (
               <div className="flex items-center justify-center py-6">
                 <Spinner className="h-4 w-4 animate-spin text-gray-500" />
-                <span className="ml-2 text-sm text-gray-500">
+                <span className="ms-2 text-sm text-gray-500">
                   {t("loading_organizations")}
                 </span>
               </div>
@@ -198,7 +198,7 @@ export default function RoleOrgSelector(props: RoleOrgSelectorProps) {
                       {isSelected && (
                         <CareIcon
                           icon="l-check"
-                          className="ml-2 h-4 w-4 text-sky-600"
+                          className="ms-2 h-4 w-4 text-sky-600"
                         />
                       )}
                     </div>
@@ -255,7 +255,7 @@ export default function RoleOrgSelector(props: RoleOrgSelectorProps) {
         <div className="space-y-1">
           <Label>
             {t("select_organization")}
-            {!props.optional && <span className="text-red-500 ml-0.5">*</span>}
+            {!props.optional && <span className="text-red-500 ms-0.5">*</span>}
           </Label>
         </div>
       </div>
@@ -304,11 +304,11 @@ export default function RoleOrgSelector(props: RoleOrgSelectorProps) {
                             ? currentSelection.name
                             : t("select_organization")}
                         </span>
-                        <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                        <ChevronDown className="ms-2 h-4 w-4 shrink-0 opacity-50" />
                       </Button>
                     </DrawerTrigger>
                     <DrawerContent height="fixed" className="p-1.5">
-                      <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+                      <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
                         <DrawerTitle>{t("select_organization")}</DrawerTitle>
                         <DrawerDescription className="text-sm">
                           {t("select_organization_description")}
@@ -334,7 +334,7 @@ export default function RoleOrgSelector(props: RoleOrgSelectorProps) {
                           ? currentSelection.name
                           : t("select_organization")}
                       </span>
-                      <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                      <ChevronDown className="ms-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent

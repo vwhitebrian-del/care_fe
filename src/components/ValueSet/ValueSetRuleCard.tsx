@@ -90,7 +90,7 @@ export function ValueSetRuleCard({
           <Button
             type="button"
             variant="ghost"
-            className="h-auto min-w-0 flex-1 justify-start whitespace-normal p-1.5 text-left"
+            className="h-auto min-w-0 flex-1 justify-start whitespace-normal p-1.5 text-start"
             aria-label={ruleTitle}
           >
             <ChevronDown

@@ -112,12 +112,12 @@ function Calendar({
   });
   const _buttonNextClassName = cn(
     buttonNavClassName,
-    "right-0",
+    "end-0",
     props.buttonNextClassName,
   );
   const _buttonPreviousClassName = cn(
     buttonNavClassName,
-    "left-0",
+    "start-0",
     props.buttonPreviousClassName,
   );
   const _navClassName = cn(
@@ -387,7 +387,7 @@ function Nav({
     <nav className={cn("flex items-center", className)}>
       <Button
         variant="outline"
-        className="absolute left-0 size-(--cell-size) bg-transparent p-0 opacity-80 hover:opacity-100"
+        className="absolute start-0 size-(--cell-size) bg-transparent p-0 opacity-80 hover:opacity-100"
         type="button"
         tabIndex={isPreviousDisabled ? undefined : -1}
         disabled={isPreviousDisabled}
@@ -405,7 +405,7 @@ function Nav({
 
       <Button
         variant="outline"
-        className="absolute right-0 size-(--cell-size) bg-transparent p-0 opacity-80 hover:opacity-100"
+        className="absolute end-0 size-(--cell-size) bg-transparent p-0 opacity-80 hover:opacity-100"
         type="button"
         tabIndex={isNextDisabled ? undefined : -1}
         disabled={isNextDisabled}

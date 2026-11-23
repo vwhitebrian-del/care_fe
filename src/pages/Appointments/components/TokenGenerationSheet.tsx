@@ -192,7 +192,7 @@ export function TokenGenerationSheet({
           >
             {isGenerating ? (
               <>
-                <Spinner className="size-4 animate-spin mr-2" />
+                <Spinner className="size-4 animate-spin me-2" />
                 {t("generating")}
               </>
             ) : (

@@ -139,7 +139,7 @@ export default function ResponsibilityFormSheet({ org, trigger }: Props) {
 
   const submitButton = (
     <Button type="submit" disabled={isPending}>
-      <Check className="mr-1.5 size-4" />
+      <Check className="me-1.5 size-4" />
       {isPending
         ? isEditMode
           ? t("updating")

@@ -143,7 +143,7 @@ function BaseLocationTreeNode({
         isExpanded &&
         children?.results &&
         children.results.length > 0 && (
-          <div className="pl-2">
+          <div className="ps-2">
             {children.results.map((child) => (
               <BaseLocationTreeNode
                 key={child.id}

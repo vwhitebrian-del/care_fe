@@ -63,7 +63,7 @@ export function ReferralProgress({ referral }: { referral: ReferralRetrieve }) {
           )}
           {t(`referral_status_${stage}`)}
           {index < stages.length - 1 && (
-            <span aria-hidden className="ml-1 text-muted-foreground">
+            <span aria-hidden className="ms-1 text-muted-foreground">
               →
             </span>
           )}

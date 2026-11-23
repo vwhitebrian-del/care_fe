@@ -490,7 +490,7 @@ export default function CreateScheduleTemplateSheet({
                           }}
                         >
                           <CareIcon icon="l-trash" className="text-base" />
-                          <span className="ml-2">{t("remove")}</span>
+                          <span className="ms-2">{t("remove")}</span>
                         </Button>
                       </div>
 

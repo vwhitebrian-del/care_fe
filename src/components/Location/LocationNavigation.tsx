@@ -64,12 +64,12 @@ export function LocationNavigation({
       <form onSubmit={onSearch}>
         <div className="relative">
           <Search
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            className="absolute start-3 top-1/2 transform -translate-y-1/2 text-gray-400"
             size={18}
           />
           <Input
             placeholder={t("search_location")}
-            className="pl-10"
+            className="ps-10"
             value={searchTerm}
             onChange={(e) => onSearchChange(e.target.value)}
           />
@@ -164,7 +164,7 @@ export function LocationNavigation({
                 className="text-sm"
               >
                 {t("load_more")}
-                <ChevronRight className="ml-1 size-4" />
+                <ChevronRight className="ms-1 size-4" />
               </Button>
             </div>
           )

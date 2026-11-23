@@ -85,7 +85,7 @@ function AddUserSheet({ patientId }: AddUserSheetProps) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="outline_primary">
-          <CareIcon icon="l-plus" className="mr-2 size-4" />
+          <CareIcon icon="l-plus" className="me-2 size-4" />
           {t("assign_user")}
         </Button>
       </SheetTrigger>
@@ -261,7 +261,7 @@ export const PatientUsers = ({ patientData }: PatientProps) => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute top-0 right-0"
+                  className="absolute top-0 end-0"
                   onClick={() => setUserToRemove(user)}
                 >
                   <CareIcon icon="l-trash" />
@@ -276,7 +276,7 @@ export const PatientUsers = ({ patientData }: PatientProps) => {
                     formatPhoneNumberIntl(user.phone_number)}
                 </div>
               </div>
-              <div className="text-sm ml-4">
+              <div className="text-sm ms-4">
                 <div className="text-gray-500">{t("user_type")}</div>
                 <div className="font-medium">{user.user_type}</div>
               </div>
@@ -313,7 +313,7 @@ export const PatientUsers = ({ patientData }: PatientProps) => {
       <div className="group my-2 w-full">
         <div className="h-full space-y-2">
           <div className="flex flex-row items-center justify-between">
-            <div className="mr-4 text-xl font-bold text-secondary-900">
+            <div className="me-4 text-xl font-bold text-secondary-900">
               {t("users")}
             </div>
             {canWritePatient && <AddUserSheet patientId={patientId} />}

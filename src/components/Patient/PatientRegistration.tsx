@@ -680,7 +680,7 @@ const PatientBasicsContent = ({
                               }}
                             />
                             {field.value && (
-                              <span className="text-xs text-gray-500 absolute right-9 top-3.25 md:top-2.5">
+                              <span className="text-xs text-gray-500 absolute end-9 top-3.25 md:top-2.5">
                                 {t("year_of_birth")}:{" "}
                                 {new Date().getFullYear() - Number(field.value)}
                               </span>

@@ -123,7 +123,7 @@ function CodingValue({ coding }: { coding: Code }) {
   const { t } = useTranslation();
 
   return (
-    <span className="ml-1 inline-flex items-center gap-1 font-normal text-gray-600">
+    <span className="ms-1 inline-flex items-center gap-1 font-normal text-gray-600">
       {coding.display}
       <Tooltip>
         <TooltipTrigger asChild>
@@ -185,7 +185,7 @@ function ResponseRows({
                     {idx > 0 && ", "}
                     {formatValue(val.value, question.type)}
                     {val.unit && (
-                      <span className="ml-1 font-normal text-gray-600">
+                      <span className="ms-1 font-normal text-gray-600">
                         {val.unit.code}
                       </span>
                     )}
@@ -198,7 +198,7 @@ function ResponseRows({
                       <Button
                         variant="outline"
                         size="sm"
-                        className="ml-2 h-6 px-2 text-xs"
+                        className="ms-2 h-6 px-2 text-xs"
                       >
                         {t("see_note")}
                       </Button>
@@ -235,7 +235,7 @@ function ResponseRows({
                   {idx > 0 && ", "}
                   {formatValue(val.value, question.type)}
                   {val.unit && (
-                    <span className="ml-1 font-normal text-gray-600">
+                    <span className="ms-1 font-normal text-gray-600">
                       {val.unit.code}
                     </span>
                   )}
@@ -757,11 +757,11 @@ export function ResponseCard({
               </CardTitle>
             )}
             {isEnteredInError && (
-              <Badge variant="destructive" className="ml-2">
+              <Badge variant="destructive" className="ms-2">
                 {t("entered_in_error")}
               </Badge>
             )}
-            <div className="ml-auto flex shrink-0 items-center gap-1">
+            <div className="ms-auto flex shrink-0 items-center gap-1">
               {isEnteredInError && (
                 <ChevronDown
                   className={cn(

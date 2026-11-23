@@ -282,7 +282,7 @@ export default function RoleForm({ role, onSuccess }: RoleFormProps) {
                         </div>
 
                         <div className="relative">
-                          <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-gray-400" />
+                          <Search className="pointer-events-none absolute start-2.5 top-1/2 size-3.5 -translate-y-1/2 text-gray-400" />
                           <Input
                             placeholder={t("search_permissions")}
                             aria-label={t("search_permissions")}
@@ -290,7 +290,7 @@ export default function RoleForm({ role, onSuccess }: RoleFormProps) {
                             onChange={(e) =>
                               setSearchPermission(e.target.value)
                             }
-                            className="h-8 pl-8 text-sm"
+                            className="h-8 ps-8 text-sm"
                           />
                         </div>
                       </div>

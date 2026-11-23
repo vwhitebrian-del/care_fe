@@ -280,7 +280,7 @@ export function ResourceCategoryPicker({
           </div>
           {value && (
             <Button variant="ghost" size="sm" onClick={handleClearSelection}>
-              <X className="w-3 h-3 mr-1" />
+              <X className="w-3 h-3 me-1" />
               {t("clear")}
             </Button>
           )}
@@ -297,7 +297,7 @@ export function ResourceCategoryPicker({
               onClick={handleBackToRoot}
               className="h-6 px-2 text-xs hover:bg-white"
             >
-              <Home className="w-3 h-3 mr-1" />
+              <Home className="w-3 h-3 me-1" />
               {t("root")}
             </Button>
             {breadcrumbs.map((breadcrumb, index) => (

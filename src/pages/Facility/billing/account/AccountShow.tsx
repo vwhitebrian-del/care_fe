@@ -398,7 +398,7 @@ function AccountShow({
                   })
                 }
               >
-                <CareIcon icon="l-plus" className="mr-2 size-4" />
+                <CareIcon icon="l-plus" className="me-2 size-4" />
                 {t("create_invoice")}
                 <ShortcutBadge actionId="create-invoice" />
               </Button>
@@ -456,13 +456,13 @@ function AccountShow({
                     <DropdownMenuItem
                       onClick={() => openPaymentSheet("credit_note")}
                     >
-                      <CareIcon icon="l-plus" className="mr-2 size-4" />
+                      <CareIcon icon="l-plus" className="me-2 size-4" />
                       {t("record_credit_note")}
                     </DropdownMenuItem>
                   </>
                 )}
                 <DropdownMenuItem onClick={() => setTransferPaymentOpen(true)}>
-                  <CareIcon icon="l-exchange" className="mr-2 size-4" />
+                  <CareIcon icon="l-exchange" className="me-2 size-4" />
                   {t("transfer_payment")}
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -574,7 +574,7 @@ function AccountShow({
 
         {/* Financial Summary Section */}
         <div className="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white flex-wrap">
-          <div className="flex-1 p-6 border-b md:border-r border-gray-200">
+          <div className="flex-1 p-6 border-b md:border-e border-gray-200">
             <div className="space-y-1">
               <p className="text-sm font-medium text-gray-500 flex items-center gap-1">
                 {t("amount_due")}
@@ -607,7 +607,7 @@ function AccountShow({
             </div>
           </div>
 
-          <div className="flex-1 p-6 border-b md:border-r border-gray-200">
+          <div className="flex-1 p-6 border-b md:border-e border-gray-200">
             <div className="space-y-1">
               <p className="text-sm font-medium text-gray-500">
                 {t("total_paid")}
@@ -621,7 +621,7 @@ function AccountShow({
             </div>
           </div>
 
-          <div className="flex-1 p-6 border-b md:border-r border-gray-200">
+          <div className="flex-1 p-6 border-b md:border-e border-gray-200">
             <div className="space-y-1">
               <p className="text-sm font-medium text-gray-500 flex items-center gap-1">
                 {t("billed_gross")}

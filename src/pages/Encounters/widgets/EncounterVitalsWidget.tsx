@@ -413,7 +413,7 @@ function VitalsMatrix({
                 <tr>
                   <th
                     scope="col"
-                    className="sticky left-0 z-10 border-y border-border bg-card px-3 py-2 text-left text-xs font-medium text-soft-foreground"
+                    className="sticky start-0 z-10 border-y border-border bg-card px-3 py-2 text-start text-xs font-medium text-soft-foreground"
                   >
                     {t("component")}
                   </th>
@@ -427,7 +427,7 @@ function VitalsMatrix({
                           : undefined
                       }
                       className={cn(
-                        "border-y border-border px-3 py-2 text-right text-xs font-medium whitespace-nowrap",
+                        "border-y border-border px-3 py-2 text-end text-xs font-medium whitespace-nowrap",
                         index === 0
                           ? "bg-primary/5 text-primary"
                           : "text-soft-foreground",
@@ -460,7 +460,7 @@ function VitalsMatrix({
                   <tr key={vitalCodeKey(row.code)}>
                     <th
                       scope="row"
-                      className="sticky left-0 z-10 border-b border-soft-border bg-card px-3 py-2 text-left font-normal"
+                      className="sticky start-0 z-10 border-b border-soft-border bg-card px-3 py-2 text-start font-normal"
                     >
                       <div className="flex min-w-36 items-baseline justify-between gap-3">
                         <ObservationDetailSheet
@@ -471,7 +471,7 @@ function VitalsMatrix({
                           trigger={
                             <button
                               type="button"
-                              className="rounded-sm text-left font-medium text-foreground underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                              className="rounded-sm text-start font-medium text-foreground underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                             >
                               {row.code.display ?? row.code.code}
                             </button>
@@ -537,7 +537,7 @@ function VitalMatrixCell({
     return (
       <td
         className={cn(
-          "border-b border-soft-border px-3 py-2 text-right text-placeholder-foreground",
+          "border-b border-soft-border px-3 py-2 text-end text-placeholder-foreground",
           latest && "bg-primary/5",
         )}
         aria-label={t("workspace_vitals_no_reading")}
@@ -560,7 +560,7 @@ function VitalMatrixCell({
         .filter(Boolean)
         .join(" ")}
       className={cn(
-        "border-b border-soft-border px-3 py-2 text-right whitespace-nowrap tabular-nums",
+        "border-b border-soft-border px-3 py-2 text-end whitespace-nowrap tabular-nums",
         cell.flag
           ? "bg-warning-50 font-semibold text-warning-900 dark:bg-warning-950/40 dark:text-warning-200"
           : latest

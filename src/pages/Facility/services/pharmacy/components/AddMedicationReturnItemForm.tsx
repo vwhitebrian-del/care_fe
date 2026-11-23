@@ -416,7 +416,7 @@ export function AddMedicationReturnItemForm({
                     variant="outline"
                     onClick={handleAddAnotherItem}
                   >
-                    <PlusCircle className="mr-2 size-4" />
+                    <PlusCircle className="me-2 size-4" />
                     {t("add_another")}
                   </Button>
                   {medicationDispenses.length > 0 && (
@@ -476,7 +476,7 @@ export function AddMedicationReturnItemForm({
                   variant="outline_primary"
                   onClick={() => handleAddAnotherItem()}
                 >
-                  <PlusCircle className="mr-2 size-4" />
+                  <PlusCircle className="me-2 size-4" />
                   {t("add_item")}
                   <ShortcutBadge actionId="add-item" />
                 </Button>
@@ -492,12 +492,12 @@ export function AddMedicationReturnItemForm({
               <DialogTitle>{t("select_items_to_add")}</DialogTitle>
             </DialogHeader>
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+              <Search className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
               <Input
                 placeholder={t("search_items")}
                 value={dispenseSearchQuery}
                 onChange={(e) => setDispenseSearchQuery(e.target.value)}
-                className="pl-9"
+                className="ps-9"
                 aria-label={t("search_items")}
               />
             </div>

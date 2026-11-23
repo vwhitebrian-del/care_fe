@@ -396,7 +396,7 @@ export const MedicineAdminForm: React.FC<MedicineAdminFormProps> = ({
             )}
             onClick={handleAdministerNow}
           >
-            <CareIcon icon="l-check-circle" className="size-4 mr-1.5" />
+            <CareIcon icon="l-check-circle" className="size-4 me-1.5" />
             {productType === ProductKnowledgeType.medication
               ? t("administer_now")
               : t("record_intake_now")}
@@ -410,7 +410,7 @@ export const MedicineAdminForm: React.FC<MedicineAdminFormProps> = ({
           >
             <CareIcon
               icon={showAdvanced ? "l-angle-up" : "l-angle-down"}
-              className="size-4 mr-1"
+              className="size-4 me-1"
             />
             {showAdvanced ? t("less_options") : t("more_options")}
           </Button>
@@ -630,7 +630,7 @@ export const MedicineAdminForm: React.FC<MedicineAdminFormProps> = ({
                   className={cn(
                     "h-auto justify-start whitespace-normal",
                     cn(
-                      "flex items-center justify-between w-full px-3 py-2 rounded-md text-sm border text-left transition-colors",
+                      "flex items-center justify-between w-full px-3 py-2 rounded-md text-sm border text-start transition-colors",
                       isCurrentMedication
                         ? "bg-primary-50 border-primary-200 cursor-default"
                         : "bg-white border-gray-100 hover:bg-gray-50 hover:border-gray-200 cursor-pointer",

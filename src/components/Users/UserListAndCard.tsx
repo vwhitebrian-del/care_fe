@@ -98,7 +98,7 @@ export function UserCard(props: UserCardProps) {
           <div className="flex flex-col min-w-0 flex-1">
             <div className="flex flex-col gap-1">
               <div className="flex items-start justify-between">
-                <h1 className="text-base font-bold wrap-break-word pr-2">
+                <h1 className="text-base font-bold wrap-break-word pe-2">
                   {formatName(user)}
                 </h1>
                 {!isServiceAccount && (
@@ -107,15 +107,15 @@ export function UserCard(props: UserCardProps) {
                   </span>
                 )}
               </div>
-              <span className="text-sm text-gray-500 mr-2 wrap-break-word">
+              <span className="text-sm text-gray-500 me-2 wrap-break-word">
                 {user.username}
               </span>
             </div>
             {(roleName || editRoleAction) && (
               <div
                 className={cn(
-                  "mt-2 -ml-12 sm:ml-0 flex items-center gap-1.5 text-sm",
-                  isServiceAccount && "ml-0",
+                  "mt-2 -ms-12 sm:ms-0 flex items-center gap-1.5 text-sm",
+                  isServiceAccount && "ms-0",
                 )}
               >
                 {roleName && <span className="text-gray-500">{roleName}</span>}
@@ -145,13 +145,13 @@ export function UserCard(props: UserCardProps) {
                   }
                 }}
               >
-                <CareIcon icon="l-arrow-up-right" className="text-lg mr-1" />
+                <CareIcon icon="l-arrow-up-right" className="text-lg me-1" />
                 <span>{t("see_details")}</span>
               </Button>
             </>
           ) : (
             <div className="bg-gray-200 rounded-md px-2 py-1 text-sm inline-block">
-              <CareIcon icon="l-archive" className="mr-2" />
+              <CareIcon icon="l-archive" className="me-2" />
               {t("archived")}
             </div>
           )}
@@ -183,10 +183,10 @@ const UserListHeader = () => {
   return (
     <thead>
       <tr className="bg-gray-50 text-sm font-medium text-gray-500">
-        <th className="px-4 py-3 text-left">{t("name")}</th>
-        <th className="w-32 px-10 py-3 text-left">{t("status")}</th>
-        <th className="px-10 py-3 text-left">{t("role")}</th>
-        <th className="px-4 py-3 text-left">{t("contact_number")}</th>
+        <th className="px-4 py-3 text-start">{t("name")}</th>
+        <th className="w-32 px-10 py-3 text-start">{t("status")}</th>
+        <th className="px-10 py-3 text-start">{t("role")}</th>
+        <th className="px-4 py-3 text-start">{t("contact_number")}</th>
       </tr>
     </thead>
   );
@@ -202,7 +202,7 @@ const UserListRow = ({ user }: { user: UserReadMinimal }) => {
       id={`usr_${user.id}`}
       className="hover:bg-gray-50"
     >
-      <td className="px-4 py-4 lg:pr-20">
+      <td className="px-4 py-4 lg:pe-20">
         <div className="flex items-center gap-3">
           <Avatar
             imageUrl={
@@ -244,7 +244,7 @@ const UserListRow = ({ user }: { user: UserReadMinimal }) => {
             to="/facility/$facilityId/users/$username"
             params={{ facilityId, username: user.username }}
           >
-            <CareIcon icon="l-arrow-up-right" className="text-lg mr-1" />
+            <CareIcon icon="l-arrow-up-right" className="text-lg me-1" />
             <span>{t("see_details")}</span>
           </Link>
         </Button>

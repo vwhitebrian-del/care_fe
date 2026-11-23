@@ -100,7 +100,7 @@ export default function DispenseOrderListSelector({
 
   return (
     <>
-      <div className="hidden lg:block h-full overflow-y-auto pr-1">
+      <div className="hidden lg:block h-full overflow-y-auto pe-1">
         <DispenseOrderList
           dispenseOrders={dispenseOrders}
           selectedDispenseOrderId={selectedDispenseOrderId}
@@ -119,7 +119,7 @@ export default function DispenseOrderListSelector({
               >
                 <div className="flex gap-3">
                   <PackageIcon className="size-5 text-primary-600" />
-                  <div className="flex flex-col -mt-1 text-left">
+                  <div className="flex flex-col -mt-1 text-start">
                     <span className="text-sm font-medium whitespace-nowrap">
                       {selectedDispenseOrder.name ||
                         formatDateTime(
@@ -132,7 +132,7 @@ export default function DispenseOrderListSelector({
                     </span>
                   </div>
                 </div>
-                <ChevronDown className="size-5 text-gray-500 shrink-0 ml-2" />
+                <ChevronDown className="size-5 text-gray-500 shrink-0 ms-2" />
               </Button>
             ) : (
               <Button variant="outline" className="w-full">
@@ -145,7 +145,7 @@ export default function DispenseOrderListSelector({
             <DrawerHeader showCloseButton className="border-b shadow-2xs">
               <DrawerTitle>{t("dispense_orders")}</DrawerTitle>
             </DrawerHeader>
-            <div className="overflow-y-auto pr-2">
+            <div className="overflow-y-auto pe-2">
               <DispenseOrderList
                 dispenseOrders={dispenseOrders}
                 selectedDispenseOrderId={selectedDispenseOrderId}
@@ -192,7 +192,7 @@ function DispenseOrderList({
             ref={i === dispenseOrders.length - 1 ? loadMoreRef : undefined}
           >
             {isSelected && (
-              <div className="absolute right-0 h-8 w-1 bg-primary-600 rounded-l inset-y-1/2 -translate-y-1/2" />
+              <div className="absolute end-0 h-8 w-1 bg-primary-600 rounded-s inset-y-1/2 -translate-y-1/2" />
             )}
             <CardContent className="flex flex-col px-4 py-3 gap-2">
               <div className="flex gap-3">

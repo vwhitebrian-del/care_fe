@@ -61,7 +61,7 @@ export function FacilitySettingsOverview({
                 {canUpdateFacility && (
                   <Button
                     variant="outline"
-                    className="absolute right-4 bottom-4"
+                    className="absolute end-4 bottom-4"
                     onClick={onEditCoverImage}
                   >
                     <ImagePlus aria-hidden="true" />
@@ -132,7 +132,7 @@ export function FacilitySettingsOverview({
               </div>
               {(phoneNumber || hasLocation) && (
                 // Offset ghost padding and border so the first link lines up with the address.
-                <div className="-my-1.5 -ml-3.25 flex flex-wrap items-center gap-x-2">
+                <div className="-my-1.5 -ms-3.25 flex flex-wrap items-center gap-x-2">
                   {facility.phone_number && phoneNumber && (
                     <ContactLink
                       tel={String(facility.phone_number)}

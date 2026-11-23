@@ -854,7 +854,7 @@ const DiagnosisTableRow = ({
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                <Pencil2Icon className="size-4 mr-2" />
+                <Pencil2Icon className="size-4 me-2" />
                 {showNotes
                   ? t("hide_notes")
                   : diagnosis.note
@@ -866,7 +866,7 @@ const DiagnosisTableRow = ({
                 className="text-destructive focus:text-destructive"
                 onClick={onRemove}
               >
-                <MinusCircledIcon className="size-4 mr-2" />
+                <MinusCircledIcon className="size-4 me-2" />
                 {t("remove_diagnosis")}
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -930,7 +930,7 @@ const DiagnosisItem: React.FC<DiagnosisItemProps> = ({
                         className="text-base text-gray-950 break-words"
                         title={diagnosis.code.display}
                       >
-                        <span className="mr-2">{diagnosis.code.display}</span>
+                        <span className="me-2">{diagnosis.code.display}</span>
                         <div
                           className={cn(
                             "inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium whitespace-nowrap bg-gray-100 text-gray-700",
@@ -941,7 +941,7 @@ const DiagnosisItem: React.FC<DiagnosisItemProps> = ({
                       </CardTitle>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 ml-2 shrink-0">
+                  <div className="flex items-center gap-2 ms-2 shrink-0">
                     {isOpen && (
                       <Button
                         variant="ghost"

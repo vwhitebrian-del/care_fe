@@ -159,16 +159,16 @@ const RenderTable = ({
         <Table className="min-w-full divide-y divide-gray-200">
           <TableHeader className="bg-gray-50">
             <TableRow>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+              <TableHead className="px-6 py-3 text-start text-xs font-medium uppercase tracking-wider text-gray-500">
                 {t("name")}
               </TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+              <TableHead className="px-6 py-3 text-start text-xs font-medium uppercase tracking-wider text-gray-500">
                 {t("status")}
               </TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+              <TableHead className="px-6 py-3 text-start text-xs font-medium uppercase tracking-wider text-gray-500">
                 {t("description")}
               </TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+              <TableHead className="px-6 py-3 text-start text-xs font-medium uppercase tracking-wider text-gray-500">
                 {t("actions")}
               </TableHead>
             </TableRow>
@@ -348,14 +348,14 @@ export function ValueSetList({ scope }: { scope: ValueSetScope }) {
             </Label>
             <div className="relative">
               <Search
-                className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
+                className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
                 aria-hidden="true"
               />
               <Input
                 id={`${filterId}-search`}
                 aria-label={t("search_valuesets")}
                 placeholder={t("search_valuesets")}
-                className="h-10 w-full pl-9"
+                className="h-10 w-full ps-9"
                 value={qParams.name || ""}
                 onChange={(e) => updateQuery({ name: e.target.value, page: 1 })}
               />

@@ -380,7 +380,7 @@ function ChargeItemsTable({
             }
             className="w-full sm:w-auto sm:max-w-full"
           >
-            <PrinterIcon className="size-4 mr-2" />
+            <PrinterIcon className="size-4 me-2" />
             {t("print_charge_items")}
             <ShortcutBadge actionId="print-button" />
           </Button>
@@ -391,7 +391,7 @@ function ChargeItemsTable({
                 onClick={() => setIsQuickAddOpen(true)}
                 className="w-full bg-linear-to-r from-amber-50 to-orange-50 border-amber-200 hover:border-amber-300 hover:from-amber-100 hover:to-orange-100 sm:w-auto sm:max-w-full"
               >
-                <Zap className="size-4 mr-2 text-amber-500" />
+                <Zap className="size-4 me-2 text-amber-500" />
                 {t("quick_add")}
               </Button>
               <Button
@@ -399,7 +399,7 @@ function ChargeItemsTable({
                 onClick={() => setIsAddChargeItemsOpen(true)}
                 className="w-full sm:w-auto sm:max-w-full"
               >
-                <PlusIcon className="size-4 mr-2" />
+                <PlusIcon className="size-4 me-2" />
                 {t("add_charge_items")}
                 <ShortcutBadge actionId="add-charge-item" />
               </Button>
@@ -433,7 +433,7 @@ function ChargeItemsTable({
             size="sm"
             onClick={() => setIsChangeAccountOpen(true)}
           >
-            <ArrowRightLeft className="size-4 mr-2" />
+            <ArrowRightLeft className="size-4 me-2" />
             {t("change_account")}
           </Button>
           <Button

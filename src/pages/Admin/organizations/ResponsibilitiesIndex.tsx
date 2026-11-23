@@ -128,7 +128,7 @@ export default function ResponsibilitiesIndex({ organizationId }: Props) {
             <ResponsibilityFormSheet
               trigger={
                 <Button className="hidden md:inline-flex">
-                  <Plus className="mr-2 size-4" />
+                  <Plus className="me-2 size-4" />
                   {t("responsibility_new")}
                 </Button>
               }
@@ -166,7 +166,7 @@ export default function ResponsibilitiesIndex({ organizationId }: Props) {
           <ResponsibilityFormSheet
             trigger={
               <Button className="w-full">
-                <Plus className="mr-2 size-4" />
+                <Plus className="me-2 size-4" />
                 {t("responsibility_new")}
               </Button>
             }
@@ -384,7 +384,7 @@ function ResponsibilityList({
                 aria-current={isSelected ? "true" : undefined}
                 onClick={() => onSelect(item.id)}
                 className={cn(
-                  "group flex w-full items-center justify-between gap-3 text-left transition-colors",
+                  "group flex w-full items-center justify-between gap-3 text-start transition-colors",
                   mobile
                     ? "border-b border-gray-100 px-4 py-3.5 last:border-0 hover:bg-gray-50"
                     : cn(
@@ -448,13 +448,13 @@ function ResponsibilityList({
           <Label htmlFor={searchInputId} className="sr-only">
             {t("responsibility_search")}
           </Label>
-          <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
+          <Search className="pointer-events-none absolute start-2.5 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
           <Input
             id={searchInputId}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={t("responsibility_search")}
-            className="h-9 pl-8 text-sm"
+            className="h-9 ps-8 text-sm"
           />
         </div>
       </div>

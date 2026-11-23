@@ -144,7 +144,7 @@ export function SubQuestionsList({
               <Button
                 variant="ghost"
                 type="button"
-                className="h-auto p-0 justify-start w-full min-w-0 truncate text-left text-sm text-gray-900"
+                className="h-auto p-0 justify-start w-full min-w-0 truncate text-start text-sm text-gray-900"
                 onClick={() => dispatch({ type: "select", id: child.id })}
               >
                 {child.text || (
@@ -229,7 +229,7 @@ export function SubQuestionsList({
           with the actions flush right. */}
       {effectiveChecked.size > 0 && (
         <div className="flex flex-wrap items-center gap-2 rounded-md bg-gray-50 p-2">
-          <span className="mr-auto text-sm text-gray-700">
+          <span className="me-auto text-sm text-gray-700">
             {t("sub_questions_selected", { count: effectiveChecked.size })}
           </span>
           <Button

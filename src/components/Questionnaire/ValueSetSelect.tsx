@@ -114,7 +114,7 @@ export default function ValueSetSelect({
               variant="white"
               role="combobox"
               className={cn(
-                "w-full flex justify-between whitespace-normal text-left font-normal border-gray-300 shadow-xs",
+                "w-full flex justify-between whitespace-normal text-start font-normal border-gray-300 shadow-xs",
                 !value?.display && "text-gray-500 hover:bg-white",
               )}
               {...props}
@@ -122,10 +122,10 @@ export default function ValueSetSelect({
               <span>
                 {value?.display || placeholder}
                 {value?.display && showCode && (
-                  <span className="text-xs ml-1">({value?.code})</span>
+                  <span className="text-xs ms-1">({value?.code})</span>
                 )}
               </span>
-              <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+              <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
             </Button>
           )}
         </DrawerTrigger>
@@ -162,10 +162,10 @@ export default function ValueSetSelect({
             <span className="truncate">
               {value?.display || placeholder}
               {value?.display && showCode && (
-                <span className="text-xs ml-1">({value?.code})</span>
+                <span className="text-xs ms-1">({value?.code})</span>
               )}
             </span>
-            <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+            <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
         <PopoverContent

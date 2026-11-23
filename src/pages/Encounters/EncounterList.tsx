@@ -649,7 +649,7 @@ export function EncounterList({
           : t("all"),
       })}
       componentRight={
-        <Badge variant="neutral" className="ml-2 w-max">
+        <Badge variant="neutral" className="ms-2 w-max">
           {isFetching
             ? t("loading")
             : t("entity_count", {
@@ -721,7 +721,7 @@ export function EncounterList({
                             </span>
                           </div>
                           <Check
-                            className={`ml-auto size-4 ${
+                            className={`ms-auto size-4 ${
                               option.key === searchWith
                                 ? "opacity-100"
                                 : "opacity-0"

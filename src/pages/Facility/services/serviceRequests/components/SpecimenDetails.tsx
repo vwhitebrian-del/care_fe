@@ -34,7 +34,7 @@ export function SpecimenDetails({
           </CardTitle>
           <Badge variant={SPECIMEN_STATUS_COLORS[specimen.status]}>
             {specimen.status === SpecimenStatus.available && (
-              <CheckCircle2 aria-hidden="true" className="size-4 mr-1" />
+              <CheckCircle2 aria-hidden="true" className="size-4 me-1" />
             )}
             {t(specimen.status)}
           </Badge>

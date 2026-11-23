@@ -61,7 +61,7 @@ export function AppSidebarToggle({
       aria-label={t("toggle_sidebar")}
       aria-expanded={isMobile ? openMobile : pinned || isOverlay}
       className={cn(
-        "group/sidebar-toggle relative -ml-1 size-7 shrink-0 p-0 after:absolute after:-inset-3 after:content-['']",
+        "group/sidebar-toggle relative -ms-1 size-7 shrink-0 p-0 after:absolute after:-inset-3 after:content-['']",
         className,
       )}
       onClick={(event) => {

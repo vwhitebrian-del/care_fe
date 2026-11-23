@@ -63,7 +63,7 @@ export default function EncounterNavigation({
             <TabsTrigger
               key={key}
               value={key}
-              className="group relative h-auto min-h-9 w-full flex-none justify-start gap-2 overflow-hidden rounded-[10px] border border-transparent px-3 py-1.5 text-left text-[15px] font-medium whitespace-normal text-muted-foreground hover:bg-muted hover:text-foreground data-active:border-border data-active:bg-muted data-active:font-semibold data-active:text-foreground data-active:shadow-none data-active:hover:bg-muted lg:after:pointer-events-none lg:after:absolute lg:after:inset-y-2 lg:after:right-0 lg:after:w-1 lg:after:rounded-l-full lg:after:bg-muted-foreground lg:after:opacity-0 lg:data-active:after:opacity-100"
+              className="group relative h-auto min-h-9 w-full flex-none justify-start gap-2 overflow-hidden rounded-[10px] border border-transparent px-3 py-1.5 text-start text-[15px] font-medium whitespace-normal text-muted-foreground hover:bg-muted hover:text-foreground data-active:border-border data-active:bg-muted data-active:font-semibold data-active:text-foreground data-active:shadow-none data-active:hover:bg-muted lg:after:pointer-events-none lg:after:absolute lg:after:inset-y-2 lg:after:end-0 lg:after:w-1 lg:after:rounded-s-full lg:after:bg-muted-foreground lg:after:opacity-0 lg:data-active:after:opacity-100"
             >
               <Icon
                 aria-hidden="true"
@@ -74,7 +74,7 @@ export default function EncounterNavigation({
               {shortcutId && (
                 <ShortcutBadge
                   actionId={shortcutId}
-                  className="ml-auto"
+                  className="ms-auto"
                   alwaysShow={false}
                 />
               )}

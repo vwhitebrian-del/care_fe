@@ -253,7 +253,7 @@ function ActivityDefinitionFilterDropdown({
               onClick={handleBackToRoot}
               className="h-6 px-2 text-xs hover:bg-white"
             >
-              <Home className="size-3 mr-1" />
+              <Home className="size-3 me-1" />
               {t("root")}
             </Button>
             {breadcrumbs.length <= 2 || breadcrumbsExpanded ? (

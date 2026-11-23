@@ -53,7 +53,7 @@ export function FacilityNavUser({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="bg-strong-background/50 border pl-2 border-strong-border data-popup-open:bg-sidebar-accent data-popup-open:text-sidebar-accent-foreground"
+              className="bg-strong-background/50 border ps-2 border-strong-border data-popup-open:bg-sidebar-accent data-popup-open:text-sidebar-accent-foreground"
               tooltip={formatName(user)}
               aria-label={formatName(user)}
             >
@@ -63,7 +63,7 @@ export function FacilityNavUser({
               />
               {(open || isMobile) && (
                 <>
-                  <div className="grid min-w-0 flex-1 gap-0.5 text-left text-sm leading-tight">
+                  <div className="grid min-w-0 flex-1 gap-0.5 text-start text-sm leading-tight">
                     <span className="truncate font-medium">
                       {formatName(user)}
                     </span>
@@ -71,7 +71,7 @@ export function FacilityNavUser({
                       {user.user_type ? t(user.user_type) : user.username}
                     </span>
                   </div>
-                  <ChevronsUpDown className="ml-auto size-4 opacity-60" />
+                  <ChevronsUpDown className="ms-auto size-4 opacity-60" />
                 </>
               )}
             </SidebarMenuButton>
@@ -83,12 +83,12 @@ export function FacilityNavUser({
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
-              <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
+              <div className="flex items-center gap-2 px-1 py-1.5 text-start text-sm">
                 <SidebarUserAvatar
                   name={formatName(user, true)}
                   imageUrl={user.profile_picture_url}
                 />
-                <div className="grid min-w-0 flex-1 gap-0.5 text-left text-sm leading-tight">
+                <div className="grid min-w-0 flex-1 gap-0.5 text-start text-sm leading-tight">
                   <span className="truncate font-medium">
                     {formatName(user)}
                   </span>
@@ -170,7 +170,7 @@ export function PatientNavUser() {
               {(open || isMobile) && (
                 <>
                   <SidebarUserAvatar name={patient?.name || phoneNumber} />
-                  <div className="grid min-w-0 flex-1 gap-0.5 text-left text-sm leading-tight">
+                  <div className="grid min-w-0 flex-1 gap-0.5 text-start text-sm leading-tight">
                     <span className="truncate font-medium">
                       {patient?.name || phoneNumber}
                     </span>
@@ -180,7 +180,7 @@ export function PatientNavUser() {
                       </span>
                     )}
                   </div>
-                  <ChevronsUpDown className="ml-auto size-4 opacity-60" />
+                  <ChevronsUpDown className="ms-auto size-4 opacity-60" />
                 </>
               )}
               {!open && !isMobile && (
@@ -197,9 +197,9 @@ export function PatientNavUser() {
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
-              <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
+              <div className="flex items-center gap-2 px-1 py-1.5 text-start text-sm">
                 <SidebarUserAvatar name={patient?.name || phoneNumber} />
-                <div className="grid min-w-0 flex-1 gap-0.5 text-left text-sm leading-tight">
+                <div className="grid min-w-0 flex-1 gap-0.5 text-start text-sm leading-tight">
                   <span className="truncate font-medium">
                     {patient?.name || phoneNumber}
                   </span>

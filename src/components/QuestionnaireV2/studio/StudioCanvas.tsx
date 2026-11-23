@@ -71,7 +71,7 @@ function StudioQuestionShell({
   const studio = useStudioCanvas();
 
   const hiddenBadge = (
-    <span className="pointer-events-none absolute -top-2.5 right-3 z-10 flex items-center gap-1 rounded bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800">
+    <span className="pointer-events-none absolute -top-2.5 end-3 z-10 flex items-center gap-1 rounded bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800">
       <EyeOff className="size-3" />
       {t("hidden_by_conditions")}
     </span>
@@ -140,7 +140,7 @@ function StudioQuestionShell({
             event.stopPropagation();
           }
         }}
-        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-20 focus:rounded-md focus:bg-white focus:px-3 focus:py-1 focus:text-sm focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:start-3 focus:top-3 focus:z-20 focus:rounded-md focus:bg-white focus:px-3 focus:py-1 focus:text-sm focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
       >
         {t("select_question")}
       </button>
@@ -148,11 +148,11 @@ function StudioQuestionShell({
         <>
           <span
             aria-hidden
-            className="pointer-events-none absolute -top-2.5 left-3 z-10 rounded bg-primary-700 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white"
+            className="pointer-events-none absolute -top-2.5 start-3 z-10 rounded bg-primary-700 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white"
           >
             {t("editing")}
           </span>
-          <div className="absolute -top-4 right-3 z-10 flex items-center gap-0.5 rounded-lg border border-gray-200 bg-white p-0.5 shadow-md">
+          <div className="absolute -top-4 end-3 z-10 flex items-center gap-0.5 rounded-lg border border-gray-200 bg-white p-0.5 shadow-md">
             {toolbarButton(
               t("move_question_up"),
               ArrowUp,
@@ -251,7 +251,7 @@ function StudioQuestionAnnotation({ question }: { question: Question }) {
   if (!logicSummary && !issueKey) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 pl-2.5">
+    <div className="flex flex-wrap items-center gap-1.5 ps-2.5">
       {logicSummary && (
         <span className="inline-flex items-center gap-1.5 rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-800">
           <Split aria-hidden className="size-3 shrink-0" />

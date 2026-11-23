@@ -187,7 +187,7 @@ export default function CreateTokenForm({
             variant="secondary"
             className="h-14 w-full justify-start text-lg"
           >
-            <Ticket className="mr-4 size-6" />
+            <Ticket className="me-4 size-6" />
             {t("create_token")}
           </Button>
         )}
@@ -228,7 +228,7 @@ export default function CreateTokenForm({
                         type="button"
                         variant="outline"
                         className={cn(
-                          "h-auto min-h-16 w-full justify-start text-left",
+                          "h-auto min-h-16 w-full justify-start text-start",
                           selectedResource.resource_type === type &&
                             "ring-2 ring-primary text-primary bg-primary/5",
                         )}

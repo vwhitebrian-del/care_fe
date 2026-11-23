@@ -251,7 +251,7 @@ export function ObservationDetailContent({
                 <div
                   ref={loadMoreRef}
                   aria-hidden="true"
-                  className="absolute inset-y-0 left-0 w-2"
+                  className="absolute inset-y-0 start-0 w-2"
                 />
               )}
               <ResponsiveContainer width="100%" height="100%">

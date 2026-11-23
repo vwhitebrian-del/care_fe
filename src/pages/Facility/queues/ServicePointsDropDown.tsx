@@ -28,8 +28,8 @@ export const ServicePointsDropDown = () => {
   if (!allServicePoints) {
     return (
       <div className="flex w-full sm:w-auto">
-        <Skeleton className="h-9 w-full sm:w-40 rounded-r-none rounded-l-md" />
-        <Skeleton className="h-9 w-10 rounded-l-none rounded-r-md shrink-0" />
+        <Skeleton className="h-9 w-full sm:w-40 rounded-e-none rounded-s-md" />
+        <Skeleton className="h-9 w-10 rounded-s-none rounded-e-md shrink-0" />
       </div>
     );
   }
@@ -44,7 +44,7 @@ export const ServicePointsDropDown = () => {
         <Button
           variant="outline"
           type="button"
-          className="h-auto w-full items-stretch p-0 text-left sm:w-auto"
+          className="h-auto w-full items-stretch p-0 text-start sm:w-auto"
         >
           <div className="flex min-w-0 flex-1 gap-1 p-1 overflow-hidden items-center">
             {assignedServicePointIds.length === 0 ? (
@@ -82,7 +82,7 @@ export const ServicePointsDropDown = () => {
               </div>
             )}
           </div>
-          <div className="flex items-center justify-center w-10 border-l border-gray-300 shrink-0">
+          <div className="flex items-center justify-center w-10 border-s border-gray-300 shrink-0">
             <ChevronDownIcon className="size-4" />
           </div>
         </Button>

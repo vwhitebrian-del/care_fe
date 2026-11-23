@@ -103,10 +103,10 @@ function QueueRow({
 
   return (
     <TableRow className="hover:bg-gray-200">
-      <TableCell className="font-medium text-gray-700 w-12 border-r border-gray-200 bg-white">
+      <TableCell className="font-medium text-gray-700 w-12 border-e border-gray-200 bg-white">
         {index + 1}
       </TableCell>
-      <TableCell className="border-r border-gray-200 bg-white">
+      <TableCell className="border-e border-gray-200 bg-white">
         <div className="flex items-center gap-2 justify-between">
           <div className="flex items-center gap-2">
             <HrefLink href={queueLink} className="font-medium underline">
@@ -133,7 +133,7 @@ function QueueRow({
           </Button>
         </div>
       </TableCell>
-      <TableCell className="border-r border-gray-200 bg-white">
+      <TableCell className="border-e border-gray-200 bg-white">
         <div className="flex items-center gap-2">
           <Button
             variant="outline"
@@ -144,7 +144,7 @@ function QueueRow({
           </Button>
         </div>
       </TableCell>
-      <TableCell className="w-12 border-r border-gray-200 bg-white rounded-r-md">
+      <TableCell className="w-12 border-e border-gray-200 bg-white rounded-e-md">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
@@ -154,19 +154,19 @@ function QueueRow({
           <DropdownMenuContent align="end" className="border border-gray-200">
             <DropdownMenuItem asChild>
               <HrefLink href={queueLink} className="flex items-center gap-2">
-                <Notebook className="size-4 mr-2" />
+                <Notebook className="size-4 me-2" />
                 {t("open_queue_board")}
               </HrefLink>
             </DropdownMenuItem>
             <DropdownMenuItem onSelect={() => setEditOpen(true)}>
-              <Pencil className="size-4 mr-2" />
+              <Pencil className="size-4 me-2" />
               {t("edit_queue_name")}
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={() => setPrimary({})}
               disabled={queue.is_primary}
             >
-              <CheckIcon className="size-4 mr-2" />
+              <CheckIcon className="size-4 me-2" />
               {t("set_as_primary")}
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -352,7 +352,7 @@ export default function QueuesIndex({
           )}
 
           {/* Create Queue Button */}
-          <div className="w-full flex justify-center lg:w-auto lg:ml-auto">
+          <div className="w-full flex justify-center lg:w-auto lg:ms-auto">
             <QueueFormSheet
               facilityId={facilityId}
               resourceType={resourceType}
@@ -360,7 +360,7 @@ export default function QueuesIndex({
               initialDate={qParams.date ? parseISO(qParams.date) : undefined}
               trigger={
                 <Button size="sm" className="font-bold" disabled={isPast}>
-                  <Plus className="size-4 mr-2" />
+                  <Plus className="size-4 me-2" />
                   {t("create_queue")}
                 </Button>
               }
@@ -396,7 +396,7 @@ export default function QueuesIndex({
                     }
                     trigger={
                       <Button disabled={isPast}>
-                        <Plus className="size-4 mr-2" />
+                        <Plus className="size-4 me-2" />
                         {t("create_first_queue")}
                       </Button>
                     }
@@ -408,16 +408,16 @@ export default function QueuesIndex({
                 <Table className="p-0">
                   <TableHeader className="bg-gray-100">
                     <TableRow className="rounded-md">
-                      <TableHead className="w-12 border-r border-gray-200 text-gray-700">
+                      <TableHead className="w-12 border-e border-gray-200 text-gray-700">
                         #
                       </TableHead>
-                      <TableHead className="border-r border-gray-200 text-gray-700">
+                      <TableHead className="border-e border-gray-200 text-gray-700">
                         {t("queue_title")}
                       </TableHead>
-                      <TableHead className="w-16 border-r border-gray-200 text-gray-700">
+                      <TableHead className="w-16 border-e border-gray-200 text-gray-700">
                         {t("status")}
                       </TableHead>
-                      <TableHead className="w-12 border-r border-gray-200 text-gray-700">
+                      <TableHead className="w-12 border-e border-gray-200 text-gray-700">
                         {t("settings")}
                       </TableHead>
                     </TableRow>
@@ -494,7 +494,7 @@ export default function QueuesIndex({
                     resourceId={effectiveResourceId}
                     trigger={
                       <Button>
-                        <Plus className="size-4 mr-2" />
+                        <Plus className="size-4 me-2" />
                         {t("add_first_service_point")}
                       </Button>
                     }

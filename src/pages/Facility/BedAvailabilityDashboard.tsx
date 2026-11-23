@@ -310,7 +310,7 @@ export default function BedAvailabilityDashboard({
 
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 size-4" />
+          <Search className="absolute start-3 top-1/2 transform -translate-y-1/2 text-gray-400 size-4" />
           <Input
             type="text"
             placeholder={t("search_wards_units")}
@@ -318,7 +318,7 @@ export default function BedAvailabilityDashboard({
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="pl-10"
+            className="ps-10"
           />
         </div>
 

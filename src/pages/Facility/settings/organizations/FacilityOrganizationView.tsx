@@ -225,7 +225,7 @@ export default function FacilityOrganizationView({
         <div className="relative w-full sm:w-72 max-w-full">
           <CareIcon
             icon="l-search"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
+            className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
           />
           <Input
             placeholder={t("search_by_department_team_name")}
@@ -233,7 +233,7 @@ export default function FacilityOrganizationView({
             onChange={(e) => {
               updateQuery({ search: e.target.value || undefined });
             }}
-            className="w-full pl-8"
+            className="w-full ps-8"
           />
         </div>
 
@@ -244,7 +244,7 @@ export default function FacilityOrganizationView({
               parentId={id}
               trigger={
                 <Button className="w-full">
-                  <CareIcon icon="l-plus" className="mr-2 size-4" />
+                  <CareIcon icon="l-plus" className="me-2 size-4" />
                   {t("add_department_team")}
                 </Button>
               }
@@ -266,9 +266,7 @@ export default function FacilityOrganizationView({
                     <TableRow>
                       <TableHead>{t("name")}</TableHead>
                       <TableHead>{t("type")}</TableHead>
-                      <TableHead className="text-right">
-                        {t("actions")}
-                      </TableHead>
+                      <TableHead className="text-end">{t("actions")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -316,7 +314,7 @@ export default function FacilityOrganizationView({
                           </Badge>
                         </TableCell>
                         <TableCell
-                          className="text-right"
+                          className="text-end"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <div className="flex items-center justify-end gap-1">

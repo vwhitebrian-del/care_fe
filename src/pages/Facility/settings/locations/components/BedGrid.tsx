@@ -29,7 +29,7 @@ export function BedGrid({ beds, onManage, onMove, onDelete }: BedGridProps) {
       {beds.map((bed, index) => (
         <li
           key={bed.id}
-          className="relative flex min-w-0 items-center gap-2 rounded-lg border border-border bg-card py-1.5 pr-1 pl-3 text-sm shadow-xs hover:bg-muted"
+          className="relative flex min-w-0 items-center gap-2 rounded-lg border border-border bg-card py-1.5 pe-1 ps-3 text-sm shadow-xs hover:bg-muted"
         >
           <Bed
             className="size-4 shrink-0 text-muted-foreground"
@@ -39,7 +39,7 @@ export function BedGrid({ beds, onManage, onMove, onDelete }: BedGridProps) {
             {/* Stretched over the tile, so the whole tile opens the bed. */}
             <button
               type="button"
-              className="block max-w-full cursor-pointer truncate text-left font-medium outline-none after:absolute after:inset-0 after:rounded-lg focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-ring"
+              className="block max-w-full cursor-pointer truncate text-start font-medium outline-none after:absolute after:inset-0 after:rounded-lg focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-ring"
               onClick={() => onManage(bed)}
             >
               {bed.name}

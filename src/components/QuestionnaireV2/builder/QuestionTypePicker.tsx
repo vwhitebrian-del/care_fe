@@ -171,7 +171,7 @@ export function QuestionTypePicker({
             {activeStructured ?? t(entry.description)}
           </span>
         </span>
-        {value === type && <Check className="ml-auto size-4 shrink-0" />}
+        {value === type && <Check className="ms-auto size-4 shrink-0" />}
       </CommandItem>
     );
   };
@@ -196,7 +196,7 @@ export function QuestionTypePicker({
           aria-label={t("question_type")}
           className="h-auto w-full justify-between gap-2 px-2 py-1.5 font-normal"
         >
-          <span className="flex min-w-0 items-center gap-2.5 text-left">
+          <span className="flex min-w-0 items-center gap-2.5 text-start">
             <TypeIconTile type={value} />
             <span className="flex min-w-0 flex-col">
               <span className="truncate text-sm font-semibold text-gray-900">
@@ -273,7 +273,7 @@ export function QuestionTypePicker({
                   >
                     {t("simple_group")}
                     {value === "group" && !structuredType && (
-                      <Check className="ml-auto size-4 shrink-0" />
+                      <Check className="ms-auto size-4 shrink-0" />
                     )}
                   </CommandItem>
                 )}
@@ -294,7 +294,7 @@ export function QuestionTypePicker({
                       )}
                       {entry.label}
                       {value === step && structuredType === entry.value && (
-                        <Check className="ml-auto size-4 shrink-0" />
+                        <Check className="ms-auto size-4 shrink-0" />
                       )}
                     </CommandItem>
                   );

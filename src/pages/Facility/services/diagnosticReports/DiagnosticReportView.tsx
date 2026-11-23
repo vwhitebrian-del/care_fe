@@ -91,7 +91,7 @@ export default function DiagnosticReportView({
             href={`/facility/${facilityId}/patient/${report.encounter.patient.id}/diagnostic_reports/${diagnosticReportId}/print`}
             className="flex items-center gap-2"
           >
-            <Printer className="size-4 mr-2" />
+            <Printer className="size-4 me-2" />
             {t("print")}
             <ShortcutBadge actionId="print-report" />
           </HrefLink>

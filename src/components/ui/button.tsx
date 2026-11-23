@@ -53,12 +53,12 @@ const buttonVariants = cva(
         md: responsiveButtonSize,
         default: [
           responsiveButtonSize,
-          "[&_svg:not([class*='size-'])]:size-4 has-data-[icon=inline-start]:pl-3 has-data-[icon=inline-end]:pr-3 in-data-[slot=button-group]:rounded-[min(var(--radius-md),10px)]",
+          "[&_svg:not([class*='size-'])]:size-4 has-data-[icon=inline-start]:ps-3 has-data-[icon=inline-end]:pe-3 in-data-[slot=button-group]:rounded-[min(var(--radius-md),10px)]",
         ],
-        xs: "h-8 gap-1 px-2.5 rounded-[min(var(--radius-md),8px)] text-xs [&_svg:not([class*='size-'])]:size-3.5 has-data-[icon=inline-start]:pl-2 has-data-[icon=inline-end]:pr-2 in-data-[slot=button-group]:rounded-md",
-        sm: "h-9 gap-1.5 px-3 rounded-[min(var(--radius-md),10px)] [&_svg:not([class*='size-'])]:size-4 has-data-[icon=inline-start]:pl-2.5 has-data-[icon=inline-end]:pr-2.5 in-data-[slot=button-group]:rounded-md",
-        lg: "h-11 gap-1.5 px-4 text-base [&_svg:not([class*='size-'])]:size-5 [&_svg]:stroke-[1.75] has-data-[icon=inline-start]:pl-3 has-data-[icon=inline-end]:pr-3 in-data-[slot=button-group]:rounded-[min(var(--radius-md),10px)]",
-        xl: "h-12 gap-2 px-4.5 text-base [&_svg:not([class*='size-'])]:size-5 has-data-[icon=inline-start]:pl-4 has-data-[icon=inline-end]:pr-4 in-data-[slot=button-group]:rounded-[min(var(--radius-md),12px)]",
+        xs: "h-8 gap-1 px-2.5 rounded-[min(var(--radius-md),8px)] text-xs [&_svg:not([class*='size-'])]:size-3.5 has-data-[icon=inline-start]:ps-2 has-data-[icon=inline-end]:pe-2 in-data-[slot=button-group]:rounded-md",
+        sm: "h-9 gap-1.5 px-3 rounded-[min(var(--radius-md),10px)] [&_svg:not([class*='size-'])]:size-4 has-data-[icon=inline-start]:ps-2.5 has-data-[icon=inline-end]:pe-2.5 in-data-[slot=button-group]:rounded-md",
+        lg: "h-11 gap-1.5 px-4 text-base [&_svg:not([class*='size-'])]:size-5 [&_svg]:stroke-[1.75] has-data-[icon=inline-start]:ps-3 has-data-[icon=inline-end]:pe-3 in-data-[slot=button-group]:rounded-[min(var(--radius-md),10px)]",
+        xl: "h-12 gap-2 px-4.5 text-base [&_svg:not([class*='size-'])]:size-5 has-data-[icon=inline-start]:ps-4 has-data-[icon=inline-end]:pe-4 in-data-[slot=button-group]:rounded-[min(var(--radius-md),12px)]",
         icon: "h-(--button-size) w-(--button-size) [--button-size:--spacing(12)] md:[--button-size:--spacing(10)] [&_svg:not([class*='size-'])]:size-4",
         "icon-xs":
           "size-8 rounded-[min(var(--radius-md),8px)] [&_svg:not([class*='size-'])]:size-3.5 [&_svg]:stroke-2 in-data-[slot=button-group]:rounded-md",

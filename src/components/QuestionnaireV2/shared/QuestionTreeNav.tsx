@@ -58,8 +58,8 @@ export function QuestionTreeNav({
         className={cn(
           "h-auto justify-start whitespace-normal",
           cn(
-            "relative flex w-full items-start gap-1 rounded-md px-3 py-2 text-left text-sm",
-            indent && "ml-2",
+            "relative flex w-full items-start gap-1 rounded-md px-3 py-2 text-start text-sm",
+            indent && "ms-2",
             activeId === item.question.id
               ? "bg-gray-100 font-medium text-gray-900"
               : "text-gray-700 hover:bg-gray-50",
@@ -87,13 +87,13 @@ export function QuestionTreeNav({
         {rowAdornment && (
           <span
             aria-hidden
-            className="mr-1 flex shrink-0 items-center gap-1 self-center"
+            className="me-1 flex shrink-0 items-center gap-1 self-center"
           >
             {rowAdornment(item.question)}
           </span>
         )}
         {activeId === item.question.id && (
-          <span className="absolute right-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-gray-900" />
+          <span className="absolute end-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-gray-900" />
         )}
       </Button>
     );
@@ -108,7 +108,7 @@ export function QuestionTreeNav({
       <Fragment key={item.question.id}>
         {row(item, indent)}
         {children.length > 0 && (
-          <div className="ml-3 border-l border-gray-200 pl-1">
+          <div className="ms-3 border-s border-gray-200 ps-1">
             {children.map((child) => branch(child, true))}
           </div>
         )}

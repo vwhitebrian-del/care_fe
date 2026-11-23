@@ -245,7 +245,7 @@ export function LocationPicker({
                   onClick={handleClearSelection}
                   className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700"
                 >
-                  <X className="h-3 w-3 mr-1" />
+                  <X className="h-3 w-3 me-1" />
                   {t("clear")}
                 </Button>
               )}
@@ -262,7 +262,7 @@ export function LocationPicker({
                   onClick={handleBackToRoot}
                   className="h-6 px-2 text-xs hover:bg-white"
                 >
-                  <Home className="h-3 w-3 mr-1" />
+                  <Home className="h-3 w-3 me-1" />
                   {t("root")}
                 </Button>
                 {breadcrumbs.map((breadcrumb, index) => (
@@ -285,12 +285,12 @@ export function LocationPicker({
           <Command className="border-0">
             <div className="px-3 py-2 border-b">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500" />
+                <Search className="absolute start-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500" />
                 <CommandInput
                   placeholder={t("search_locations")}
                   value={searchQuery}
                   onValueChange={setSearchQuery}
-                  className="pl-9 h-9 border-0 focus:ring-0"
+                  className="ps-9 h-9 border-0 focus:ring-0"
                 />
               </div>
             </div>

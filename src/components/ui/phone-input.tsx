@@ -226,7 +226,7 @@ const CountrySelect = ({
         <Button
           type="button"
           variant="ghost"
-          className="border-input flex shrink-0 gap-1.5 rounded-none! border-0 border-r px-2 text-sm no-underline shadow-none not-in-data-[slot=button-group]:rounded-none! focus-visible:outline-0 focus-visible:bg-muted h-full"
+          className="border-input flex shrink-0 gap-1.5 rounded-none! border-0 border-e px-2 text-sm no-underline shadow-none not-in-data-[slot=button-group]:rounded-none! focus-visible:outline-0 focus-visible:bg-muted h-full"
           disabled={disabled}
         >
           <FlagComponent

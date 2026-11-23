@@ -91,7 +91,7 @@ export function AppointmentSuccess(props: { appointmentId: string }) {
         </div>
       </div>
 
-      <div className="mt-12 text-left space-y-2">
+      <div className="mt-12 text-start space-y-2">
         <p className="text-gray-900">
           {formatName(userData)} {t("doc_will_visit_patient")}
         </p>

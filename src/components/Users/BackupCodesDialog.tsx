@@ -119,7 +119,7 @@ export function BackupCodesDialog({
               onClick={handleCopyBackupCodes}
               className="flex-1"
             >
-              <CareIcon icon="l-copy" className="mr-2 size-4" />
+              <CareIcon icon="l-copy" className="me-2 size-4" />
               {t("copy")}
             </Button>
             <Button

@@ -101,7 +101,7 @@ export default function PrescriptionListSelector({
 
   return (
     <>
-      <div className="hidden lg:block h-full overflow-y-auto pr-1">
+      <div className="hidden lg:block h-full overflow-y-auto pe-1">
         <PrescriptionListComponent
           prescriptions={prescriptions}
           selectedPrescriptionId={selectedPrescriptionId}
@@ -120,7 +120,7 @@ export default function PrescriptionListSelector({
               >
                 <div className="flex gap-3">
                   <ReceiptTextIcon className="size-5 text-primary-600" />
-                  <div className="flex flex-col -mt-1 text-left">
+                  <div className="flex flex-col -mt-1 text-start">
                     <span className="text-sm font-medium whitespace-nowrap">
                       {t("all_prescriptions")}
                     </span>
@@ -129,7 +129,7 @@ export default function PrescriptionListSelector({
                     </span>
                   </div>
                 </div>
-                <ChevronDown className="size-5 text-gray-500 shrink-0 ml-2" />
+                <ChevronDown className="size-5 text-gray-500 shrink-0 ms-2" />
               </Button>
             ) : selectedPrescription ? (
               <Button
@@ -138,7 +138,7 @@ export default function PrescriptionListSelector({
               >
                 <div className="flex gap-3">
                   <ReceiptTextIcon className="size-5 text-primary-600" />
-                  <div className="flex flex-col -mt-1 text-left">
+                  <div className="flex flex-col -mt-1 text-start">
                     <span className="text-sm font-medium whitespace-nowrap">
                       {formatDateTime(
                         selectedPrescription.created_date,
@@ -153,7 +153,7 @@ export default function PrescriptionListSelector({
                     <PrescriptionTags tags={selectedPrescription.tags} />
                   </div>
                 </div>
-                <ChevronDown className="size-5 text-gray-500 shrink-0 ml-2" />
+                <ChevronDown className="size-5 text-gray-500 shrink-0 ms-2" />
               </Button>
             ) : (
               <Button variant="outline" className="w-full">
@@ -237,7 +237,7 @@ function PrescriptionListComponent({
             ref={i === items.length - 1 ? loadMoreRef : undefined}
           >
             {isSelected && (
-              <div className="absolute right-0 h-8 w-1 bg-primary-600 rounded-l inset-y-1/2 -translate-y-1/2" />
+              <div className="absolute end-0 h-8 w-1 bg-primary-600 rounded-s inset-y-1/2 -translate-y-1/2" />
             )}
             <CardContent className="flex flex-col px-4 py-3 gap-2">
               <div className="flex gap-3">

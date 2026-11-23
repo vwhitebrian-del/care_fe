@@ -37,7 +37,7 @@ class OverrideErrorBoundary extends Component<
         "div",
         {
           className:
-            "my-1 px-2 py-1 text-xs text-gray-400 border-l-2 border-gray-200",
+            "my-1 px-2 py-1 text-xs text-gray-400 border-s-2 border-gray-200",
         },
         "A plugin override for ",
         React.createElement("strong", null, this.props.componentKey),

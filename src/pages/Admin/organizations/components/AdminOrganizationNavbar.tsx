@@ -100,7 +100,7 @@ function OrganizationTreeNode({
           }}
           aria-pressed={isSelected}
           className={cn(
-            "h-auto min-w-0 flex-1 justify-start truncate px-2 py-1.5 text-left text-sm",
+            "h-auto min-w-0 flex-1 justify-start truncate px-2 py-1.5 text-start text-sm",
             isSelected
               ? "bg-primary-100 font-medium text-primary-900 hover:bg-primary-100"
               : "text-gray-700",
@@ -110,7 +110,7 @@ function OrganizationTreeNode({
         </Button>
       </div>
       {isExpanded && isError && children.length === 0 && (
-        <div className="flex items-center gap-2 pl-8">
+        <div className="flex items-center gap-2 ps-8">
           <p className="text-xs text-gray-500">{t("something_went_wrong")}</p>
           <Button
             type="button"
@@ -143,7 +143,7 @@ function OrganizationTreeNode({
                 type="button"
                 variant="link"
                 size="sm"
-                className="ml-8 h-auto p-0 text-xs"
+                className="ms-8 h-auto p-0 text-xs"
                 onClick={() => fetchNextPage()}
               >
                 {t("retry")}

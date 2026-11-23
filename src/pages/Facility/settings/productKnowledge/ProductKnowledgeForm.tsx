@@ -606,7 +606,7 @@ function ProductKnowledgeFormContent({
                       });
                     }}
                   >
-                    <PlusCircle className="mr-2 size-4" />
+                    <PlusCircle className="me-2 size-4" />
                     {t("add_name")}
                   </Button>
                 </div>
@@ -813,7 +813,7 @@ function ProductKnowledgeFormContent({
                                         >
                                           <span>
                                             {t(`unit_${duration.code}`)}
-                                            <span className="text-sm ml-1 text-gray-500">
+                                            <span className="text-sm ms-1 text-gray-500">
                                               ({duration.code})
                                             </span>
                                           </span>
@@ -894,7 +894,7 @@ function ProductKnowledgeFormContent({
                         )
                       }
                     >
-                      <PlusCircle className="mr-2 size-4" />
+                      <PlusCircle className="me-2 size-4" />
                       {t("add_definition")}
                     </Button>
                   )}
@@ -956,7 +956,7 @@ function ProductKnowledgeFormContent({
                             });
                           }}
                         >
-                          <PlusCircle className="mr-2 size-4" />
+                          <PlusCircle className="me-2 size-4" />
                           {t("add_route")}
                         </Button>
                       </div>

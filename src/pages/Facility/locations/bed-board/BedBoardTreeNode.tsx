@@ -84,7 +84,7 @@ export function BedBoardTreeNode({
         <button
           type="button"
           aria-current={isSelected ? "true" : undefined}
-          className="flex min-h-9 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded-md py-1.5 pr-2 text-left text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          className="flex min-h-9 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded-md py-1.5 pe-2 text-start text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           onClick={() => {
             onSelect(location);
             if (canExpand) onToggle(location.id, true);
@@ -105,7 +105,7 @@ export function BedBoardTreeNode({
           )}
           {location.has_beds && (
             <Bed
-              className="ml-auto size-3.5 shrink-0 text-muted-foreground"
+              className="ms-auto size-3.5 shrink-0 text-muted-foreground"
               role="img"
               aria-label={t("has_beds")}
             />

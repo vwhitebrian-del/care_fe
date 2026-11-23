@@ -112,7 +112,7 @@ export const SummaryPanelReportsTab = ({
               }}
             >
               <FileText className="size-4 shrink-0" />
-              <span className="min-w-0 text-left [overflow-wrap:anywhere]">
+              <span className="min-w-0 text-start [overflow-wrap:anywhere]">
                 {template.name}
               </span>
             </Link>

@@ -97,7 +97,7 @@ function SelectedItemCard({
             {details.map(({ label, value }, index) => (
               <div key={index} className="flex text-sm">
                 <span className="text-gray-500">{label}: </span>
-                <span className="ml-1 text-gray-900">{value}</span>
+                <span className="ms-1 text-gray-900">{value}</span>
               </div>
             ))}
           </div>
@@ -267,7 +267,7 @@ function RequirementsContent({
                       <Button
                         variant="outline"
                         size="sm"
-                        className="ml-auto h-8 w-8 shrink-0 p-0"
+                        className="ms-auto h-8 w-8 shrink-0 p-0"
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
@@ -342,7 +342,7 @@ export default function RequirementsSelector({
           </span>
         )}
       </div>
-      <ChevronDown className="ml-2 size-4 shrink-0 opacity-50" />
+      <ChevronDown className="ms-2 size-4 shrink-0 opacity-50" />
     </Button>
   );
 

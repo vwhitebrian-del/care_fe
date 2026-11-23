@@ -78,7 +78,7 @@ function ProductCard({
               </p>
             )}
           </div>
-          <div className="ml-auto flex flex-wrap gap-2">
+          <div className="ms-auto flex flex-wrap gap-2">
             <ProductActions product={product} facilityId={facilityId} />
           </div>
         </div>

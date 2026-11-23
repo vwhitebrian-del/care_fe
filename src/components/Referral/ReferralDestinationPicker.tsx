@@ -130,7 +130,7 @@ function DestinationCombobox<T extends DestinationOption>({
     >
       <span
         className={cn(
-          "w-0 min-w-0 flex-1 truncate text-left",
+          "w-0 min-w-0 flex-1 truncate text-start",
           !selected && "text-muted-foreground",
         )}
       >

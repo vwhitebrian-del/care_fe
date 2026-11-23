@@ -17,7 +17,7 @@ export function ServerErrorsPanel({
     <Alert variant="destructive" className="mx-auto mb-4 w-full max-w-3xl">
       <AlertTitle>{t("questionnaire_submission_failed")}</AlertTitle>
       <AlertDescription>
-        <ul className="list-disc space-y-1 pl-4">
+        <ul className="list-disc space-y-1 ps-4">
           {errors.map((error, index) => (
             <li key={`${error.reference_id}-${index}`}>{error.message}</li>
           ))}

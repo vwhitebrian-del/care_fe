@@ -176,14 +176,14 @@ export default function ImmunizationPolicyList({
               {t("immunization_policy_search")}
             </Label>
             <Search
-              className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400"
+              className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-400"
               aria-hidden="true"
             />
             <Input
               id={searchId}
               value={qParams.name || ""}
               placeholder={t("immunization_policy_search")}
-              className="h-9 pl-9"
+              className="h-9 ps-9"
               onChange={(event) =>
                 updateQuery({ name: event.target.value, page: 1 })
               }

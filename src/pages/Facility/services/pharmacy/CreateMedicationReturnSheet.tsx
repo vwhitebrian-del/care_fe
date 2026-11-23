@@ -148,7 +148,7 @@ export function CreateMedicationReturnSheet({
       <SheetTrigger asChild>
         {trigger || (
           <Button>
-            <Plus className="size-4 mr-1" />
+            <Plus className="size-4 me-1" />
             {t("create_medication_return")}
             <ShortcutBadge actionId="medication-return" />
           </Button>

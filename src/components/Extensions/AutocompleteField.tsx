@@ -152,7 +152,7 @@ export function AutocompleteField<TFieldValues extends FieldValues>({
         <FormItem className={className}>
           <FormLabel>
             {metadata.label}
-            {metadata.required && <span className="text-red-500 ml-1">*</span>}
+            {metadata.required && <span className="text-red-500 ms-1">*</span>}
           </FormLabel>
           <FormControl>
             <Autocomplete

@@ -48,9 +48,9 @@ export function ServiceRequestDetails({
       <div className="relative flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         <span
           aria-hidden="true"
-          className="absolute left-0 top-4 h-8 w-1.5 rounded-r-sm bg-primary-500"
+          className="absolute start-0 top-4 h-8 w-1.5 rounded-e-sm bg-primary-500"
         />
-        <div className="min-w-0 flex-1 sm:ml-2">
+        <div className="min-w-0 flex-1 sm:ms-2">
           <h2
             id={titleId}
             className="text-xl font-semibold text-muted-foreground wrap-break-word"
@@ -59,7 +59,7 @@ export function ServiceRequestDetails({
           </h2>
           <p className="text-sm text-muted-foreground">
             {t("request id")}:
-            <span className="ml-1 break-all text-muted-foreground font-medium">
+            <span className="ms-1 break-all text-muted-foreground font-medium">
               {request.id}
             </span>
           </p>
@@ -88,7 +88,7 @@ export function ServiceRequestDetails({
               activityDefinition={activityDefinition}
             />
           </div>
-          <div className="min-w-0 space-y-3 border-t border-border pt-5 text-sm md:border-t-0 md:border-l md:pt-0 md:pl-6">
+          <div className="min-w-0 space-y-3 border-t border-border pt-5 text-sm md:border-t-0 md:border-s md:pt-0 md:ps-6">
             <p className="text-muted-foreground">{t("tags")}</p>
             <TagBadges tags={request.tags} className="pb-1" />
             <TagAssignmentSheet

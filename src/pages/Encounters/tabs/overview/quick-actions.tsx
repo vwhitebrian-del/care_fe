@@ -192,8 +192,8 @@ export function QuickAction({
   const className = cn(
     "h-auto min-w-0 w-full whitespace-normal",
     compact
-      ? "min-h-11 justify-start gap-1.5 rounded-lg border-gray-200 bg-white px-2 py-2 text-left font-semibold text-gray-950 shadow-xs transition-[background-color,border-color,box-shadow] hover:border-gray-300 hover:bg-white hover:shadow-sm active:bg-gray-50 active:shadow-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 [&_svg]:size-6"
-      : "flex-1 flex-row items-center justify-start gap-1.25 rounded-lg bg-white p-1 pb-2 text-left shadow md:flex-col md:items-stretch md:text-center",
+      ? "min-h-11 justify-start gap-1.5 rounded-lg border-gray-200 bg-white px-2 py-2 text-start font-semibold text-gray-950 shadow-xs transition-[background-color,border-color,box-shadow] hover:border-gray-300 hover:bg-white hover:shadow-sm active:bg-gray-50 active:shadow-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 [&_svg]:size-6"
+      : "flex-1 flex-row items-center justify-start gap-1.25 rounded-lg bg-white p-1 pb-2 text-start shadow md:flex-col md:items-stretch md:text-center",
     hidden && "hidden",
     customClassName,
   );

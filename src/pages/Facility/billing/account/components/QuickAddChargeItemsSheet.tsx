@@ -300,7 +300,7 @@ export default function QuickAddChargeItemsSheet({
                       </Button>
                     </div>
 
-                    <div className="space-y-2 max-h-64 overflow-y-auto pr-1">
+                    <div className="space-y-2 max-h-64 overflow-y-auto pe-1">
                       {cartItems.map((item) => (
                         <CartItemRow
                           key={item.definition.slug}
@@ -353,7 +353,7 @@ export default function QuickAddChargeItemsSheet({
                     t("adding")
                   ) : (
                     <>
-                      <Plus className="h-4 w-4 mr-2" />
+                      <Plus className="h-4 w-4 me-2" />
                       {t("add_items")} ({cartItems.length})
                       {open && <ShortcutBadge actionId="submit-action" />}
                     </>
@@ -426,7 +426,7 @@ function GroupCard({
           <div className="p-1.5 rounded-md bg-gray-100">
             <FolderOpen className="h-4 w-4 text-gray-600" />
           </div>
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-start">
             <h4 className="font-semibold text-sm text-gray-900">
               {group.display}
             </h4>
@@ -436,7 +436,7 @@ function GroupCard({
                 defaultValue: `${packages.length} packages`,
               })}
               {selectedCount > 0 && (
-                <span className="text-primary-600 ml-2">
+                <span className="text-primary-600 ms-2">
                   ({selectedCount} {t("selected")})
                 </span>
               )}
@@ -450,7 +450,7 @@ function GroupCard({
         </Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="pl-4 pt-2 space-y-2">
+        <div className="ps-4 pt-2 space-y-2">
           {packages.map((pkg) => (
             <PackageCard
               key={pkg.id}
@@ -542,7 +542,7 @@ function PackageCard({
         type="button"
         onClick={handleClick}
         disabled={disabled || isLoading || items.length === 0}
-        className="h-auto block whitespace-normal w-full p-3 text-left"
+        className="h-auto block whitespace-normal w-full p-3 text-start"
       >
         <div className="flex items-center gap-3">
           {/* Selection indicator */}
@@ -629,7 +629,7 @@ function PackageCard({
                   key={item.id}
                   className="text-xs text-gray-600 flex items-center justify-between py-0.5"
                 >
-                  <span className="truncate pr-2">{item.title}</span>
+                  <span className="truncate pe-2">{item.title}</span>
                   <MonetaryDisplay
                     amount={calculateTotalPrice(
                       item.price_components ?? [],
@@ -716,7 +716,7 @@ function CartItemRow({
       </div>
 
       {/* Line total */}
-      <div className="w-20 text-right">
+      <div className="w-20 text-end">
         <span className="text-sm font-medium">
           <MonetaryDisplay amount={lineTotal} />
         </span>

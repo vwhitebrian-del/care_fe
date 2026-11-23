@@ -44,7 +44,7 @@ export function FacilityHomeCover({
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 translate-x-0 ml-32">
+      <div className="absolute bottom-0 left-0 translate-x-0 ms-32">
         <div className="flex flex-wrap items-center gap-4 md:gap-6">
           <div className="flex-1 min-w-0 mb-2">
             <div className="text-white">
@@ -67,7 +67,7 @@ export function FacilityHomeCover({
           </div>
         </div>
       </div>
-      <div className="absolute right-0 bottom-0 p-1 text-white [@media(max-width:55rem)]:top-0">
+      <div className="absolute end-0 bottom-0 p-1 text-white [@media(max-width:55rem)]:top-0">
         {canUpdateFacility && (
           <Button
             variant="link"

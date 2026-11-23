@@ -140,7 +140,7 @@ export default function ResourceDetails({
               }
               className="w-full sm:w-auto"
             >
-              <CareIcon icon="l-file-alt" className="mr-2 size-4" />
+              <CareIcon icon="l-file-alt" className="me-2 size-4" />
               {t("request_letter")}
             </Button>
             <Button
@@ -153,7 +153,7 @@ export default function ResourceDetails({
                 })
               }
             >
-              <CareIcon icon="l-pen" className="mr-2 size-4" />
+              <CareIcon icon="l-pen" className="me-2 size-4" />
               {t("update_status")}
             </Button>
           </div>

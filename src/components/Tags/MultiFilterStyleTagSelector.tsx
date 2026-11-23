@@ -562,7 +562,7 @@ export function MultiFilterStyleTagSelector({
                                       {t("group")}
                                     </Badge>
                                   </div>
-                                  <ArrowRight className="ml-auto size-4" />
+                                  <ArrowRight className="ms-auto size-4" />
                                 </Button>
                               </PopoverTrigger>
                               <PopoverContent

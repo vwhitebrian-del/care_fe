@@ -178,9 +178,9 @@ export function DiscountMonetaryComponentForm({
                             onChange={(e) =>
                               field.onChange(e.target.value || null)
                             }
-                            className="pr-8"
+                            className="pe-8"
                           />
-                          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm">
+                          <span className="absolute end-3 top-1/2 -translate-y-1/2 text-sm">
                             %
                           </span>
                         </div>
@@ -197,7 +197,7 @@ export function DiscountMonetaryComponentForm({
                     <FormItem>
                       <FormControl>
                         <div className="relative">
-                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm">
+                          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-sm">
                             ₹
                           </span>
                           <Input
@@ -209,7 +209,7 @@ export function DiscountMonetaryComponentForm({
                               field.onChange(e.target.value || null)
                             }
                             value={field.value === null ? "" : field.value}
-                            className="pl-8"
+                            className="ps-8"
                           />
                         </div>
                       </FormControl>

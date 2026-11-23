@@ -58,7 +58,7 @@ function ClinicalSummaryRow({ item }: { item: ClinicalSummaryItem }) {
   const meta = item.meta.filter(Boolean);
 
   return (
-    <li className="-mb-px flex min-w-0 flex-wrap items-start gap-x-2 border-b border-soft-border py-2.5 pr-1 pl-3 @md/clinical-widget:odd:border-r">
+    <li className="-mb-px flex min-w-0 flex-wrap items-start gap-x-2 border-b border-soft-border py-2.5 pe-1 ps-3 @md/clinical-widget:odd:border-e">
       <div className="min-w-0 flex-1">
         <p
           className={cn(
@@ -123,7 +123,7 @@ function ClinicalSummaryRow({ item }: { item: ClinicalSummaryItem }) {
         </DropdownMenuContent>
       </DropdownMenu>
       {showNote && item.note && (
-        <div className="mt-2.5 -mr-1 -mb-2.5 -ml-3 min-w-0 grow basis-full border-t border-gray-200 bg-gray-50 p-3 pt-2">
+        <div className="mt-2.5 -me-1 -mb-2.5 -ms-3 min-w-0 grow basis-full border-t border-gray-200 bg-gray-50 p-3 pt-2">
           <div className="flex items-center justify-between gap-2">
             <div className="text-xs font-semibold text-gray-800">
               {t("note")}
@@ -133,7 +133,7 @@ function ClinicalSummaryRow({ item }: { item: ClinicalSummaryItem }) {
             <Button
               variant="ghost"
               size="icon-sm"
-              className="-my-2 -mr-2 text-gray-600"
+              className="-my-2 -me-2 text-gray-600"
               onClick={() => setShowNote(false)}
               aria-label={t("hide_note")}
             >

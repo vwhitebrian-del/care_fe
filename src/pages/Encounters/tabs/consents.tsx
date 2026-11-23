@@ -53,7 +53,7 @@ function ConsentCard({
       <div className="flex flex-wrap gap-2">
         <Badge
           variant="indigo"
-          className="w-fit border-b rounded-b-md border-t-0 rounded-t-none py-1 ml-3 font-semibold text-xs"
+          className="w-fit border-b rounded-b-md border-t-0 rounded-t-none py-1 ms-3 font-semibold text-xs"
         >
           {t(`consent_category__${consent.category}`).toUpperCase()}
         </Badge>
@@ -198,10 +198,10 @@ export const EncounterConsentsTab = () => {
     <div className="py-4">
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
         <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4" />
+          <Search className="absolute start-3 top-1/2 transform -translate-y-1/2 size-4" />
           <Input
             placeholder={t("search_existing_consent")}
-            className="pl-10 focus-visible:ring-1"
+            className="ps-10 focus-visible:ring-1"
             value={searchQuery}
             onChange={handleSearch}
           />

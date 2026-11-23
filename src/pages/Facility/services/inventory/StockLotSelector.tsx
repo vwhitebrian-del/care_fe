@@ -244,12 +244,12 @@ export default function StockLotSelector({
         {enableSearch && (
           <div className="p-2 border-b">
             <div className="relative">
-              <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 size-4" />
+              <SearchIcon className="absolute start-2 top-1/2 transform -translate-y-1/2 text-gray-400 size-4" />
               <Input
                 placeholder={t("search")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-8"
+                className="ps-8"
               />
             </div>
           </div>

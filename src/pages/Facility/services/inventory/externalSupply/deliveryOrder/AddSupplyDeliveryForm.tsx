@@ -286,7 +286,7 @@ export function AddSupplyDeliveryForm({
         className="min-w-[100px] text-xs font-semibold"
       >
         {field.label}
-        {field.required && <span className="text-red-500 ml-0.5">*</span>}
+        {field.required && <span className="text-red-500 ms-0.5">*</span>}
       </TableHead>
     ));
   const extensionHeadsAfter = (anchor: SupplyDeliveryFormAnchor) =>
@@ -1068,7 +1068,7 @@ export function AddSupplyDeliveryForm({
                               <TableRow className="divide-x divide-gray-200">
                                 <TableHead
                                   rowSpan={2}
-                                  className="sticky left-0 z-20 border-r border-gray-200 bg-gray-100 text-xs font-semibold shadow-[1px_0_0_0_var(--color-gray-300)]"
+                                  className="sticky start-0 z-20 border-e border-gray-200 bg-gray-100 text-xs font-semibold shadow-[1px_0_0_0_var(--color-gray-300)]"
                                 >
                                   {t("product")}
                                 </TableHead>
@@ -1141,7 +1141,7 @@ export function AddSupplyDeliveryForm({
                                 )}
                                 <TableHead
                                   rowSpan={2}
-                                  className="sm:sticky sm:right-0 z-20 border-l bg-gray-100 text-xs font-semibold"
+                                  className="sm:sticky sm:end-0 z-20 border-s bg-gray-100 text-xs font-semibold"
                                 >
                                   {t("actions")}
                                 </TableHead>
@@ -1161,7 +1161,7 @@ export function AddSupplyDeliveryForm({
                                 <TableHead className="min-w-[100px] text-xs font-semibold">
                                   {t("pr")}
                                 </TableHead>
-                                <TableHead className="min-w-[120px] text-xs font-semibold border-r">
+                                <TableHead className="min-w-[120px] text-xs font-semibold border-e">
                                   {t("tpr")}
                                 </TableHead>
                               </TableRow>
@@ -1368,7 +1368,7 @@ export function AddSupplyDeliveryForm({
                     onClick={() => handleAddAnotherItem()}
                     disabled={disableAddItem}
                   >
-                    <PlusCircle className="mr-2 size-4" />
+                    <PlusCircle className="me-2 size-4" />
                     {t("add_item")}
                     <ShortcutBadge actionId="add-item" />
                   </Button>

@@ -114,7 +114,7 @@ export default function UserAvatar({ username }: { username: string }) {
           <Button
             variant="outline"
             size="icon"
-            className="absolute -bottom-1.5 -right-1.5 size-9 bg-background"
+            className="absolute -bottom-1.5 -end-1.5 size-9 bg-background"
             onClick={() => setEditAvatar(true)}
             type="button"
             id="change-avatar"

@@ -108,7 +108,7 @@ function CommandDialog({
     <Drawer open={open} onOpenChange={onOpenChange}>
       {trigger && <DrawerTrigger asChild>{trigger}</DrawerTrigger>}
       <DrawerContent height="fixed" className={cn("p-1.5", className)}>
-        <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+        <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
           <DrawerTitle>{resolvedTitle}</DrawerTitle>
           <DrawerDescription className="sr-only">
             {resolvedDescription}
@@ -256,7 +256,7 @@ function CommandItem({
       {...props}
     >
       {children}
-      <CheckIcon className="ml-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
+      <CheckIcon className="ms-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
     </CommandPrimitive.Item>
   );
 }
@@ -269,7 +269,7 @@ function CommandShortcut({
     <span
       data-slot="command-shortcut"
       className={cn(
-        "text-muted-foreground group-data-[selected=true]/command-item:text-foreground ml-auto text-xs tracking-widest",
+        "text-muted-foreground group-data-[selected=true]/command-item:text-foreground ms-auto text-xs tracking-widest",
         className,
       )}
       {...props}

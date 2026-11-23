@@ -114,7 +114,7 @@ export default function LinkUserSheet({
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="primary_gradient">
-          <CareIcon icon="l-plus" className="mr-2 size-4" />
+          <CareIcon icon="l-plus" className="me-2 size-4" />
           {isServiceAccount ? t("link_service_account") : t("link_user")}
         </Button>
       </SheetTrigger>

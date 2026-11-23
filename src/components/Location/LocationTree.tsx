@@ -36,7 +36,7 @@ export function LocationNode({
     return (
       <div className="flex flex-col gap-2">
         <div className="flex items-center text-sm">
-          <span className="size-2 rounded-full bg-gray-400 mr-2" />
+          <span className="size-2 rounded-full bg-gray-400 me-2" />
           {isLast ? (
             <Badge variant="blue">
               <Circle className="size-3.5" strokeWidth={2} />
@@ -48,7 +48,7 @@ export function LocationNode({
         </div>
         {children}
         {isLast && (startTime || endTime) && (
-          <div className="pl-6 text-sm font-normal text-gray-700 italic">
+          <div className="ps-6 text-sm font-normal text-gray-700 italic">
             {[
               startTime && format(new Date(startTime), "MMM d, yyyy h:mm a"),
               endTime && format(new Date(endTime), "MMM d, yyyy h:mm a"),
@@ -68,10 +68,10 @@ export function LocationNode({
       startTime={startTime}
       endTime={endTime}
     >
-      <div className="flex flex-col gap-2 ml-2">
+      <div className="flex flex-col gap-2 ms-2">
         <div className="flex items-center text-sm">
-          <div className="relative border-l border-b border-gray-400 rounded-bl-sm size-2 -mt-1.5 mr-2">
-            <div className="absolute -bottom-0.75 -right-0.75 size-1.5 bg-gray-400 rounded-full" />
+          <div className="relative border-s border-b border-gray-400 rounded-es-sm size-2 -mt-1.5 me-2">
+            <div className="absolute -bottom-0.75 -end-0.75 size-1.5 bg-gray-400 rounded-full" />
           </div>
           {isLast ? (
             <Badge variant="sky">
@@ -84,7 +84,7 @@ export function LocationNode({
         </div>
         {children}
         {isLast && (startTime || endTime) && (
-          <div className="pl-6 text-sm font-normal text-gray-700 italic">
+          <div className="ps-6 text-sm font-normal text-gray-700 italic">
             {[
               startTime && format(new Date(startTime), "MMM d, yyyy h:mm a"),
               endTime && format(new Date(endTime), "MMM d, yyyy h:mm a"),
@@ -123,10 +123,10 @@ export function LocationTree({
 
   return (
     <div
-      className={`relative flex ${showTimeline ? "gap-8 pl-12" : ""}  pt-0.5`}
+      className={`relative flex ${showTimeline ? "gap-8 ps-12" : ""}  pt-0.5`}
     >
       {showTimeline && (
-        <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
+        <div className="absolute start-0 top-0 bottom-0 flex flex-col items-center">
           <div
             className={`absolute w-px bg-gray-200 h-full ${isLatest ? "top-3" : "-top-3"}`}
           />

@@ -72,7 +72,7 @@ function TagConfigCard({
               <Badge variant="secondary">{t(config.category)}</Badge>
               {config.has_children && (
                 <Badge variant="blue">
-                  <CareIcon icon="l-sitemap" className="size-3 mr-1" />
+                  <CareIcon icon="l-sitemap" className="size-3 me-1" />
                   {t("has_children")}
                 </Badge>
               )}
@@ -254,7 +254,7 @@ export default function TagConfigTable({
                     <TableCell>
                       {config.has_children && (
                         <Badge variant="blue">
-                          <CareIcon icon="l-sitemap" className="size-3 mr-1" />
+                          <CareIcon icon="l-sitemap" className="size-3 me-1" />
                           {t("yes")}
                         </Badge>
                       )}

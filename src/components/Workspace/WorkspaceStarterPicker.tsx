@@ -44,7 +44,7 @@ export function WorkspaceStarterPicker<T>({
             aria-label={t(starter.titleKey)}
             onClick={() => onPick(starter)}
             className={cn(
-              "h-auto min-h-28 flex-col items-start justify-start gap-2 p-4 text-left whitespace-normal shadow-none hover:border-primary-400 hover:bg-primary-50/40",
+              "h-auto min-h-28 flex-col items-start justify-start gap-2 p-4 text-start whitespace-normal shadow-none hover:border-primary-400 hover:bg-primary-50/40",
               starter.recommended && "border-primary-200 bg-primary-50/30",
             )}
           >

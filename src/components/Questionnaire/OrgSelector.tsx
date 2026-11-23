@@ -62,11 +62,11 @@ export function OrgSelector({
       type="button"
       variant="outline"
       className={cn(
-        "w-full justify-start text-left font-normal",
+        "w-full justify-start text-start font-normal",
         triggerClassName,
       )}
     >
-      <Building className="mr-2 size-4" />
+      <Building className="me-2 size-4" />
       <span>{title || t("search_organizations")}</span>
     </Button>
   );

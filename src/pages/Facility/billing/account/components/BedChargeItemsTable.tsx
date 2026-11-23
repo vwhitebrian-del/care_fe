@@ -68,7 +68,7 @@ function PriceComponentRow({ label, components }: PriceComponentRowProps) {
       {components.map((component, index) => {
         return (
           <TableRow key={`${label}-${index}`} className="text-xs text-gray-500">
-            <TableCell className="pl-12"></TableCell>
+            <TableCell className="ps-12"></TableCell>
             <TableCell>
               {component.code && `${component.code.display} `}({label})
             </TableCell>
@@ -163,7 +163,7 @@ function LocationGroupRow({
               }
               className=""
             >
-              <PlusIcon className="size-4 mr-2" />
+              <PlusIcon className="size-4 me-2" />
               {t("add_charge_items")}
             </Button>
           )}
@@ -431,7 +431,7 @@ function BedChargeItemsTable({
                               key={item.id}
                               className="border-b hover:bg-gray-50"
                             >
-                              <TableCell className="border-x p-3 text-gray-950 pl-6">
+                              <TableCell className="border-x p-3 text-gray-950 ps-6">
                                 <div className="flex items-center gap-2">
                                   <Button
                                     variant="ghost"
@@ -532,7 +532,7 @@ function BedChargeItemsTable({
                               key={`${item.id}-summary`}
                               className="bg-muted/30 font-medium border-b"
                             >
-                              <TableCell className="pl-12"></TableCell>
+                              <TableCell className="ps-12"></TableCell>
                               <TableCell className="text-gray-950">
                                 {t("total")}
                               </TableCell>

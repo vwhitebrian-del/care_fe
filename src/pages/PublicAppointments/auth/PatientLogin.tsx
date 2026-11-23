@@ -253,7 +253,7 @@ export default function PatientLogin({
               })
         }
       >
-        <CareIcon icon="l-arrow-left" className="size-4 mr-1" />
+        <CareIcon icon="l-arrow-left" className="size-4 me-1" />
         <span className="text-sm underline">{t("back")}</span>
       </Button>
       {page === "send" ? renderPhoneNumberForm() : renderVerifyForm()}

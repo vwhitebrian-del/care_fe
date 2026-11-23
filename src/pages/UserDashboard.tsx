@@ -124,7 +124,7 @@ export default function UserDashboard() {
                   className="size-16 md:size-20"
                 />
               </div>
-              <div className="min-w-0 space-y-2 text-center sm:text-left">
+              <div className="min-w-0 space-y-2 text-center sm:text-start">
                 <h1 className="text-xl/8 font-medium wrap-break-word text-gray-600">
                   <Trans
                     i18nKey={greeting}
@@ -399,13 +399,13 @@ const TabContent = ({
       </p>
       {tabItems.length > 1 && (
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+          <Search className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
           <Input
             placeholder={t("search")}
             aria-label={t("search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="bg-card pl-9"
+            className="bg-card ps-9"
           />
         </div>
       )}

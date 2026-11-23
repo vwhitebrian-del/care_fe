@@ -65,7 +65,7 @@ const FacilityDeleteDialog = ({
 
   const defaultTrigger = (
     <Button variant="destructive" size="sm" type="button">
-      <Trash2Icon className="mr-2 size-4" />
+      <Trash2Icon className="me-2 size-4" />
       {t("delete_facility")}
     </Button>
   );

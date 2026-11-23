@@ -391,7 +391,7 @@ export function LoadingAnimationSvg({ className }: { className?: string }) {
           })}
         </g>
       </svg>
-      <p className="pl-3 text-center text-xs font-medium tracking-widest text-gray-500 uppercase">
+      <p className="ps-3 text-center text-xs font-medium tracking-widest text-gray-500 uppercase">
         {t("loading_animation_text")}
         <span className="animate-blink opacity-0">.</span>
         <span className="animate-[blink_1.5s_0.2s_infinite] opacity-0">.</span>

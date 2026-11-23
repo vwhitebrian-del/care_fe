@@ -167,7 +167,7 @@ function DialogContent({
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute z-20 top-2 right-2"
+                className="absolute z-20 top-2 end-2"
               >
                 <XIcon />
                 <span className="sr-only">{t("close")}</span>
@@ -193,7 +193,7 @@ function DialogHeader({
     <div
       data-slot="dialog-header"
       className={cn(
-        "flex flex-col items-start justify-between gap-1.5 border-b pr-10 pb-4",
+        "flex flex-col items-start justify-between gap-1.5 border-b pe-10 pb-4",
         className,
       )}
       {...props}
@@ -205,7 +205,7 @@ function DialogHeader({
             <Button
               variant="ghost"
               size="icon"
-              className="-mt-1 -mr-1 shrink-0"
+              className="-mt-1 -me-1 shrink-0"
             >
               <XIcon />
               <span className="sr-only">{t("close")}</span>

@@ -259,7 +259,7 @@ export function ReferralDetailsPage({ referralId }: { referralId: string }) {
                                 {formatName(member)}
                               </span>
                               {role.display && (
-                                <span className="ml-1.5 text-muted-foreground">
+                                <span className="ms-1.5 text-muted-foreground">
                                   · {role.display}
                                 </span>
                               )}

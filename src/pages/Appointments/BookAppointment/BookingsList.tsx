@@ -192,7 +192,7 @@ const AppointmentTable = ({
 
   return (
     <Table className="border-separate border-spacing-y-2 border-spacing-x-0">
-      <TableHeader className="bg-gray-100 border border-gray-200  border-y border-l rounded-tl-md align-middle">
+      <TableHeader className="bg-gray-100 border border-gray-200  border-y border-s rounded-ss-md align-middle">
         <TableRow className="divide-x">
           <TableHead className="w-14 border-y bg-gray-100 text-gray-700 text-sm">
             {t("date")}

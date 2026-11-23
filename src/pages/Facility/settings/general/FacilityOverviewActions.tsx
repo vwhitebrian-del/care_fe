@@ -50,17 +50,17 @@ export function FacilityOverviewActions({
                   type="button"
                   variant="ghost"
                   disabled={disabled}
-                  className="w-full justify-start whitespace-normal text-left font-normal tracking-normal"
+                  className="w-full justify-start whitespace-normal text-start font-normal tracking-normal"
                 >
                   <FilePlus2 aria-hidden="true" />
                   {t("submit_forms")}
-                  <ChevronRight className="ml-auto size-4" aria-hidden="true" />
+                  <ChevronRight className="ms-auto size-4" aria-hidden="true" />
                 </Button>
               }
             />
             <Button
               variant="ghost"
-              className="w-full justify-start whitespace-normal text-left font-normal tracking-normal"
+              className="w-full justify-start whitespace-normal text-start font-normal tracking-normal"
               asChild
             >
               <Link
@@ -69,7 +69,7 @@ export function FacilityOverviewActions({
               >
                 <ClipboardList aria-hidden="true" />
                 {t("responses")}
-                <ChevronRight className="ml-auto size-4" aria-hidden="true" />
+                <ChevronRight className="ms-auto size-4" aria-hidden="true" />
               </Link>
             </Button>
           </CardContent>

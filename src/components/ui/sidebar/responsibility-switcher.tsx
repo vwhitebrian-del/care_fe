@@ -45,7 +45,7 @@ export function ResponsibilitySwitcher({ selectedResponsibilityId }: Props) {
         >
           {
             <>
-              <div className="grid min-w-0 flex-1 gap-0.5 text-left text-sm leading-tight">
+              <div className="grid min-w-0 flex-1 gap-0.5 text-start text-sm leading-tight">
                 <span className="truncate font-normal">
                   {selectedItem?.organization.name || t("responsibilities")}
                 </span>
@@ -55,7 +55,7 @@ export function ResponsibilitySwitcher({ selectedResponsibilityId }: Props) {
                   </span>
                 )}
               </div>
-              <ChevronsUpDown className="ml-auto size-3.5 shrink-0 opacity-60" />
+              <ChevronsUpDown className="ms-auto size-3.5 shrink-0 opacity-60" />
             </>
           }
         </Button>

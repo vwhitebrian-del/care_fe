@@ -283,7 +283,7 @@ export function QuestionnaireStudioPage({
         )}
 
         <div className="flex min-h-0 flex-1">
-          <aside className="order-1 hidden w-72 shrink-0 overflow-y-auto border-r border-gray-200 p-3 md:block">
+          <aside className="order-1 hidden w-72 shrink-0 overflow-y-auto border-e border-gray-200 p-3 md:block">
             <StudioOutline
               questions={state.questions}
               editing={editing}
@@ -309,7 +309,7 @@ export function QuestionnaireStudioPage({
               flex order-*): the type picker stays the first combobox on the
               editor surface regardless of what the canvas renders. */}
           {editing && (
-            <aside className="order-2 w-full min-w-0 space-y-4 overflow-y-auto p-3 md:flex-1 lg:order-3 lg:w-[400px] lg:flex-none lg:border-l lg:border-gray-200">
+            <aside className="order-2 w-full min-w-0 space-y-4 overflow-y-auto p-3 md:flex-1 lg:order-3 lg:w-[400px] lg:flex-none lg:border-s lg:border-gray-200">
               {panel === "actions" ? (
                 <ActionsPanel
                   subjectType={questionnaire.subject_type}

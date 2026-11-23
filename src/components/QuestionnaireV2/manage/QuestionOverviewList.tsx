@@ -169,7 +169,7 @@ export function QuestionOverviewList({
                       {question.text}
                     </span>
                   </div>
-                  <div className="mt-1 flex flex-wrap items-center gap-2 pl-6">
+                  <div className="mt-1 flex flex-wrap items-center gap-2 ps-6">
                     <QuestionTypeBadge
                       type={question.type}
                       structuredType={question.structured_type}
@@ -197,7 +197,7 @@ export function QuestionOverviewList({
                   </div>
 
                   {isExpanded && subQuestions.length > 0 && (
-                    <div className="mt-2 space-y-1 border-t border-gray-100 pl-4 pt-2">
+                    <div className="mt-2 space-y-1 border-t border-gray-100 ps-4 pt-2">
                       {subQuestions.map((child) => (
                         <p key={child.id} className="text-sm text-gray-600">
                           {child.text}

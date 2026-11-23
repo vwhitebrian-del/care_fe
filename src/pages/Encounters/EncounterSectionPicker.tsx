@@ -54,7 +54,7 @@ export function EncounterSectionPicker({
           render={
             <Button
               variant="outline"
-              className="h-auto min-h-[56px] w-full justify-start gap-3 px-3 py-2 text-left whitespace-normal"
+              className="h-auto min-h-[56px] w-full justify-start gap-3 px-3 py-2 text-start whitespace-normal"
               aria-label={t("encounter_section_current", {
                 section: currentSection.label,
               })}
@@ -83,7 +83,7 @@ export function EncounterSectionPicker({
           className="p-1.5"
         >
           <DrawerHeader className="border-b shadow-2xs" showCloseButton>
-            <DrawerTitle className="text-lg font-semibold pl-2">
+            <DrawerTitle className="text-lg font-semibold ps-2">
               {t("encounter_sections")}
             </DrawerTitle>
           </DrawerHeader>
@@ -103,7 +103,7 @@ export function EncounterSectionPicker({
                         variant="ghost"
                         aria-current={selected ? "page" : undefined}
                         className={cn(
-                          "h-auto min-h-[48px] w-full justify-start gap-3 px-3 py-3 text-left text-sm whitespace-normal",
+                          "h-auto min-h-[48px] w-full justify-start gap-3 px-3 py-3 text-start text-sm whitespace-normal",
                           selected && "bg-muted text-primary",
                         )}
                         onClick={() => onTabChange(key)}

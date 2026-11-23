@@ -258,7 +258,7 @@ export const PrintMedicationAdministration = (props: {
               variant="ghost"
               size="sm"
               className={cn(
-                "h-8 w-10 rounded-none border-r last:border-r-0 border-gray-300",
+                "h-8 w-10 rounded-none border-e last:border-e-0 border-gray-300",
                 slotsPerDay === num
                   ? "bg-primary-100 text-primary-700 font-semibold"
                   : "hover:bg-gray-100",

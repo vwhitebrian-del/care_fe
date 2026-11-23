@@ -81,7 +81,7 @@ const TimeSlotHeader: React.FC<TimeSlotHeaderProps> = ({
   return (
     <div className="h-14">
       {isFirstSlotOfDay && (
-        <div className="flex items-center h-full ml-2">
+        <div className="flex items-center h-full ms-2">
           <div className="flex flex-col items-center">
             <div className="text-sm font-medium">
               {format(slot.date, "dd MMM").toUpperCase()}
@@ -90,7 +90,7 @@ const TimeSlotHeader: React.FC<TimeSlotHeaderProps> = ({
               {format(slot.date, "EEE")}
             </div>
           </div>
-          <div className="flex-1 border-t border-dotted border-gray-300 ml-2" />
+          <div className="flex-1 border-t border-dotted border-gray-300 ms-2" />
         </div>
       )}
       {!isFirstSlotOfDay && !isLastSlotOfDay && (
@@ -99,8 +99,8 @@ const TimeSlotHeader: React.FC<TimeSlotHeaderProps> = ({
         </div>
       )}
       {isLastSlotOfDay && (
-        <div className="flex items-center h-full mr-2">
-          <div className="flex-1 border-t border-dotted border-gray-300 mr-2" />
+        <div className="flex items-center h-full me-2">
+          <div className="flex-1 border-t border-dotted border-gray-300 me-2" />
           <div className="flex flex-col items-center">
             <div className="text-sm font-medium">
               {format(slot.date, "dd MMM").toUpperCase()}
@@ -568,7 +568,7 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
                     <Button
                       variant="outline"
                       size="icon"
-                      className="size-8 text-gray-400 mr-2"
+                      className="size-8 text-gray-400 me-2"
                       onClick={handlePreviousSlot}
                       disabled={!canGoBack}
                       title={
@@ -603,9 +603,9 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
               </div>
 
               {/* Main content with borders */}
-              <div className="col-span-full grid grid-cols-subgrid border-l border-r border-gray-200">
+              <div className="col-span-full grid grid-cols-subgrid border-s border-e border-gray-200">
                 {/* Headers */}
-                <div className="p-4 font-medium text-sm border-t border-r border-gray-200 bg-gray-100 text-secondary-700">
+                <div className="p-4 font-medium text-sm border-t border-e border-gray-200 bg-gray-100 text-secondary-700">
                   {t("medicine")}:
                 </div>
                 {visibleSlots.map((slot, i) => {
@@ -620,8 +620,8 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
                     <div
                       key={`${format(slot.date, "yyyy-MM-dd")}-${slot.start}`}
                       className={cn(
-                        "p-4 font-semibold text-xs text-center border-t border-r border-gray-200 relative bg-gray-100 text-secondary-700",
-                        isLastSlotOfDay && "border-r-4 border-r-gray-200",
+                        "p-4 font-semibold text-xs text-center border-t border-e border-gray-200 relative bg-gray-100 text-secondary-700",
+                        isLastSlotOfDay && "border-e-4 border-e-gray-200",
                       )}
                     >
                       {i === endSlotIndex &&
@@ -746,7 +746,7 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
                 >
                   <CareIcon
                     icon={isMedication ? "l-syringe" : "l-utensils"}
-                    className="mr-2 size-4"
+                    className="me-2 size-4"
                   />
                   {isMedication ? t("administer_medicine") : t("record_intake")}
                 </Button>
@@ -764,7 +764,7 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
                     size="sm"
                     className="h-9"
                   >
-                    <CareIcon icon="l-file-medical-alt" className="mr-2" />
+                    <CareIcon icon="l-file-medical-alt" className="me-2" />
                     {isMedication
                       ? t("view_drug_chart")
                       : t("view_intake_chart")}

@@ -99,7 +99,7 @@ function DepartmentRow({
           userRole?.role.name || t("unassigned")
         )}
       </TableCell>
-      <TableCell className="text-right">
+      <TableCell className="text-end">
         {userRole && (
           <EditFacilityUserRoleSheet
             facilityId={facilityId}
@@ -151,7 +151,7 @@ export default function UserDepartmentsTab({ userData }: userChildProps) {
         <h3 className="text-lg font-semibold text-gray-900">
           {t("departments")}
           {data && (
-            <span className="ml-2 text-sm font-normal text-gray-500">
+            <span className="ms-2 text-sm font-normal text-gray-500">
               {data.count}
             </span>
           )}

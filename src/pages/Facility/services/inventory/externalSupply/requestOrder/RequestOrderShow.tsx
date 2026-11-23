@@ -238,7 +238,7 @@ export function RequestOrderShow({
                           className="w-full flex flex-row justify-stretch items-center"
                           disabled={isUpdating}
                         >
-                          <CareIcon icon="l-pause" className="mr-1" />
+                          <CareIcon icon="l-pause" className="me-1" />
                           {t("mark_as_draft")}
                         </Button>
                       </DropdownMenuItem>
@@ -254,7 +254,7 @@ export function RequestOrderShow({
                             className="w-full flex flex-row justify-stretch items-center"
                             disabled={isUpdating}
                           >
-                            <CareIcon icon="l-play" className="mr-1" />
+                            <CareIcon icon="l-play" className="me-1" />
                             {t("mark_as_completed")}
                           </Button>
                         </DropdownMenuItem>
@@ -270,7 +270,7 @@ export function RequestOrderShow({
                       >
                         <CareIcon
                           icon="l-exclamation-circle"
-                          className="mr-1"
+                          className="me-1"
                         />
                         <span>{t("mark_as_entered_in_error")}</span>
                       </Button>
@@ -284,7 +284,7 @@ export function RequestOrderShow({
                         disabled={isUpdating}
                         className="w-full flex flex-row justify-stretch items-center"
                       >
-                        <CareIcon icon="l-ban" className="mr-1" />
+                        <CareIcon icon="l-ban" className="me-1" />
                         {t("mark_as_abandoned")}
                       </Button>
                     </DropdownMenuItem>

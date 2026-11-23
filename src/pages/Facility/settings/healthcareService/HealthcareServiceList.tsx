@@ -65,12 +65,12 @@ export default function HealthcareServiceList({
             }
             className="w-full md:w-auto mt-2 md:mt-0"
           >
-            <CareIcon icon="l-plus" className="mr-2" />
+            <CareIcon icon="l-plus" className="me-2" />
             {t("add_healthcare_service")}
           </Button>
         </div>
         <div className=" relative w-full md:w-auto mb-6">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
             <CareIcon icon="l-search" className="size-5" />
           </span>
           <Input
@@ -79,7 +79,7 @@ export default function HealthcareServiceList({
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="w-full md:w-[300px] pl-10"
+            className="w-full md:w-[300px] ps-10"
           />
         </div>
 

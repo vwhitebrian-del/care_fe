@@ -200,12 +200,12 @@ export const DispenseLotSelector = ({
         {/* Search input */}
         <div className="p-2 border-b">
           <div className="relative ring-4 ring-gray-100 rounded-md">
-            <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 size-4" />
+            <SearchIcon className="absolute start-2 top-1/2 transform -translate-y-1/2 text-gray-500 size-4" />
             <Input
               placeholder={t("search_lot_batch")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-8"
+              className="ps-8"
             />
           </div>
         </div>
@@ -222,17 +222,17 @@ export const DispenseLotSelector = ({
             <table className="w-full">
               <thead className="sticky top-0 bg-gray-100 border-b border-gray-200">
                 <tr>
-                  <th className="p-2 text-left w-10"></th>
-                  <th className="p-2 text-left text-sm font-medium text-gray-600">
+                  <th className="p-2 text-start w-10"></th>
+                  <th className="p-2 text-start text-sm font-medium text-gray-600">
                     {t("lot_batch")}
                   </th>
-                  <th className="p-2 text-left text-sm font-medium text-gray-600">
+                  <th className="p-2 text-start text-sm font-medium text-gray-600">
                     {t("unit_price")}
                   </th>
-                  <th className="p-2 text-right text-sm font-medium text-gray-600">
+                  <th className="p-2 text-end text-sm font-medium text-gray-600">
                     {t("available_stock")}
                   </th>
-                  <th className="p-2 text-left text-sm font-medium text-gray-600">
+                  <th className="p-2 text-start text-sm font-medium text-gray-600">
                     {t("expiry")}
                   </th>
                 </tr>

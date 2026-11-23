@@ -148,7 +148,7 @@ export default function DeviceServiceHistory({
                   <TableHead className="h-10 text-sm font-medium text-neutral-950">
                     {t("service_notes")}
                   </TableHead>
-                  <TableHead className="h-10 px-4 text-right text-sm font-medium text-neutral-950">
+                  <TableHead className="h-10 px-4 text-end text-sm font-medium text-neutral-950">
                     {t("actions")}
                   </TableHead>
                 </TableRow>
@@ -172,7 +172,7 @@ export default function DeviceServiceHistory({
                         </ExpandableTextExpandButton>
                       </ExpandableText>
                     </TableCell>
-                    <TableCell className="px-4 text-right">
+                    <TableCell className="px-4 text-end">
                       <EditServiceHistorySheet
                         facilityId={facilityId}
                         deviceId={deviceId}

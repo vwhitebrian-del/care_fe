@@ -194,7 +194,7 @@ export default function TypstPrintPreview<TContent>({
                   tabIndex={-1}
                   onLoad={() => setLoadedUrl(url)}
                   // Chrome doesn't load PDFs in display:none frames.
-                  className="pointer-events-none fixed bottom-0 right-0 size-px opacity-0"
+                  className="pointer-events-none fixed bottom-0 end-0 size-px opacity-0"
                 />
               )}
             </>

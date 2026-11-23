@@ -155,7 +155,7 @@ export function EncounterNavItem({ facilityId }: { facilityId: string }) {
                   onClick={() => setSettingDefault(true)}
                 >
                   {t("set_default")}
-                  <ArrowRight className="ml-auto" />
+                  <ArrowRight className="ms-auto" />
                 </DropdownMenuItem>
               </>
             )}

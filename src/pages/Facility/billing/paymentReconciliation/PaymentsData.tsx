@@ -340,7 +340,7 @@ export default function PaymentsData({
             facilityId={facilityId}
           />
         </div>
-        <div className="w-full sm:ml-auto sm:w-auto sm:shrink-0">
+        <div className="w-full sm:ms-auto sm:w-auto sm:shrink-0">
           <Select
             value={qParams.ordering || ""}
             onValueChange={(value) => {
@@ -370,7 +370,7 @@ export default function PaymentsData({
             size="sm"
             onClick={() => setIsChangeAccountOpen(true)}
           >
-            <ArrowRightLeft className="size-4 mr-2" />
+            <ArrowRightLeft className="size-4 me-2" />
             {t("change_account")}
           </Button>
           <Button

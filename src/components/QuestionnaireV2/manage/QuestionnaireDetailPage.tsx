@@ -166,7 +166,7 @@ export function QuestionnaireDetailPage({
           <AlertDescription>{t("no_data_found")}</AlertDescription>
         </Alert>
         <Button variant="outline" onClick={() => goBack(scope.basePath)}>
-          <ArrowLeft className="mr-2 size-4" />
+          <ArrowLeft className="me-2 size-4" />
           {t("back")}
         </Button>
       </div>
@@ -258,7 +258,7 @@ export function QuestionnaireDetailPage({
                   </Button>
                   {canWrite && (
                     <Button type="submit" disabled={isPending || !dirty}>
-                      <Check className="mr-2 size-4" />
+                      <Check className="me-2 size-4" />
                       {t("save_form")}
                     </Button>
                   )}

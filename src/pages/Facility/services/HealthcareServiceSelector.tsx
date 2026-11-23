@@ -111,7 +111,7 @@ export const HealthcareServiceSelector = ({
       ) : (
         <span className="text-gray-400">{t("select_healthcare_service")}</span>
       )}
-      <CaretDownIcon className="ml-auto" />
+      <CaretDownIcon className="ms-auto" />
     </Button>
   );
 
@@ -182,7 +182,7 @@ export const HealthcareServiceSelector = ({
                   )}
                 </div>
                 {selected?.id === service.id && (
-                  <CheckIcon className="ml-auto" />
+                  <CheckIcon className="ms-auto" />
                 )}
               </div>
             </CommandItem>

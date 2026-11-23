@@ -163,14 +163,14 @@ export default function AddChargeItemSheet({
         <SheetBody className="pt-0">
           <div className="sticky top-0 z-10 flex flex-col sm:flex-row gap-2 py-4 justify-between bg-background">
             <div className="relative">
-              <SearchIcon className="size-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <SearchIcon className="size-4 absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
               <Input
                 placeholder={t("search_charge_items")}
                 value={qParams.search || ""}
                 onChange={(e) =>
                   updateQuery({ search: e.target.value || undefined })
                 }
-                className="w-full sm:w-auto pl-10"
+                className="w-full sm:w-auto ps-10"
               />
             </div>
             <Button

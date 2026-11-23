@@ -51,7 +51,7 @@ export const Updates = (props: PatientProps) => {
                   : `/patient/${patientId}/questionnaire`
               }
             >
-              <CareIcon icon="l-plus" className="mr-2" />
+              <CareIcon icon="l-plus" className="me-2" />
               {t("add_patient_updates")}
             </HrefLink>
           </Button>

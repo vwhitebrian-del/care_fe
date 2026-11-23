@@ -78,7 +78,7 @@ function ConnectionCard({
           </Link>
           {canManageOrganization && (
             <>
-              <span className="ml-2 h-7 w-px bg-gray-300" />
+              <span className="ms-2 h-7 w-px bg-gray-300" />
               <Button
                 variant="ghost"
                 size="icon"
@@ -130,7 +130,7 @@ function EmptyHint({ children }: { children: ReactNode }) {
 function DotSeparator() {
   return (
     <div
-      className="sm:ml-9 h-4 overflow-hidden"
+      className="sm:ms-9 h-4 overflow-hidden"
       style={{
         backgroundImage:
           "radial-gradient(circle, #cbd5e1 0.5px, transparent 1.2px), radial-gradient(circle, #cbd5e1 0.5px, transparent 1.2px)",
@@ -342,7 +342,7 @@ export default function RoleOrganizationConnections({ organization }: Props) {
           </div>
         </div>
 
-        <div className="space-y-2 sm:pl-9">
+        <div className="space-y-2 sm:ps-9">
           {isLoadingManagedOrganizations ? (
             <div className="flex items-center gap-2 py-3 text-sm text-gray-400">
               <Loader2 className="size-4 animate-spin" />
@@ -416,7 +416,7 @@ export default function RoleOrganizationConnections({ organization }: Props) {
           </div>
         </div>
 
-        <div className="space-y-2 sm:pl-9">
+        <div className="space-y-2 sm:ps-9">
           {currentManagingOrganizations.length > 0 ? (
             currentManagingOrganizations.map((managingOrganization) => (
               <ConnectionCard
@@ -478,7 +478,7 @@ export default function RoleOrganizationConnections({ organization }: Props) {
               block: "start",
             })
           }
-          className="sticky inset-x-0 bottom-0 z-10 -mx-5 flex w-[calc(100%+2.5rem)] items-center justify-between gap-3 border-t border-gray-200 bg-white/95 px-5 py-2.5 text-left text-sm font-medium text-gray-700 backdrop-blur-sm hover:text-gray-900"
+          className="sticky inset-x-0 bottom-0 z-10 -mx-5 flex w-[calc(100%+2.5rem)] items-center justify-between gap-3 border-t border-gray-200 bg-white/95 px-5 py-2.5 text-start text-sm font-medium text-gray-700 backdrop-blur-sm hover:text-gray-900"
         >
           <span className="flex min-w-0 items-center gap-3">
             <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-100 text-blue-700">

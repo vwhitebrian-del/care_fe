@@ -456,7 +456,7 @@ export function EditInvoiceTable({
                             className="h-6 px-2 text-xs"
                           >
                             {t("apply_to_all")}
-                            <ChevronDown className="h-3 w-3 ml-1" />
+                            <ChevronDown className="h-3 w-3 ms-1" />
                           </Button>
                         }
                         contentAlign="center"
@@ -484,7 +484,7 @@ export function EditInvoiceTable({
                               className="h-6 px-2 text-xs"
                             >
                               {t("apply_to_all")}
-                              <ChevronDown className="h-3 w-3 ml-1" />
+                              <ChevronDown className="h-3 w-3 ms-1" />
                             </Button>
                           </DropdownMenuTrigger>
                           <DropdownMenuContent align="end">
@@ -585,7 +585,7 @@ export function EditInvoiceTable({
                           )}
                         />
                       </TableCell>
-                      <TableCell className="border-r border-gray-200 font-medium text-gray-950 text-sm ">
+                      <TableCell className="border-e border-gray-200 font-medium text-gray-950 text-sm ">
                         {(() => {
                           const hasAppliedDiscounts =
                             item.discounts && item.discounts.length > 0;
@@ -836,7 +836,7 @@ export function EditInvoiceTable({
                                   onClick={() => handleAddDiscount(index)}
                                   disabled={hasEmptyRow || !canEditRow}
                                 >
-                                  <Plus className="h-4 w-4 mr-2" />
+                                  <Plus className="h-4 w-4 me-2" />
                                   {t("add_discount")}
                                 </Button>
                               )}

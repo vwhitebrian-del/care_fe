@@ -72,7 +72,7 @@ export function WorkspaceHeader({
         )}
       </div>
       {onSearch && (
-        <div className="ml-auto flex shrink-0 items-center">
+        <div className="ms-auto flex shrink-0 items-center">
           <Button
             variant="ghost"
             size="icon"
@@ -94,7 +94,7 @@ export function WorkspaceHeader({
               className="h-full min-w-0 w-full justify-start gap-2 rounded-[inherit] border-0 px-2 text-muted-foreground font-normal shadow-none"
             >
               <Search className="size-4" aria-hidden="true" />
-              <span className="min-w-0 flex-1 truncate text-left">
+              <span className="min-w-0 flex-1 truncate text-start">
                 {t("search")}
               </span>
               <ShortcutBadge actionId="show-shortcuts" />

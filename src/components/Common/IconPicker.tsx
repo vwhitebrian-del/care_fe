@@ -65,7 +65,7 @@ export default function IconPicker({ value, onChange }: IconPickerProps) {
           t("select_icon")
         )}
       </div>
-      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+      <ChevronsUpDown className="ms-2 h-4 w-4 shrink-0 opacity-50" />
     </Button>
   );
 
@@ -94,7 +94,7 @@ export default function IconPicker({ value, onChange }: IconPickerProps) {
                 <span>{iconName}</span>
               </div>
               {value === iconName && (
-                <Check className="ml-auto h-4 w-4 opacity-100" />
+                <Check className="ms-auto h-4 w-4 opacity-100" />
               )}
             </CommandItem>
           ))}

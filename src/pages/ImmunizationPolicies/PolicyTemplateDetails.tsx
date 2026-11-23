@@ -33,7 +33,7 @@ export function PolicyTemplateDetails({
           aria-hidden="true"
         />
         {t("immunization_additional_details")}
-        <span className="ml-auto text-xs font-normal text-gray-400">
+        <span className="ms-auto text-xs font-normal text-gray-400">
           {t("optional")}
         </span>
       </summary>

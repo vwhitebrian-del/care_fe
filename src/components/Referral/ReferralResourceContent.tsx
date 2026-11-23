@@ -94,7 +94,7 @@ export function ReferralResourceContent({
         <div className="space-y-4">
           {(hasStructuredAnswers(response.responses) ||
             Object.keys(response.structured_responses ?? {}).length > 0) && (
-            <p className="border-l-2 border-border pl-3 text-sm text-muted-foreground">
+            <p className="border-s-2 border-border ps-3 text-sm text-muted-foreground">
               {t("referral_structured_response_notice")}
             </p>
           )}

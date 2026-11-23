@@ -219,8 +219,8 @@ function ServiceRequestForm({
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
       <div className="rounded-lg border border-gray-200 bg-white shadow-sm relative">
-        <div className="absolute left-0 top-4 w-1 h-4 bg-purple-500 rounded-r-full" />
-        <CollapsibleTrigger className="flex flex-col gap-3 w-full items-start text-left p-2 pl-6 hover:bg-gray-50 cursor-pointer">
+        <div className="absolute start-0 top-4 w-1 h-4 bg-purple-500 rounded-e-full" />
+        <CollapsibleTrigger className="flex flex-col gap-3 w-full items-start text-start p-2 ps-6 hover:bg-gray-50 cursor-pointer">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between w-full">
             <div className="flex items-center gap-2 flex-1 min-w-0">
               <p className="text-sm font-semibold text-gray-900">
@@ -1006,7 +1006,7 @@ export function ServiceRequestQuestion({
         </div>
         {serviceRequests.length > 1 && (
           <div className="flex items-center gap-2 border border-gray-400 rounded-md">
-            <span className="text-xs font-medium text-gray-800 whitespace-nowrap pl-3">
+            <span className="text-xs font-medium text-gray-800 whitespace-nowrap ps-3">
               {t("requester")}:
             </span>
             <UserSelector

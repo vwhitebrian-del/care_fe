@@ -90,7 +90,7 @@ function TreeViewItem({
                 e.stopPropagation();
                 setExpanded(!expanded);
               }}
-              className="w-12 justify-center -mr-2"
+              className="w-12 justify-center -me-2"
             >
               <ChevronRight
                 className={cn("transition-transform", expanded && "rotate-90")}

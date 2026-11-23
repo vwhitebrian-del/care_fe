@@ -130,14 +130,14 @@ export function QuestionnaireListPage({
         </RadioGroup>
 
         <div className="relative w-full md:w-[300px]">
-          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
+          <Search className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
           <Input
             placeholder={t("search_questionnaires")}
             value={qParams.search || ""}
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="w-full pl-9"
+            className="w-full ps-9"
           />
         </div>
 
@@ -150,13 +150,13 @@ export function QuestionnaireListPage({
         />
 
         {canWriteQuestionnaire && (
-          <div className="flex w-full flex-wrap gap-2 md:ml-auto md:w-auto">
+          <div className="flex w-full flex-wrap gap-2 md:ms-auto md:w-auto">
             <Button variant="outline" onClick={() => setImportOpen(true)}>
               <Upload className="size-4" />
               {t("import_questionnaire")}
             </Button>
             <Button onClick={() => navigate({ href: `${scope.basePath}/new` })}>
-              <Plus className="mr-2 size-4" />
+              <Plus className="me-2 size-4" />
               {t("create_questionnaire")}
             </Button>
           </div>
@@ -175,7 +175,7 @@ export function QuestionnaireListPage({
               <Button
                 onClick={() => navigate({ href: `${scope.basePath}/new` })}
               >
-                <Plus className="mr-2 size-4" />
+                <Plus className="me-2 size-4" />
                 {t("create_questionnaire")}
               </Button>
             ) : undefined
@@ -241,7 +241,7 @@ export function QuestionnaireListPage({
                           });
                         }}
                       >
-                        <Eye className="mr-1 size-4" />
+                        <Eye className="me-1 size-4" />
                         {t("see_details")}
                       </Button>
                     </div>
@@ -260,7 +260,7 @@ export function QuestionnaireListPage({
               key={questionnaire.id}
               variant="outline"
               asChild
-              className="h-auto block rounded-lg p-4 text-left whitespace-normal"
+              className="h-auto block rounded-lg p-4 text-start whitespace-normal"
             >
               <HrefLink href={`${scope.basePath}/${questionnaire.id}`}>
                 <p className="font-medium">{questionnaire.title}</p>

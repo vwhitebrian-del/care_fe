@@ -823,13 +823,13 @@ export function ChargeItemDefinitionForm({
             {isPending ? (
               <>
                 <Spinner
-                  className={`${minimal ? "mr-1" : "mr-2"} size-4 animate-spin`}
+                  className={`${minimal ? "me-1" : "me-2"} size-4 animate-spin`}
                 />
                 {t("saving")}
               </>
             ) : (
               <>
-                <CheckIcon className={`${minimal ? "mr-1" : "mr-2"} size-4`} />
+                <CheckIcon className={`${minimal ? "me-1" : "me-2"} size-4`} />
                 {isUpdate ? t("update") : t("create")}
               </>
             )}

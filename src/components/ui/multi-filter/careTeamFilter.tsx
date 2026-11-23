@@ -126,7 +126,7 @@ function CareTeamFilterDropdown({
                     <span className="text-sm truncate">
                       {formatName(user)}
                       {user.id === currentUser.id && (
-                        <span className="text-xs text-gray-500 ml-1">
+                        <span className="text-xs text-gray-500 ms-1">
                           ({t("me")})
                         </span>
                       )}
@@ -196,7 +196,7 @@ function CareTeamFilterDropdown({
                       <span className="text-sm truncate">
                         {formatName(user)}
                         {user.id === currentUser.id && (
-                          <span className="text-xs text-gray-500 ml-1">
+                          <span className="text-xs text-gray-500 ms-1">
                             ({t("me")})
                           </span>
                         )}

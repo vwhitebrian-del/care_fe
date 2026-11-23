@@ -76,7 +76,7 @@ export function RecordItem<T>({
   return (
     <>
       <TableRow className="border-0">
-        <TableCell className="border-0 bg-transparent p-2 w-12 [&:has([role=checkbox])]:pr-2">
+        <TableCell className="border-0 bg-transparent p-2 w-12 [&:has([role=checkbox])]:pe-2">
           <Checkbox
             checked={isSelected}
             onCheckedChange={handleToggle}
@@ -98,8 +98,8 @@ export function RecordItem<T>({
               key={field.key}
               className={cn(
                 "p-2 text-sm whitespace-pre-wrap border border-gray-200",
-                "nth-2:rounded-l-md",
-                "nth-last-1:rounded-r-md",
+                "nth-2:rounded-s-md",
+                "nth-last-1:rounded-e-md",
                 isHighlightedUser
                   ? "bg-emerald-100!"
                   : "bg-white even:bg-gray-100",
@@ -112,7 +112,7 @@ export function RecordItem<T>({
 
         <TableCell
           className={
-            "p-2 text-sm border border-gray-200 bg-white even:bg-gray-100 nth-last-1:rounded-r-md"
+            "p-2 text-sm border border-gray-200 bg-white even:bg-gray-100 nth-last-1:rounded-e-md"
           }
         >
           {hasAdditionalInfo && (

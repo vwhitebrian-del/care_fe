@@ -58,7 +58,7 @@ export const LoginHeader = () => {
                 className="text-red-600 focus:text-red-600 cursor-pointer"
                 onClick={signOut}
               >
-                <CareIcon icon="l-signout" className="mr-2 size-4" />
+                <CareIcon icon="l-signout" className="me-2 size-4" />
                 {t("sign_out")}
               </DropdownMenuItem>
             </DropdownMenuContent>

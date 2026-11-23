@@ -152,8 +152,8 @@ const PrescriptionCard = ({
   return (
     <>
       {/* Header */}
-      <div className="relative flex justify-between col-start-1 col-span-5 bg-white pt-4 pr-2 pb-2 pl-4">
-        <div className="absolute top-5 left-0 h-4 w-1 bg-indigo-500 rounded-r-md" />
+      <div className="relative flex justify-between col-start-1 col-span-5 bg-white pt-4 pe-2 pb-2 ps-4">
+        <div className="absolute top-5 start-0 h-4 w-1 bg-indigo-500 rounded-e-md" />
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-0.5">
             <div className="text-base text-gray-950">

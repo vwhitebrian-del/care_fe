@@ -80,7 +80,7 @@ export function EncounterActions({ encounter }: EncounterActionsProps) {
           disabled={isRestarting}
           className="cursor-pointer"
         >
-          <RotateCcw className="mr-2 size-4" />
+          <RotateCcw className="me-2 size-4" />
           {t("restart_encounter")}
         </DropdownMenuItem>
       </DropdownMenuContent>

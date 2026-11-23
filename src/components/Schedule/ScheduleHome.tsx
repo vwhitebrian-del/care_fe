@@ -157,7 +157,7 @@ export function ScheduleHome({ resourceType, resourceId, facilityId }: Props) {
                   {unavailableExceptions.length > 0 && (
                     <div
                       className={cn(
-                        "absolute top-0 left-0 right-0 z-10",
+                        "absolute top-0 start-0 end-0 z-10",
                         isFullDayUnavailable ? "h-full" : "h-1/4",
                       )}
                       style={diagonalStripes}
@@ -242,7 +242,7 @@ export function ScheduleHome({ resourceType, resourceId, facilityId }: Props) {
         </div>
 
         <div>
-          <ScrollArea className="max-h-[calc(100vh-18rem)] overflow-auto -mr-3 pr-3 pb-4">
+          <ScrollArea className="max-h-[calc(100vh-18rem)] overflow-auto -me-3 pe-3 pb-4">
             {view === "schedule" && (
               <ScheduleTemplates
                 facilityId={facilityId}
@@ -365,13 +365,13 @@ function DayDetailsPopover({
           <div key={template.id}>
             <div className="flex items-center">
               <ColoredIndicator
-                className="mr-2 size-3 rounded"
+                className="me-2 size-3 rounded"
                 id={template.id}
               />
               <h3 className="text-lg font-semibold">{template.name}</h3>
             </div>
 
-            <div className="pl-5 py-2 space-y-4">
+            <div className="ps-5 py-2 space-y-4">
               {template.availabilities.map((availability) => (
                 <ScheduleTemplateAvailabilityItem
                   key={availability.id}
@@ -389,7 +389,7 @@ function DayDetailsPopover({
             {unavailableExceptions.map((exception) => (
               <div key={exception.id} className="flex items-start">
                 <div
-                  className="mr-2 mt-1 w-3 h-8 rounded bg-yellow-200"
+                  className="me-2 mt-1 w-3 h-8 rounded bg-yellow-200"
                   style={diagonalStripes}
                 />
                 <div>

@@ -250,7 +250,7 @@ export const FilesPage = ({
             onChange={(is_archived) => updateQuery({ is_archived })}
           />
           {canEdit && (
-            <div className="ml-auto">
+            <div className="ms-auto">
               <FileUploadDropdown fileUpload={fileUpload} />
             </div>
           )}
@@ -287,7 +287,7 @@ export const FilesPage = ({
             <Table className="table-fixed">
               <TableHeader>
                 <TableRow>
-                  <TableHead className="pl-4">{t("file_name")}</TableHead>
+                  <TableHead className="ps-4">{t("file_name")}</TableHead>
                   <TableHead className="hidden w-[14%] px-4 md:table-cell">
                     {t("file_type")}
                   </TableHead>
@@ -297,7 +297,7 @@ export const FilesPage = ({
                   <TableHead className="hidden w-[14%] px-4 md:table-cell">
                     {t("date")}
                   </TableHead>
-                  <TableHead className="w-14 pr-4 text-right md:w-40">
+                  <TableHead className="w-14 pe-4 text-end md:w-40">
                     <span className="sr-only">{t("actions")}</span>
                   </TableHead>
                 </TableRow>
@@ -339,7 +339,7 @@ export const FilesPage = ({
                         file.is_archived && "bg-muted/30",
                       )}
                     >
-                      <TableCell className="relative py-3 pl-4">
+                      <TableCell className="relative py-3 ps-4">
                         {openFile && (
                           <button
                             type="button"
@@ -419,7 +419,7 @@ export const FilesPage = ({
                           </span>
                         </TooltipComponent>
                       </TableCell>
-                      <TableCell className="pr-4 text-right">
+                      <TableCell className="pe-4 text-end">
                         <FileRowActions
                           file={file}
                           canEdit={canEdit}

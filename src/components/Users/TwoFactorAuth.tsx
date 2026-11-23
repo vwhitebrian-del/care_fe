@@ -174,14 +174,14 @@ export const TwoFactorAuth = ({ userData }: userChildProps) => {
               <Button
                 onClick={handleSetup}
                 variant="outline"
-                className="w-fit max-w-full whitespace-normal text-left"
+                className="w-fit max-w-full whitespace-normal text-start"
                 disabled={isSettingUp}
               >
                 {isSettingUp ? (
                   <>
                     <CareIcon
                       icon="l-spinner"
-                      className="mr-2 size-4 animate-spin"
+                      className="me-2 size-4 animate-spin"
                     />
                   </>
                 ) : (
@@ -205,13 +205,13 @@ export const TwoFactorAuth = ({ userData }: userChildProps) => {
                     <>
                       <CareIcon
                         icon="l-spinner"
-                        className="mr-2 size-4 animate-spin"
+                        className="me-2 size-4 animate-spin"
                       />
                       <span>{t("regenerating")}</span>
                     </>
                   ) : (
                     <>
-                      <CareIcon icon="l-refresh" className="mr-2 size-4" />
+                      <CareIcon icon="l-refresh" className="me-2 size-4" />
                       {t("two_factor_authentication_regenerating_codes")}
                     </>
                   )}
@@ -221,7 +221,7 @@ export const TwoFactorAuth = ({ userData }: userChildProps) => {
                   onClick={() => openDisableDialog()}
                   className="hover:bg-red-600 w-auto"
                 >
-                  <CareIcon icon="l-shield" className="mr-2 size-4" />
+                  <CareIcon icon="l-shield" className="me-2 size-4" />
                   {t("two_factor_authentication_disable")}
                 </Button>
               </div>

@@ -45,7 +45,7 @@ export function CollapsibleSettingsCard({
               type="button"
               variant="ghost"
               aria-label={title}
-              className="h-auto w-full min-w-0 justify-between whitespace-normal rounded-none p-4 text-left font-normal"
+              className="h-auto w-full min-w-0 justify-between whitespace-normal rounded-none p-4 text-start font-normal"
             >
               <span className="min-w-0">
                 <span className="block text-sm font-semibold text-gray-900">
@@ -61,7 +61,7 @@ export function CollapsibleSettingsCard({
             </Button>
           </CollapsibleTrigger>
         </h4>
-        {badge && <div className="shrink-0 pr-4">{badge}</div>}
+        {badge && <div className="shrink-0 pe-4">{badge}</div>}
       </div>
       <CollapsibleContent className="border-t border-gray-100 p-4">
         {children}

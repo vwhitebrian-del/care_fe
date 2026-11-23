@@ -59,7 +59,7 @@ function renderAnswers(
         {result.sub_results?.map((group, groupIndex) => (
           <div
             key={groupIndex}
-            className="space-y-4 border-l-2 border-border pl-4"
+            className="space-y-4 border-s-2 border-border ps-4"
           >
             {renderAnswers(group, questions, t)}
           </div>

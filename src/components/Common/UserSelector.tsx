@@ -141,7 +141,7 @@ function UserCommandContent({
                     {user.username}
                   </span>
                 </div>
-                {selectedId === user.id && <CheckIcon className="ml-auto" />}
+                {selectedId === user.id && <CheckIcon className="ms-auto" />}
               </div>
             </CommandItem>
           ))}
@@ -244,7 +244,7 @@ export default function UserSelector({
         ) : (
           <span>{placeholder || t("select_user")}</span>
         )}
-        <CaretDownIcon className="ml-auto" />
+        <CaretDownIcon className="ms-auto" />
       </Button>
     );
 
@@ -255,7 +255,7 @@ export default function UserSelector({
           {renderTriggerButton()}
         </DrawerTrigger>
         <DrawerContent height="fixed" className="p-1.5">
-          <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+          <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
             <DrawerTitle>
               {dialogTitle || placeholder || t("select_user")}
             </DrawerTitle>

@@ -81,7 +81,7 @@ export function ServiceSwitcher() {
             }}
             className={cn(
               "gap-1.5 text-muted-foreground",
-              !isCollapsed && "-ml-2 px-2",
+              !isCollapsed && "-ms-2 px-2",
             )}
             aria-label={t("home")}
             title={isCollapsed ? t("home") : undefined}
@@ -128,7 +128,7 @@ export function ServiceSwitcher() {
                     <span className="text-xs text-muted-foreground">
                       {t("current_service")}
                     </span>
-                    <span className="max-w-full truncate text-left text-sm font-medium">
+                    <span className="max-w-full truncate text-start text-sm font-medium">
                       {selectedService?.name ?? t("select_healthcare_service")}
                     </span>
                   </div>
@@ -245,7 +245,7 @@ export function ServiceSelectorDialog({
                 {isLoading ? (
                   <div className="flex items-center justify-center py-6">
                     <Spinner className="h-4 w-4 animate-spin text-gray-500" />
-                    <span className="ml-2 text-sm text-gray-500">
+                    <span className="ms-2 text-sm text-gray-500">
                       {t("loading")}
                     </span>
                   </div>
@@ -295,7 +295,7 @@ function ServiceCommandItem({
     >
       <span>{service.name}</span>
       <div>
-        <Button variant="white" size="xs" className="p-2 mr-4 w-full shadow">
+        <Button variant="white" size="xs" className="p-2 me-4 w-full shadow">
           <CareIcon icon="l-corner-down-left" />
           {t("select")}
         </Button>

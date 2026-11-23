@@ -95,7 +95,7 @@ export function VitalsCodePicker({
             {value.map((code) => (
               <li
                 key={`${code.system}|${code.code}`}
-                className="flex items-center gap-1 rounded-md border border-primary-200 bg-primary-50 py-0.5 pr-0.5 pl-2 text-xs font-medium text-primary-900"
+                className="flex items-center gap-1 rounded-md border border-primary-200 bg-primary-50 py-0.5 pe-0.5 ps-2 text-xs font-medium text-primary-900"
               >
                 <span className="max-w-48 truncate" title={code.display}>
                   {code.display}
@@ -144,7 +144,7 @@ export function VitalsCodePicker({
               <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2 text-xs font-medium text-soft-foreground [&::-webkit-details-marker]:hidden">
                 {t("workspace_vitals_picker_more_presets")}
                 <ChevronDown
-                  className="ml-auto size-3.5 transition-transform group-open:rotate-180"
+                  className="ms-auto size-3.5 transition-transform group-open:rotate-180"
                   aria-hidden="true"
                 />
               </summary>

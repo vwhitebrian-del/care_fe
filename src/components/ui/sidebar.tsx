@@ -27,6 +27,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { isRTLLanguage } from "@/i18n";
 import { cn } from "@/lib/utils";
 import { ChevronsDownIcon, PanelLeftIcon } from "lucide-react";
 
@@ -165,7 +166,7 @@ function SidebarProvider({
 }
 
 function Sidebar({
-  side = "left",
+  side: sideProp,
   variant = "sidebar",
   collapsible = "offcanvas",
   className,
@@ -178,7 +179,10 @@ function Sidebar({
   collapsible?: "offcanvas" | "icon" | "none";
 }) {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  // Physical left/right classes below are not direction-aware, so the sidebar
+  // sits at the inline-start edge (right in RTL) unless a side is forced.
+  const side = sideProp ?? (isRTLLanguage(i18n.language) ? "right" : "left");
 
   if (collapsible === "none") {
     return (
@@ -251,7 +255,7 @@ function Sidebar({
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "p-1 pt-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
-            : "p-1 group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
+            : "p-1 group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-e group-data-[side=right]:border-s",
           className,
         )}
         {...props}
@@ -326,7 +330,7 @@ function SidebarInset({ className, ...props }: React.ComponentProps<"main">) {
     <main
       data-slot="sidebar-inset"
       className={cn(
-        "bg-soft-background relative flex w-full flex-1 flex-col md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 overflow-hidden",
+        "bg-soft-background relative flex w-full flex-1 flex-col md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ms-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ms-2 overflow-hidden",
         className,
       )}
       {...props}
@@ -565,7 +569,7 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebarMenuButtonVariants = cva(
-  "peer/menu-button group/menu-button relative flex w-full items-center gap-2 overflow-hidden rounded-md px-2.5 py-2 text-left text-sm ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-popup-open:hover:bg-sidebar-accent data-popup-open:hover:text-sidebar-accent-foreground data-[active=true]:bg-background data-[active=true]:shadow data-[active=true]:ring-1 data-[active=true]:ring-primary-800/20 data-[active=true]:dark:ring-primary-700 data-[active=true]:font-medium data-[active=true]:text-primary data-[active=true]:hover:bg-background data-[active=true]:hover:text-primary data-[active=true]:after:absolute data-[active=true]:after:right-0 data-[active=true]:after:top-1/2 data-[active=true]:after:-translate-y-1/2 data-[active=true]:after:h-6 data-[active=true]:after:w-1 data-[active=true]:after:rounded-l-full data-[active=true]:after:bg-primary-600 data-[active=true]:after:content-[''] [&_svg]:size-4 [&_svg]:shrink-0 [&>span:last-child]:truncate",
+  "peer/menu-button group/menu-button relative flex w-full items-center gap-2 overflow-hidden rounded-md px-2.5 py-2 text-start text-sm ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pe-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-popup-open:hover:bg-sidebar-accent data-popup-open:hover:text-sidebar-accent-foreground data-[active=true]:bg-background data-[active=true]:shadow data-[active=true]:ring-1 data-[active=true]:ring-primary-800/20 data-[active=true]:dark:ring-primary-700 data-[active=true]:font-medium data-[active=true]:text-primary data-[active=true]:hover:bg-background data-[active=true]:hover:text-primary data-[active=true]:after:absolute data-[active=true]:after:right-0 data-[active=true]:after:top-1/2 data-[active=true]:after:-translate-y-1/2 data-[active=true]:after:h-6 data-[active=true]:after:w-1 data-[active=true]:after:rounded-s-full data-[active=true]:after:bg-primary-600 data-[active=true]:after:content-[''] [&_svg]:size-4 [&_svg]:shrink-0 [&>span:last-child]:truncate",
   {
     variants: {
       variant: {
@@ -728,7 +732,7 @@ function SidebarMenuSub({ className, ...props }: React.ComponentProps<"ul">) {
       data-slot="sidebar-menu-sub"
       data-sidebar="menu-sub"
       className={cn(
-        "border-sidebar-border ml-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l pl-2.5 py-0.5 group-data-[collapsible=icon]:hidden",
+        "border-sidebar-border ms-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-s ps-2.5 py-0.5 group-data-[collapsible=icon]:hidden",
         className,
       )}
       {...props}

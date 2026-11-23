@@ -273,7 +273,7 @@ function PlugConfigForm({
             variant="destructive"
             onClick={() => setShowDeleteDialog(true)}
           >
-            <CareIcon icon="l-trash-alt" className="mr-2" />
+            <CareIcon icon="l-trash-alt" className="me-2" />
             {t("delete_config")}
           </Button>
         )}

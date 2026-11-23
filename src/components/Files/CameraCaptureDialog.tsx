@@ -151,7 +151,7 @@ export default function CameraCaptureDialog(props: CameraCaptureDialogProps) {
                 />
               )}
 
-              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center mb-4 h-20">
+              <div className="absolute bottom-0 start-0 end-0 flex items-center justify-center mb-4 h-20">
                 <div className="flex items-center justify-between gap-8">
                   {cameraPermission !== "denied" && (
                     <>
@@ -190,7 +190,7 @@ export default function CameraCaptureDialog(props: CameraCaptureDialogProps) {
                                   <DropdownMenuRadioItem
                                     key={camera.deviceId}
                                     value={camera.deviceId}
-                                    className="rounded-lg border border-border p-3 pr-8 data-checked:border-primary data-checked:bg-primary/10"
+                                    className="rounded-lg border border-border p-3 pe-8 data-checked:border-primary data-checked:bg-primary/10"
                                   >
                                     <div className="flex items-center gap-3">
                                       <CareIcon
@@ -271,7 +271,7 @@ export default function CameraCaptureDialog(props: CameraCaptureDialogProps) {
                 alt="Camera preview"
               />
 
-              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center mb-4 h-20">
+              <div className="absolute bottom-0 start-0 end-0 flex items-center justify-center mb-4 h-20">
                 <div className="flex items-center justify-between gap-8">
                   <Button
                     variant="secondary"

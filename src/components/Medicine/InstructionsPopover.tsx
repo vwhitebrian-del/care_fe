@@ -141,7 +141,7 @@ const TriggerButton = (
               .filter(Boolean)
               .join(", ")}
       </span>
-      <ChevronDown className="ml-2 size-4 shrink-0 opacity-50" />
+      <ChevronDown className="ms-2 size-4 shrink-0 opacity-50" />
     </Button>
   );
 };

@@ -74,9 +74,9 @@ export function ActionConditionRow({
   return (
     <div>
       {index > 0 && (
-        <div className="relative flex justify-start py-1 pl-6">
+        <div className="relative flex justify-start py-1 ps-6">
           <span
-            className="absolute left-[1.375rem] top-0 h-full w-px bg-gray-200"
+            className="absolute start-[1.375rem] top-0 h-full w-px bg-gray-200"
             aria-hidden
           />
           <span className="relative rounded-md border border-gray-200 bg-white px-2 py-0.5 text-xs font-semibold uppercase text-gray-500">
@@ -135,7 +135,7 @@ export function ActionConditionRow({
                       >
                         {questionLabel(entry.question, t, questionPeers)}
                         {entry.unusable && entry.unusable !== "link_id" && (
-                          <span className="ml-1 text-xs text-gray-400">
+                          <span className="ms-1 text-xs text-gray-400">
                             · {unusableReasonLabel(entry.unusable, t)}
                           </span>
                         )}

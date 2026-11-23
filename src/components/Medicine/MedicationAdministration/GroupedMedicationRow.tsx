@@ -121,7 +121,7 @@ const IndividualMedicationRow: React.FC<{
       {/* Medication details - indented */}
       <div
         className={cn(
-          "p-3 pl-12 border-t border-r border-gray-100 bg-gray-50 min-w-0",
+          "p-3 ps-12 border-t border-e border-gray-100 bg-gray-50 min-w-0",
           isInactive && "opacity-50",
         )}
       >
@@ -211,13 +211,13 @@ const IndividualMedicationRow: React.FC<{
           <div
             key={`${medication.id}-${format(slot.date, "yyyy-MM-dd")}-${slot.start}`}
             className={cn(
-              "p-2 border-t border-r border-gray-100 bg-gray-50",
+              "p-2 border-t border-e border-gray-100 bg-gray-50",
               isInactive && "opacity-50",
               hasAdmins && "bg-green-50/50",
               !windowState.inWindow &&
                 !hasAdmins &&
                 "bg-gray-100/60 opacity-40",
-              isLastSlotOfDay && "border-r-4 border-r-gray-200",
+              isLastSlotOfDay && "border-e-4 border-e-gray-200",
             )}
           >
             {windowState.isStartSlot && (
@@ -269,7 +269,7 @@ const IndividualMedicationRow: React.FC<{
                       ? "l-syringe"
                       : "l-utensils"
                   }
-                  className="size-3 mr-1"
+                  className="size-3 me-1"
                 />
                 {productType === ProductKnowledgeType.medication
                   ? t("administer")
@@ -361,7 +361,7 @@ export const GroupedMedicationRow: React.FC<GroupedMedicationRowProps> = ({
         )}
       >
         {/* Product name column */}
-        <div className="p-4 border-r border-gray-200">
+        <div className="p-4 border-e border-gray-200">
           <div className="flex items-start gap-2">
             {hasMultipleRequests ? (
               <CollapsibleTrigger asChild>
@@ -488,12 +488,12 @@ export const GroupedMedicationRow: React.FC<GroupedMedicationRowProps> = ({
             <div
               key={`${group.productId}-${format(slot.date, "yyyy-MM-dd")}-${slot.start}`}
               className={cn(
-                "p-3 border-t border-r border-gray-200",
+                "p-3 border-t border-e border-gray-200",
                 hasAdmins && "bg-green-50",
                 !windowState.inWindow &&
                   !hasAdmins &&
                   "bg-gray-100/60 opacity-40",
-                isLastSlotOfDay && "border-r-4 border-r-gray-200",
+                isLastSlotOfDay && "border-e-4 border-e-gray-200",
               )}
             >
               {/* Window start/end markers
@@ -568,7 +568,7 @@ export const GroupedMedicationRow: React.FC<GroupedMedicationRowProps> = ({
                           ? "l-syringe"
                           : "l-utensils"
                       }
-                      className="size-4 mr-1"
+                      className="size-4 me-1"
                     />
                     {productType === ProductKnowledgeType.medication
                       ? t("administer")

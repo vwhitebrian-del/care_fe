@@ -95,7 +95,7 @@ export function PasswordDialog({
                 <>
                   <CareIcon
                     icon="l-spinner"
-                    className="mr-2 size-4 animate-spin"
+                    className="me-2 size-4 animate-spin"
                   />
                 </>
               ) : (

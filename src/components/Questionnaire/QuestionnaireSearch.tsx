@@ -154,7 +154,7 @@ export function QuestionnaireSearch({
                 >
                   <CareIcon
                     icon="l-file-export"
-                    className="mr-2 size-4 shrink-0"
+                    className="me-2 size-4 shrink-0"
                   />
                   <span className="min-w-0 break-words">{item.title}</span>
                 </CommandItem>
@@ -191,20 +191,20 @@ export function QuestionnaireSearch({
                 <>
                   <CareIcon
                     icon="l-spinner"
-                    className="mr-2 size-4 animate-spin"
+                    className="me-2 size-4 animate-spin"
                   />
                   {t("loading")}
                 </>
               ) : (
                 <span>{placeholder || t("add_forms")}</span>
               )}
-              <CaretSortIcon className="ml-2 opacity-50 size-4 shrink-0" />
+              <CaretSortIcon className="ms-2 opacity-50 size-4 shrink-0" />
             </Button>
           )}
         </DrawerTrigger>
 
         <DrawerContent height="fixed" className="p-1.5">
-          <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+          <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
             <DrawerTitle>{t("forms")}</DrawerTitle>
             <DrawerDescription className="sr-only">
               {t("search_forms")}
@@ -232,7 +232,7 @@ export function QuestionnaireSearch({
               <>
                 <CareIcon
                   icon="l-spinner"
-                  className="mr-2 size-4 animate-spin"
+                  className="me-2 size-4 animate-spin"
                 />
                 {t("loading")}
               </>

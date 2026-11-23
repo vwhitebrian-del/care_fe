@@ -330,7 +330,7 @@ export function ReferralAvailabilityForm({
             <Button
               type="button"
               variant="destructive"
-              className="sm:mr-auto"
+              className="sm:me-auto"
               onClick={onDelete}
               disabled={isPending}
             >

@@ -7,19 +7,19 @@ export const TableSkeleton = ({ count }: { count: number }) => (
       {/* Header Skeleton */}
       <thead>
         <tr>
-          <th className="sticky top-0 z-10 bg-gray-100 px-4 py-3 text-left text-sm font-medium text-gray-600">
+          <th className="sticky top-0 z-10 bg-gray-100 px-4 py-3 text-start text-sm font-medium text-gray-600">
             <Skeleton className="h-4 w-24" />
           </th>
-          <th className="bg-gray-100 px-6 py-3 text-left text-sm font-medium text-gray-600">
+          <th className="bg-gray-100 px-6 py-3 text-start text-sm font-medium text-gray-600">
             <Skeleton className="h-4 w-16" />
           </th>
-          <th className="bg-gray-100 px-10 py-3 text-left text-sm font-medium text-gray-600">
+          <th className="bg-gray-100 px-10 py-3 text-start text-sm font-medium text-gray-600">
             <Skeleton className="h-4 w-20" />
           </th>
-          <th className="bg-gray-100 px-4 py-3 text-left text-sm font-medium text-gray-600">
+          <th className="bg-gray-100 px-4 py-3 text-start text-sm font-medium text-gray-600">
             <Skeleton className="h-4 w-24" />
           </th>
-          <th className="bg-gray-100 px-4 py-3 text-left text-sm font-medium text-gray-600">
+          <th className="bg-gray-100 px-4 py-3 text-start text-sm font-medium text-gray-600">
             <Skeleton className="h-4 w-20" />
           </th>
         </tr>
@@ -28,7 +28,7 @@ export const TableSkeleton = ({ count }: { count: number }) => (
       <tbody className="divide-y divide-gray-200 bg-white animate-pulse">
         {Array.from({ length: count }).map((_, i) => (
           <tr key={i} className="hover:bg-gray-50">
-            <td className="sticky left-0 z-10 bg-white px-4 py-4 lg:pr-20">
+            <td className="sticky start-0 z-10 bg-white px-4 py-4 lg:pe-20">
               <div className="flex items-center gap-3">
                 <Skeleton className="size-10 rounded-full" />
                 <div className="flex flex-col">

@@ -112,7 +112,7 @@ function TreeViewItem({
           />
           <span className="text-sm truncate flex-1">{tag.display}</span>
           {tag.has_children && (
-            <Badge variant="secondary" className="text-xs p-0.5 ml-auto">
+            <Badge variant="secondary" className="text-xs p-0.5 ms-auto">
               {t("group")}
             </Badge>
           )}
@@ -553,12 +553,12 @@ export const SelectedTagBadge = ({ selected }: { selected: TagConfig[] }) => {
           <TagColorDot
             tag={selected[0]}
             fallbackColorClass={firstColor}
-            className="w-2 h-2 absolute left-0 opacity-75"
+            className="w-2 h-2 absolute start-0 opacity-75"
           />
           <TagColorDot
             tag={selected[1]}
             fallbackColorClass={secondColor}
-            className="w-2 h-2 absolute left-1 opacity-75"
+            className="w-2 h-2 absolute start-1 opacity-75"
           />
         </div>
       )}

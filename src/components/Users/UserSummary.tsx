@@ -53,7 +53,7 @@ export default function UserSummaryTab({ userData, onEdit }: UserSummaryProps) {
         type="button"
         variant="ghost"
         size="sm"
-        className="-mr-2 shrink-0"
+        className="-me-2 shrink-0"
         aria-label={t("profile_edit_section", { section: label })}
         onClick={() => onEdit(section)}
       >
@@ -163,7 +163,7 @@ export default function UserSummaryTab({ userData, onEdit }: UserSummaryProps) {
             />
           </div>
         </div>
-        <div className="contents md:block md:space-y-8 md:border-l md:border-border md:pl-8">
+        <div className="contents md:block md:space-y-8 md:border-s md:border-border md:ps-8">
           <UserProfileSection
             title={t("contact")}
             className="order-2"

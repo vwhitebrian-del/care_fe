@@ -479,7 +479,7 @@ export function WorkspaceSectionSettings({
                 <Braces className="size-3.5" aria-hidden="true" />
                 {t("workspace_widget_advanced_config")}
                 <ChevronDown
-                  className="ml-auto size-3.5 transition-transform group-open:rotate-180"
+                  className="ms-auto size-3.5 transition-transform group-open:rotate-180"
                   aria-hidden="true"
                 />
               </summary>

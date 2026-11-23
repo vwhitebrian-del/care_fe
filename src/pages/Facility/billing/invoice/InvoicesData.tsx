@@ -182,7 +182,7 @@ export default function InvoicesData({
           <div className="relative">
             <CareIcon
               icon="l-search"
-              className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-500 pointer-events-none z-10"
+              className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-500 pointer-events-none z-10"
             />
             <Input
               placeholder={t("search_invoices")}
@@ -190,7 +190,7 @@ export default function InvoicesData({
               onChange={(e) =>
                 updateQuery({ search: e.target.value || undefined })
               }
-              className="w-full sm:w-64 pl-10 h-9"
+              className="w-full sm:w-64 ps-10 h-9"
             />
           </div>
         </div>

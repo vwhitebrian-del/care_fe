@@ -204,7 +204,7 @@ export function LocationCardWrapper({
                   disabled={isPending}
                 >
                   {isPending && (
-                    <Spinner className="mr-2 size-4 animate-spin" />
+                    <Spinner className="me-2 size-4 animate-spin" />
                   )}
                   {isCompletingStay ? t("complete") : t("save")}
                 </Button>

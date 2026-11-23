@@ -137,7 +137,7 @@ export default function Calendar(props: Props) {
               {props.renderDay?.(date) ?? (
                 <span
                   className={cn(
-                    "block text-right p-2 transition-all rounded-lg bg-white text-gray-900",
+                    "block text-end p-2 transition-all rounded-lg bg-white text-gray-900",
                     isToday &&
                       highlightToday &&
                       "bg-primary-50 font-bold text-primary-900",

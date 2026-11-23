@@ -77,7 +77,7 @@ export function ActionConditionWarnings({
               question: optional.map((q) => questionLabel(q, t)).join(", "),
             })}
           </p>
-          <div className="flex flex-wrap gap-2 pl-5">
+          <div className="flex flex-wrap gap-2 ps-5">
             {optional.map((question) => (
               <Button
                 key={question.id}

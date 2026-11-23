@@ -134,7 +134,7 @@ export function SpecimenIDScanSuccessDialog({
           {/* Action Button */}
           <Button className="w-full mt-2" onClick={onContinue}>
             {t("continue")}
-            <CareIcon icon="l-arrow-right" className="size-4 sm:size-5 ml-2" />
+            <CareIcon icon="l-arrow-right" className="size-4 sm:size-5 ms-2" />
           </Button>
         </div>
       </DialogContent>

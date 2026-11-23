@@ -132,7 +132,7 @@ function PaymentStatusBannerSkeleton() {
       className="border border-gray-200 rounded-md p-1 pt-2 bg-gray-50"
     >
       {/* Header */}
-      <div className="flex items-center gap-2 mb-3 pl-3">
+      <div className="flex items-center gap-2 mb-3 ps-3">
         <Skeleton className="h-5 w-32" />
         <Skeleton className="h-5 w-20 rounded-full" />
       </div>
@@ -156,7 +156,7 @@ function PaymentStatusBannerSkeleton() {
           ))}
         </div>
         {/* Actions */}
-        <div className="flex items-center gap-2 lg:ml-auto flex-wrap">
+        <div className="flex items-center gap-2 lg:ms-auto flex-wrap">
           <Skeleton className="h-9 w-28 rounded-md" />
           <Skeleton className="h-9 w-32 rounded-md" />
         </div>
@@ -448,7 +448,7 @@ export function PaymentStatusBanner({
       <div className={`border rounded-md p-1 pt-2 ${bannerStyle}`}>
         {/* Header */}
         <div className="flex items-center gap-2 mb-3">
-          <h3 className="pl-3 text-base font-medium text-gray-900">
+          <h3 className="ps-3 text-base font-medium text-gray-900">
             {t("payment_status")}
           </h3>
           {isFullyPaid ? (
@@ -585,7 +585,7 @@ export function PaymentStatusBanner({
           </div>
 
           {/* Actions (right aligned) */}
-          <div className="flex items-center gap-2 lg:ml-auto flex-wrap my-auto">
+          <div className="flex items-center gap-2 lg:ms-auto flex-wrap my-auto">
             {isSettled ? (
               <>
                 <Button variant="outline" asChild>

@@ -78,7 +78,7 @@ export function EncounterAccordionLayout({
               "min-w-0 w-full p-0",
               isPanel
                 ? "flex flex-row flex-wrap items-center gap-x-3 gap-y-1 space-y-0"
-                : "flex flex-row items-center justify-between pl-2",
+                : "flex flex-row items-center justify-between ps-2",
             )}
           >
             <CardTitle
@@ -94,7 +94,7 @@ export function EncounterAccordionLayout({
             <div
               className={cn(
                 isPanel
-                  ? "ml-auto flex max-w-full shrink-0 flex-wrap items-center justify-end gap-1"
+                  ? "ms-auto flex max-w-full shrink-0 flex-wrap items-center justify-end gap-1"
                   : "flex rounded-md border border-gray-500 lg:border-0 lg:divide-x-0 mt-1",
                 !isPanel &&
                   (editLink || actionButton) &&
@@ -104,7 +104,7 @@ export function EncounterAccordionLayout({
               {isPanel ? (
                 <>
                   {summary && (
-                    <p className="mr-1 hidden whitespace-nowrap text-xs text-soft-foreground tabular-nums @sm/clinical-panel:block">
+                    <p className="me-1 hidden whitespace-nowrap text-xs text-soft-foreground tabular-nums @sm/clinical-panel:block">
                       {summary}
                     </p>
                   )}

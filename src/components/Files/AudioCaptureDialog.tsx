@@ -200,7 +200,7 @@ export default function AudioCaptureDialog(props: AudioCaptureDialogProps) {
               className="h-auto rounded-md bg-primary-500 px-4 py-2 text-white transition-all hover:bg-primary-600"
               id="save-recording"
             >
-              <CareIcon icon="l-check" className="mr-2 text-lg" />
+              <CareIcon icon="l-check" className="me-2 text-lg" />
               {t("done")}
             </Button>
             <Button
@@ -209,7 +209,7 @@ export default function AudioCaptureDialog(props: AudioCaptureDialogProps) {
               onClick={handleRestartRecording}
               className="h-auto rounded-md bg-white/10 px-4 py-2 text-white transition-all hover:bg-white/20"
             >
-              <CareIcon icon="l-history" className="mr-2 text-lg" />
+              <CareIcon icon="l-history" className="me-2 text-lg" />
               {t("audio__start_again")}
             </Button>
           </div>
@@ -225,7 +225,7 @@ export default function AudioCaptureDialog(props: AudioCaptureDialogProps) {
         }}
         className="h-auto rounded-md bg-white/10 px-4 py-2 text-white transition-all hover:bg-white/20"
       >
-        <CareIcon icon="l-times" className="mr-2 text-lg" />
+        <CareIcon icon="l-times" className="me-2 text-lg" />
         {t("cancel")}
       </Button>
     </div>

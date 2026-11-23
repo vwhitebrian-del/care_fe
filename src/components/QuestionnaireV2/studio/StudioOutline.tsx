@@ -93,13 +93,13 @@ export function StudioOutline({
         <div className="relative">
           <Search
             aria-hidden
-            className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-gray-400"
+            className="pointer-events-none absolute start-2.5 top-1/2 size-4 -translate-y-1/2 text-gray-400"
           />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t("find_a_question")}
-            className="pl-8"
+            className="ps-8"
           />
         </div>
       )}
@@ -112,7 +112,7 @@ export function StudioOutline({
           className={cn(
             "h-auto justify-start whitespace-normal",
             cn(
-              "flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm font-medium",
+              "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm font-medium",
               formSelected
                 ? "bg-gray-100 text-gray-900"
                 : "text-gray-700 hover:bg-gray-50",
@@ -132,7 +132,7 @@ export function StudioOutline({
           className={cn(
             "h-auto justify-start whitespace-normal",
             cn(
-              "flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm font-medium",
+              "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm font-medium",
               actionsSelected
                 ? "bg-gray-100 text-gray-900"
                 : "text-gray-700 hover:bg-gray-50",
@@ -142,7 +142,7 @@ export function StudioOutline({
           <Zap aria-hidden className="size-4 text-gray-500" />
           {t("actions")}
           {actionCount > 0 && (
-            <Badge variant="secondary" className="ml-auto tabular-nums">
+            <Badge variant="secondary" className="ms-auto tabular-nums">
               {actionCount}
             </Badge>
           )}
@@ -151,7 +151,7 @@ export function StudioOutline({
               aria-label={t("actions_have_issues")}
               className={cn(
                 "size-3 text-red-500",
-                actionCount === 0 && "ml-auto",
+                actionCount === 0 && "ms-auto",
               )}
             />
           )}

@@ -339,7 +339,7 @@ export function ScheduleAppointment(props: AppointmentsProps) {
         {selectedSlot?.id && (
           <div className="container mx-auto flex flex-row justify-end mt-6">
             {(isCreatingAppointment || isCancellingAppointment) && (
-              <Spinner className="size-4 animate-spin self-center mr-2" />
+              <Spinner className="size-4 animate-spin self-center me-2" />
             )}
             {appointment?.status !== "in_consultation" && (
               <Button

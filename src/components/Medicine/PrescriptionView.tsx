@@ -101,12 +101,12 @@ export default function PrescriptionView({
               >
                 {prescriptionId ? (
                   <>
-                    <PencilIcon className="mr-2 size-4" />
+                    <PencilIcon className="me-2 size-4" />
                     {t("edit")}
                   </>
                 ) : (
                   <>
-                    <PlusIcon className="mr-2 size-4" />
+                    <PlusIcon className="me-2 size-4" />
                     {t("create")}
                   </>
                 )}
@@ -121,7 +121,7 @@ export default function PrescriptionView({
               className="text-gray-950 hover:text-gray-700 h-9"
             >
               <HrefLink href={`../../prescription/${prescriptionId}/print`}>
-                <CareIcon icon="l-print" className="mr-2" />
+                <CareIcon icon="l-print" className="me-2" />
                 {t("print")}
               </HrefLink>
             </Button>
@@ -134,7 +134,7 @@ export default function PrescriptionView({
               className="text-gray-950 hover:text-gray-700 h-9"
             >
               <HrefLink href={`../${encounterId}/prescriptions/print`}>
-                <CareIcon icon="l-print" className="mr-2" />
+                <CareIcon icon="l-print" className="me-2" />
                 {t("print_all_prescriptions")}
               </HrefLink>
             </Button>
@@ -147,13 +147,13 @@ export default function PrescriptionView({
           <div className="relative flex-1">
             <CareIcon
               icon="l-search"
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
+              className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
             />
             <Input
               placeholder={t("search_medications")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8"
+              className="w-full ps-8"
             />
           </div>
           {searchQuery && (

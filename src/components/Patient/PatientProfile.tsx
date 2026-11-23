@@ -145,7 +145,7 @@ const PatientProfileContent = (props: PatientProfileProps) => {
           </div>
         </div>
         <div className="lg:flex">
-          <div className="h-full min-w-0 lg:mr-7 lg:basis-5/6">
+          <div className="h-full min-w-0 lg:me-7 lg:basis-5/6">
             {Tab?.component && (
               <Tab.component
                 facilityId={
@@ -180,7 +180,7 @@ const PatientProfileContent = (props: PatientProfileProps) => {
                         {t("patient_home")}
                       </HrefLink>
                     </Button>
-                    <div className="space-y-3 text-left text-lg font-semibold text-secondary-900">
+                    <div className="space-y-3 text-start text-lg font-semibold text-secondary-900">
                       <div className="space-y-2">
                         <PLUGIN_Component
                           __name="PatientHomeActions"

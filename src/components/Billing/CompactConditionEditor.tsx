@@ -583,7 +583,7 @@ export function CompactConditionEditor({
             {/* Error Summary */}
             {Object.keys(form.formState.errors).length > 0 && (
               <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded-md">
-                <ul className="text-sm text-red-600 pl-4 list-disc">
+                <ul className="text-sm text-red-600 ps-4 list-disc">
                   {/* Map errors to user-friendly messages */}
                   {Object.entries(form.formState.errors).map(([key, error]) => {
                     // Get error message based on field
@@ -639,7 +639,7 @@ export function CompactConditionEditor({
             className="text-blue-600 hover:text-blue-700"
             onClick={() => setIsAdding(true)}
           >
-            <Plus className="h-4 w-4 mr-1" />
+            <Plus className="h-4 w-4 me-1" />
             {t("add_condition")}
           </Button>
         )}

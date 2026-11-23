@@ -172,7 +172,7 @@ export default function OrganizationPatients({
                             <Skeleton className="h-4 w-20" />
                           </TableCell>
                           <TableCell className="px-4 py-3">
-                            <Skeleton className="ml-auto h-12 w-20 md:h-10" />
+                            <Skeleton className="ms-auto h-12 w-20 md:h-10" />
                           </TableCell>
                         </TableRow>
                       ))
@@ -222,7 +222,7 @@ export default function OrganizationPatients({
                               />
                             </TableCell>
                             <TableCell
-                              className="px-4 py-3 text-right"
+                              className="px-4 py-3 text-end"
                               onClick={(e) => e.stopPropagation()}
                             >
                               <Button variant="tertiary" asChild>

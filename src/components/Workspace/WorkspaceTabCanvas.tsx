@@ -264,7 +264,7 @@ export function WorkspaceTabCanvas({
                             aria-label={t("workspace_studio_edit_section", {
                               name: title,
                             })}
-                            className="flex min-w-0 flex-1 items-center gap-2 rounded-md py-1 text-left focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:outline-none"
+                            className="flex min-w-0 flex-1 items-center gap-2 rounded-md py-1 text-start focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:outline-none"
                           >
                             <span
                               className={cn(

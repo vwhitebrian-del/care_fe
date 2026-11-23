@@ -101,7 +101,7 @@ function useTokenActions({
     items.push({
       key: "mark_as_now_serving",
       label: t("mark_as_now_serving"),
-      icon: <CircleDot className="size-4 mr-2" />,
+      icon: <CircleDot className="size-4 me-2" />,
       onSelect: () =>
         updateToken({
           status: TokenStatus.IN_PROGRESS,
@@ -116,7 +116,7 @@ function useTokenActions({
       {
         key: "move_to_calling",
         label: t("move_to_calling"),
-        icon: <Megaphone className="size-4 mr-2" />,
+        icon: <Megaphone className="size-4 me-2" />,
         onSelect: () =>
           updateToken({
             status: TokenStatus.CREATED,
@@ -127,7 +127,7 @@ function useTokenActions({
       {
         key: "move_to_awaiting_recall_in_progress",
         label: t("move_to_awaiting_recall"),
-        icon: <BringToFront className="size-4 mr-2" />,
+        icon: <BringToFront className="size-4 me-2" />,
         onSelect: () =>
           updateToken({
             status: TokenStatus.UNFULFILLED,
@@ -142,7 +142,7 @@ function useTokenActions({
     items.push({
       key: "move_to_waiting",
       label: t("move_to_waiting"),
-      icon: <RotateCcw className="size-4 mr-2" />,
+      icon: <RotateCcw className="size-4 me-2" />,
       onSelect: () =>
         updateToken({
           status: TokenStatus.CREATED,
@@ -163,9 +163,9 @@ function useTokenActions({
         ? t("reassign_service_point", { name: service.name })
         : t("mark_as_in_service", { name: service.name }),
       icon: token.sub_queue ? (
-        <RedoDot className="size-4 mr-2" />
+        <RedoDot className="size-4 me-2" />
       ) : (
-        <TicketCheck className="size-4 mr-2" />
+        <TicketCheck className="size-4 me-2" />
       ),
       onSelect: () =>
         updateToken({
@@ -180,7 +180,7 @@ function useTokenActions({
     items.push({
       key: `call_to_${service.id}`,
       label: t("call_to", { name: service.name }),
-      icon: <Megaphone className="size-4 mr-2" />,
+      icon: <Megaphone className="size-4 me-2" />,
       onSelect: () =>
         updateToken({
           status: TokenStatus.CREATED,
@@ -193,7 +193,7 @@ function useTokenActions({
   items.push({
     key: "mark_as_complete",
     label: t("mark_as_complete"),
-    icon: <Check className="size-4 mr-2" />,
+    icon: <Check className="size-4 me-2" />,
     onSelect: () =>
       updateToken({
         status: TokenStatus.FULFILLED,
@@ -212,7 +212,7 @@ function useTokenActions({
     items.push({
       key: "cancel_token",
       label: t("cancel_token"),
-      icon: <OctagonX className="size-4 mr-2 text-danger-700" />,
+      icon: <OctagonX className="size-4 me-2 text-danger-700" />,
       onSelect: onCancelClick,
       danger: true,
       separatorBefore: true,
@@ -223,7 +223,7 @@ function useTokenActions({
     items.push({
       key: "mark_as_entered_in_error",
       label: t("mark_as_entered_in_error"),
-      icon: <OctagonX className="size-4 mr-2 text-danger-700" />,
+      icon: <OctagonX className="size-4 me-2 text-danger-700" />,
       onSelect: onEnteredInErrorClick,
       danger: true,
       separatorBefore: !cancellable,

@@ -241,13 +241,13 @@ export function DurationInput({
       )}
       className={cn(
         "text-sm",
-        BoundIcon && "pl-9",
+        BoundIcon && "ps-9",
         hasError && "border-red-500",
         className,
       )}
       startAdornment={
         BoundIcon ? (
-          <BoundIcon className="pointer-events-none absolute ml-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+          <BoundIcon className="pointer-events-none absolute ms-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
         ) : null
       }
     >
@@ -259,7 +259,7 @@ export function DurationInput({
                 variant="ghost"
                 type="button"
                 onClick={() => commitDuration(customDuration)}
-                className="justify-start whitespace-normal flex w-full items-center gap-2 px-3.5 py-2 text-left text-sm hover:bg-accent"
+                className="justify-start whitespace-normal flex w-full items-center gap-2 px-3.5 py-2 text-start text-sm hover:bg-accent"
               >
                 {t("use_duration", {
                   duration: formatDurationLabel(customDuration),
@@ -275,7 +275,7 @@ export function DurationInput({
                 className={cn(
                   "justify-start whitespace-normal",
                   cn(
-                    "flex w-full items-center justify-between px-3.5 py-2 text-left text-sm hover:bg-accent",
+                    "flex w-full items-center justify-between px-3.5 py-2 text-start text-sm hover:bg-accent",
                     isSelected(s.decoded) && "bg-accent",
                   ),
                 )}
@@ -301,7 +301,7 @@ export function DurationInput({
                 seedRange();
                 setView("range");
               }}
-              className="justify-start whitespace-normal flex w-full items-center gap-2.5 px-3.5 py-2 text-left text-sm text-muted-foreground hover:bg-accent"
+              className="justify-start whitespace-normal flex w-full items-center gap-2.5 px-3.5 py-2 text-start text-sm text-muted-foreground hover:bg-accent"
             >
               <ArrowLeftRight className="size-4 shrink-0" />
               <span className="flex-1">{t("duration_set_range")}</span>
@@ -314,7 +314,7 @@ export function DurationInput({
                 seedPeriod();
                 setView("period");
               }}
-              className="justify-start whitespace-normal flex w-full items-center gap-2.5 px-3.5 py-2 text-left text-sm text-muted-foreground hover:bg-accent"
+              className="justify-start whitespace-normal flex w-full items-center gap-2.5 px-3.5 py-2 text-start text-sm text-muted-foreground hover:bg-accent"
             >
               <CalendarIcon className="size-4 shrink-0" />
               <span className="flex-1">{t("duration_set_period")}</span>
@@ -330,7 +330,7 @@ export function DurationInput({
             variant="ghost"
             type="button"
             onClick={() => setView("list")}
-            className="justify-start whitespace-normal flex w-full items-center gap-2 border-b px-3 py-2.5 text-left text-sm font-medium"
+            className="justify-start whitespace-normal flex w-full items-center gap-2 border-b px-3 py-2.5 text-start text-sm font-medium"
           >
             <ChevronLeft className="size-4 text-muted-foreground" />
             {t("duration_range_title")}
@@ -392,7 +392,7 @@ export function DurationInput({
             variant="ghost"
             type="button"
             onClick={() => setView("list")}
-            className="justify-start whitespace-normal flex w-full items-center gap-2 border-b px-3 py-2.5 text-left text-sm font-medium"
+            className="justify-start whitespace-normal flex w-full items-center gap-2 border-b px-3 py-2.5 text-start text-sm font-medium"
           >
             <ChevronLeft className="size-4 text-muted-foreground" />
             {t("duration_set_period")}

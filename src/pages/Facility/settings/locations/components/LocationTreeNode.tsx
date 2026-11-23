@@ -75,7 +75,7 @@ export function LocationTreeNode({
         <button
           type="button"
           aria-current={isSelected ? "true" : undefined}
-          className="flex min-h-9 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded-md py-1.5 pr-2 text-left text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          className="flex min-h-9 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded-md py-1.5 pe-2 text-start text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           onClick={() => {
             onSelect(location);
             // Opening a location shows what is inside it; only the arrow collapses.

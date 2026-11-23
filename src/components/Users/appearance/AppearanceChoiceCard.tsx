@@ -25,7 +25,7 @@ export function AppearanceChoiceCard({
     <Label
       htmlFor={id}
       className={cn(
-        "relative flex min-w-0 cursor-pointer flex-col items-stretch gap-2 rounded-lg border p-3 text-left font-normal leading-normal transition-all duration-150 active:scale-[0.98] has-focus-visible:ring-2 has-focus-visible:ring-ring has-focus-visible:ring-offset-2 has-focus-visible:ring-offset-background",
+        "relative flex min-w-0 cursor-pointer flex-col items-stretch gap-2 rounded-lg border p-3 text-start font-normal leading-normal transition-all duration-150 active:scale-[0.98] has-focus-visible:ring-2 has-focus-visible:ring-ring has-focus-visible:ring-offset-2 has-focus-visible:ring-offset-background",
         selected
           ? "border-primary bg-primary/5 ring-2 ring-primary/30"
           : "border-border hover:border-strong-border hover:bg-muted/50",

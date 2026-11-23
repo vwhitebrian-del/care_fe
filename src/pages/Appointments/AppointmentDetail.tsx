@@ -336,7 +336,7 @@ export default function AppointmentDetail(props: Props) {
             appointment={appointment}
             facility={facility}
           />
-          <div className="mt-6 pl-0 md:pl-4 flex-1">
+          <div className="mt-6 ps-0 md:ps-4 flex-1">
             {appointment.token?.number ? (
               <>
                 <h3 className="text-base font-semibold">{t("token")}</h3>
@@ -377,7 +377,7 @@ export default function AppointmentDetail(props: Props) {
                               appointment.status,
                             )}
                           >
-                            <PlusCircledIcon className="size-4 mr-2" />
+                            <PlusCircledIcon className="size-4 me-2" />
                             {t("generate_token")}
                             <ShortcutBadge actionId="generate-token" />
                           </Button>
@@ -625,7 +625,7 @@ const AppointmentDetailsContent = ({
         <Card className="bg-white shadow-sm rounded-md p-1">
           <CardHeader className="p-2 bg-gray-50">
             <CardTitle className="flex justify-between">
-              <span className="mr-3 inline-block mb-2">
+              <span className="me-3 inline-block mb-2">
                 {t("schedule_information")}
               </span>
               <Badge variant={APPOINTMENT_STATUS_COLORS[appointment.status]}>
@@ -937,7 +937,7 @@ const AppointmentActions = ({
                 })
               }
             >
-              <CheckCircledIcon className="size-4 mr-2" />
+              <CheckCircledIcon className="size-4 me-2" />
               {t("mark_as_fulfilled")}
             </DropdownMenuItem>
 
@@ -950,7 +950,7 @@ const AppointmentActions = ({
                 <DropdownMenuItem
                   onSelect={() => setIsRescheduleReasonOpen(true)}
                 >
-                  <CalendarIcon className="size-4 mr-2" />
+                  <CalendarIcon className="size-4 me-2" />
                   {t("reschedule")}
                 </DropdownMenuItem>
               )}
@@ -961,18 +961,18 @@ const AppointmentActions = ({
                 disabled={!canMarkFulfilledOrNoShow}
                 onSelect={() => setIsNoShowOpen(true)}
               >
-                <EyeNoneIcon className="size-4 mr-2" />
+                <EyeNoneIcon className="size-4 me-2" />
                 {t("mark_as_noshow")}
               </DropdownMenuItem>
             )}
             {appointment.status !== AppointmentStatus.IN_CONSULTATION && (
               <DropdownMenuItem onSelect={() => setIsCancelOpen(true)}>
-                <BanIcon className="size-4 mr-2" />
+                <BanIcon className="size-4 me-2" />
                 {t("cancel_appointment")}
               </DropdownMenuItem>
             )}
             <DropdownMenuItem onSelect={() => setIsErrorOpen(true)}>
-              <BanIcon className="size-4 mr-2" />
+              <BanIcon className="size-4 me-2" />
               {t("mark_as_entered_in_error")}
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -987,7 +987,7 @@ const AppointmentActions = ({
               onOpenChange={setIsRescheduleReasonOpen}
             >
               <AlertDialogContent className="max-h-[90dvh] overflow-y-auto">
-                <AlertDialogHeader className="min-w-0 place-items-stretch text-left sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
+                <AlertDialogHeader className="min-w-0 place-items-stretch text-start sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
                   <AlertDialogTitle>
                     {t("reschedule_appointment")}
                   </AlertDialogTitle>
@@ -1115,7 +1115,7 @@ const AppointmentActions = ({
       ) && (
         <AlertDialog open={isNoShowOpen} onOpenChange={setIsNoShowOpen}>
           <AlertDialogContent className="max-h-[90dvh] overflow-y-auto">
-            <AlertDialogHeader className="min-w-0 place-items-stretch text-left sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
+            <AlertDialogHeader className="min-w-0 place-items-stretch text-start sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
               <AlertDialogTitle>{t("mark_as_noshow")}</AlertDialogTitle>
               <Label>{t("note")}</Label>
               <RichTextEditor
@@ -1145,7 +1145,7 @@ const AppointmentActions = ({
                 disabled={!hasMarkdownContent(note)}
               >
                 {isUpdating ? (
-                  <Spinner className="size-4 animate-spin mr-2" />
+                  <Spinner className="size-4 animate-spin me-2" />
                 ) : (
                   t("confirm")
                 )}
@@ -1159,7 +1159,7 @@ const AppointmentActions = ({
       {appointment.status !== AppointmentStatus.IN_CONSULTATION && (
         <AlertDialog open={isCancelOpen} onOpenChange={setIsCancelOpen}>
           <AlertDialogContent className="max-h-[90dvh] overflow-y-auto">
-            <AlertDialogHeader className="min-w-0 place-items-stretch text-left sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
+            <AlertDialogHeader className="min-w-0 place-items-stretch text-start sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
               <AlertDialogTitle>{t("cancel_appointment")}</AlertDialogTitle>
               <Label>{t("note")}</Label>
               <RichTextEditor
@@ -1184,7 +1184,7 @@ const AppointmentActions = ({
                 disabled={!hasMarkdownContent(note)}
               >
                 {isCancelling ? (
-                  <Spinner className="size-4 animate-spin mr-2" />
+                  <Spinner className="size-4 animate-spin me-2" />
                 ) : (
                   t("confirm")
                 )}
@@ -1197,7 +1197,7 @@ const AppointmentActions = ({
       {/* Mark as Entered in Error */}
       <AlertDialog open={isErrorOpen} onOpenChange={setIsErrorOpen}>
         <AlertDialogContent className="max-h-[90dvh] overflow-y-auto">
-          <AlertDialogHeader className="min-w-0 place-items-stretch text-left sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
+          <AlertDialogHeader className="min-w-0 place-items-stretch text-start sm:group-data-[size=default]/alert-dialog-content:place-items-stretch">
             <AlertDialogTitle>{t("mark_as_entered_in_error")}</AlertDialogTitle>
             <AlertDialogDescription asChild>
               <Alert variant="destructive" className="mt-4">
@@ -1217,7 +1217,7 @@ const AppointmentActions = ({
               variant="destructive"
             >
               {isCancelling ? (
-                <Spinner className="size-4 animate-spin mr-2" />
+                <Spinner className="size-4 animate-spin me-2" />
               ) : (
                 t("confirm")
               )}

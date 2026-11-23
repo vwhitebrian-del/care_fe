@@ -369,8 +369,8 @@ function DrawerContent({
               "border-popover bg-popover flex-col border",
               "data-[swipe-direction=down]:rounded-t-[min(var(--radius-xl),24px)] data-[swipe-direction=down]:rounded-b-none",
               "data-[swipe-direction=up]:rounded-t-none data-[swipe-direction=up]:rounded-b-[min(var(--radius-xl),24px)]",
-              "data-[swipe-direction=left]:rounded-l-none data-[swipe-direction=left]:rounded-r-[min(var(--radius-xl),24px)]",
-              "data-[swipe-direction=right]:rounded-l-[min(var(--radius-xl),24px)] data-[swipe-direction=right]:rounded-r-none",
+              "data-[swipe-direction=left]:rounded-s-none data-[swipe-direction=left]:rounded-e-[min(var(--radius-xl),24px)]",
+              "data-[swipe-direction=right]:rounded-s-[min(var(--radius-xl),24px)] data-[swipe-direction=right]:rounded-e-none",
               "text-popover-foreground text-sm shadow-xl outline-none select-none",
               "transition-[transform,height,opacity,filter] duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform",
               "[--drawer-bleed-background:transparent] [--drawer-inset:0px]",
@@ -383,8 +383,8 @@ function DrawerContent({
               "after:pointer-events-none after:absolute after:bg-(--drawer-bleed-background,var(--color-popover))",
               "data-[swipe-axis=x]:after:inset-y-0 data-[swipe-axis=x]:after:w-(--bleed)",
               "data-[swipe-axis=y]:after:inset-x-0 data-[swipe-axis=y]:after:h-(--bleed)",
-              "data-[swipe-direction=down]:after:top-full data-[swipe-direction=left]:after:right-full",
-              "data-[swipe-direction=right]:after:left-full data-[swipe-direction=up]:after:bottom-full",
+              "data-[swipe-direction=down]:after:top-full data-[swipe-direction=left]:after:end-full",
+              "data-[swipe-direction=right]:after:start-full data-[swipe-direction=up]:after:bottom-full",
               // Sizing
               "[--drawer-content-height:var(--drawer-height,auto)]",
               "data-[swipe-axis=x]:[--drawer-content-width:75%] data-[swipe-axis=y]:[--drawer-content-max-height:calc(100dvh-6rem)]",
@@ -422,11 +422,11 @@ function DrawerContent({
               "data-[swipe-direction=up]:[--closed-transform:translate3d(0,calc(-100%-var(--drawer-inset,0px)-2px),0)]",
               "data-[swipe-direction=up]:[--translate-y:calc(var(--drawer-snap-point-offset,0px)+var(--drawer-swipe-movement-y)+var(--stack-peek-offset)+(var(--stack-shrink)*var(--stack-height)))]",
               // Direction: left
-              "data-[swipe-direction=left]:left-0 data-[swipe-direction=left]:origin-left",
+              "data-[swipe-direction=left]:start-0 data-[swipe-direction=left]:origin-left",
               "data-[swipe-direction=left]:[--closed-transform:translate3d(calc(-100%-var(--drawer-inset,0px)-2px),0,0)]",
               "data-[swipe-direction=left]:[--translate-x:calc(var(--drawer-swipe-movement-x)+var(--stack-peek-offset)+(var(--stack-shrink)*100%))]",
               // Direction: right
-              "data-[swipe-direction=right]:right-0 data-[swipe-direction=right]:origin-right",
+              "data-[swipe-direction=right]:end-0 data-[swipe-direction=right]:origin-right",
               "data-[swipe-direction=right]:[--closed-transform:translate3d(calc(100%+var(--drawer-inset,0px)+2px),0,0)]",
               "data-[swipe-direction=right]:[--translate-x:calc(var(--drawer-swipe-movement-x)-var(--stack-peek-offset)-(var(--stack-shrink)*100%))]",
               drawerHeightClasses[height],
@@ -476,7 +476,7 @@ function DrawerHeader({
     <div
       data-slot="drawer-header"
       className={cn(
-        "relative flex shrink-0 items-center justify-between gap-0.5 md:p-4 text-left md:gap-1.5 px-2",
+        "relative flex shrink-0 items-center justify-between gap-0.5 md:p-4 text-start md:gap-1.5 px-2",
         drawerContainerClasses[size],
         className,
       )}

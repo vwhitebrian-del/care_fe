@@ -172,7 +172,7 @@ export default function AdminOrganizationFormSheet({
           </Button>
         ) : (
           <Button className="w-full md:w-auto">
-            <CareIcon icon="l-plus" className="mr-2 size-4" />
+            <CareIcon icon="l-plus" className="me-2 size-4" />
             {isRoleOrganizationPage
               ? t("create_role_organization")
               : t("add_organization")}

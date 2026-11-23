@@ -298,7 +298,7 @@ export function ReferralList({
                   <Item
                     asChild
                     size="sm"
-                    className="rounded-none text-left hover:bg-muted/50"
+                    className="rounded-none text-start hover:bg-muted/50"
                   >
                     <HrefLink
                       href={getReferralDetailUrl(referral.id, sourceUrl)}
@@ -323,20 +323,20 @@ export function ReferralList({
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="pl-4">{t("referral")}</TableHead>
+                  <TableHead className="ps-4">{t("referral")}</TableHead>
                   {isEntityScope && <TableHead>{t("patient")}</TableHead>}
                   <TableHead>{t("status")}</TableHead>
                   <TableHead>{t("assigned_to")}</TableHead>
-                  <TableHead className="pr-4">{t("created_date")}</TableHead>
+                  <TableHead className="pe-4">{t("created_date")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {data.results.map((referral) => (
                   <TableRow key={referral.id} data-cy="referral-row">
-                    <TableCell className="min-w-80 max-w-lg py-3 pl-4">
+                    <TableCell className="min-w-80 max-w-lg py-3 ps-4">
                       <HrefLink
                         href={getReferralDetailUrl(referral.id, sourceUrl)}
-                        className="block max-w-full truncate text-left font-medium text-foreground underline-offset-4 hover:underline focus-visible:outline-ring"
+                        className="block max-w-full truncate text-start font-medium text-foreground underline-offset-4 hover:underline focus-visible:outline-ring"
                       >
                         {referral.title}
                       </HrefLink>
@@ -359,7 +359,7 @@ export function ReferralList({
                             .join(", ")
                         : t("unassigned")}
                     </TableCell>
-                    <TableCell className="pr-4 text-muted-foreground">
+                    <TableCell className="pe-4 text-muted-foreground">
                       {formatDateTime(referral.created_date)}
                     </TableCell>
                   </TableRow>

@@ -130,7 +130,7 @@ export function CreateDispenseSheet({
     }
     return (
       <Button onClick={handleDirectDispense}>
-        <Plus className="size-4 mr-1" />
+        <Plus className="size-4 me-1" />
         {trigger || t("new_dispense")}
         <ShortcutBadge actionId="dispense-button" />
       </Button>
@@ -148,7 +148,7 @@ export function CreateDispenseSheet({
       <SheetTrigger asChild>
         {trigger || (
           <Button>
-            <Plus className="size-4 mr-1" />
+            <Plus className="size-4 me-1" />
             {t("new_dispense")}
             <ShortcutBadge actionId="dispense-button" />
           </Button>

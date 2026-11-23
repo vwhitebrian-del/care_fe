@@ -46,7 +46,7 @@ export function SubLocationTable({
         <TableRow>
           <TableHead>{t("name")}</TableHead>
           <TableHead>{t("type")}</TableHead>
-          <TableHead className="text-right">
+          <TableHead className="text-end">
             <span className="sr-only">{t("actions")}</span>
           </TableHead>
         </TableRow>

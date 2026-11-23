@@ -165,7 +165,7 @@ export default function AdminOrganizationView({ id, organizationType }: Props) {
         <div className="relative w-full sm:max-w-md">
           <CareIcon
             icon="l-search"
-            className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
+            className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
           />
           <Input
             placeholder={t("search_by_department_team_name")}
@@ -174,7 +174,7 @@ export default function AdminOrganizationView({ id, organizationType }: Props) {
             onChange={(event) => {
               updateQuery({ search: event.target.value || undefined });
             }}
-            className="w-full pl-8"
+            className="w-full ps-8"
           />
         </div>
         <FacilityOrganizationFormSheet

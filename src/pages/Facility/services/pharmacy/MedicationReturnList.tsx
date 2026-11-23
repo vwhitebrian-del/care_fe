@@ -220,7 +220,7 @@ function MedicationReturnTable({
                   })
                 }
               >
-                <Eye className="mr-1 size-4" />
+                <Eye className="me-1 size-4" />
                 {t("view")}
               </Button>
             </TableCell>

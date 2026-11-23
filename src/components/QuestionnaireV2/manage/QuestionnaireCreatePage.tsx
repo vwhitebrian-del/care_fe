@@ -180,7 +180,7 @@ export function QuestionnaireCreatePage({
                 {t("cancel")}
               </Button>
               <Button type="submit" disabled={isPending}>
-                <Check className="mr-2 size-4" />
+                <Check className="me-2 size-4" />
                 {t("save_form")}
               </Button>
             </div>

@@ -101,7 +101,7 @@ export function ResourceResponseRow({
         )}
       </TableCell>
       <TableCell className="hidden md:table-cell">{statusBadge}</TableCell>
-      <TableCell className="px-3 text-right sm:px-4">
+      <TableCell className="px-3 text-end sm:px-4">
         <Button
           variant="ghost"
           size="sm"

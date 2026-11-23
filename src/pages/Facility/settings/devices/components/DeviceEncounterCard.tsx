@@ -33,7 +33,7 @@ function EncounterNode({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center text-sm">
-        <span className="size-2 rounded-full bg-gray-400 mr-2" />
+        <span className="size-2 rounded-full bg-gray-400 me-2" />
         <span className={!end ? "font-semibold" : "text-gray-700 font-medium"}>
           <Link
             to="/facility/$facilityId/patient/$patientId/encounter/$encounterId/$tab"
@@ -54,7 +54,7 @@ function EncounterNode({
         </span>
       </div>
       {created_by && (
-        <div className="flex items-center text-sm pl-6">
+        <div className="flex items-center text-sm ps-6">
           <span className="text-gray-700 font-normal">
             {t("associated_by", { name: formatName(created_by) })}
           </span>
@@ -62,7 +62,7 @@ function EncounterNode({
       )}
       {children}
       {start && (
-        <div className="pl-6 flex items-center text-sm font-normal text-gray-700 italic">
+        <div className="ps-6 flex items-center text-sm font-normal text-gray-700 italic">
           {format(new Date(start), "MMM d, yyyy h:mm a")}
         </div>
       )}
@@ -74,8 +74,8 @@ export const DeviceEncounterCard = ({ encounterData }: EncounterCardProps) => {
   const { start, end, encounter, created_by } = encounterData;
 
   return (
-    <div className={`relative flex gap-8 pl-12 pt-0.5`}>
-      <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
+    <div className={`relative flex gap-8 ps-12 pt-0.5`}>
+      <div className="absolute start-0 top-0 bottom-0 flex flex-col items-center">
         <div
           className={`absolute w-px bg-gray-200 h-full ${!end ? "top-3" : "-top-3"}`}
         />

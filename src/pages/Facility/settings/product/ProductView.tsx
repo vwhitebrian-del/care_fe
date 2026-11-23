@@ -69,7 +69,7 @@ export default function ProductView({ facilityId, productId }: Props) {
             className="mt-4"
             onClick={() => goBack(`/facility/${facilityId}/settings/product`)}
           >
-            <CareIcon icon="l-arrow-left" className="mr-2 size-4" />
+            <CareIcon icon="l-arrow-left" className="me-2 size-4" />
             {t("back_to_list")}
           </Button>
         </div>
@@ -110,7 +110,7 @@ export default function ProductView({ facilityId, productId }: Props) {
               })
             }
           >
-            <CareIcon icon="l-pen" className="mr-2 size-4" />
+            <CareIcon icon="l-pen" className="me-2 size-4" />
             {t("edit")}
           </Button>
         </div>
@@ -201,7 +201,7 @@ export default function ProductView({ facilityId, productId }: Props) {
                       })
                     }
                   >
-                    <CareIcon icon="l-eye" className="mr-2 size-4" />
+                    <CareIcon icon="l-eye" className="me-2 size-4" />
                     {t("view_details")}
                   </Button>
                 )}
@@ -238,7 +238,7 @@ export default function ProductView({ facilityId, productId }: Props) {
                         slug: product.charge_item_definition.slug,
                       }}
                     >
-                      <CareIcon icon="l-eye" className="mr-2 size-4" />
+                      <CareIcon icon="l-eye" className="me-2 size-4" />
                       {t("view_details")}
                     </Link>
                   </Button>

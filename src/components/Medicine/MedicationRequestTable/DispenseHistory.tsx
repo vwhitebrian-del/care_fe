@@ -59,7 +59,7 @@ function DispenseButtonSection({
           onClick={() => setIsDispenseOpen(true)}
           disabled={!facilityId}
         >
-          <Plus className="mr-2" />
+          <Plus className="me-2" />
           {t("dispense")}
         </Button>
       </div>

@@ -131,16 +131,16 @@ export function DiagnosisList({
         {Object.entries(groupedByYear).map(([year, groupedByDate]) => {
           return (
             <div key={year}>
-              <h2 className="text-sm font-medium text-indigo-700 border-y border-gray-300 py-2 w-fit pr-10">
+              <h2 className="text-sm font-medium text-indigo-700 border-y border-gray-300 py-2 w-fit pe-10">
                 {year}
               </h2>
-              <div className="border-l border-gray-300 pt-5 ml-4">
+              <div className="border-s border-gray-300 pt-5 ms-4">
                 {Object.entries(groupedByDate).map(([date, diagnoses]) => {
                   return (
                     <div key={date} className="pb-6">
                       <div className="flex items-start gap-4">
                         <div className="flex flex-col items-center h-full">
-                          <div className="size-3 bg-blue-300 ring-1 ring-blue-700 rounded-full flex-shrink-0 -ml-1.5 mt-1"></div>
+                          <div className="size-3 bg-blue-300 ring-1 ring-blue-700 rounded-full flex-shrink-0 -ms-1.5 mt-1"></div>
                         </div>
 
                         <div className="space-y-3 overflow-auto w-full">

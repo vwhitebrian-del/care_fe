@@ -156,7 +156,7 @@ export function WorkspaceTabDialog({
             <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2 text-xs font-semibold text-soft-foreground [&::-webkit-details-marker]:hidden">
               {t("workspace_studio_tab_advanced")}
               <ChevronDown
-                className="ml-auto size-3.5 transition-transform group-open:rotate-180"
+                className="ms-auto size-3.5 transition-transform group-open:rotate-180"
                 aria-hidden="true"
               />
             </summary>

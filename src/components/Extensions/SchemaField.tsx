@@ -150,7 +150,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
       <div className={cn("space-y-2", className)}>
         <FormLabel>
           {metadata.label}
-          {metadata.required && <span className="text-red-500 ml-1">*</span>}
+          {metadata.required && <span className="text-red-500 ms-1">*</span>}
         </FormLabel>
         {metadata.description && (
           <p className="text-sm text-muted-foreground">
@@ -245,7 +245,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -296,7 +296,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -368,7 +368,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -406,7 +406,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -474,7 +474,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <Select
@@ -528,7 +528,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -576,7 +576,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -614,7 +614,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -646,7 +646,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -678,7 +678,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -710,7 +710,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             <FormLabel>
               {metadata.label}
               {metadata.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500 ms-1">*</span>
               )}
             </FormLabel>
             <FormControl>
@@ -757,7 +757,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
         <div>
           <FormLabel>
             {metadata.label}
-            {metadata.required && <span className="text-red-500 ml-1">*</span>}
+            {metadata.required && <span className="text-red-500 ms-1">*</span>}
           </FormLabel>
           {metadata.description && (
             <p className="text-sm text-muted-foreground mt-1">
@@ -765,7 +765,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
             </p>
           )}
         </div>
-        <div className="pl-4 border-l-2 border-gray-200 space-y-3">
+        <div className="ps-4 border-s-2 border-gray-200 space-y-3">
           {visibleNestedFields.map((nestedMeta) => {
             const nestedPath = `${fieldPath}.${nestedMeta.name}`;
             const isRequired =
@@ -802,7 +802,7 @@ export function SchemaField<TFieldValues extends FieldValues>({
         <FormItem className={className}>
           <FormLabel>
             {metadata.label}
-            {metadata.required && <span className="text-red-500 ml-1">*</span>}
+            {metadata.required && <span className="text-red-500 ms-1">*</span>}
           </FormLabel>
           <FormControl>
             <Input

@@ -185,7 +185,7 @@ export function useShortcuts() {
  *
  *   return (
  *     <button data-shortcut-id="print-button">
- *       Print {shortcut && <span className="ml-2 text-xs">({shortcut})</span>}
+ *       Print {shortcut && <span className="ms-2 text-xs">({shortcut})</span>}
  *     </button>
  *   );
  * }

@@ -295,7 +295,7 @@ export function SupplyDeliveryTable({
           <TableHead rowSpan={2}>{t("hash_tag")}</TableHead>
           <TableHead
             rowSpan={2}
-            className="sticky left-0 z-20 border-r border-gray-200 bg-gray-100 shadow-[1px_0_0_0_var(--color-gray-300)]"
+            className="sticky start-0 z-20 border-e border-gray-200 bg-gray-100 shadow-[1px_0_0_0_var(--color-gray-300)]"
           >
             {t("item")}
           </TableHead>
@@ -345,7 +345,7 @@ export function SupplyDeliveryTable({
               rowSpan={2}
               className={cn(
                 onEditDelivery &&
-                  "sm:sticky sm:right-0 z-10 bg-gray-100 border-l",
+                  "sm:sticky sm:end-0 z-10 bg-gray-100 border-s",
               )}
             >
               {t("actions")}
@@ -355,12 +355,12 @@ export function SupplyDeliveryTable({
         <TableRow>
           <TableHead>{t("item_price")}</TableHead>
           {informationalCodes.map((code) => (
-            <TableHead key={code.code} className="border border-r">
+            <TableHead key={code.code} className="border border-e">
               {code.display}
             </TableHead>
           ))}
           {!internal && <TableHead>{t("pr")}</TableHead>}
-          {!internal && <TableHead className="border-r">{t("tpr")}</TableHead>}
+          {!internal && <TableHead className="border-e">{t("tpr")}</TableHead>}
         </TableRow>
       </TableHeader>
       <TableBody className="text-sm">
@@ -396,7 +396,7 @@ export function SupplyDeliveryTable({
               <TableCell>{serialNumberMap.get(delivery.id)}</TableCell>
               <TableCell
                 className={cn(
-                  "sticky left-0 z-10 border-r border-gray-200 bg-white shadow-[1px_0_0_0_var(--color-gray-300)]",
+                  "sticky start-0 z-10 border-e border-gray-200 bg-white shadow-[1px_0_0_0_var(--color-gray-300)]",
                   isEditing && "bg-primary-50",
                   isInactive && "bg-gray-50",
                 )}
@@ -551,7 +551,7 @@ export function SupplyDeliveryTable({
                 <TableCell
                   className={cn(
                     onEditDelivery &&
-                      "sm:sticky sm:right-0 z-10 border-l bg-white",
+                      "sm:sticky sm:end-0 z-10 border-s bg-white",
                     onEditDelivery && isEditing && "bg-primary-50",
                   )}
                 >

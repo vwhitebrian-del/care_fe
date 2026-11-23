@@ -134,7 +134,7 @@ export default function ActivityDefinitionView({
             <AlertDescription>{t("definition_not_found")}</AlertDescription>
           </Alert>
           <BackButton variant="outline" className="mt-4">
-            <CareIcon icon="l-arrow-left" className="mr-2 size-4" />
+            <CareIcon icon="l-arrow-left" className="me-2 size-4" />
             {t("back_to_list")}
           </BackButton>
         </div>

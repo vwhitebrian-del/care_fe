@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   ComponentProps,
   Fragment,
@@ -268,7 +268,10 @@ function CollapsibleNavItem({ link, path }: NavGroupProps) {
             <span className="truncate" title={link.name}>
               {link.name}
             </span>
-            <ChevronRight className="ml-auto transition-transform duration-200 group-data-open/collapsible:rotate-90 motion-reduce:transition-none" />
+            <>
+              <ChevronRight className="ms-auto transition-transform duration-200 group-data-open/collapsible:rotate-90 motion-reduce:transition-none rtl:hidden" />
+              <ChevronLeft className="ms-auto transition-transform duration-200 group-data-open/collapsible:-rotate-90 motion-reduce:transition-none ltr:hidden" />
+            </>
           </SidebarMenuButton>
         </CollapsibleTrigger>
         <CollapsibleContent>

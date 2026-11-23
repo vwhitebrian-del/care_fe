@@ -190,7 +190,7 @@ function ChargeItemForm({
           disabled={disabled}
         />
       </TableCell>
-      <TableCell className="text-right">
+      <TableCell className="text-end">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" disabled={disabled}>
@@ -203,7 +203,7 @@ function ChargeItemForm({
                 onSelect={() => onRemove()}
                 className="text-red-600"
               >
-                <Trash2 className="h-4 w-4 mr-2" />
+                <Trash2 className="h-4 w-4 me-2" />
                 <span>{t("remove")}</span>
               </DropdownMenuItem>
             )}
@@ -280,7 +280,7 @@ export function ChargeItemQuestion({
               <TableHead>{t("quantity")}</TableHead>
               <TableHead>{t("price")}</TableHead>
               <TableHead>{t("performer")}</TableHead>
-              <TableHead className="text-right">{t("actions")}</TableHead>
+              <TableHead className="text-end">{t("actions")}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

@@ -190,7 +190,7 @@ export function PrintTemplateSheet({
                   <Button
                     type="button"
                     variant="ghost"
-                    className="text-destructive hover:text-destructive sm:mr-auto"
+                    className="text-destructive hover:text-destructive sm:me-auto"
                     disabled={isPending}
                     onClick={() => setConfirmRemove(true)}
                   >

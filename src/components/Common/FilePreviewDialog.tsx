@@ -498,7 +498,7 @@ export default function FilePreviewDialog(props: FilePreviewProps) {
                       {button.icon && (
                         <CareIcon
                           icon={button.icon as IconName}
-                          className="mr-2 text-lg"
+                          className="me-2 text-lg"
                         />
                       )}
                       {button.label}
@@ -538,7 +538,7 @@ export default function FilePreviewDialog(props: FilePreviewProps) {
                       {button.icon && (
                         <CareIcon
                           icon={button.icon as IconName}
-                          className="mr-2 text-lg"
+                          className="me-2 text-lg"
                         />
                       )}
                       {button.label}

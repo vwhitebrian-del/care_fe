@@ -72,7 +72,7 @@ export default function FacilityUsers(props: { facilityId: string }) {
       title={t("users_management")}
       componentRight={
         <Badge
-          className="bg-purple-50 text-purple-700 ml-2 text-sm font-medium rounded-xl px-3 m-3 w-max"
+          className="bg-purple-50 text-purple-700 ms-2 text-sm font-medium rounded-xl px-3 m-3 w-max"
           variant="outline"
         >
           {userListFetching
@@ -85,7 +85,7 @@ export default function FacilityUsers(props: { facilityId: string }) {
       }
     >
       <hr className="mt-4 border-gray-200" />
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 m-5 ml-0">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 m-5 ms-0">
         <SearchInput
           options={[
             {

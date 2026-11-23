@@ -241,7 +241,7 @@ function ImmunizationPolicyEditor({
                   <Button
                     type="submit"
                     disabled={isPending || (!!existing && !isDirty)}
-                    className="ml-auto h-10 sm:ml-0"
+                    className="ms-auto h-10 sm:ms-0"
                   >
                     {isPending && (
                       <Spinner

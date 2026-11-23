@@ -324,8 +324,8 @@ export function AppSidebarProvider({
             overlayReady &&
             "[&_[data-collapsible]>div:last-child]:invisible",
           isOverlay &&
-            "[&_[data-collapsible]>div:first-child]:w-0! [&_[data-collapsible]>div:last-child]:border-t [&_[data-collapsible]>div:last-child]:border-r [&_[data-collapsible]>div:last-child]:border-border [&_[data-collapsible]>div:last-child]:rounded-r-md [&_[data-collapsible]>div:last-child]:bg-sidebar [&_[data-collapsible]>div:last-child]:shadow-xl",
-          isOverlay && (innerWorkspace ? "[&>main]:ml-0!" : "[&>main]:ml-2!"),
+            "[&_[data-collapsible]>div:first-child]:w-0! [&_[data-collapsible]>div:last-child]:border-t [&_[data-collapsible]>div:last-child]:border-e [&_[data-collapsible]>div:last-child]:border-border [&_[data-collapsible]>div:last-child]:rounded-e-md [&_[data-collapsible]>div:last-child]:bg-sidebar [&_[data-collapsible]>div:last-child]:shadow-xl",
+          isOverlay && (innerWorkspace ? "[&>main]:ms-0!" : "[&>main]:ms-2!"),
           className,
         )}
         style={

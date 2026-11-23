@@ -30,7 +30,7 @@ export function DiagnosticReportMetadata({
           <div className="font-medium">
             {report.service_request.code.display}
             {report.service_request.code.code && (
-              <span className="text-xs text-muted-foreground ml-2">
+              <span className="text-xs text-muted-foreground ms-2">
                 ({report.service_request.code.code})
               </span>
             )}

@@ -279,7 +279,7 @@ export function MonetaryComponentSelector({
               handleRadioChange(groupCode, value)
             }
             options={radioOptions}
-            className="flex flex-row gap-1 justify-end mr-2"
+            className="flex flex-row gap-1 justify-end me-2"
           />
         </div>
       );
@@ -384,7 +384,7 @@ export function MonetaryComponentSelector({
               )}
             </div>
           )}
-          <ChevronDown className="ml-1 h-3 w-3 shrink-0 opacity-50" />
+          <ChevronDown className="ms-1 h-3 w-3 shrink-0 opacity-50" />
         </Button>
       );
     }
@@ -539,7 +539,7 @@ export function MonetaryComponentSelector({
           {/* Search */}
           <div className="p-3 border-b">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4 text-gray-400" />
+              <Search className="absolute start-3 top-1/2 transform -translate-y-1/2 size-4 text-gray-400" />
               <Input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -548,7 +548,7 @@ export function MonetaryComponentSelector({
                     ? "search_for_tax_code"
                     : "search_for_discount_code",
                 )}
-                className="pl-10"
+                className="ps-10"
               />
             </div>
           </div>
@@ -587,7 +587,7 @@ export function MonetaryComponentSelector({
               size="sm"
               className="flex-1 bg-green-600 hover:bg-green-700"
             >
-              <Check className="size-4 mr-1" />
+              <Check className="size-4 me-1" />
               {t("done")}
             </Button>
           </div>

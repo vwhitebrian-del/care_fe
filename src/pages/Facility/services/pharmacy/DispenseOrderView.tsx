@@ -448,7 +448,7 @@ export function DispenseOrderView({
       </div>
 
       {/* Patient header card with Account button on right */}
-      <Card className="mb-3 pr-2 rounded-md shadow-none bg-white border flex items-center justify-between">
+      <Card className="mb-3 pe-2 rounded-md shadow-none bg-white border flex items-center justify-between">
         <PatientHeader
           patient={dispenseOrder.patient}
           facilityId={facilityId}

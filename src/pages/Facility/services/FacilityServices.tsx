@@ -50,7 +50,7 @@ export default function FacilityServicesPage({
           </p>
         </div>
         <div className="relative w-full md:w-auto mb-6">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
             <CareIcon icon="l-search" className="size-5" />
           </span>
           <Input
@@ -59,7 +59,7 @@ export default function FacilityServicesPage({
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="w-full md:w-75 pl-10"
+            className="w-full md:w-75 ps-10"
             aria-label={t("search_healthcare_services")}
           />
         </div>

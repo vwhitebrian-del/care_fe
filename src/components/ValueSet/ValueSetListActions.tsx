@@ -32,7 +32,7 @@ export function ValueSetListActions({
           valueset={valueset}
           trigger={
             <Button variant="outline" size="sm">
-              <Eye className="size-4 mr-0" />
+              <Eye className="size-4 me-0" />
               {t("preview")}
             </Button>
           }
@@ -47,7 +47,7 @@ export function ValueSetListActions({
               })
             }
           >
-            <Copy className="size-4 mr-0" />
+            <Copy className="size-4 me-0" />
             {t("customize")}
           </Button>
         )}
@@ -66,12 +66,12 @@ export function ValueSetListActions({
     >
       {readOnly ? (
         <>
-          <Eye className="size-4 mr-0" />
+          <Eye className="size-4 me-0" />
           {t("view")}
         </>
       ) : (
         <>
-          <Pencil className="size-4 mr-0" />
+          <Pencil className="size-4 me-0" />
           {t("edit")}
         </>
       )}

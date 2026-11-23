@@ -227,7 +227,7 @@ function PaymentReconciliationShow({
                     amount={payment.amount}
                   />
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="text-sm text-gray-500 mb-1">
                     {t("payment_date")}
                   </div>
@@ -377,7 +377,7 @@ function PaymentReconciliationShow({
                       {payment.target_invoice.id})
                     </p>
                   </div>
-                  <div className="text-right">
+                  <div className="text-end">
                     <div className="text-sm text-gray-500 mb-1">
                       {t("invoice_amount")}
                     </div>
@@ -429,8 +429,8 @@ function PaymentReconciliationShow({
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="relative pl-6">
-                  <div className="absolute left-0 top-2 size-2 rounded-full bg-primary" />
+                <div className="relative ps-6">
+                  <div className="absolute start-0 top-2 size-2 rounded-full bg-primary" />
                   <p className="font-medium">{t("payment_recorded")}</p>
                   <p className="text-sm text-gray-500">
                     {payment.payment_datetime
@@ -439,8 +439,8 @@ function PaymentReconciliationShow({
                   </p>
                 </div>
                 {payment.status === "cancelled" && (
-                  <div className="relative pl-6">
-                    <div className="absolute left-0 top-2 size-2 rounded-full bg-destructive" />
+                  <div className="relative ps-6">
+                    <div className="absolute start-0 top-2 size-2 rounded-full bg-destructive" />
                     <p className="font-medium">{t("payment_cancelled")}</p>
                     <p className="text-sm text-gray-500">
                       {format(new Date(), "PPP p")}

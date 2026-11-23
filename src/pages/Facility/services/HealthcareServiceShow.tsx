@@ -99,7 +99,7 @@ function LocationCard({
 
             <div className="shrink-0 w-full sm:w-auto px-3 text-xs border rounded-md bg-white py-2 flex items-center justify-center gap-1 text-gray-700">
               {text}
-              <CareIcon icon="l-arrow-right" className="size-3 ml-1" />
+              <CareIcon icon="l-arrow-right" className="size-3 ms-1" />
             </div>
           </div>
         </CardContent>

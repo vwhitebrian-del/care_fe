@@ -130,7 +130,7 @@ export function QuantityInput({
         onChange={(e) => handleValueChange(e.target.value)}
         step="0.01"
         disabled={disabled}
-        className="min-w-0 flex-1 rounded-r-none border-r-0"
+        className="min-w-0 flex-1 rounded-e-none border-e-0"
       />
       <div className="flex w-36 shrink-0">
         <ValueSetSelect
@@ -143,7 +143,7 @@ export function QuantityInput({
           aria-describedby={errorId}
           aria-invalid={!!errorId || undefined}
           placeholder={t("unit")}
-          className="h-auto justify-between truncate rounded-l-none border-gray-300 font-normal shadow-none"
+          className="h-auto justify-between truncate rounded-s-none border-gray-300 font-normal shadow-none"
         />
       </div>
     </div>

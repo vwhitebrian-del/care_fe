@@ -1023,7 +1023,7 @@ function ActivityDefinitionFormContent({
                                   <span className="font-medium">
                                     {code.display}
                                   </span>
-                                  <span className="ml-2 text-gray-500">
+                                  <span className="ms-2 text-gray-500">
                                     ({code.code})
                                   </span>
                                 </div>

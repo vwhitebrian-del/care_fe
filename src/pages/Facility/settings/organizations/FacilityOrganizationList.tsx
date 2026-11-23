@@ -164,7 +164,7 @@ export default function FacilityOrganizationList({
               onToggleExpand={handleToggleExpand}
               onOrganizationSelect={handleOrganizationSelect}
             />
-            <div className="flex-1 space-y-3 sm:space-y-4 rounded-lg md:shadow-lg overflow-hidden ml-0 md:ml-4 md:bg-white">
+            <div className="flex-1 space-y-3 sm:space-y-4 rounded-lg md:shadow-lg overflow-hidden ms-0 md:ms-4 md:bg-white">
               {organizationId && (
                 <div className="md:pt-4 flex items-center mx-auto max-w-4xl">
                   <Breadcrumb className="md:px-5 md:pt-5">
@@ -229,7 +229,7 @@ export default function FacilityOrganizationList({
                     <div className="flex items-center">
                       <h2 className="text-xl font-semibold">{org.name}</h2>
                       {org.org_type && (
-                        <Badge variant="indigo" className="ml-2 w-auto">
+                        <Badge variant="indigo" className="ms-2 w-auto">
                           {t(`facility_organization_type__${org.org_type}`)}
                         </Badge>
                       )}

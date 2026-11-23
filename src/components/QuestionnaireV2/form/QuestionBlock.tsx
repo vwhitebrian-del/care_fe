@@ -148,7 +148,7 @@ function LeafBlock({
         )}
       </div>
       {question.description && (
-        <p className="pl-2.5 text-xs text-gray-500">{question.description}</p>
+        <p className="ps-2.5 text-xs text-gray-500">{question.description}</p>
       )}
       {QuestionAnnotation && <QuestionAnnotation question={question} />}
       <div inert={inert || undefined}>

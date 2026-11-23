@@ -58,7 +58,7 @@ export function RecommendationOutline({
           className={cn(
             "h-auto justify-start whitespace-normal",
             cn(
-              "group flex w-full items-start gap-2.5 rounded-md px-3 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
+              "group flex w-full items-start gap-2.5 rounded-md px-3 py-3 text-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
               selected
                 ? "bg-primary-50 text-primary-900 ring-1 ring-inset ring-primary-200"
                 : "text-gray-700 hover:bg-gray-100",
@@ -104,7 +104,7 @@ export function RecommendationOutline({
           )}
         </Button>
         {node.is_group && node.children.length > 0 && (
-          <ul className="ml-4 mt-1 space-y-1 border-l border-gray-200 pl-2">
+          <ul className="ms-4 mt-1 space-y-1 border-s border-gray-200 ps-2">
             {node.children.map((child, index) =>
               renderNode(child, [...path, index]),
             )}

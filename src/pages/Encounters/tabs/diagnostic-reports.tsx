@@ -51,7 +51,7 @@ function LeftCard({ report, isActive, onClick }: LeftCardProps) {
       aria-current={isActive ? "true" : undefined}
       onClick={onClick}
       className={cn(
-        "h-auto w-full justify-start whitespace-normal p-3 text-left text-sm font-normal tracking-normal border border-border hover:border-primary-500 transition-colors rounded-md",
+        "h-auto w-full justify-start whitespace-normal p-3 text-start text-sm font-normal tracking-normal border border-border hover:border-primary-500 transition-colors rounded-md",
         isActive && "border-primary-600 bg-primary-50",
       )}
     >
@@ -79,7 +79,7 @@ function LeftCard({ report, isActive, onClick }: LeftCardProps) {
           </div>
         </div>
         {isActive && (
-          <ArrowRight className="size-4 text-muted-foreground ml-2" />
+          <ArrowRight className="size-4 text-muted-foreground ms-2" />
         )}
       </div>
     </Button>
@@ -267,7 +267,7 @@ export const DiagnosticReportsTab = ({
 
   return (
     <div className="flex flex-col md:flex-row h-full">
-      <div className="hidden md:flex md:w-1/4 flex-col gap-3 pt-1 md:h-full md:overflow-y-auto pr-3">
+      <div className="hidden md:flex md:w-1/4 flex-col gap-3 pt-1 md:h-full md:overflow-y-auto pe-3">
         <LeftPanel
           reports={reports}
           isLoading={isLoading}
@@ -287,12 +287,12 @@ export const DiagnosticReportsTab = ({
           <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
               <Button variant="outline" size="sm" className="w-full">
-                <Menu className="size-4 mr-2" />
+                <Menu className="size-4 me-2" />
                 {t("ENCOUNTER_TAB__diagnostic_reports")}
               </Button>
             </DrawerTrigger>
             <DrawerContent aria-describedby={undefined} height="fixed">
-              <DrawerHeader className="pl-1 border-b" showCloseButton>
+              <DrawerHeader className="ps-1 border-b" showCloseButton>
                 <DrawerTitle>
                   {t("ENCOUNTER_TAB__diagnostic_reports")}
                 </DrawerTitle>

@@ -103,7 +103,7 @@ export default function ResourceList({ facilityId }: { facilityId: string }) {
     <Page
       title={t("resource")}
       componentRight={
-        <Badge className="bg-purple-50 text-purple-700 ml-2 rounded-xl px-3 py-0.5 m-3 w-max border-gray-200">
+        <Badge className="bg-purple-50 text-purple-700 ms-2 rounded-xl px-3 py-0.5 m-3 w-max border-gray-200">
           {isLoading
             ? t("loading")
             : t("entity_count", {
@@ -306,12 +306,12 @@ export default function ResourceList({ facilityId }: { facilityId: string }) {
                           facilityId: resource.origin_facility.id,
                           id: resource.id,
                         }}
-                        className="items-center self-end pt-2 pr-4 pb-3 text-sm text-primary hover:underline text-right flex justify-end group-hover:translate-x-1 transition-transform"
+                        className="items-center self-end pt-2 pe-4 pb-3 text-sm text-primary hover:underline text-end flex justify-end group-hover:translate-x-1 transition-transform"
                       >
                         {t("view_details")}
                         <CareIcon
                           icon="l-arrow-right"
-                          className="ml-1 size-4"
+                          className="ms-1 size-4"
                         />
                       </Link>
                     </CardFooter>

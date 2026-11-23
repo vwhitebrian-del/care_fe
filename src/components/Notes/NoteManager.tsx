@@ -63,7 +63,7 @@ const ThreadItem = ({
     className={cn(
       "h-auto block whitespace-normal",
       cn(
-        "group relative w-full p-4 text-left rounded-lg transition-colors border",
+        "group relative w-full p-4 text-start rounded-lg transition-colors border",
         isSelected
           ? "bg-primary-100 hover:bg-primary/15 border-primary"
           : "hover:bg-gray-100 hover:border-gray-200",
@@ -115,7 +115,7 @@ const NewThreadDialog = ({
             {t("notes__start_new_discussion")}
             <InfoTooltip content={t("notes__create_discussion")} />
           </DialogTitle>
-          <DialogDescription className="text-sm text-left">
+          <DialogDescription className="text-sm text-start">
             {threadsUnused.length === 0
               ? t("notes__no_unused_threads")
               : t("notes__choose_template")}
@@ -155,9 +155,9 @@ const NewThreadDialog = ({
             disabled={!title.trim() || isCreating}
           >
             {isCreating ? (
-              <Spinner className="size-4 animate-spin mr-2" />
+              <Spinner className="size-4 animate-spin me-2" />
             ) : (
-              <MessageSquarePlus className="size-4 mr-2" />
+              <MessageSquarePlus className="size-4 me-2" />
             )}
             {t("create")}
           </Button>
@@ -181,7 +181,7 @@ const MobileNav = ({
 }) => {
   const { t } = useTranslation();
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 border-t border-gray-200 bg-white p-2 flex items-center justify-around z-50 divide-x">
+    <div className="lg:hidden fixed bottom-0 start-0 end-0 border-t border-gray-200 bg-white p-2 flex items-center justify-around z-50 divide-x">
       <Button
         variant="ghost"
         size="sm"
@@ -377,7 +377,7 @@ function PatientNoteManager({
   return (
     <div className="flex h-[calc(100vh-15rem)] min-h-80 overflow-hidden max-lg:pb-14">
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex lg:w-80 lg:flex-col lg:border-r border-gray-200">
+      <div className="hidden lg:flex lg:w-80 lg:flex-col lg:border-e border-gray-200">
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -440,7 +440,7 @@ function PatientNoteManager({
                 className="h-8 hidden lg:block"
                 disabled={!canWrite}
               >
-                <MessageSquarePlus className="size-4 mr-2" />
+                <MessageSquarePlus className="size-4 me-2" />
                 {t("notes__new")}
               </Button>
             </div>
@@ -494,7 +494,7 @@ function PatientNoteManager({
               onClick={() => setShowNewThreadDialog(true)}
               disabled={!canWrite}
             >
-              <MessageSquarePlus className="size-5 mr-2" />
+              <MessageSquarePlus className="size-5 me-2" />
               {t("notes__start_new_discussion")}
             </Button>
           </div>

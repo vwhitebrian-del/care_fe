@@ -113,8 +113,8 @@ function PatientPortalIndex() {
 
         <CardContent className="mt-2 pt-2 px-6 pb-3">
           <div className="flex flex-col md:flex-row gap-4 justify-between">
-            <div className="flex flex-row gap-3 justify-between md:flex-row md:flex-grow md:mr-6">
-              <div className="flex flex-col gap-0 items-start md:flex-grow md:mr-4">
+            <div className="flex flex-row gap-3 justify-between md:flex-row md:flex-grow md:me-6">
+              <div className="flex flex-col gap-0 items-start md:flex-grow md:me-4">
                 <span className="text-xs font-medium">{t("location")}: </span>
                 <span className="text-sm">
                   <Link
@@ -186,7 +186,7 @@ function PatientPortalIndex() {
       <div className="container mx-auto mt-2">
         <div className="flex justify-between w-full">
           <span className="text-xl font-bold">{t("appointments")}</span>
-          <Button variant="primary_gradient" className="sticky right-0" asChild>
+          <Button variant="primary_gradient" className="sticky end-0" asChild>
             <Link to="/facilities">
               <span>{t("book_appointment")}</span>
             </Link>

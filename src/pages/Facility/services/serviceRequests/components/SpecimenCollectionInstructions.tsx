@@ -40,7 +40,7 @@ export function SpecimenCollectionInstructions({
           "px-4 py-2 text-sm hover:bg-soft-background/50 aria-[expanded=false]:bg-muted aria-expanded:bg-soft-background aria-expanded:rounded-b-none",
         )}
       >
-        <div className="flex items-center gap-2 flex-1 mr-4">
+        <div className="flex items-center gap-2 flex-1 me-4">
           <span className="font-medium flex items-center gap-2 underline">
             {t("specimen_collection_instructions")}
             {hasCollected ? (

@@ -76,7 +76,7 @@ export function LocationSwitcher() {
             }}
             className={cn(
               "gap-1.5 text-muted-foreground",
-              !isCollapsed && "-ml-2 px-2",
+              !isCollapsed && "-ms-2 px-2",
             )}
             aria-label={t("home")}
             title={isCollapsed ? t("home") : undefined}
@@ -119,7 +119,7 @@ export function LocationSwitcher() {
                     <span className="text-xs text-muted-foreground">
                       {t("current_location")}
                     </span>
-                    <span className="max-w-full truncate text-left text-sm font-medium">
+                    <span className="max-w-full truncate text-start text-sm font-medium">
                       {location?.name ?? t("select_location")}
                     </span>
                   </div>

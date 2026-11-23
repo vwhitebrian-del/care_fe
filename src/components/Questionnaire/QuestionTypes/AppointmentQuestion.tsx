@@ -241,7 +241,7 @@ export function AppointmentQuestion({
       <div>
         <Label className="block mb-2">
           {t("appointment_slot")}
-          {question.required && <span className="text-red-500 ml-0.5">*</span>}
+          {question.required && <span className="text-red-500 ms-0.5">*</span>}
         </Label>
         <div
           className={cn(

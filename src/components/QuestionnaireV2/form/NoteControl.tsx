@@ -36,7 +36,7 @@ export function NoteControl({
 
   const noteIndicator = response.note && (
     <>
-      <span className="absolute bottom-2 right-2 size-1.5 rounded-full bg-amber-500" />
+      <span className="absolute bottom-2 end-2 size-1.5 rounded-full bg-amber-500" />
       <span id={noteStateId} className="sr-only">
         {t("note_added")}
       </span>
@@ -45,7 +45,7 @@ export function NoteControl({
 
   return (
     <Popover>
-      <div className="ml-auto flex shrink-0 items-center gap-1.5 self-center pl-1.5">
+      <div className="ms-auto flex shrink-0 items-center gap-1.5 self-center ps-1.5">
         <span aria-hidden className="h-6 w-px bg-gray-200" />
         <PopoverTrigger asChild>
           <Button

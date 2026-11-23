@@ -294,7 +294,7 @@ export function NoteThreadConversation({
                   onClick={() => void loadOlder()}
                 >
                   {conversation.isFetchingNextPage && (
-                    <Spinner className="mr-2 size-4 animate-spin" />
+                    <Spinner className="me-2 size-4 animate-spin" />
                   )}
                   {t("notes__load_older")}
                 </Button>
@@ -368,7 +368,7 @@ export function NoteThreadConversation({
                             }
                           >
                             {editMutation.isPending && (
-                              <Spinner className="mr-2 size-4 animate-spin" />
+                              <Spinner className="me-2 size-4 animate-spin" />
                             )}
                             {t("save_changes")}
                           </Button>
@@ -586,7 +586,7 @@ export function NoteThreadConversation({
                 }
               >
                 {renameMutation.isPending && (
-                  <Spinner className="mr-2 size-4 animate-spin" />
+                  <Spinner className="me-2 size-4 animate-spin" />
                 )}
                 {t("save_changes")}
               </Button>

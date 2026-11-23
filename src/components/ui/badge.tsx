@@ -204,7 +204,7 @@ function Badge({
                 type="button"
                 onClick={onClose}
                 aria-label={t("remove")}
-                className="inline-flex aspect-square shrink-0 cursor-pointer items-center justify-center self-stretch rounded-r-sm opacity-60 outline-none hover:bg-current/20 hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-indigo-500/80 focus-visible:ring-inset"
+                className="inline-flex aspect-square shrink-0 cursor-pointer items-center justify-center self-stretch rounded-e-sm opacity-60 outline-none hover:bg-current/20 hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-indigo-500/80 focus-visible:ring-inset"
               >
                 <X
                   className={cn(

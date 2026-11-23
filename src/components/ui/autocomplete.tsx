@@ -122,7 +122,7 @@ export default function Autocomplete({
     >
       <span
         className={cn(
-          "w-0 min-w-0 flex-1 truncate text-left",
+          "w-0 min-w-0 flex-1 truncate text-start",
           !displayText && "text-muted-foreground",
         )}
       >
@@ -238,7 +238,7 @@ export default function Autocomplete({
             height="fixed"
             className="p-1.5"
           >
-            <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+            <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
               <DrawerTitle>{placeholder || t("search")}</DrawerTitle>
             </DrawerHeader>
             <div className="flex min-h-0 flex-1 flex-col overflow-hidden pb-[env(safe-area-inset-bottom)]">

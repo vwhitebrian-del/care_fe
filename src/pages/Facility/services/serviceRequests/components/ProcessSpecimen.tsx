@@ -129,7 +129,7 @@ export function ProcessSpecimen({
                 type="button"
                 variant="ghost"
                 size="sm"
-                className="ml-auto h-auto p-1.5"
+                className="ms-auto h-auto p-1.5"
                 onClick={(e) =>
                   handleOpenNote(e, index, process.description, process.method)
                 }

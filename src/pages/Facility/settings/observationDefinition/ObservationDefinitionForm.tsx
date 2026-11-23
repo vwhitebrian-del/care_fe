@@ -783,7 +783,7 @@ function ObservationDefinitionFormContent({
                         });
                       }}
                     >
-                      <PlusCircle className="mr-2 h-4 w-4" />
+                      <PlusCircle className="me-2 h-4 w-4" />
                       {t("add_your_first_component")}
                     </Button>
                   </div>
@@ -794,7 +794,7 @@ function ObservationDefinitionFormContent({
                         key={componentField.id}
                         className="relative rounded-lg border border-gray-200 bg-gray-50 p-4"
                       >
-                        <div className="absolute right-3 top-3">
+                        <div className="absolute end-3 top-3">
                           <Button
                             type="button"
                             variant="ghost"
@@ -953,7 +953,7 @@ function ObservationDefinitionFormContent({
                         });
                       }}
                     >
-                      <PlusCircle className="mr-2 h-4 w-4" />
+                      <PlusCircle className="me-2 h-4 w-4" />
                       {t("add_component")}
                     </Button>
                   </div>

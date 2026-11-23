@@ -128,7 +128,7 @@ export function ShortcutCommandDialog({
                     >
                       <span className="flex-1">{action.label}</span>
                       {action.shortcut && (
-                        <CommandShortcut className="ml-2 text-xs text-gray-500 bg-white border border-gray-200 shadow-xs px-1.5 py-0.5 rounded">
+                        <CommandShortcut className="ms-2 text-xs text-gray-500 bg-white border border-gray-200 shadow-xs px-1.5 py-0.5 rounded">
                           {action.shortcut}
                         </CommandShortcut>
                       )}

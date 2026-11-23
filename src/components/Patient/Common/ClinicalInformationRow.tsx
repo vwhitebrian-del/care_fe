@@ -47,7 +47,7 @@ export function BadgeButtonDropdownTrigger({ note }: { note?: string }) {
           <BadgeInfo size={16} />
           {note && (
             <span
-              className="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-green-600 ring-2 ring-white"
+              className="absolute -top-0.5 -end-0.5 size-2 rounded-full bg-green-600 ring-2 ring-white"
               aria-hidden="true"
             ></span>
           )}
@@ -74,9 +74,9 @@ export default function ClinicalInformationRow({
           key={col.key}
           className={cn(
             "px-2 py-1 border-t border-b border-gray-200 flex items-center",
-            index === 0 && "border-l rounded-l",
-            index !== 0 && "border-l",
-            index === columns.length - 1 && "border-r",
+            index === 0 && "border-s rounded-s",
+            index !== 0 && "border-s",
+            index === columns.length - 1 && "border-e",
             col.className,
             compact && "rounded-none border-t-0",
           )}
@@ -87,7 +87,7 @@ export default function ClinicalInformationRow({
 
       <div
         className={cn(
-          "flex items-center justify-center border border-gray-200 border-l-0 rounded-r-sm",
+          "flex items-center justify-center border border-gray-200 border-s-0 rounded-e-sm",
           compact && "rounded-none border-t-0",
         )}
       >
@@ -151,14 +151,14 @@ export default function ClinicalInformationRow({
 
           <Button
             variant="link"
-            className="absolute top-0 right-2 flex items-center gap-1 p-0 text-sm"
+            className="absolute top-0 end-2 flex items-center gap-1 p-0 text-sm"
             onClick={() => setShowNote(false)}
           >
             <X />
             <span className="underline">{t("hide_note")}</span>
           </Button>
 
-          <p className="text-sm text-gray-700 whitespace-pre-wrap pr-8 max-w-full break-words mt-2">
+          <p className="text-sm text-gray-700 whitespace-pre-wrap pe-8 max-w-full break-words mt-2">
             {note}
           </p>
         </div>

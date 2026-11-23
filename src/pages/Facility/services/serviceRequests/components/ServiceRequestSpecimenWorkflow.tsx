@@ -89,7 +89,7 @@ export function ServiceRequestSpecimenWorkflow({
               </h5>
               <Badge
                 variant={allSpecimensCollected ? "green" : "orange"}
-                className="mr-3"
+                className="me-3"
               >
                 {allSpecimensCollected
                   ? requirements.length
@@ -202,7 +202,7 @@ export function ServiceRequestSpecimenWorkflow({
               <Button
                 variant="ghost"
                 onClick={() => setSelectedSpecimenDefinition(null)}
-                className="h-auto w-full flex-col items-stretch gap-3 bg-muted p-3 text-left font-normal tracking-normal sm:flex-row sm:items-center sm:justify-between sm:gap-2"
+                className="h-auto w-full flex-col items-stretch gap-3 bg-muted p-3 text-start font-normal tracking-normal sm:flex-row sm:items-center sm:justify-between sm:gap-2"
                 aria-label={t("collapse")}
               >
                 <div className="min-w-0 m-0">

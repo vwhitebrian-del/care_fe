@@ -368,7 +368,7 @@ export function WorkspaceForm({
               {t("workspace_editor_description")}
             </p>
           </div>
-          <div className="ml-auto flex w-full shrink-0 items-center justify-end gap-4 sm:w-auto">
+          <div className="ms-auto flex w-full shrink-0 items-center justify-end gap-4 sm:w-auto">
             <span
               className="hidden items-center gap-1.5 text-xs text-gray-500 xl:flex"
               role="status"
@@ -440,11 +440,11 @@ export function WorkspaceForm({
               <h2 id="workspace-settings-heading">
                 <CollapsibleTrigger
                   type="button"
-                  className="group flex w-full items-center gap-2.5 rounded-xl px-4 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 sm:px-5"
+                  className="group flex w-full items-center gap-2.5 rounded-xl px-4 py-3 text-start text-sm font-medium text-gray-700 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 sm:px-5"
                 >
                   <Settings2 className="size-4 shrink-0 text-gray-500" />
                   <span>{t("workspace_general_settings")}</span>
-                  <span className="ml-auto flex items-center gap-3">
+                  <span className="ms-auto flex items-center gap-3">
                     {(accessState.dirty ||
                       form.formState.dirtyFields.name ||
                       form.formState.dirtyFields.description ||

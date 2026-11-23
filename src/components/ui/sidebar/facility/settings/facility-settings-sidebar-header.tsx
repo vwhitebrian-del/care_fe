@@ -26,7 +26,7 @@ export function FacilitySettingsSidebarHeader() {
             size={isCollapsed ? "icon-sm" : "sm"}
             className={cn(
               "gap-1.5 text-muted-foreground",
-              !isCollapsed && "-ml-2 px-2",
+              !isCollapsed && "-ms-2 px-2",
             )}
           >
             <Link

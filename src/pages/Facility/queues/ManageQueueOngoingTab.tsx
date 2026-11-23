@@ -314,7 +314,7 @@ function FilterControls({
         )}
         <div className="flex flex-col sm:flex-row gap-2">
           <div className="relative w-full sm:w-64">
-            <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4 text-gray-400" />
+            <SearchIcon className="absolute start-3 top-1/2 transform -translate-y-1/2 size-4 text-gray-400" />
             <Input
               type="search"
               placeholder={t("search_by_patient_name")}
@@ -325,7 +325,7 @@ function FilterControls({
                   { overwrite: false, replace: true },
                 )
               }
-              className="pl-10 w-full h-9"
+              className="ps-10 w-full h-9"
             />
           </div>
           <PatientIdentifierFilter

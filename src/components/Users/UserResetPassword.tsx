@@ -150,7 +150,7 @@ export default function UserResetPassword({
                         </FormControl>
                         {isPasswordFieldFocused ? (
                           <div
-                            className="text-small mt-2 pl-2 text-secondary-500"
+                            className="text-small mt-2 ps-2 text-secondary-500"
                             aria-live="polite"
                           >
                             <ValidationHelper
@@ -232,7 +232,7 @@ export default function UserResetPassword({
                 {isPending && (
                   <CareIcon
                     icon="l-spinner"
-                    className="mr-2 size-4 animate-spin"
+                    className="me-2 size-4 animate-spin"
                   />
                 )}
                 {isPending ? t("updating") : t("update_password")}

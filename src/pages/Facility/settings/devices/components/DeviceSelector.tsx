@@ -127,7 +127,7 @@ export function DeviceSearch({
       ) : (
         <span className="text-gray-500">{t("select_device")}</span>
       )}
-      <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+      <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
     </Button>
   );
 

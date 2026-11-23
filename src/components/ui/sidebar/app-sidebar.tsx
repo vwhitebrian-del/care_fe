@@ -207,7 +207,7 @@ export function AppSidebar({
                 type="button"
                 variant="ghost"
                 size="icon"
-                className="ml-auto"
+                className="ms-auto"
                 aria-label={t("close_sidebar")}
                 onClick={() => setOpenMobile(false)}
               >
@@ -263,7 +263,7 @@ export function AppSidebar({
         <SidebarRail
           aria-hidden="true"
           onMouseEnter={handleToggleMouseEnter}
-          className="fixed top-[calc(var(--app-sidebar-offset)+(--spacing(2)))] left-0 right-auto! visible items-center justify-center after:hidden hover:group-data-[collapsible=offcanvas]:bg-sidebar-accent group-data-[state=expanded]:hidden"
+          className="fixed top-[calc(var(--app-sidebar-offset)+(--spacing(2)))] start-0 end-auto! visible items-center justify-center after:hidden hover:group-data-[collapsible=offcanvas]:bg-sidebar-accent group-data-[state=expanded]:hidden"
         >
           <span
             aria-hidden="true"

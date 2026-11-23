@@ -153,7 +153,7 @@ export function FilterTabs({
                     className="h-full font-medium text-muted-foreground"
                   >
                     {t("more")}
-                    <ChevronDown className="ml-1 h-4 w-4" />
+                    <ChevronDown className="ms-1 h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">

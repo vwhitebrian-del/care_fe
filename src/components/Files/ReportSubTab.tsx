@@ -165,7 +165,7 @@ export function ReportSubTab({
             </Button>
           </TooltipComponent>
           {facility && (
-            <div className="ml-auto">
+            <div className="ms-auto">
               <TemplateReportSheet
                 facilityId={facility.id}
                 associatingId={associatingId}
@@ -214,14 +214,14 @@ export function ReportSubTab({
             <Table className="table-fixed">
               <TableHeader>
                 <TableRow>
-                  <TableHead className="pl-4">{t("report_name")}</TableHead>
+                  <TableHead className="ps-4">{t("report_name")}</TableHead>
                   <TableHead className="hidden w-[22%] px-4 md:table-cell">
                     {t("type")}
                   </TableHead>
                   <TableHead className="hidden w-[16%] px-4 md:table-cell">
                     {t("date")}
                   </TableHead>
-                  <TableHead className="w-14 pr-4 text-right md:w-40">
+                  <TableHead className="w-14 pe-4 text-end md:w-40">
                     <span className="sr-only">{t("actions")}</span>
                   </TableHead>
                 </TableRow>
@@ -239,7 +239,7 @@ export function ReportSubTab({
                         report.is_archived && "bg-muted/30",
                       )}
                     >
-                      <TableCell className="relative py-3 pl-4">
+                      <TableCell className="relative py-3 ps-4">
                         <button
                           type="button"
                           onClick={() => handleView(report)}
@@ -314,7 +314,7 @@ export function ReportSubTab({
                           </span>
                         </TooltipComponent>
                       </TableCell>
-                      <TableCell className="pr-4 text-right">
+                      <TableCell className="pe-4 text-end">
                         <ReportRowActions
                           report={report}
                           onView={() => handleView(report)}

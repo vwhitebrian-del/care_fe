@@ -62,7 +62,7 @@ export function FillFormSection({
       {outlineHost &&
         createPortal(
           <div className="flex flex-col gap-3">
-            <p className="truncate pl-2 text-base font-semibold text-gray-950">
+            <p className="truncate ps-2 text-base font-semibold text-gray-950">
               {form.questionnaire.title}
             </p>
             <FillOutline ariaLabel={outlineLabel} />

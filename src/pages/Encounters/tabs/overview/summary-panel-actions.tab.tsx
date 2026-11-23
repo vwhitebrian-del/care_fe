@@ -112,7 +112,7 @@ export const SummaryPanelActionsTab = ({
             >
               <NotebookPen />
               {action.label}
-              <span className="ml-auto">
+              <span className="ms-auto">
                 {"shortcut" in action && action.shortcut}
               </span>
             </Button>

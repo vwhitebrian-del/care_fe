@@ -95,7 +95,7 @@ const MedicineListItem = ({
             </p>
           )}
         </div>
-        <div className="mt-1 mr-6">
+        <div className="mt-1 me-6">
           <Checkbox
             checked={isSelected}
             onCheckedChange={onSelect}

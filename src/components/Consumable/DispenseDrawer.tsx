@@ -555,10 +555,10 @@ export default function DispenseDrawer({
         </div>
         <div className="mx-auto flex min-h-0 w-full max-w-6xl flex-1 flex-col">
           {/* Selected Location */}
-          <div className="my-4 px-3 md:mr-4">
+          <div className="my-4 px-3 md:me-4">
             <Button
               variant="outline"
-              className="w-full justify-between border-gray-300 text-left h-auto py-1 px-2 bg-gray-50 hover:bg-gray-100"
+              className="w-full justify-between border-gray-300 text-start h-auto py-1 px-2 bg-gray-50 hover:bg-gray-100"
               onClick={handleLocationSelectorClick}
             >
               <div className="flex items-center gap-2">
@@ -584,7 +584,7 @@ export default function DispenseDrawer({
             </Button>
           </div>
 
-          <div className="flex-1 overflow-y-auto sm:pr-4 px-3">
+          <div className="flex-1 overflow-y-auto sm:pe-4 px-3">
             <Form {...form}>
               <form onSubmit={(e) => e.preventDefault()}>
                 {fields.length === 0 ? (
@@ -632,7 +632,7 @@ export default function DispenseDrawer({
                       <Table className="w-full border-separate border-spacing-y-2 px-1">
                         <TableHeader>
                           <TableRow className="divide-x">
-                            <TableHead className="rounded-tl-md bg-gray-100 text-gray-700">
+                            <TableHead className="rounded-ss-md bg-gray-100 text-gray-700">
                               {t("items")}
                             </TableHead>
                             <TableHead className="bg-gray-100 text-gray-700">
@@ -647,7 +647,7 @@ export default function DispenseDrawer({
                             <TableHead className="bg-gray-100 text-gray-700">
                               {t("expiry")}
                             </TableHead>
-                            <TableHead className="bg-gray-100 rounded-tr-md text-gray-700 text-center">
+                            <TableHead className="bg-gray-100 rounded-se-md text-gray-700 text-center">
                               {t("actions")}
                             </TableHead>
                           </TableRow>

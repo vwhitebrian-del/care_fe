@@ -72,7 +72,7 @@ export function QuestionnaireRevisionPage({
           <AlertDescription>{t("no_data_found")}</AlertDescription>
         </Alert>
         <Button variant="outline" onClick={() => goBack(versionsPath)}>
-          <ArrowLeft className="mr-2 size-4" />
+          <ArrowLeft className="me-2 size-4" />
           {t("back")}
         </Button>
       </div>

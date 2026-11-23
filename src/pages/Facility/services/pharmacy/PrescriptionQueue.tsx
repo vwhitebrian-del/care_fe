@@ -357,7 +357,7 @@ export default function PrescriptionQueue({
             </div>
             <div
               className={cn(
-                "mx-auto md:mr-0 flex flex-col md:flex-row items-center gap-2",
+                "mx-auto md:me-0 flex flex-col md:flex-row items-center gap-2",
                 selectedPrescriptionIds.length === 0 && "hidden",
               )}
             >
@@ -592,7 +592,7 @@ export default function PrescriptionQueue({
                             }
                             disabled={item.status !== "active"}
                           >
-                            <CheckCircle className="mr-2 h-4 w-4" />
+                            <CheckCircle className="me-2 h-4 w-4" />
                             {t("mark_prescription_complete")}
                           </DropdownMenuItem>
                         </DropdownMenuContent>

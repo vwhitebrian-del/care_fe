@@ -48,7 +48,7 @@ export function OrganizationSwitcher({
               ? t("my_organizations")
               : t("select_organization")}
           </span>
-          <ChevronsUpDown className="ml-auto size-3.5 shrink-0 opacity-60" />
+          <ChevronsUpDown className="ms-auto size-3.5 shrink-0 opacity-60" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

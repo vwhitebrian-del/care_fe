@@ -105,9 +105,9 @@ const ScheduleExceptionItem = (
         isPending && "opacity-50",
       )}
     >
-      <div className="flex items-center justify-between py-2 pr-4">
+      <div className="flex items-center justify-between py-2 pe-4">
         <div className="flex">
-          <ColoredIndicator className="my-1 mr-2.5 h-5 w-1.5 rounded-r" />
+          <ColoredIndicator className="my-1 me-2.5 h-5 w-1.5 rounded-e" />
           <div className="flex flex-col">
             <span className="space-x-1 text-lg font-semibold text-gray-700">
               {props.reason}
@@ -146,7 +146,7 @@ const ScheduleExceptionItem = (
           onClick={() => setShowDeleteDialog(true)}
         >
           <CareIcon icon="l-minus-circle" className="text-base" />
-          <span className="ml-2">{t("remove")}</span>
+          <span className="ms-2">{t("remove")}</span>
         </Button>
         <ConfirmActionDialog
           open={showDeleteDialog}

@@ -164,7 +164,7 @@ function MedicationsPreview({
         <span className="text-xs font-semibold text-primary-900">
           {isFormVariant ? t("medications_to_include") : t("medications")}
         </span>
-        <Badge variant="secondary" className="ml-auto text-xs px-1 py-0 h-4">
+        <Badge variant="secondary" className="ms-auto text-xs px-1 py-0 h-4">
           {medications.length}
         </Badge>
       </div>
@@ -235,7 +235,7 @@ function MedicationsPreview({
                   : "cursor-default bg-white/50",
               )}
             >
-              <div className="flex-1 min-w-0 text-left">
+              <div className="flex-1 min-w-0 text-start">
                 <div className="font-medium text-gray-900 text-xs leading-tight">
                   <MedicationName medication={med} />
                 </div>
@@ -318,7 +318,7 @@ function ActivityDefinitionsPreview({
             ? t("activity_definitions_to_include")
             : t("activity_definitions")}
         </span>
-        <Badge variant="secondary" className="ml-auto text-xs px-1 py-0 h-4">
+        <Badge variant="secondary" className="ms-auto text-xs px-1 py-0 h-4">
           {activityDefinitions.length}
         </Badge>
       </div>
@@ -368,7 +368,7 @@ function ActivityDefinitionsPreview({
                   : "cursor-default bg-white/50",
               )}
             >
-              <div className="flex-1 min-w-0 text-left font-medium text-gray-900 text-xs leading-tight">
+              <div className="flex-1 min-w-0 text-start font-medium text-gray-900 text-xs leading-tight">
                 {ad.service_request?.title ||
                   ad.slug ||
                   t("unknown_activity_definition")}
@@ -461,7 +461,7 @@ function TemplateCard({
           )}
           {!hasContent && <div className="w-4" />}
 
-          <div className="flex-1 min-w-0 text-left">
+          <div className="flex-1 min-w-0 text-start">
             <h4 className="font-semibold text-sm text-gray-900 line-clamp-1">
               {template.name}
             </h4>
@@ -842,14 +842,14 @@ export default function ManageResponseTemplatesSheet({
         >
           <SaveIcon className="size-3.5" />
           <span className="text-xs">{t("save_current")}</span>
-          <Badge variant="secondary" className="ml-auto text-xs px-1.5">
+          <Badge variant="secondary" className="ms-auto text-xs px-1.5">
             {totalItemsCount}
           </Badge>
         </Button>
       )}
 
       <div className="relative mt-1">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+        <Search className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
         <Input
           placeholder={t("search_templates")}
           value={searchQuery}
@@ -861,7 +861,7 @@ export default function ManageResponseTemplatesSheet({
             type="button"
             variant="ghost"
             size="icon"
-            className="absolute right-1 top-1/2 -translate-y-1/2 size-7 text-gray-400 hover:text-gray-600"
+            className="absolute end-1 top-1/2 -translate-y-1/2 size-7 text-gray-400 hover:text-gray-600"
             onClick={() => setSearchQuery("")}
           >
             <X className="size-4" />

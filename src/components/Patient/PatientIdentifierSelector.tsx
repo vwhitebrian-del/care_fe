@@ -284,7 +284,7 @@ export function PatientIdentifierSelector({
                 size="sm"
                 onClick={() => setScanDialogOpen(true)}
               >
-                <QrCode className="size-4 mr-1" />
+                <QrCode className="size-4 me-1" />
                 {t("scan")}
               </Button>
             </div>
@@ -292,7 +292,7 @@ export function PatientIdentifierSelector({
             {/* Search Type Selector */}
             {allIdentifierConfigs.length > 2 ? (
               <div>
-                <label className="text-xs text-gray-600 mb-1.5 ml-1 block">
+                <label className="text-xs text-gray-600 mb-1.5 ms-1 block">
                   {t("search_by")}
                 </label>
                 <Select value={searchType} onValueChange={setSearchType}>
@@ -343,14 +343,14 @@ export function PatientIdentifierSelector({
                 />
               ) : (
                 <>
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400 pointer-events-none z-10" />
+                  <Search className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-400 pointer-events-none z-10" />
                   <Input
                     ref={inputRef}
                     type="text"
                     placeholder={selectedConfig?.config.display || t("search")}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-9"
+                    className="ps-9"
                   />
                 </>
               )}
@@ -358,7 +358,7 @@ export function PatientIdentifierSelector({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 size-6 text-gray-400 hover:bg-transparent"
+                  className="absolute end-2 top-1/2 -translate-y-1/2 size-6 text-gray-400 hover:bg-transparent"
                   onClick={() => setSearchTerm("")}
                   aria-label={t("clear")}
                 >
@@ -380,7 +380,7 @@ export function PatientIdentifierSelector({
                       size="sm"
                       onClick={onRegisterNewPatient}
                     >
-                      <UserPlus className="size-4 mr-1" />
+                      <UserPlus className="size-4 me-1" />
                       {t("add_new_patient")}
                     </Button>
                   </div>
@@ -426,7 +426,7 @@ export function PatientIdentifierSelector({
                     className="w-full"
                     onClick={onRegisterNewPatient}
                   >
-                    <UserPlus className="size-4 mr-1" />
+                    <UserPlus className="size-4 me-1" />
                     {t("add_new_patient")}
                   </Button>
                 )}

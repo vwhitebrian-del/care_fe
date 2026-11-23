@@ -85,7 +85,7 @@ export default function TagConfigList({ facilityId }: TagConfigListProps) {
               facilityId={facilityId}
               trigger={
                 <Button>
-                  <CareIcon icon="l-plus" className="mr-2" />
+                  <CareIcon icon="l-plus" className="me-2" />
                   {t("add_tag_config")}
                 </Button>
               }
@@ -95,7 +95,7 @@ export default function TagConfigList({ facilityId }: TagConfigListProps) {
           <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-4">
             <div className="w-full md:w-auto">
               <div className="relative w-full md:w-auto">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
                   <CareIcon icon="l-search" className="size-5" />
                 </span>
                 <Input
@@ -104,7 +104,7 @@ export default function TagConfigList({ facilityId }: TagConfigListProps) {
                   onChange={(e) =>
                     updateQuery({ display: e.target.value || undefined })
                   }
-                  className="w-full md:w-[300px] pl-10"
+                  className="w-full md:w-[300px] ps-10"
                 />
               </div>
             </div>

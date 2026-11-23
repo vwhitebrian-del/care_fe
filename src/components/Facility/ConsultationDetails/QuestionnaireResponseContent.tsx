@@ -72,16 +72,16 @@ export function QuestionnaireResponseContent({
           {(questionResponse.values ?? []).map((entry, index) => (
             <div key={index}>
               {formatValue(entry.value, question.type)}
-              {entry.unit && <span className="ml-1">{entry.unit.code}</span>}
+              {entry.unit && <span className="ms-1">{entry.unit.code}</span>}
               {entry.coding && (
-                <span className="ml-1">
+                <span className="ms-1">
                   {entry.coding.display} ({entry.coding.code})
                 </span>
               )}
             </div>
           ))}
           {questionResponse.note && (
-            <span className="ml-2 text-sm text-gray-500">
+            <span className="ms-2 text-sm text-gray-500">
               ({questionResponse.note})
             </span>
           )}

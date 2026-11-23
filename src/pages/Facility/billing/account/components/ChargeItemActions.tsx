@@ -98,7 +98,7 @@ export default function ChargeItemActionsMenu({
             disabled={item.status !== ChargeItemStatus.billable}
             onSelect={() => onEdit(item)}
           >
-            <PencilIcon className="mr-2 size-4" />
+            <PencilIcon className="me-2 size-4" />
             <span>{t("edit")}</span>
           </DropdownMenuItem>
           {onChangeAccount && (
@@ -106,7 +106,7 @@ export default function ChargeItemActionsMenu({
               onClick={() => onChangeAccount(item)}
               className="cursor-pointer"
             >
-              <ArrowRightLeft className="mr-2 size-4" />
+              <ArrowRightLeft className="me-2 size-4" />
               <span>{t("change_account")}</span>
             </DropdownMenuItem>
           )}
@@ -120,7 +120,7 @@ export default function ChargeItemActionsMenu({
                     onClick={() => setPendingStatus(status)}
                     className="cursor-pointer"
                   >
-                    <Icon className="mr-2 size-4" />
+                    <Icon className="me-2 size-4" />
                     <span>{t("mark_as_status", { status: t(status) })}</span>
                   </DropdownMenuItem>
                 );

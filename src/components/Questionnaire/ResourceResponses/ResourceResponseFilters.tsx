@@ -123,7 +123,7 @@ export default function ResourceResponseFilters({
               disabled={disabled}
               className="h-12 w-full min-w-0 justify-between gap-2 border-neutral-300 bg-white font-normal text-neutral-950 shadow-xs hover:bg-neutral-50 focus-visible:ring-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 md:h-10"
             >
-              <span className="truncate text-left">
+              <span className="truncate text-start">
                 {value.questionnaire
                   ? value.questionnaireTitle ||
                     t("location_response_selected_form")
@@ -163,7 +163,7 @@ export default function ResourceResponseFilters({
                   >
                     {t("location_response_all_forms")}
                     {!value.questionnaire && (
-                      <Check className="ml-auto size-4" />
+                      <Check className="ms-auto size-4" />
                     )}
                   </CommandItem>
                 </CommandGroup>
@@ -268,7 +268,7 @@ export default function ResourceResponseFilters({
               disabled={disabled}
               className="h-12 w-full min-w-0 justify-between gap-2 border-neutral-300 bg-white font-normal text-neutral-950 shadow-xs hover:bg-neutral-50 focus-visible:ring-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 md:h-10"
             >
-              <span className="truncate text-left">
+              <span className="truncate text-start">
                 {value.createdBy
                   ? value.creatorName ||
                     t("location_response_selected_submitter")

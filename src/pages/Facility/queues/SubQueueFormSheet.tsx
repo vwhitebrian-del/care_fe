@@ -169,7 +169,7 @@ export default function SubQueueFormSheet({
       <SheetTrigger asChild>
         {trigger || (
           <Button>
-            <Plus className="size-4 mr-2" />
+            <Plus className="size-4 me-2" />
             {isEditMode ? t("edit") : t("add_service_point")}
           </Button>
         )}

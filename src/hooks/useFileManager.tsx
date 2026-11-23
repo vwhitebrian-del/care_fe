@@ -275,7 +275,7 @@ export default function useFileManager(
           <DialogHeader>
             <DialogTitle>
               <div className="flex flex-row">
-                <div className="my-1 mr-3 rounded-full bg-red-100 px-5 py-4 text-center">
+                <div className="my-1 me-3 rounded-full bg-red-100 px-5 py-4 text-center">
                   <CareIcon
                     icon="l-exclamation-triangle"
                     className="text-lg text-danger-500"
@@ -355,7 +355,7 @@ export default function useFileManager(
             </DialogTitle>
           </DialogHeader>
           <div className="mb-8 text-xs text-secondary-700">
-            <CareIcon icon="l-archive" className="mr-2" />
+            <CareIcon icon="l-archive" className="me-2" />
             {t("this_file_has_been_archived")}
           </div>
           <div className="flex flex-col gap-4 md:grid md:grid-cols-2">

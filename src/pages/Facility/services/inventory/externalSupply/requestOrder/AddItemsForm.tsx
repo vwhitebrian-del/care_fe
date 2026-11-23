@@ -280,7 +280,7 @@ export function AddItemsForm({
                             careConfig.maxDatapointsPerUpsert
                         }
                       >
-                        <Check className="mr-2 h-4 w-4" />
+                        <Check className="me-2 h-4 w-4" />
                         {isCreating ? t("creating") : t("save_list")}
                       </Button>
                     </div>

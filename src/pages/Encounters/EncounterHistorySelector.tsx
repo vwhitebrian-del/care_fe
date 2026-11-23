@@ -106,7 +106,7 @@ function EncounterCard({
       className={cn(
         "h-auto block whitespace-normal p-0",
         cn(
-          "relative w-full cursor-pointer rounded-md border text-left text-gray-950 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-600",
+          "relative w-full cursor-pointer rounded-md border text-start text-gray-950 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-600",
           isSelected
             ? "bg-white border-primary-600 shadow-md"
             : "bg-gray-100 hover:bg-gray-100 shadow-none",
@@ -115,7 +115,7 @@ function EncounterCard({
       onClick={() => onSelect(encounter.id)}
     >
       {isSelected && (
-        <span className="absolute right-0 h-8 w-1 bg-primary-600 rounded-l inset-y-1/2 -translate-y-1/2" />
+        <span className="absolute end-0 h-8 w-1 bg-primary-600 rounded-s inset-y-1/2 -translate-y-1/2" />
       )}
       <span className="flex flex-col px-4 py-3 gap-2">
         <span className="flex justify-between items-center">
@@ -140,7 +140,7 @@ function EncounterCard({
               )}
             </span>
             {encounter.tags.length > 0 && (
-              <span className="hidden md:flex items-center py-1 pr-1 gap-2">
+              <span className="hidden md:flex items-center py-1 pe-1 gap-2">
                 <Tags className="size-4 text-gray-700" />
                 <span className="text-sm text-gray-700 font-medium">
                   {t("encounter_tag_count", {
@@ -591,7 +591,7 @@ export default function EncounterHistorySelector() {
       <DrawerTrigger asChild>{trigger}</DrawerTrigger>
       <DrawerContent height="fixed" aria-describedby={undefined}>
         <DrawerHeader showCloseButton className="py-2 border-b shadow-2xs">
-          <DrawerTitle className="text-lg font-semibold pl-2">
+          <DrawerTitle className="text-lg font-semibold ps-2">
             {t("encounter_history")}
           </DrawerTitle>
         </DrawerHeader>

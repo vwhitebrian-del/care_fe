@@ -100,7 +100,7 @@ const SbomViewer = ({ data: { sbom } }: { data: LicensesSbom }) => {
             toast.info(t("copied_to_clipboard"));
           }}
         >
-          <CopyIcon className="mr-2" />
+          <CopyIcon className="me-2" />
           {t("copy_bom_json")}
         </Button>
       </div>

@@ -67,7 +67,7 @@ export default function ChargeItemPriceDisplay({
       <span>
         {prefix}
         {component.amount && (
-          <MonetaryDisplay amount={component.amount} className="mr-2" />
+          <MonetaryDisplay amount={component.amount} className="me-2" />
         )}
         {component.factor && <MonetaryDisplay factor={component.factor} />}
       </span>
@@ -105,7 +105,7 @@ export default function ChargeItemPriceDisplay({
             <span className="max-w-40">
               {component.code?.display || t("discount")}
               {component.conditions?.length ? (
-                <span className="ml-1 text-xs text-gray-400">
+                <span className="ms-1 text-xs text-gray-400">
                   ({t("conditional")})*
                 </span>
               ) : null}

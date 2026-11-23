@@ -392,7 +392,7 @@ export default function AvatarEditModal({
                       <label className="cursor-pointer">
                         <CareIcon
                           icon="l-cloud-upload"
-                          className="text-lg mr-1"
+                          className="text-lg me-1"
                         />
                         {t("upload_an_image")}
                         <input
@@ -435,7 +435,7 @@ export default function AvatarEditModal({
                       {isDeleting ? (
                         <CareIcon
                           icon="l-spinner"
-                          className="animate-spin text-lg mr-1"
+                          className="animate-spin text-lg me-1"
                         />
                       ) : null}
                       {isDeleting ? `${t("deleting")}...` : t("delete")}

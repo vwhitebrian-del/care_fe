@@ -155,7 +155,7 @@ export function TokenCategoryGroup({
                         <>
                           <span className="font-medium text-primary-700 dark:text-primary-400">
                             <Star
-                              className="mr-1 inline size-3.5 -translate-y-px fill-current"
+                              className="me-1 inline size-3.5 -translate-y-px fill-current"
                               aria-hidden
                             />
                             {t("default")}

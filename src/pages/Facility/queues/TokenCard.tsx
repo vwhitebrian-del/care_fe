@@ -186,7 +186,7 @@ const TokenCard = ({
                 onClick={() => printToken(token.id)}
                 className="text-base font-semibold text-gray-950"
               >
-                <PrinterIcon className="mr-2 size-4" />
+                <PrinterIcon className="me-2 size-4" />
                 {t("print")}
                 <ShortcutBadge actionId="print-button" />
               </Button>

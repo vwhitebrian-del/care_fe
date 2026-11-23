@@ -30,7 +30,7 @@ export default function TemplatePage({ facilityId }: TemplatePageProps) {
               to="/facility/$facilityId/template/builder"
               params={{ facilityId }}
             >
-              <CareIcon icon="l-plus" className="mr-1" />
+              <CareIcon icon="l-plus" className="me-1" />
               <span>{t("create_template")}</span>
             </Link>
           </Button>

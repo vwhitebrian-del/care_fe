@@ -522,7 +522,7 @@ export default function TemplateBuilder({
         </div>
 
         {/* Sidebar - 1/4 of screen */}
-        <div className="flex-1 border-l p-4 overflow-auto flex flex-col gap-4">
+        <div className="flex-1 border-s p-4 overflow-auto flex flex-col gap-4">
           {/* Context Selector */}
           <Form {...form}>
             <FormField
@@ -634,12 +634,12 @@ function FieldItem({
             type="button"
             variant="ghost"
             size="sm"
-            className="w-full justify-start text-left h-auto py-2"
+            className="w-full justify-start text-start h-auto py-2"
             style={{ paddingLeft: `${depth * 1.5}rem` }}
           >
             <ChevronRight
               className={cn(
-                "h-4 w-4 mr-2 transition-transform",
+                "h-4 w-4 me-2 transition-transform",
                 isExpanded && "rotate-90",
               )}
             />
@@ -678,7 +678,7 @@ function FieldItem({
       variant="ghost"
       size="sm"
       onClick={() => onClick(currentPath)}
-      className="w-full justify-start text-left h-auto py-2"
+      className="w-full justify-start text-start h-auto py-2"
       style={{ paddingLeft: `${depth * 1.5 + 1.5}rem` }}
     >
       <div className="flex flex-col items-start flex-1">

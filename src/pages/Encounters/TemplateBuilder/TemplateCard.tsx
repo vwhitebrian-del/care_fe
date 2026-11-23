@@ -87,7 +87,7 @@ export default function TemplateCard({
                 to="/facility/$facilityId/template/builder/$slug"
                 params={{ facilityId, slug: template.slug }}
               >
-                <CareIcon icon="l-pen" className="mr-1" />
+                <CareIcon icon="l-pen" className="me-1" />
                 <span>{t("edit")}</span>
               </Link>
             </Button>

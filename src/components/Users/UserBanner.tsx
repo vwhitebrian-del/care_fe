@@ -67,7 +67,7 @@ export default function UserBanner({ userData, onEdit }: UserBannerProps) {
           </Button>
         )}
       </div>
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-3 sm:ml-[6.25rem]">
+      <div className="mt-5 flex flex-wrap items-center justify-between gap-3 sm:ms-[6.25rem]">
         <p className="flex items-start gap-1.5 text-xs leading-relaxed text-soft-foreground">
           <Clock3 className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />
           <span>

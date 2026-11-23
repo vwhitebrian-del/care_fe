@@ -99,7 +99,7 @@ export default function ServiceTokenSection({
               onClick={() => setShowRevokeDialog(true)}
               className="justify-center items-center"
             >
-              <ShieldAlertIcon className="mr-2 size-4" />
+              <ShieldAlertIcon className="me-2 size-4" />
               {t("revoke_token")}
             </Button>
             <Button
@@ -108,7 +108,7 @@ export default function ServiceTokenSection({
               disabled={isGenerating}
               className="justify-center items-center"
             >
-              <KeyRoundIcon className="mr-2 size-4" />
+              <KeyRoundIcon className="me-2 size-4" />
               {isGenerating ? t("generating") : t("generate_token")}
             </Button>
           </div>
@@ -138,14 +138,14 @@ export default function ServiceTokenSection({
                 {t("service_account_token")}
               </p>
               <div className="relative bg-white p-3 rounded border border-gray-200">
-                <code className="block break-all font-mono text-sm text-gray-900 pr-8">
+                <code className="block break-all font-mono text-sm text-gray-900 pe-8">
                   {generatedToken}
                 </code>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleCopyToken}
-                  className="absolute top-2 right-2 h-6 w-6 p-0 hover:bg-gray-100"
+                  className="absolute top-2 end-2 h-6 w-6 p-0 hover:bg-gray-100"
                 >
                   <CopyIcon className="size-4" />
                 </Button>

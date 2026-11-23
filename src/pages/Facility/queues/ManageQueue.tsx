@@ -212,7 +212,7 @@ export function ManageQueuePage({
                 <ManageServicePointsDialog
                   trigger={
                     <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                      <SettingsIcon className="mr-2 size-4" />
+                      <SettingsIcon className="me-2 size-4" />
                       {t("manage_service_points")}
                     </DropdownMenuItem>
                   }
@@ -224,7 +224,7 @@ export function ManageQueuePage({
                   queueId={queueId}
                   trigger={
                     <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                      <Edit3 className="mr-2 size-4" />
+                      <Edit3 className="me-2 size-4" />
                       {t("edit_queue_name")}
                     </DropdownMenuItem>
                   }

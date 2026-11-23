@@ -31,7 +31,7 @@ export function ArchivedBadge({
     <TooltipComponent
       className="max-w-xs"
       content={
-        <div className="space-y-1.5 text-left whitespace-normal">
+        <div className="space-y-1.5 text-start whitespace-normal">
           <div>
             <p className="text-xs opacity-70">{t("archived_reason")}</p>
             <p className="break-words">{reason || "—"}</p>

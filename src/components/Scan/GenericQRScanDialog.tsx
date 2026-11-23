@@ -134,7 +134,7 @@ function GenericQRScanDialog({
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute top-2 right-2 z-20"
+                  className="absolute top-2 end-2 z-20"
                   onClick={() => setScanning(false)}
                   aria-label={t("close")}
                 >

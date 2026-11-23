@@ -1013,7 +1013,7 @@ function SelectOptionsPopover<T = unknown>({
             <>
               {selectedOptions.some((opt) => opt.icon) && (
                 <div
-                  className="flex items-center [&>*:not(:first-child)]:-ml-1.5"
+                  className="flex items-center [&>*:not(:first-child)]:-ms-1.5"
                   aria-hidden="true"
                 >
                   {selectedOptions.slice(0, 3).map((option) => (
@@ -1518,9 +1518,9 @@ function FilterChip<T = unknown>({
         <ButtonGroup
           className={cn(
             "grid w-full grid-cols-2",
-            "[&>*:not(:first-child)]:rounded-l-none! [&>*:not(:last-child)]:rounded-r-none!",
-            "[&>*:not(:first-child)]:border-l-0!",
-            "[&>*]:rounded-b-none! [&>*]:shadow-none! [&>[data-slot]:not(:has(~[data-slot]))]:rounded-br-none!",
+            "[&>*:not(:first-child)]:rounded-s-none! [&>*:not(:last-child)]:rounded-e-none!",
+            "[&>*:not(:first-child)]:border-s-0!",
+            "[&>*]:rounded-b-none! [&>*]:shadow-none! [&>[data-slot]:not(:has(~[data-slot]))]:rounded-ee-none!",
           )}
         >
           {fieldButton}
@@ -1529,9 +1529,9 @@ function FilterChip<T = unknown>({
         <ButtonGroup
           className={cn(
             "w-full",
-            "[&>*:not(:first-child)]:rounded-l-none! [&>*:not(:last-child)]:rounded-r-none!",
-            "[&>*]:border-t-0! [&>*:not(:first-child)]:border-l-0!",
-            "[&>*]:rounded-t-none! [&>*]:shadow-none! [&>[data-slot]:not(:has(~[data-slot]))]:rounded-tr-none!",
+            "[&>*:not(:first-child)]:rounded-s-none! [&>*:not(:last-child)]:rounded-e-none!",
+            "[&>*]:border-t-0! [&>*:not(:first-child)]:border-s-0!",
+            "[&>*]:rounded-t-none! [&>*]:shadow-none! [&>[data-slot]:not(:has(~[data-slot]))]:rounded-se-none!",
           )}
         >
           {valueSelector}
@@ -1548,8 +1548,8 @@ function FilterChip<T = unknown>({
       aria-label={field.label}
       className={cn(
         "w-fit max-w-full min-w-0 shrink-0",
-        "[&>*:not(:first-child)]:rounded-l-none! [&>*:not(:last-child)]:rounded-r-none!",
-        "[&>*:not(:first-child)]:border-l-0!",
+        "[&>*:not(:first-child)]:rounded-s-none! [&>*:not(:last-child)]:rounded-e-none!",
+        "[&>*:not(:first-child)]:border-s-0!",
         field.chipClassName,
       )}
     >
@@ -1888,7 +1888,7 @@ export function Filters<T = unknown>({
                       }}
                     />
                     {enableShortcut && shortcutLabel && (
-                      <Kbd className="bg-background absolute top-1/2 right-2 -translate-y-1/2 border">
+                      <Kbd className="bg-background absolute top-1/2 end-2 -translate-y-1/2 border">
                         {shortcutLabel}
                       </Kbd>
                     )}
@@ -1964,7 +1964,7 @@ export function Filters<T = unknown>({
                                 {field.icon}
                                 <span>{field.label}</span>
                                 {currentValues.length > 0 && (
-                                  <span className="text-muted-foreground ml-auto text-xs tabular-nums">
+                                  <span className="text-muted-foreground ms-auto text-xs tabular-nums">
                                     {currentValues.length}
                                   </span>
                                 )}
@@ -2089,7 +2089,7 @@ export function Filters<T = unknown>({
                             {field.icon}
                             <span>{field.label}</span>
                             {filterValueCount > 0 && (
-                              <span className="text-muted-foreground ml-auto text-xs tabular-nums">
+                              <span className="text-muted-foreground ms-auto text-xs tabular-nums">
                                 {filterValueCount}
                               </span>
                             )}
@@ -3051,7 +3051,7 @@ export function FilterPanel<T = unknown>({
                             )}
                             <span>{f.label}</span>
                             {filterValueCount > 0 && (
-                              <span className="text-muted-foreground ml-auto text-xs tabular-nums">
+                              <span className="text-muted-foreground ms-auto text-xs tabular-nums">
                                 {filterValueCount}
                               </span>
                             )}

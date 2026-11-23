@@ -173,7 +173,7 @@ export function SmartExternalDeliveryRow({
       {/* Product Knowledge */}
       <TableCell
         className={cn(
-          "sticky left-0 z-10 border-r border-gray-200 bg-white align-top p-2 shadow-[1px_0_0_0_var(--color-gray-300)]",
+          "sticky start-0 z-10 border-e border-gray-200 bg-white align-top p-2 shadow-[1px_0_0_0_var(--color-gray-300)]",
           replacesDeliveryId && "bg-primary-50",
         )}
       >
@@ -332,7 +332,7 @@ export function SmartExternalDeliveryRow({
                                     ? "primary"
                                     : "secondary"
                                 }
-                                className="text-xs ml-2"
+                                className="text-xs ms-2"
                               >
                                 {round(totalNetContent)} {unit}
                               </Badge>
@@ -555,7 +555,7 @@ export function SmartExternalDeliveryRow({
       <TableCell className="align-top p-2!">
         <div className="flex flex-col gap-1">
           <div className="flex items-center">
-            <span className="text-xs text-gray-500 mr-1">
+            <span className="text-xs text-gray-500 me-1">
               {CURRENCY_SYMBOL}
             </span>
             <DeliveryMonetaryInput
@@ -598,7 +598,7 @@ export function SmartExternalDeliveryRow({
         return (
           <TableCell key={code.code} className="align-top p-2">
             <div className="flex items-center">
-              <span className="text-xs text-gray-500 mr-1">
+              <span className="text-xs text-gray-500 me-1">
                 {CURRENCY_SYMBOL}
               </span>
               <DeliveryMonetaryInput
@@ -620,7 +620,7 @@ export function SmartExternalDeliveryRow({
       {/* Purchase Price (auto-calculated: tpr / pack_size) */}
       <TableCell className="align-top p-2">
         <div className="flex items-center">
-          <span className="text-xs text-gray-500 mr-1">{CURRENCY_SYMBOL}</span>
+          <span className="text-xs text-gray-500 me-1">{CURRENCY_SYMBOL}</span>
           <DeliveryMonetaryInput
             value={purchasePrice}
             placeholder="0"
@@ -633,7 +633,7 @@ export function SmartExternalDeliveryRow({
       {/* Total Purchase Price per pack (user-entered) */}
       <TableCell className="align-top p-2">
         <div className="flex items-center">
-          <span className="text-xs text-gray-500 mr-1">{CURRENCY_SYMBOL}</span>
+          <span className="text-xs text-gray-500 me-1">{CURRENCY_SYMBOL}</span>
           <DeliveryMonetaryInput
             value={totalPurchasePrice}
             aria-label={t("tpr")}
@@ -686,7 +686,7 @@ export function SmartExternalDeliveryRow({
 
       <TableCell
         className={cn(
-          "sm:sticky sm:right-0 z-10 border-l bg-white align-top p-2",
+          "sm:sticky sm:end-0 z-10 border-s bg-white align-top p-2",
           replacesDeliveryId && "bg-primary-50",
         )}
       >

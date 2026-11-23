@@ -200,7 +200,7 @@ export const BookAppointmentDetails = ({
       </div>
       {selectedSlotId && (
         <div className="hidden sm:flex p-4 shadow mt-2">
-          <div className="flex gap-4 ml-auto">
+          <div className="flex gap-4 ms-auto">
             <Button
               variant="outline"
               size="sm"

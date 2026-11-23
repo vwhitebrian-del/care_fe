@@ -125,7 +125,7 @@ const CriticalActionConfirmationDialog = ({
     <AlertDialog open={open} onOpenChange={handleOpenChange}>
       {trigger && <AlertDialogTrigger asChild>{trigger}</AlertDialogTrigger>}
       <AlertDialogContent className="max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] gap-0 overflow-y-auto">
-        <AlertDialogHeader className="block text-left">
+        <AlertDialogHeader className="block text-start">
           <div className="flex items-center gap-2">
             <div className={cn("shrink-0 rounded p-2", variantColors.bgColor)}>
               {icon ?? variantColors.defaultIcon}

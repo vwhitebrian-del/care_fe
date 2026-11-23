@@ -66,7 +66,7 @@ export function DiagnosticReportResultsTable({
         >
           <div className="flex flex-row text-sm divide-x divide-gray-300 space-x-2">
             {qr.conditions?.map((c, ind) => (
-              <span className="text-foreground pr-2" key={`condition-${ind}`}>
+              <span className="text-foreground pe-2" key={`condition-${ind}`}>
                 <ConditionOperationSummary condition={c} shortDisplay={true} />
               </span>
             ))}
@@ -85,7 +85,7 @@ export function DiagnosticReportResultsTable({
             const label = r.interpretation?.display;
 
             return (
-              <span key={i} className="text-foreground self-start ml-2">
+              <span key={i} className="text-foreground self-start ms-2">
                 {label ? `${label}: ` : ""}
                 {rangeText}
               </span>
@@ -156,11 +156,11 @@ export function DiagnosticReportResultsTable({
             index === components.length - 1 && "border-b",
           )}
         >
-          <TableCell className="pl-4 border-r border-b border-border whitespace-normal wrap-break-word align-top">
+          <TableCell className="ps-4 border-e border-b border-border whitespace-normal wrap-break-word align-top">
             <div className="w-2 h-px" />
             {component.code?.display}
           </TableCell>
-          <TableCell className="border-r border-b border-border whitespace-normal wrap-break-word align-top">
+          <TableCell className="border-e border-b border-border whitespace-normal wrap-break-word align-top">
             <div
               className={cn(
                 "whitespace-normal",
@@ -169,13 +169,13 @@ export function DiagnosticReportResultsTable({
             >
               <span>{component.value.value}</span>
               {component.value.unit && (
-                <span className="text-muted-foreground ml-1">
+                <span className="text-muted-foreground ms-1">
                   {component.value.unit.code || component.value.unit.display}
                 </span>
               )}
             </div>
           </TableCell>
-          <TableCell className="border-r border-b border-border whitespace-normal wrap-break-word align-top">
+          <TableCell className="border-e border-b border-border whitespace-normal wrap-break-word align-top">
             {component.reference_range?.length
               ? renderObservationReferenceRange(component.reference_range)
               : componentQualifiedRange &&
@@ -239,7 +239,7 @@ export function DiagnosticReportResultsTable({
               >
                 <span>{observation.value.value}</span>
                 {observation.value.unit && (
-                  <span className="text-muted-foreground ml-1">
+                  <span className="text-muted-foreground ms-1">
                     {observation.value.unit.code ||
                       observation.value.unit.display}
                   </span>

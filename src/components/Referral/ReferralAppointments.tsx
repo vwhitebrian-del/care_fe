@@ -105,7 +105,7 @@ function AppointmentSummary({
             )}
           </div>
           <p className="break-words text-xs text-muted-foreground">
-            <span className="mr-2">
+            <span className="me-2">
               {t(`referral_records_${attachment.attachment_type}`)}
             </span>
             {appointment?.token_slot.availability.name}

@@ -256,7 +256,7 @@ export function FillOutlineOverlay({
   return (
     <div
       ref={rootRef}
-      className="absolute inset-y-0 left-0 z-30 hidden lg:block"
+      className="absolute inset-y-0 start-0 z-30 hidden lg:block"
     >
       {/* The button comes FIRST in DOM so forward Tab from the rail
           enters the open panel's rows; z-10 keeps the ticks painted on
@@ -300,7 +300,7 @@ export function FillOutlineOverlay({
         className={cn(
           "h-auto px-0",
           cn(
-            "absolute top-1/2 left-0 z-10 flex max-h-[calc(100%-2rem)] min-h-8 w-6 -translate-y-1/2 flex-col rounded-r-lg py-2 transition-colors",
+            "absolute top-1/2 start-0 z-10 flex max-h-[calc(100%-2rem)] min-h-8 w-6 -translate-y-1/2 flex-col rounded-e-lg py-2 transition-colors",
             "hover:bg-gray-200/50 focus-visible:bg-gray-200/50 focus-visible:outline-none",
           ),
         )}
@@ -320,14 +320,14 @@ export function FillOutlineOverlay({
         aria-label={t("questions_outline")}
         inert={!open || undefined}
         className={cn(
-          "absolute inset-y-0 left-0 w-80 overflow-y-auto border-r border-gray-300 bg-white/90 shadow-lg backdrop-blur-sm",
+          "absolute inset-y-0 start-0 w-80 overflow-y-auto border-e border-gray-300 bg-white/90 shadow-lg backdrop-blur-sm",
           "transition-[opacity,transform] duration-200 motion-reduce:transition-none",
           open
             ? "translate-x-0 opacity-100"
             : "pointer-events-none -translate-x-3 opacity-0",
         )}
       >
-        <div ref={onPanelHost} className="flex flex-col gap-6 py-6 pl-7 pr-4" />
+        <div ref={onPanelHost} className="flex flex-col gap-6 py-6 ps-7 pe-4" />
       </aside>
     </div>
   );

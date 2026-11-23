@@ -497,7 +497,7 @@ const PaymentReconciliationSheetBase = ({
                     {invoice && (
                       <div className="flex text-sm justify-center text-gray-700">
                         {t("invoice_total")}:
-                        <p className="font-bold ml-1">
+                        <p className="font-bold ms-1">
                           <MonetaryDisplay amount={invoice.total_gross} />
                         </p>
                       </div>
@@ -565,7 +565,7 @@ const PaymentReconciliationSheetBase = ({
                               >
                                 <RadioGroupItem
                                   value={method.value}
-                                  className="absolute left-2 top-2"
+                                  className="absolute start-2 top-2"
                                   aria-label={`payment-method-${method.value}`}
                                 />
                                 <div className="grid grow justify-items-center gap-1">
@@ -738,7 +738,7 @@ const PaymentReconciliationSheetBase = ({
                             <span className="text-sm text-yellow-950">
                               {t("change_to_return")}:
                               <MonetaryDisplay
-                                className="font-semibold text-yellow-950 ml-1"
+                                className="font-semibold text-yellow-950 ms-1"
                                 amount={form.watch("returned_amount") || "0"}
                               />
                             </span>
@@ -847,7 +847,7 @@ const PaymentReconciliationSheetBase = ({
                       <>
                         <CareIcon
                           icon="l-spinner"
-                          className="mr-2 size-4 animate-spin"
+                          className="me-2 size-4 animate-spin"
                         />
                         {t("processing_with_dots")}
                       </>

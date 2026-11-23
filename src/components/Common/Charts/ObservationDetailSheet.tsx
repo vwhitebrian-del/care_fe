@@ -199,7 +199,7 @@ export function ObservationDetailSheet({
                           <h3 className="mb-1 text-sm font-semibold text-foreground">
                             {code.display || code.code}
                             {unitGroups.length > 1 && group.unit && (
-                              <span className="ml-1 font-normal text-muted-foreground">
+                              <span className="ms-1 font-normal text-muted-foreground">
                                 ({group.unit})
                               </span>
                             )}

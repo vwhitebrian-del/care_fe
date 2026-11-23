@@ -142,7 +142,7 @@ export default function EditFacilityUserRoleSheet({
 
                 <div className="flex flex-col flex-wrap gap-2 pt-2 border-t border-gray-200">
                   <div className="flex flex-wrap">
-                    <div className="mr-3">
+                    <div className="me-3">
                       <span className="text-sm text-gray-500">
                         {t("username")}
                       </span>

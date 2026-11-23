@@ -59,7 +59,7 @@ export function FacilitySwitcher({
           <span className="truncate">
             {selectedFacility?.name || t("select_facility")}
           </span>
-          <ChevronsUpDown className="ml-auto size-3.5 shrink-0 opacity-60" />
+          <ChevronsUpDown className="ms-auto size-3.5 shrink-0 opacity-60" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

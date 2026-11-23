@@ -167,7 +167,7 @@ export default function ProductKnowledgeView({ facilityId, slug }: Props) {
                 onClick={() => setShowDeleteDialog(true)}
                 disabled={isDeleting}
               >
-                <CareIcon icon="l-trash" className="mr-2 size-4" />
+                <CareIcon icon="l-trash" className="me-2 size-4" />
                 {isDeleting ? t("deleting") : t("delete")}
               </Button>
             )}
@@ -180,7 +180,7 @@ export default function ProductKnowledgeView({ facilityId, slug }: Props) {
                 })
               }
             >
-              <CareIcon icon="l-pen" className="mr-2 size-4" />
+              <CareIcon icon="l-pen" className="me-2 size-4" />
               {t("edit")}
             </Button>
           </div>

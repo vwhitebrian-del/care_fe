@@ -63,7 +63,7 @@ export function ValueSetFormErrors({
                   <Button
                     variant="link"
                     type="button"
-                    className="h-auto p-0 whitespace-normal text-left cursor-pointer text-left underline underline-offset-2"
+                    className="h-auto p-0 whitespace-normal text-start cursor-pointer text-start underline underline-offset-2"
                     onClick={() => onFocusIssue(issue)}
                   >
                     {issueLabel(issue)}: {issue.message}

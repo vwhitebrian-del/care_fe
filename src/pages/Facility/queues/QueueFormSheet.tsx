@@ -180,7 +180,7 @@ export default function QueueFormSheet({
         <SheetTrigger asChild>
           {trigger || (
             <Button>
-              <Plus className="size-4 mr-2" />
+              <Plus className="size-4 me-2" />
               {isEditMode ? t("edit") : t("create_queue")}
             </Button>
           )}
@@ -260,7 +260,7 @@ export default function QueueFormSheet({
           >
             {isPending ? (
               <>
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white me-2" />
                 {isEditMode ? t("updating") : t("creating")}
               </>
             ) : isEditMode ? (

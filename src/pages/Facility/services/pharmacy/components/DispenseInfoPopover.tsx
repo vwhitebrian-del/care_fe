@@ -172,7 +172,7 @@ const PrescriptionInfoSection = ({
         <span className="text-sm font-medium text-gray-600">
           {t("prescribed_by")}
         </span>
-        <span className="text-sm font-semibold text-gray-950 text-right">
+        <span className="text-sm font-semibold text-gray-950 text-end">
           {prescriber ? formatName(prescriber) : "-"}
         </span>
       </div>
@@ -180,7 +180,7 @@ const PrescriptionInfoSection = ({
         <span className="text-sm font-medium text-gray-600">
           {t("prescribed_on")}
         </span>
-        <span className="text-sm font-semibold text-gray-950 text-right">
+        <span className="text-sm font-semibold text-gray-950 text-end">
           {prescribedOn
             ? format(new Date(prescribedOn), "dd/MM/yyyy · hh:mm a")
             : "-"}
@@ -259,7 +259,7 @@ const ChargeItemInfoSection = ({
         <span className="text-sm font-medium text-gray-600">
           {t("quantity")}
         </span>
-        <span className="text-sm font-semibold text-gray-950 text-right">
+        <span className="text-sm font-semibold text-gray-950 text-end">
           {roundWhole(chargeItem.quantity)}
         </span>
       </div>

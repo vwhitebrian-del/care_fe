@@ -33,7 +33,7 @@ export default function UpdateDevice({ facilityId, deviceId }: Props) {
   return (
     <div className="max-w-3xl mx-auto space-y-3">
       <div className="inline-flex items-center">
-        <DeviceTypeIcon type={device?.care_type} className="size-5 mr-2" />
+        <DeviceTypeIcon type={device?.care_type} className="size-5 me-2" />
         <span className="text-2xl font-bold capitalize">
           {device?.care_type
             ? t("update_device_with_type", { type: device.care_type })

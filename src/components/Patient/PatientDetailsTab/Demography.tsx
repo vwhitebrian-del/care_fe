@@ -75,7 +75,7 @@ export const Demography = (props: PatientProps) => {
 
   const EmergencyContact = (props: { number?: string }) => (
     <div className="w-full">
-      <div className="mr-6 rounded-md border border-orange-300 bg-orange-50 p-4">
+      <div className="me-6 rounded-md border border-orange-300 bg-orange-50 p-4">
         {/* Emergency Contact Section */}
         <div>
           <div className="text-sm font-normal leading-5 text-gray-600">
@@ -281,7 +281,7 @@ export const Demography = (props: PatientProps) => {
           canWrite={canWritePatient}
           trigger={
             <Button variant="outline" disabled={false}>
-              <CareIcon icon="l-edit-alt" className="text-md pr-1" />
+              <CareIcon icon="l-edit-alt" className="text-md pe-1" />
               {t("edit")}
             </Button>
           }
@@ -310,7 +310,7 @@ export const Demography = (props: PatientProps) => {
                 aria-current={
                   activeSection === subtab.id ? "location" : undefined
                 }
-                className={`h-auto justify-start whitespace-normal cursor-pointer rounded-lg p-3 transition-colors duration-300 text-left ${
+                className={`h-auto justify-start whitespace-normal cursor-pointer rounded-lg p-3 transition-colors duration-300 text-start ${
                   activeSection === subtab.id
                     ? "bg-white text-green-800"
                     : "hover:bg-white hover:text-green-800"
@@ -345,10 +345,10 @@ export const Demography = (props: PatientProps) => {
                 <div
                   key={i}
                   id={subtab.id}
-                  className="group mt-4 rounded-md bg-white pb-2 pl-5 pt-5 shadow-sm"
+                  className="group mt-4 rounded-md bg-white pb-2 ps-5 pt-5 shadow-sm"
                 >
-                  <hr className="mb-1 mr-5 h-1 w-5 border-0 bg-blue-500" />
-                  <div className="flex flex-row items-center justify-between gap-x-4 mb-4 mr-4">
+                  <hr className="mb-1 me-5 h-1 w-5 border-0 bg-blue-500" />
+                  <div className="flex flex-row items-center justify-between gap-x-4 mb-4 me-4">
                     <h1 className="text-xl">{t(`patient__${subtab.id}`)}</h1>
                     {subtab.allowEdit &&
                       (subtab.editComponent ? (
@@ -361,7 +361,7 @@ export const Demography = (props: PatientProps) => {
                         >
                           <CareIcon
                             icon="l-edit-alt"
-                            className="text-md pr-1"
+                            className="text-md pe-1"
                           />
                           {t("edit")}
                         </Button>

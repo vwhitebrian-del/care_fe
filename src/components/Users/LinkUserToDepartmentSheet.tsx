@@ -98,7 +98,7 @@ export default function LinkUserToDepartmentSheet({
       <SheetTrigger asChild>
         {trigger || (
           <Button>
-            <CareIcon icon="l-plus" className="mr-2 size-4" />
+            <CareIcon icon="l-plus" className="me-2 size-4" />
             {t("link_department")}
           </Button>
         )}
@@ -145,7 +145,7 @@ export default function LinkUserToDepartmentSheet({
             }
           >
             {isPending && (
-              <CareIcon icon="l-spinner" className="mr-2 size-4 animate-spin" />
+              <CareIcon icon="l-spinner" className="me-2 size-4 animate-spin" />
             )}
             {t("link_to_department")}
           </Button>

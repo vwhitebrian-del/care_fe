@@ -88,7 +88,7 @@ function ActivityDefinitionCard({
               )}
             </div>
           </div>
-          <div className="ml-auto flex flex-wrap gap-2">
+          <div className="ms-auto flex flex-wrap gap-2">
             <ActivityDefinitionActions
               definition={definition}
               facilityId={facilityId}
@@ -224,7 +224,7 @@ export function ActivityDefinitionListContent({
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
         {/* Search */}
         <div className="relative w-full sm:w-auto">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
             <CareIcon icon="l-search" className="size-5" />
           </span>
           <Input
@@ -233,7 +233,7 @@ export function ActivityDefinitionListContent({
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="w-full sm:w-[300px] pl-10"
+            className="w-full sm:w-[300px] ps-10"
           />
         </div>
 

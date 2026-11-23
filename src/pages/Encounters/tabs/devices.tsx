@@ -137,7 +137,7 @@ export const EncounterDevicesTab = () => {
                                         }
                                         disabled={isDisassociating}
                                       >
-                                        <Unlink className="size-4 mr-1" />
+                                        <Unlink className="size-4 me-1" />
                                         {t("disassociate")}
                                       </Button>
                                     </TooltipTrigger>
@@ -178,7 +178,7 @@ export const EncounterDevicesTab = () => {
                 encounterId={encounterId}
               >
                 <Button variant="white">
-                  <CareIcon icon="l-link-add" className="size-4 mr-1" />
+                  <CareIcon icon="l-link-add" className="size-4 me-1" />
                   {t("associate_device_to_encounter")}
                 </Button>
               </AssociateDeviceSheet>

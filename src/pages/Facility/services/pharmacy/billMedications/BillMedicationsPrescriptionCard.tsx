@@ -184,8 +184,8 @@ export const BillMedicationsOtherItemsCard = ({
 
   return (
     <>
-      <div className="relative flex justify-between col-start-1 col-span-7 bg-white pt-4 pr-2 pb-2 pl-4">
-        <div className="absolute top-5 left-0 h-4 w-1 bg-amber-500 rounded-r-md" />
+      <div className="relative flex justify-between col-start-1 col-span-7 bg-white pt-4 pe-2 pb-2 ps-4">
+        <div className="absolute top-5 start-0 h-4 w-1 bg-amber-500 rounded-e-md" />
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-0.5">
             <div className="text-base text-gray-950">
@@ -306,8 +306,8 @@ const PrescriptionSummary = ({
   }, [form, name, shouldMarkComplete, isMarkCompleteDirty]);
 
   return (
-    <div className="relative flex justify-between col-start-1 col-span-7 bg-white pt-4 pr-2 pb-2 pl-4">
-      <div className="absolute top-5 left-0 h-4 w-1 bg-indigo-500 rounded-r-md" />
+    <div className="relative flex justify-between col-start-1 col-span-7 bg-white pt-4 pe-2 pb-2 ps-4">
+      <div className="absolute top-5 start-0 h-4 w-1 bg-indigo-500 rounded-e-md" />
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-0.5">
           <div className="text-base text-gray-950">
@@ -347,7 +347,7 @@ const PrescriptionSummary = ({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <div className="flex items-center gap-2 pr-2">
+                <div className="flex items-center gap-2 pe-2">
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
@@ -512,7 +512,7 @@ const HeaderRow = ({
           {t("medicine")}
         </span>
       </div>
-      <div className="bg-gray-100 py-1 pl-3 pr-13 flex items-center justify-between">
+      <div className="bg-gray-100 py-1 ps-3 pe-13 flex items-center justify-between">
         <span className="text-sm font-medium text-gray-700">
           {t("select_lot")}
         </span>
@@ -651,7 +651,7 @@ const MedicineLineItem = ({
                 type="button"
                 onClick={() => autoSelectInventoryItems()}
                 disabled={disabled || isAutoSelectingInventoryItems}
-                className="absolute top-1/2 -translate-y-1/2 -right-2.75 size-5 z-10 text-gray-500"
+                className="absolute top-1/2 -translate-y-1/2 -end-2.75 size-5 z-10 text-gray-500"
                 size="xs"
                 title={t("auto_select_lots")}
               >
@@ -1082,7 +1082,7 @@ const MedicineLineItemSelectedLotPrice = ({ lot }: { lot: LotSelection }) => {
     <div className="text-base font-medium">
       <MonetaryDisplay amount={basePrice} />
       {hasDiscount && (
-        <p className="text-xs text-gray-500 ml-1">
+        <p className="text-xs text-gray-500 ms-1">
           (
           {discountComponents
             .map((component) =>

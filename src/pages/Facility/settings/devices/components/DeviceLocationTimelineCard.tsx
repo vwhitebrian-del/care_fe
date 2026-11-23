@@ -43,7 +43,7 @@ function LocationNode({
           <CareIcon icon="l-external-link-alt" className="size-3 opacity-50" />
         </Link>
 
-        <div className="ml-2">
+        <div className="ms-2">
           <Badge variant="outline" className="text-xs">
             {t(`location_form__${location?.form}`)}
           </Badge>
@@ -75,8 +75,8 @@ export const DeviceLocationTimelineCard = ({
   const { end } = locationData;
 
   return (
-    <div className="relative flex gap-8 pl-12 pt-0.5">
-      <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
+    <div className="relative flex gap-8 ps-12 pt-0.5">
+      <div className="absolute start-0 top-0 bottom-0 flex flex-col items-center">
         <div className="absolute w-px bg-gray-200 h-full top-4 group-last:hidden" />
         <div
           className={cn(

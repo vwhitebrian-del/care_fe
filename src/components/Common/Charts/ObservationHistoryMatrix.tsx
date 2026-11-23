@@ -93,11 +93,11 @@ export const ObservationHistoryMatrix = ({
   }, [columns]);
 
   return (
-    <div className="mt-5 ml-3 min-w-0 max-w-full rounded-xl border border-border bg-card">
+    <div className="mt-5 ms-3 min-w-0 max-w-full rounded-xl border border-border bg-card">
       <div className="relative flex items-center gap-3 p-4">
         <span
           aria-hidden="true"
-          className="absolute top-4 left-0 inset-y-6 w-1 rounded-r-lg bg-primary h-5"
+          className="absolute top-4 start-0 inset-y-6 w-1 rounded-e-lg bg-primary h-5"
         />
         <div className="min-w-0 flex-1">
           <h3 className="text-base font-semibold text-foreground">
@@ -121,7 +121,7 @@ export const ObservationHistoryMatrix = ({
             <TableRow className="bg-muted-background">
               <TableHead
                 ref={firstColRef}
-                className="sticky left-0 z-20 w-32 min-w-32 max-w-32 sm:w-64 sm:min-w-64 sm:max-w-64 border-r border-border bg-soft-background text-soft-foreground"
+                className="sticky start-0 z-20 w-32 min-w-32 max-w-32 sm:w-64 sm:min-w-64 sm:max-w-64 border-e border-border bg-soft-background text-soft-foreground"
               >
                 {t("component")}
               </TableHead>
@@ -133,7 +133,7 @@ export const ObservationHistoryMatrix = ({
                     key={col.key}
                     style={isLatest ? { left: pinnedOffset } : undefined}
                     className={cn(
-                      "whitespace-nowrap border-r border-border bg-muted-background text-center font-normal text-soft-foreground last:border-r-0",
+                      "whitespace-nowrap border-e border-border bg-muted-background text-center font-normal text-soft-foreground last:border-e-0",
                       isLatest && "sticky z-20 bg-primary/10",
                     )}
                   >
@@ -157,7 +157,7 @@ export const ObservationHistoryMatrix = ({
                 <TableHead
                   ref={loadMoreRef}
                   aria-hidden="true"
-                  className="w-2 min-w-2 border-r-0 bg-muted-background"
+                  className="w-2 min-w-2 border-e-0 bg-muted-background"
                 />
               )}
             </TableRow>
@@ -165,7 +165,7 @@ export const ObservationHistoryMatrix = ({
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.id} className="hover:bg-transparent">
-                <TableCell className="sticky left-0 z-10 w-32 max-w-32 sm:w-64 sm:max-w-64 border-r border-border bg-card">
+                <TableCell className="sticky start-0 z-10 w-32 max-w-32 sm:w-64 sm:max-w-64 border-e border-border bg-card">
                   <div className="flex min-w-0 flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-2">
                     <TooltipComponent content={row.title}>
                       <span className="block truncate font-semibold text-foreground">
@@ -183,7 +183,7 @@ export const ObservationHistoryMatrix = ({
                       key={col.key}
                       style={isLatest ? { left: pinnedOffset } : undefined}
                       className={cn(
-                        "whitespace-nowrap border-r border-border text-center last:border-r-0 bg-card",
+                        "whitespace-nowrap border-e border-border text-center last:border-e-0 bg-card",
                         isLatest && "sticky z-10",
                       )}
                     >
@@ -204,7 +204,7 @@ export const ObservationHistoryMatrix = ({
             <TableRow className="hover:bg-transparent border-none">
               <TableCell
                 colSpan={2}
-                className="sticky left-0 z-10 border border-border h-2 border-y-0 p-0 border-l-0"
+                className="sticky start-0 z-10 border border-border h-2 border-y-0 p-0 border-s-0"
               />
             </TableRow>
           </TableBody>

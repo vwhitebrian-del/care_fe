@@ -273,7 +273,7 @@ function WorkspaceOrganizationsForm<TOrganization extends { id: string }>({
         </Alert>
       )}
       <div className="flex flex-wrap items-center justify-end gap-3">
-        <p className="mr-auto text-sm text-gray-500">
+        <p className="me-auto text-sm text-gray-500">
           {t("workspace_access_saved_separately")}
         </p>
         <Button

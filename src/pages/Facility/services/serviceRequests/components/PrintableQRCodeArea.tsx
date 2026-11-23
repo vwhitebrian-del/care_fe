@@ -35,7 +35,7 @@ export function PrintableQRCodeArea({
         <img
           src={careConfig.mainLogo?.dark}
           alt="Care Logo"
-          className="h-10 w-auto object-contain ml-6 print:block"
+          className="h-10 w-auto object-contain ms-6 print:block"
         />
       </div>
 

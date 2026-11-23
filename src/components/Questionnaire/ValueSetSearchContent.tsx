@@ -302,7 +302,7 @@ export default function ValueSetSearchContent({
           >
             {searchQuery.isFetching ? (
               <div className="h-72 flex justify-center items-center py-6 text-gray-500">
-                <Spinner className="h-5 w-5 animate-spin mr-2" />
+                <Spinner className="h-5 w-5 animate-spin me-2" />
                 {t("searching")}
               </div>
             ) : (
@@ -331,7 +331,7 @@ export default function ValueSetSearchContent({
               (search.length < 3 && !searchQuery.isFetching) ||
                 (!favourites?.length && !resultsWithRecents.length)
                 ? ""
-                : "md:border-l",
+                : "md:border-s",
               "border-gray-200",
             )}
           >

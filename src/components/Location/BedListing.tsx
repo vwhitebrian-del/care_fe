@@ -97,7 +97,7 @@ export function BedListing({
               <RadioGroupItem
                 value={bed.id}
                 id={bed.id}
-                className="absolute top-2 right-2 size-4"
+                className="absolute top-2 end-2 size-4"
                 disabled={!isClickable}
                 onClick={(event) => {
                   event.stopPropagation();

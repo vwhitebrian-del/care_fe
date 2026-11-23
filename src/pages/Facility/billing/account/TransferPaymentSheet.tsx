@@ -200,7 +200,7 @@ export default function TransferPaymentSheet({
                       className={cn(
                         "h-auto block whitespace-normal",
                         cn(
-                          "w-full text-left rounded-md border p-3 transition-colors hover:bg-gray-50",
+                          "w-full text-start rounded-md border p-3 transition-colors hover:bg-gray-50",
                           selectedAccountId === acc.id
                             ? "border-primary bg-primary/5 ring-1 ring-primary"
                             : "border-gray-200",
@@ -250,7 +250,7 @@ export default function TransferPaymentSheet({
               <>
                 <CareIcon
                   icon="l-spinner"
-                  className="mr-2 size-4 animate-spin"
+                  className="me-2 size-4 animate-spin"
                 />
                 {t("transferring")}
               </>

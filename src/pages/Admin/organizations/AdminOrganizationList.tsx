@@ -238,7 +238,7 @@ export default function AdminOrganizationList({
             className="hidden md:flex items-center justify-center"
           />
 
-          <ResizablePanel defaultSize="80%" className="pl-0 md:pl-4">
+          <ResizablePanel defaultSize="80%" className="ps-0 md:ps-4">
             <div className="relative space-y-3 overflow-hidden rounded-lg sm:space-y-4 md:h-full md:overflow-y-auto md:bg-white md:shadow-lg">
               {organizationId && (
                 <div className="md:pt-4 flex items-center mx-auto max-w-4xl">
@@ -521,7 +521,7 @@ function SupplierDirectory() {
       <div className="flex flex-col gap-3 border-b border-gray-200 p-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
         <div className="relative w-full sm:max-w-sm">
           <Search
-            className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400"
+            className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-400"
             aria-hidden="true"
           />
           <Input
@@ -529,7 +529,7 @@ function SupplierDirectory() {
             onChange={(event) => setSearchTerm(event.target.value)}
             placeholder={t("search")}
             aria-label={t("search")}
-            className="pl-9"
+            className="ps-9"
           />
         </div>
         {isFetching && (

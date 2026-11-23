@@ -35,7 +35,7 @@ export function BedSection({
           <Button
             variant="ghost"
             size="sm"
-            className="-ml-2.5 min-w-0 max-w-full"
+            className="-ms-2.5 min-w-0 max-w-full"
             onClick={() => onOpenRoom?.(room)}
           >
             {Icon && <Icon aria-hidden="true" />}

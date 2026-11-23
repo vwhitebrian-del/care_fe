@@ -88,7 +88,7 @@ export default function DevicesList({ facilityId }: Props) {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div className="flex items-center gap-4">
           <PageTitle title={t("devices")} className="mt-2" />
-          <Badge className="bg-purple-50 text-purple-700 ml-2 rounded-xl px-3 py-0.5 m-3 w-max border-gray-200">
+          <Badge className="bg-purple-50 text-purple-700 ms-2 rounded-xl px-3 py-0.5 m-3 w-max border-gray-200">
             {isLoading
               ? t("loading")
               : t("entity_count", {
@@ -123,7 +123,7 @@ export default function DevicesList({ facilityId }: Props) {
                       params={{ facilityId }}
                       search={{ type: pluginDevice.type }}
                     >
-                      <DeviceIcon className="size-4 mr-1" />
+                      <DeviceIcon className="size-4 me-1" />
                       {pluginDevice.type}
                     </Link>
                   </DropdownMenuItem>
@@ -134,7 +134,7 @@ export default function DevicesList({ facilityId }: Props) {
                   to="/facility/$facilityId/settings/devices/create"
                   params={{ facilityId }}
                 >
-                  <CubeIcon className="size-4 mr-1" />
+                  <CubeIcon className="size-4 me-1" />
                   {t("other")}
                 </Link>
               </DropdownMenuItem>
@@ -155,12 +155,12 @@ export default function DevicesList({ facilityId }: Props) {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">
-          <SearchIcon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-500" />
+          <SearchIcon className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-500" />
           <Input
             placeholder={t("search_devices")}
             value={qParams.search_text || ""}
             onChange={(e) => handleSearchChange(e.target.value)}
-            className="pl-9"
+            className="ps-9"
           />
         </div>
         {pluginDevices.length > 0 && (
@@ -175,7 +175,7 @@ export default function DevicesList({ facilityId }: Props) {
                 ) : (
                   t("filter_by_type")
                 )}
-                <CaretSortIcon className="ml-2 size-4" />
+                <CaretSortIcon className="ms-2 size-4" />
               </Button>
             </PopoverTrigger>
             <PopoverContent
@@ -200,7 +200,7 @@ export default function DevicesList({ facilityId }: Props) {
                       className="w-full capitalize justify-start font-normal"
                       onClick={() => handleCareTypeChange(device.type)}
                     >
-                      <DeviceIcon className="mr-2 size-4" />
+                      <DeviceIcon className="me-2 size-4" />
                       {device.type}
                     </Button>
                   );

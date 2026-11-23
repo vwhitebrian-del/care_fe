@@ -148,7 +148,7 @@ export const MedicineInfoPopover = ({
                   variant="outline"
                   type="button"
                   size="sm"
-                  className="mr-auto font-semibold"
+                  className="me-auto font-semibold"
                   onClick={() => {
                     setViewingDispensedMedicationId(medication?.id);
                   }}

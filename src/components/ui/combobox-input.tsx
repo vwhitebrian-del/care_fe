@@ -136,7 +136,7 @@ export function ComboboxInput({
               <span className="truncate">
                 {value || inputProps.placeholder}
               </span>
-              <ChevronsUpDown className="ml-2 size-4 shrink-0 opacity-50" />
+              <ChevronsUpDown className="ms-2 size-4 shrink-0 opacity-50" />
             </Button>
           )}
         </DrawerTrigger>

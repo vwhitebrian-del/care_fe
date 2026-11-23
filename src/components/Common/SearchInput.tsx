@@ -153,8 +153,8 @@ const SearchInputFieldRenderer = ({
             onChange={handlePhoneChange}
             className={cn(
               "min-w-0 bg-background",
-              (!isSingleOption || hasValue) && "[&_input]:pr-20",
-              grouped && "rounded-l-none border-l-0",
+              (!isSingleOption || hasValue) && "[&_input]:pe-20",
+              grouped && "rounded-s-none border-s-0",
               inputClassName,
             )}
             autoFocus={autoFocus}
@@ -162,7 +162,7 @@ const SearchInputFieldRenderer = ({
             {...prop}
           />
           {showClear ? (
-            <div className="absolute inset-y-0 right-1.5 flex items-center">
+            <div className="absolute inset-y-0 end-1.5 flex items-center">
               <InputGroupButton
                 size="icon-sm"
                 aria-label={t("clear_search")}
@@ -176,7 +176,7 @@ const SearchInputFieldRenderer = ({
               <div
                 data-shortcut-target
                 onClick={() => inputRef?.current?.focus()}
-                className="pointer-events-none absolute inset-y-0 right-1.5 flex items-center"
+                className="pointer-events-none absolute inset-y-0 end-1.5 flex items-center"
               >
                 <ShortcutBadge actionId="search-input-shortcut" />
               </div>

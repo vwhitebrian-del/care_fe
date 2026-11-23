@@ -66,8 +66,8 @@ export function FillOutline({ ariaLabel }: { ariaLabel?: string }) {
         className={cn(
           "h-auto justify-start whitespace-normal",
           cn(
-            "relative flex w-full items-center gap-2 rounded-lg py-1.5 pr-2 text-left text-sm",
-            indent ? "min-h-9 px-3" : "min-h-10 pl-2",
+            "relative flex w-full items-center gap-2 rounded-lg py-1.5 pe-2 text-start text-sm",
+            indent ? "min-h-9 px-3" : "min-h-10 ps-2",
             active
               ? "font-semibold text-indigo-600"
               : cn(
@@ -93,7 +93,7 @@ export function FillOutline({ ariaLabel }: { ariaLabel?: string }) {
         {active && (
           <span
             aria-hidden
-            className="absolute right-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-l-full bg-indigo-600"
+            className="absolute end-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-s-full bg-indigo-600"
           />
         )}
       </Button>
@@ -109,7 +109,7 @@ export function FillOutline({ ariaLabel }: { ariaLabel?: string }) {
       <Fragment key={item.question.id}>
         {row(item, indent)}
         {children.length > 0 && (
-          <div className="ml-4 border-l border-gray-300 pl-2">
+          <div className="ms-4 border-s border-gray-300 ps-2">
             {children.map((child) => branch(child, true))}
           </div>
         )}

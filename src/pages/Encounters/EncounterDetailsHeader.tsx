@@ -118,7 +118,7 @@ export default function EncounterDetailsHeader({
                   variant="ghost"
                   type="button"
                   aria-label={`${t("encounter_dates")}: ${periodLabel}`}
-                  className="h-auto p-0 rounded-sm text-left underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                  className="h-auto p-0 rounded-sm text-start underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
                 >
                   {periodLabel}
                 </Button>
@@ -178,7 +178,7 @@ export default function EncounterDetailsHeader({
             <Button
               variant="outline"
               size="sm"
-              className="ml-auto h-8 shrink-0 rounded-lg border-gray-300 bg-white px-3 text-gray-950 shadow-none hover:bg-gray-50"
+              className="ms-auto h-8 shrink-0 rounded-lg border-gray-300 bg-white px-3 text-gray-950 shadow-none hover:bg-gray-50"
               asChild
             >
               <HrefLink
@@ -195,7 +195,7 @@ export default function EncounterDetailsHeader({
               </HrefLink>
             </Button>
           )}
-          {actions && <div className="ml-auto shrink-0">{actions}</div>}
+          {actions && <div className="ms-auto shrink-0">{actions}</div>}
         </div>
       ) : null}
     </section>

@@ -75,7 +75,7 @@ export function AuthCard({
           aria-hidden="true"
           viewBox="0 0 144 96"
           preserveAspectRatio="none"
-          className="pointer-events-none absolute top-0 right-0 z-0 h-24 w-36 mask-[radial-gradient(ellipse_at_top_right,black_15%,transparent_45%)] opacity-50"
+          className="pointer-events-none absolute top-0 end-0 z-0 h-24 w-36 mask-[radial-gradient(ellipse_at_top_right,black_15%,transparent_45%)] opacity-50"
         >
           {CORNER_PIXELS.map(({ fill, opacity, cells }) => (
             <g key={fill} fill={fill} opacity={opacity}>

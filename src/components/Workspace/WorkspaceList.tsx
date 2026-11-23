@@ -157,12 +157,12 @@ export function WorkspaceList({ scope }: WorkspaceListProps) {
         <Label htmlFor={searchId}>{t("search")}</Label>
         <div className="relative">
           <Search
-            className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
+            className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-500"
             aria-hidden="true"
           />
           <Input
             id={searchId}
-            className="h-10 pl-9"
+            className="h-10 ps-9"
             value={name}
             placeholder={t("search_workspaces")}
             onChange={(event) =>
@@ -214,9 +214,7 @@ export function WorkspaceList({ scope }: WorkspaceListProps) {
                 <TableHead className="hidden px-4 sm:table-cell">
                   {t("description")}
                 </TableHead>
-                <TableHead className="px-4 text-right">
-                  {t("actions")}
-                </TableHead>
+                <TableHead className="px-4 text-end">{t("actions")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -238,7 +236,7 @@ export function WorkspaceList({ scope }: WorkspaceListProps) {
                       {workspace.description || t("no_description")}
                     </p>
                   </TableCell>
-                  <TableCell className="px-4 py-3 text-right">
+                  <TableCell className="px-4 py-3 text-end">
                     <Button asChild variant="outline" size="sm">
                       <HrefLink
                         href={`${scope.basePath}/${workspace.id}/edit`}

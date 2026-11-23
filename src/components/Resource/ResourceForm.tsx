@@ -512,7 +512,7 @@ export default function ResourceForm({ facilityId, id }: ResourceProps) {
                 onClick={fillMyDetails}
                 className="shrink-0"
               >
-                <CareIcon icon="l-user" className="mr-2 size-4" />
+                <CareIcon icon="l-user" className="me-2 size-4" />
                 {t("fill_my_details")}
               </Button>
             </div>

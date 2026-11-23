@@ -260,7 +260,7 @@ export default function PatientSelect({
 
       {/* Sticky bottom bar */}
       {selectedPatient && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-4 shadow-lg">
+        <div className="fixed bottom-0 start-0 end-0 bg-white border-t p-4 shadow-lg">
           <div className="container mx-auto max-w-4xl flex justify-end gap-3">
             <Button variant="outline" onClick={() => setSelectedPatient(null)}>
               {t("cancel")}

@@ -297,7 +297,7 @@ export const PractitionerSelector = ({
           {t("select_practitioner")}
         </span>
       )}
-      <CaretDownIcon className="ml-auto" />
+      <CaretDownIcon className="ms-auto" />
     </Button>
   );
 
@@ -392,7 +392,7 @@ export const PractitionerSelector = ({
                           {formatName(user)}
                         </span>
                       </div>
-                      <XIcon className="ml-auto" />
+                      <XIcon className="ms-auto" />
                     </CommandItem>
                   ))}
                 </CommandGroup>
@@ -484,7 +484,7 @@ export const PractitionerSelector = ({
 
       {/* Sidebar */}
       {currentOrganizationId && (
-        <div className="flex min-h-0 flex-1 flex-col border-l border-gray-200">
+        <div className="flex min-h-0 flex-1 flex-col border-s border-gray-200">
           {/* Sidebar Header */}
           <div className="px-4 py-3 border-b bg-gray-50">
             <div className="flex items-center justify-between">
@@ -534,7 +534,7 @@ export const PractitionerSelector = ({
                     type="button"
                     variant="ghost"
                     key={organization.id}
-                    className="h-auto w-full justify-start text-left whitespace-normal flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
+                    className="h-auto w-full justify-start text-start whitespace-normal flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
                     onClick={() => handleChildOrganizationClick(organization)}
                   >
                     <div className="flex-shrink-0">
@@ -617,7 +617,7 @@ export const PractitionerSelector = ({
                         type="button"
                         variant="ghost"
                         key={user.id}
-                        className="h-auto w-full justify-start text-left whitespace-normal flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
+                        className="h-auto w-full justify-start text-start whitespace-normal flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
                         onClick={() => !isSelected && handleUserSelect(user)}
                       >
                         <Avatar

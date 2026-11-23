@@ -57,7 +57,7 @@ export function PatientHoverCard({
           className={cn(
             "min-w-0 max-w-full lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
             compact && "block w-full",
-            presentation === "encounter" && "min-w-0 max-w-full text-left",
+            presentation === "encounter" && "min-w-0 max-w-full text-start",
           )}
         >
           <PatientHoverCardTrigger
@@ -83,7 +83,7 @@ export function PatientHoverCard({
           disabled={disabled}
           className={cn(
             "hidden min-w-0 max-w-full lg:flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-10 focus-visible:ring-offset-background",
-            presentation === "encounter" && "min-w-0 max-w-full text-left",
+            presentation === "encounter" && "min-w-0 max-w-full text-start",
           )}
         >
           <PatientHoverCardTrigger
@@ -189,7 +189,7 @@ function PatientHoverCardTrigger({
     <div
       data-slot="patient-info-hover-card-trigger"
       className={cn(
-        "flex w-fit max-w-full gap-3 items-center rounded-md text-left",
+        "flex w-fit max-w-full gap-3 items-center rounded-md text-start",
         !disabled &&
           "hover:bg-soft-background active:bg-soft-background cursor-pointer",
       )}

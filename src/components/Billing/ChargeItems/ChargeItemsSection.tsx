@@ -99,14 +99,14 @@ export function ChargeItemsSection({
               ? t("charge_items", { count: chargeItems.count })
               : t("add_charge_item")}
           </CardTitle>
-          <div className="contents sm:ml-auto sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-2">
+          <div className="contents sm:ms-auto sm:flex sm:flex-wrap sm:items-center sm:justify-end sm:gap-2">
             {!viewOnly &&
               account?.results[0] &&
               isAccountActiveAndBillable(account?.results[0]) && (
                 <Button
                   variant="outline"
                   size="sm"
-                  className="ml-auto sm:ml-0"
+                  className="ms-auto sm:ms-0"
                   onClick={() => setIsMultiAddOpen(true)}
                 >
                   <LayersPlus className="size-4" />
@@ -118,7 +118,7 @@ export function ChargeItemsSection({
               <Button
                 variant="outline"
                 size="sm"
-                className="ml-auto sm:ml-0"
+                className="ms-auto sm:ms-0"
                 onClick={() => setIsInvoiceSheetOpen(true)}
               >
                 <ReceiptIndianRupee className="size-4" />

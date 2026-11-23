@@ -776,7 +776,7 @@ export function WorkspaceStudio({
         />
       ) : (
         <div className="grid min-h-[560px] lg:grid-cols-[220px_minmax(0,1fr)]">
-          <aside className="min-w-0 border-b border-border bg-background lg:border-r lg:border-b-0">
+          <aside className="min-w-0 border-b border-border bg-background lg:border-e lg:border-b-0">
             <div className="flex items-center justify-between px-4 py-4">
               <h3 className="text-xs font-semibold tracking-wider text-soft-foreground uppercase">
                 {t("workspace_studio_tabs")}
@@ -800,7 +800,7 @@ export function WorkspaceStudio({
                     aria-current={item.key === tab?.key ? "true" : undefined}
                     onClick={() => setSelectedTab(item.key)}
                     className={cn(
-                      "h-auto min-h-10 shrink-0 justify-start gap-2 px-3 py-2 text-left text-sm font-normal lg:w-full lg:whitespace-normal",
+                      "h-auto min-h-10 shrink-0 justify-start gap-2 px-3 py-2 text-start text-sm font-normal lg:w-full lg:whitespace-normal",
                       item.key === tab?.key &&
                         "bg-primary-50 font-semibold text-primary-900 hover:bg-primary-100",
                       item.hidden && "text-placeholder-foreground",
@@ -841,7 +841,7 @@ export function WorkspaceStudio({
                   >
                     <Plus className="size-3.5" />
                     {t("workspace_studio_add_tab")}
-                    <ChevronDown className="ml-auto size-3.5 text-placeholder-foreground" />
+                    <ChevronDown className="ms-auto size-3.5 text-placeholder-foreground" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -919,7 +919,7 @@ export function WorkspaceStudio({
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center gap-1">
-                    <div className="mr-2 flex items-center gap-2">
+                    <div className="me-2 flex items-center gap-2">
                       {/* The state text describes the switch; an associated label
                           would replace its stable name with the changing text. */}
                       <Switch

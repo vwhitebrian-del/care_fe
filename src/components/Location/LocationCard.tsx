@@ -80,7 +80,7 @@ export function LocationCard({
               <div className="flex items-center">
                 <div
                   className={cn(
-                    "p-1 rounded mr-2",
+                    "p-1 rounded me-2",
                     status === "active" ? "bg-teal-100" : "bg-blue-100",
                   )}
                 >

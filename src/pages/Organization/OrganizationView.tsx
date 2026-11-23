@@ -137,7 +137,7 @@ export default function OrganizationView({
                                 <Skeleton className="h-5 w-24" />
                               </TableCell>
                               <TableCell className="px-4">
-                                <Skeleton className="ml-auto h-12 w-20 md:h-10" />
+                                <Skeleton className="ms-auto h-12 w-20 md:h-10" />
                               </TableCell>
                             </TableRow>
                           ))
@@ -185,7 +185,7 @@ export default function OrganizationView({
                                 </Badge>
                               </TableCell>
                               <TableCell
-                                className="px-4 text-right"
+                                className="px-4 text-end"
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 <Button variant="tertiary" asChild>

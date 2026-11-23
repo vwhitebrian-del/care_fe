@@ -105,7 +105,7 @@ function AlertAction({ className, ...props }: React.ComponentProps<"div">) {
         // vertical (default): below description in col 2
         "col-start-2 flex flex-wrap gap-2 pt-2",
         // horizontal: col 3, start at row 1, self-centered, no top padding
-        "group-data-[layout=horizontal]/alert:col-start-3 group-data-[layout=horizontal]/alert:row-start-1 group-data-[layout=horizontal]/alert:flex-nowrap group-data-[layout=horizontal]/alert:self-center group-data-[layout=horizontal]/alert:pt-0 group-data-[layout=horizontal]/alert:pl-4",
+        "group-data-[layout=horizontal]/alert:col-start-3 group-data-[layout=horizontal]/alert:row-start-1 group-data-[layout=horizontal]/alert:flex-nowrap group-data-[layout=horizontal]/alert:self-center group-data-[layout=horizontal]/alert:pt-0 group-data-[layout=horizontal]/alert:ps-4",
         className,
       )}
       {...props}

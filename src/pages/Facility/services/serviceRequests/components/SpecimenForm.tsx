@@ -365,7 +365,7 @@ export function SpecimenForm({
                 className="rounded-lg border-none"
               >
                 <AccordionTrigger className="rounded-md px-4 py-2 text-sm hover:bg-muted aria-[expanded=false]:bg-soft-background aria-expanded:rounded-b-none aria-expanded:bg-soft-background">
-                  <div className="flex flex-1 items-center gap-2 mr-4">
+                  <div className="flex flex-1 items-center gap-2 me-4">
                     <span className="font-medium flex items-center gap-2 underline">
                       {t("see_container_requirements")}
                       <Eye className="size-4 text-muted-foreground" />

@@ -200,12 +200,12 @@ export function AddToTemplateDialog<T>({
               >
                 {isCreating ? (
                   <>
-                    <Spinner className="size-4 mr-2 animate-spin" />
+                    <Spinner className="size-4 me-2 animate-spin" />
                     {t("creating")}
                   </>
                 ) : (
                   <>
-                    <PlusIcon className="size-4 mr-2" />
+                    <PlusIcon className="size-4 me-2" />
                     {t("create_template")}
                   </>
                 )}
@@ -219,7 +219,7 @@ export function AddToTemplateDialog<T>({
             <Button
               type="button"
               variant="outline"
-              className="w-full flex items-center gap-3 p-3 h-auto rounded-lg border-2 border-dashed border-primary-300 bg-primary-50/30 hover:bg-primary-50 transition-colors text-left justify-start"
+              className="w-full flex items-center gap-3 p-3 h-auto rounded-lg border-2 border-dashed border-primary-300 bg-primary-50/30 hover:bg-primary-50 transition-colors text-start justify-start"
               onClick={() => setIsCreatingNewTemplate(true)}
             >
               <div className="rounded-lg bg-primary-100 p-2">
@@ -249,19 +249,19 @@ export function AddToTemplateDialog<T>({
 
             {/* Search and Template List */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+              <Search className="absolute start-3 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
               <Input
                 placeholder={t("search_templates")}
                 value={templateSearchQuery}
                 onChange={(e) => setTemplateSearchQuery(e.target.value)}
-                className="h-9 text-sm pl-9 pr-9"
+                className="h-9 text-sm ps-9 pe-9"
               />
               {templateSearchQuery && (
                 <Button
                   type="button"
                   variant="ghost"
                   size="icon"
-                  className="absolute right-1 top-1/2 -translate-y-1/2 size-7"
+                  className="absolute end-1 top-1/2 -translate-y-1/2 size-7"
                   onClick={() => setTemplateSearchQuery("")}
                 >
                   <X className="size-4" />
@@ -307,7 +307,7 @@ export function AddToTemplateDialog<T>({
                         type="button"
                         variant="outline"
                         className={cn(
-                          "w-full flex items-center gap-3 p-3 h-auto rounded-lg border transition-all text-left justify-start",
+                          "w-full flex items-center gap-3 p-3 h-auto rounded-lg border transition-all text-start justify-start",
                           isAdding
                             ? "opacity-50 cursor-not-allowed"
                             : "hover:border-primary-300 hover:bg-primary-50/50 cursor-pointer",

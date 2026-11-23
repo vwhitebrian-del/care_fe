@@ -48,7 +48,7 @@ export function ResourceResponseTable({
             <TableHead className="hidden h-10 text-sm font-medium text-neutral-950 md:table-cell">
               {t("status")}
             </TableHead>
-            <TableHead className="w-20 px-4 text-right">
+            <TableHead className="w-20 px-4 text-end">
               <span className="sr-only">{t("view_response")}</span>
             </TableHead>
           </TableRow>

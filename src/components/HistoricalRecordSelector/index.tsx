@@ -454,7 +454,7 @@ export function HistoricalRecordSelector<T extends BaseRecord>({
                                 <TableHead
                                   key={String(field.label)}
                                   className={
-                                    "border border-gray-200 bg-gray-50 nth-2:rounded-l-md nth-last-1:rounded-r-md"
+                                    "border border-gray-200 bg-gray-50 nth-2:rounded-s-md nth-last-1:rounded-e-md"
                                   }
                                 >
                                   {field.label}
@@ -465,7 +465,7 @@ export function HistoricalRecordSelector<T extends BaseRecord>({
                                   0 && (
                                   <TableHead
                                     className={
-                                      "border border-gray-200 bg-gray-50 nth-last-1:rounded-r-md"
+                                      "border border-gray-200 bg-gray-50 nth-last-1:rounded-e-md"
                                     }
                                   ></TableHead>
                                 )}

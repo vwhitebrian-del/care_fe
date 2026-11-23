@@ -587,7 +587,7 @@ export function EncounterCommandDialog({
                       {action.label}
                     </span>
                     {action.shortcut && (
-                      <CommandShortcut className="ml-2 tracking-normal">
+                      <CommandShortcut className="ms-2 tracking-normal">
                         <Kbd>{action.shortcut}</Kbd>
                       </CommandShortcut>
                     )}

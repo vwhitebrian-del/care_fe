@@ -130,12 +130,12 @@ function RoleCard({
             <DropdownMenuContent align="end">
               {!isSystem && (
                 <DropdownMenuItem onClick={() => onEdit(role)}>
-                  <Pencil className="mr-2 size-3.5" />
+                  <Pencil className="me-2 size-3.5" />
                   {t("edit")}
                 </DropdownMenuItem>
               )}
               <DropdownMenuItem onClick={() => onClone(role)}>
-                <Copy className="mr-2 size-3.5" />
+                <Copy className="me-2 size-3.5" />
                 {t("clone")}
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -275,7 +275,7 @@ export default function RolesIndex() {
         {/* Search + Context Filters */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="relative w-full sm:max-w-sm">
-            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
+            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
             <Input
               placeholder={t("search_roles")}
               value={qParams.search || ""}
@@ -285,7 +285,7 @@ export default function RolesIndex() {
                   page: undefined,
                 })
               }
-              className="pl-9"
+              className="ps-9"
             />
           </div>
 

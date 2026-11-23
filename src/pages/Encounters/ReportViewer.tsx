@@ -456,7 +456,7 @@ export default function ReportViewer({
               </DrawerTrigger>
               <DrawerContent aria-describedby={undefined} height="fixed">
                 <DrawerHeader
-                  className="pl-3 border-b shadow-2xs"
+                  className="ps-3 border-b shadow-2xs"
                   showCloseButton
                 >
                   <DrawerTitle>{t("report_history")}</DrawerTitle>
@@ -478,8 +478,8 @@ export default function ReportViewer({
         {reports.length > 0 && (
           <div
             className={cn(
-              "hidden lg:flex shrink-0 border-r flex-col transition-all duration-200",
-              sidebarOpen ? "w-72" : "w-0 overflow-hidden border-r-0",
+              "hidden lg:flex shrink-0 border-e flex-col transition-all duration-200",
+              sidebarOpen ? "w-72" : "w-0 overflow-hidden border-e-0",
             )}
           >
             <div className="flex items-center justify-between px-4 py-3 h-11 border-b">
@@ -505,7 +505,7 @@ export default function ReportViewer({
 
         <div className="flex-1 flex flex-col min-h-0 min-w-0">
           {selectedReport && (
-            <div className="items-center justify-between border-b pr-3 pl-1 h-11 hidden lg:flex">
+            <div className="items-center justify-between border-b pe-3 ps-1 h-11 hidden lg:flex">
               <div className="flex items-center gap-2 flex-1 min-w-0">
                 <Button
                   variant="ghost"
@@ -635,7 +635,7 @@ function ReportHistoryTrigger({
   return (
     <Card className="relative rounded-md cursor-pointer w-full bg-white border-primary-600">
       <CardContent className="flex items-center justify-between px-4 py-3 gap-2">
-        <div className="absolute right-0 h-8 w-1 bg-primary-600 rounded-l inset-y-1/2 -translate-y-1/2" />
+        <div className="absolute end-0 h-8 w-1 bg-primary-600 rounded-s inset-y-1/2 -translate-y-1/2" />
         <div className="flex flex-col items-start gap-1 min-w-0 flex-1">
           <span className="flex text-sm font-semibold text-gray-900 truncate w-full items-start">
             {selectedReport.name || template.name}
@@ -682,12 +682,12 @@ function ReportList({
             )}
           >
             {isSelected && (
-              <ArrowRight className="absolute text-primary-700 right-3 size-4 inset-y-1/2 -translate-y-1/2" />
+              <ArrowRight className="absolute text-primary-700 end-3 size-4 inset-y-1/2 -translate-y-1/2" />
             )}
             <CardContent
               className={cn(
                 "flex flex-col px-3 py-2.5 gap-1",
-                isSelected && "pr-8",
+                isSelected && "pe-8",
               )}
             >
               <div className="flex items-center gap-2">

@@ -170,7 +170,7 @@ export function EntitySelectionDrawer({
       className="w-full border border-primary rounded-md px-2 text-primary-700"
       disabled={disabled}
     >
-      <CareIcon icon="l-plus" className="mr-2" />
+      <CareIcon icon="l-plus" className="me-2" />
       <span className="font-semibold">{placeholder}</span>
     </Button>
   );

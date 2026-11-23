@@ -217,7 +217,7 @@ export function ConsentDetailPage({ consentId }: ConsentDetailPageProps) {
                                 )}
                                 <Button
                                   variant="ghost"
-                                  className="cursor-pointer ml-2"
+                                  className="cursor-pointer ms-2"
                                   onClick={() =>
                                     fileManager.downloadFile(
                                       attachment,
@@ -226,7 +226,7 @@ export function ConsentDetailPage({ consentId }: ConsentDetailPageProps) {
                                   }
                                 >
                                   <span className="flex flex-row items-center gap-1 text-sm text-gray-600">
-                                    <Download className="size-4 mr-1" />
+                                    <Download className="size-4 me-1" />
                                     <span className="hidden sm:inline">
                                       {t("download")}
                                     </span>

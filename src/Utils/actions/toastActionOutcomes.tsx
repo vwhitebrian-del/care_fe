@@ -40,7 +40,7 @@ function ActionOutcomesSummary({
         <InfoIcon className="size-4 shrink-0" aria-hidden />
         <p className={actionToastTitleClassName}>{heading}</p>
       </div>
-      <ul className="mt-2 max-h-64 space-y-2 overflow-y-auto pr-1">
+      <ul className="mt-2 max-h-64 space-y-2 overflow-y-auto pe-1">
         {entries.map((entry, index) => (
           <li
             key={index}

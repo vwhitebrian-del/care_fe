@@ -112,11 +112,11 @@ function LeftPanel({
               className="w-full border shadow-xs border-primary-600 justify-between h-auto min-h-[2.5rem] py-2"
             >
               <div className="flex justify-start items-center gap-2 text-primary-800 flex-1">
-                <span className="text-left whitespace-normal break-words">
+                <span className="text-start whitespace-normal break-words">
                   {questionnaireSlug ? questionnaireTitle : t("select_forms")}
                 </span>
               </div>
-              <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+              <div className="flex items-center gap-1 flex-shrink-0 ms-2">
                 {questionnaireSlug && (
                   <Button
                     variant="ghost"
@@ -251,7 +251,7 @@ export const EncounterResponsesTab = ({
           <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
               <Button variant="outline" size="sm" className="w-full">
-                <Menu className="size-4 mr-2" />
+                <Menu className="size-4 me-2" />
                 {t("view_responses")}
               </Button>
             </DrawerTrigger>

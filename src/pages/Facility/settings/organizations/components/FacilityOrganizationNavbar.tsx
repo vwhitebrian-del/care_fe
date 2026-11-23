@@ -84,13 +84,13 @@ function OrganizationTreeNode({
               onToggleExpand(organization.id);
             }
           }}
-          className="h-auto min-w-0 justify-start p-0 text-left flex items-center flex-1 text-sm gap-2 cursor-pointer"
+          className="h-auto min-w-0 justify-start p-0 text-start flex items-center flex-1 text-sm gap-2 cursor-pointer"
         >
           <span className="truncate">{organization.name}</span>
         </Button>
       </div>
       {isExpanded && children?.results && children.results.length > 0 && (
-        <div className="pl-2">
+        <div className="ps-2">
           {children.results.map((child) => (
             <OrganizationTreeNode
               key={child.id}

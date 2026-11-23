@@ -255,7 +255,7 @@ function StatusButtons({
           onClick={() => onUpdate({ clinical_status: "active" })}
           disabled={disabled}
         >
-          <CheckCircledIcon className="size-4 mr-2" />
+          <CheckCircledIcon className="size-4 me-2" />
           {t("mark_active")}
         </Button>
       )}
@@ -266,7 +266,7 @@ function StatusButtons({
           onClick={() => onUpdate({ clinical_status: "inactive" })}
           disabled={disabled}
         >
-          <CircleBackslashIcon className="size-4 mr-2" />
+          <CircleBackslashIcon className="size-4 me-2" />
           {t("mark_inactive")}
         </Button>
       )}
@@ -277,7 +277,7 @@ function StatusButtons({
           onClick={() => onUpdate({ clinical_status: "resolved" })}
           disabled={disabled}
         >
-          <CheckCircledIcon className="size-4 mr-2 text-green-600" />
+          <CheckCircledIcon className="size-4 me-2 text-green-600" />
           {t("mark_resolved")}
         </Button>
       )}
@@ -351,7 +351,7 @@ const AllergyItem = ({
             "[&_*]:line-through": allergy.clinical_status === "resolved",
           })}
         >
-          <TableCell className="py-1 pr-0">
+          <TableCell className="py-1 pe-0">
             <CategorySelect
               category={allergy.category}
               onValueChange={(value: AllergyCategory) =>
@@ -361,7 +361,7 @@ const AllergyItem = ({
               hasId={!!allergy.id}
             />
           </TableCell>
-          <TableCell className="font-medium py-1 pl-1">
+          <TableCell className="font-medium py-1 ps-1">
             {allergy.code.display}
           </TableCell>
           <TableCell className="py-1 px-0.5">
@@ -408,7 +408,7 @@ const AllergyItem = ({
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => setShowNotes((n) => !n)}>
-                  <Pencil2Icon className="size-4 mr-2" />
+                  <Pencil2Icon className="size-4 me-2" />
                   {showNotes
                     ? t("hide_notes")
                     : allergy.note
@@ -425,7 +425,7 @@ const AllergyItem = ({
                     }
                     disabled={disabled}
                   >
-                    <CheckCircledIcon className="size-4 mr-2" />
+                    <CheckCircledIcon className="size-4 me-2" />
                     {t("mark_active")}
                   </DropdownMenuItem>
                 )}
@@ -438,7 +438,7 @@ const AllergyItem = ({
                     }
                     disabled={disabled}
                   >
-                    <CircleBackslashIcon className="size-4 mr-2" />
+                    <CircleBackslashIcon className="size-4 me-2" />
                     {t("mark_inactive")}
                   </DropdownMenuItem>
                 )}
@@ -451,7 +451,7 @@ const AllergyItem = ({
                     }
                     disabled={disabled}
                   >
-                    <CheckCircledIcon className="size-4 mr-2 text-green-600" />
+                    <CheckCircledIcon className="size-4 me-2 text-green-600" />
                     {t("mark_resolved")}
                   </DropdownMenuItem>
                 )}
@@ -461,7 +461,7 @@ const AllergyItem = ({
                   onClick={onRemove}
                   disabled={allergy.verification_status === "entered_in_error"}
                 >
-                  <MinusCircledIcon className="size-4 mr-2" />
+                  <MinusCircledIcon className="size-4 me-2" />
                   {allergy.verification_status === "entered_in_error"
                     ? t("already_marked_as_error")
                     : t("remove_allergy")}

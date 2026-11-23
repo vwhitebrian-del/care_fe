@@ -93,7 +93,7 @@ function MonetaryAmountInput({
   return (
     <div className="relative">
       {!hideCurrency && (
-        <span className="font-medium absolute left-3 top-1/2 -translate-y-1/2 text-gray-600">
+        <span className="font-medium absolute start-3 top-1/2 -translate-y-1/2 text-gray-600">
           {CURRENCY_SYMBOL}
         </span>
       )}
@@ -107,7 +107,7 @@ function MonetaryAmountInput({
         onChange={handleChange}
         className={cn(
           "font-bold tracking-widest",
-          !hideCurrency && "pl-8",
+          !hideCurrency && "ps-8",
           props.className,
         )}
       />

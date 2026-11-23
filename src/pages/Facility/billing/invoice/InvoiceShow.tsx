@@ -145,9 +145,9 @@ function InvoiceShow({
   const queryClient = useQueryClient();
   useShortcutSubContext("facility:billing:invoice:show");
 
-  const tableHeadClass = "border-r border-gray-200 font-semibold text-center";
+  const tableHeadClass = "border-e border-gray-200 font-semibold text-center";
   const tableCellClass =
-    "border-r border-gray-200 font-medium text-gray-950 text-sm";
+    "border-e border-gray-200 font-medium text-gray-950 text-sm";
 
   // Fetch facility data for available components
   const { data: facilityData } = useQuery({
@@ -390,7 +390,7 @@ function InvoiceShow({
               >
                 <div className="font-semibold text-gray-950 underline">
                   {invoice.account.patient.name}
-                  <SquareArrowOutUpRight className="ml-1 size-4 inline" />
+                  <SquareArrowOutUpRight className="ms-1 size-4 inline" />
                 </div>
               </Link>
             </div>
@@ -405,7 +405,7 @@ function InvoiceShow({
               >
                 <div className="font-semibold text-gray-950 underline">
                   {invoice.account.name}
-                  <SquareArrowOutUpRight className="ml-1 size-4 inline" />
+                  <SquareArrowOutUpRight className="ms-1 size-4 inline" />
                 </div>
               </Link>
             </div>
@@ -451,7 +451,7 @@ function InvoiceShow({
                 onClick={() => handleStatusChange(InvoiceStatus.balanced)}
                 disabled={isUpdatingInvoice}
               >
-                <CareIcon icon="l-wallet" className="mr-1" />
+                <CareIcon icon="l-wallet" className="me-1" />
                 {t("mark_as_balanced")}
                 <ShortcutBadge actionId="mark-as-balanced" />
               </Button>
@@ -459,7 +459,7 @@ function InvoiceShow({
             {invoice.status === InvoiceStatus.issued && (
               <ButtonGroup className="w-full">
                 <Button className="w-full" onClick={() => openPaymentSheet()}>
-                  <CareIcon icon="l-plus" className="mr-2 size-4" />
+                  <CareIcon icon="l-plus" className="me-2 size-4" />
                   {invoice.is_refund
                     ? t("record_credit_note")
                     : t("record_payment")}
@@ -674,7 +674,7 @@ function InvoiceShow({
                             disabled={isUnlockPending}
                             className="w-full flex flex-row justify-stretch items-center"
                           >
-                            <CareIcon icon="l-unlock" className="mr-1" />
+                            <CareIcon icon="l-unlock" className="me-1" />
                             <span>{t("unlock_invoice")}</span>
                           </Button>
                         </DropdownMenuItem>
@@ -686,7 +686,7 @@ function InvoiceShow({
                             disabled={isLockPending}
                             className="w-full flex flex-row justify-stretch items-center"
                           >
-                            <CareIcon icon="l-lock" className="mr-1" />
+                            <CareIcon icon="l-lock" className="me-1" />
                             <span>{t("lock_invoice")}</span>
                           </Button>
                         </DropdownMenuItem>
@@ -698,7 +698,7 @@ function InvoiceShow({
                           disabled={isCancelPending}
                           className="w-full flex flex-row justify-stretch items-center"
                         >
-                          <CareIcon icon="l-times-circle" className="mr-1" />
+                          <CareIcon icon="l-times-circle" className="me-1" />
                           <span>{t("mark_as_cancelled")}</span>
                         </Button>
                       </DropdownMenuItem>
@@ -711,7 +711,7 @@ function InvoiceShow({
                         >
                           <CareIcon
                             icon="l-exclamation-circle"
-                            className="mr-1"
+                            className="me-1"
                           />
                           <span>{t("mark_as_entered_in_error")}</span>
                         </Button>
@@ -747,12 +747,12 @@ function InvoiceShow({
                     {t("bill_to")}:
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-950 text-base ml-2">
+                    <p className="font-semibold text-gray-950 text-base ms-2">
                       {invoice.account.patient.name}
                     </p>
-                    <div className="flex gap-1 font-medium text-gray-700 text-sm ml-2">
+                    <div className="flex gap-1 font-medium text-gray-700 text-sm ms-2">
                       {t("address")}:{" "}
-                      <p className="font-medium text-gray-700 text-sm whitespace-pre-wrap ml-2">
+                      <p className="font-medium text-gray-700 text-sm whitespace-pre-wrap ms-2">
                         {formatPatientAddress(
                           invoice.account.patient.address,
                         ) || (
@@ -762,7 +762,7 @@ function InvoiceShow({
                         )}
                       </p>
                     </div>
-                    <p className="font-medium text-gray-700 text-sm ml-2">
+                    <p className="font-medium text-gray-700 text-sm ms-2">
                       {t("phone")}:{" "}
                       {formatPhoneNumberIntl(
                         invoice.account.patient.phone_number,
@@ -773,7 +773,7 @@ function InvoiceShow({
                     }).map((identifier) => (
                       <p
                         key={identifier.config.id}
-                        className="font-medium text-gray-700 text-sm ml-2"
+                        className="font-medium text-gray-700 text-sm ms-2"
                       >
                         <span>{identifier.config.config.display}: </span>
                         <span>{identifier.value}</span>
@@ -784,7 +784,7 @@ function InvoiceShow({
                     {invoice.note && <p>{invoice.note}</p>}
                   </div>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="font-medium text-gray-700 text-sm">
                     {t("issue_date")}:
                   </div>
@@ -804,10 +804,10 @@ function InvoiceShow({
                   <TableHeader>
                     <TableRow className="border-b border-gray-200">
                       <TableHead className={tableHeadClass}>#</TableHead>
-                      <TableHead className={cn(tableHeadClass, "text-left")}>
+                      <TableHead className={cn(tableHeadClass, "text-start")}>
                         {t("item")}
                       </TableHead>
-                      <TableHead className={cn(tableHeadClass, "text-left")}>
+                      <TableHead className={cn(tableHeadClass, "text-start")}>
                         {t("performer")}
                       </TableHead>
                       <TableHead className={tableHeadClass}>
@@ -890,7 +890,7 @@ function InvoiceShow({
                               {formatName(item.performer_actor)}
                             </TableCell>
                             <TableCell
-                              className={cn(tableCellClass, "text-right")}
+                              className={cn(tableCellClass, "text-end")}
                             >
                               <MonetaryDisplay
                                 amount={baseAmount}
@@ -903,7 +903,7 @@ function InvoiceShow({
                               {round(item.quantity)}
                             </TableCell>
                             <TableCell
-                              className={cn(tableCellClass, "text-right")}
+                              className={cn(tableCellClass, "text-end")}
                             >
                               <div className="flex flex-col items-end gap-0.5">
                                 <MonetaryDisplay
@@ -942,7 +942,7 @@ function InvoiceShow({
                                 (taxCode) => (
                                   <TableCell
                                     key={taxCode}
-                                    className={cn(tableCellClass, "text-right")}
+                                    className={cn(tableCellClass, "text-end")}
                                   >
                                     {(() => {
                                       const totalAmount =
@@ -976,8 +976,8 @@ function InvoiceShow({
                             <TableCell
                               className={
                                 invoice.status === InvoiceStatus.draft
-                                  ? cn(tableCellClass, "text-right")
-                                  : "text-right"
+                                  ? cn(tableCellClass, "text-end")
+                                  : "text-end"
                               }
                             >
                               <MonetaryDisplay
@@ -1053,7 +1053,7 @@ function InvoiceShow({
                           className="w-full border border-gray-400 text-gray-950 font-semibold text-sm shadow-sm"
                           disabled={isAddChargeItemSheetOpen}
                         >
-                          <CareIcon icon="l-plus" className="mr-2 size-4" />
+                          <CareIcon icon="l-plus" className="me-2 size-4" />
                           {t("add_charge_item")}
                           <ShortcutBadge actionId="add-charge-item" />
                         </Button>
@@ -1180,17 +1180,17 @@ function InvoiceShow({
                         <TableRow className="border-b border-gray-200">
                           <TableHead className={tableHeadClass}>#</TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("date_and_time")}
                           </TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("payment_method")}
                           </TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("reference")}
                           </TableHead>
@@ -1198,7 +1198,7 @@ function InvoiceShow({
                             className={
                               invoice.status === InvoiceStatus.draft
                                 ? tableHeadClass
-                                : "font-semibold text-right"
+                                : "font-semibold text-end"
                             }
                           >
                             {t("amount")} ({getCurrencySymbol()})
@@ -1287,7 +1287,7 @@ function InvoiceShow({
                                   </div>
                                 </TableCell>
                                 <TableCell
-                                  className={cn(tableCellClass, "text-left")}
+                                  className={cn(tableCellClass, "text-start")}
                                 >
                                   {
                                     PAYMENT_RECONCILIATION_METHOD_MAP[
@@ -1298,7 +1298,7 @@ function InvoiceShow({
                                 <TableCell className={tableCellClass}>
                                   {payment.reference_number}
                                 </TableCell>
-                                <TableCell className="text-right">
+                                <TableCell className="text-end">
                                   <MonetaryDisplay
                                     amount={multiply(
                                       payment.amount,
@@ -1345,21 +1345,21 @@ function InvoiceShow({
                         <TableRow className="border-b border-gray-200">
                           <TableHead className={tableHeadClass}>#</TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("date_and_time")}
                           </TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("payment_method")}
                           </TableHead>
                           <TableHead
-                            className={cn(tableHeadClass, "text-left")}
+                            className={cn(tableHeadClass, "text-start")}
                           >
                             {t("reference")}
                           </TableHead>
-                          <TableHead className="font-semibold text-right">
+                          <TableHead className="font-semibold text-end">
                             {t("amount")} ({getCurrencySymbol()})
                           </TableHead>
                         </TableRow>
@@ -1445,7 +1445,7 @@ function InvoiceShow({
                                 </div>
                               </TableCell>
                               <TableCell
-                                className={cn(tableCellClass, "text-left")}
+                                className={cn(tableCellClass, "text-start")}
                               >
                                 {
                                   PAYMENT_RECONCILIATION_METHOD_MAP[
@@ -1456,7 +1456,7 @@ function InvoiceShow({
                               <TableCell className={tableCellClass}>
                                 {creditNote.reference_number}
                               </TableCell>
-                              <TableCell className="text-right">
+                              <TableCell className="text-end">
                                 <MonetaryDisplay
                                   amount={creditNote.amount}
                                   hideCurrency
@@ -1611,19 +1611,19 @@ function InvoiceShow({
         {sourceUrl && (
           <Alert className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-2xl w-full mx-auto shadow-lg rounded-lg p-0 bg-white border border-gray-200">
             <AlertTitle className="flex items-center justify-between gap-0">
-              <div className="flex items-center gap-2 bg-green-50 border border-green-200 rounded-l-lg p-4 flex-1">
+              <div className="flex items-center gap-2 bg-green-50 border border-green-200 rounded-s-lg p-4 flex-1">
                 <BadgeCheck className="size-5 text-green-600" />
                 <span className="font-semibold text-green-900">
                   {t("invoice_alert_title")}
                 </span>
               </div>
-              <div className="flex items-center bg-white rounded-r-lg p-2 pl-0">
+              <div className="flex items-center bg-white rounded-e-lg p-2 ps-0">
                 <Button
                   variant="primary"
                   onClick={() => goBack(sourceUrl)}
-                  className="shadow ml-2"
+                  className="shadow ms-2"
                 >
-                  <CareIcon icon="l-arrow-left" className="mr-2 size-4" />
+                  <CareIcon icon="l-arrow-left" className="me-2 size-4" />
                   {alertButtonText}
                   <ShortcutBadge actionId="navigate-to-source" />
                 </Button>

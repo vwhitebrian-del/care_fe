@@ -87,7 +87,7 @@ function ProductKnowledgeCard({
               )}
             </div>
           </div>
-          <div className="flex flex-wrap gap-2 ml-auto shrink-0">
+          <div className="flex flex-wrap gap-2 ms-auto shrink-0">
             <ProductKnowledgeActionButtons
               product={product}
               facilityId={facilityId}
@@ -220,7 +220,7 @@ export function ProductKnowledgeListContent({
       <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 mb-6 justify-between">
         {/* Search */}
         <div className="relative min-w-42 flex-1 lg:max-w-xs">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
             <CareIcon icon="l-search" className="size-5" />
           </span>
           <Input
@@ -229,7 +229,7 @@ export function ProductKnowledgeListContent({
             onChange={(e) =>
               updateQuery({ search: e.target.value || undefined })
             }
-            className="w-full pl-10"
+            className="w-full ps-10"
           />
         </div>
 

@@ -353,7 +353,7 @@ export function FillPageBody({
 
   const formActions = (
     <div
-      className="ml-auto flex flex-wrap items-center justify-end gap-2"
+      className="ms-auto flex flex-wrap items-center justify-end gap-2"
       onKeyDown={(event) => {
         if (
           event.key === "Enter" &&

@@ -111,7 +111,7 @@ export function TOTPSetupDialog({
                       />
                     ),
                     CareIcon: (
-                      <CareIcon icon="l-copy" className="size-4 mr-1" />
+                      <CareIcon icon="l-copy" className="size-4 me-1" />
                     ),
                   }}
                 />
@@ -169,7 +169,7 @@ export function TOTPSetupDialog({
                   <>
                     <CareIcon
                       icon="l-spinner"
-                      className="mr-2 size-4 animate-spin"
+                      className="me-2 size-4 animate-spin"
                     />
                     {t("verifying")}
                   </>

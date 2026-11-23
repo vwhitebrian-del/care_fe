@@ -153,7 +153,7 @@ export default function ServiceRequestTable({
                 </div>
               </TableCell>
               {!readOnly && (
-                <TableCell className="w-px text-left whitespace-nowrap">
+                <TableCell className="w-px text-start whitespace-nowrap">
                   <Button
                     variant="tertiary"
                     size="sm"

@@ -352,7 +352,7 @@ function CreateReferralContent({
             contained
             onActionsHeightChange={setActionsHeight}
             actions={
-              <div className="ml-auto flex min-w-0 flex-wrap items-center justify-end gap-2">
+              <div className="ms-auto flex min-w-0 flex-wrap items-center justify-end gap-2">
                 <Button
                   type="button"
                   variant="outline"

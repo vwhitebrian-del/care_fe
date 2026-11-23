@@ -432,7 +432,7 @@ export function ResourceCategoryList<
                 hidden={isLeafCategory && !allowCategoryCreate}
                 className="w-full sm:w-auto"
               >
-                <CareIcon icon="l-folder-plus" className="mr-2" />
+                <CareIcon icon="l-folder-plus" className="me-2" />
                 {t("add_category")}
               </Button>
             )}
@@ -444,7 +444,7 @@ export function ResourceCategoryList<
                   disabled={!isLeafCategory || false}
                   hidden={!isLeafCategory}
                 >
-                  <CareIcon icon={createItemIcon} className="mr-2" />
+                  <CareIcon icon={createItemIcon} className="me-2" />
                   {createItemLabel}
                 </Button>
               </div>
@@ -456,7 +456,7 @@ export function ResourceCategoryList<
       {/* Search Section */}
       {!isLeafCategory && (
         <div className="relative w-full sm:w-auto mb-4">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <span className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-400">
             <CareIcon icon="l-search" className="size-5" />
           </span>
           <Input
@@ -465,7 +465,7 @@ export function ResourceCategoryList<
             onChange={(e) =>
               updateQuery({ searchCategory: e.target.value || undefined })
             }
-            className="w-full sm:w-auto pl-10"
+            className="w-full sm:w-auto ps-10"
           />
         </div>
       )}

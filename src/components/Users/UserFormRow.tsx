@@ -50,7 +50,7 @@ export function UserFormListHeaderCell({
   return (
     <span>
       {children}
-      {required && <span className="ml-0.5 text-red-500">*</span>}
+      {required && <span className="ms-0.5 text-red-500">*</span>}
     </span>
   );
 }
@@ -95,7 +95,7 @@ export function UserFormListRow({
       className={cn(
         "text-muted-foreground hover:text-destructive",
         mobile
-          ? "-mt-2 -mr-2 shrink-0"
+          ? "-mt-2 -me-2 shrink-0"
           : "justify-self-end sm:justify-self-auto",
       )}
     >

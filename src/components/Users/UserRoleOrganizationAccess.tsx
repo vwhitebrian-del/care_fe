@@ -229,7 +229,7 @@ export function RoleOrgAccessSummary({
             <Button
               variant="ghost"
               size="sm"
-              className="-mr-2 shrink-0"
+              className="-me-2 shrink-0"
               aria-label={t("manage_access")}
             >
               {t("manage")}
@@ -314,9 +314,9 @@ export function RoleOrgAccessSummary({
                       disabled={isPending || !newOrg || !newRole}
                     >
                       {isAssigning ? (
-                        <Spinner className="mr-1.5 size-3.5 animate-spin" />
+                        <Spinner className="me-1.5 size-3.5 animate-spin" />
                       ) : (
-                        <Plus className="mr-1.5 size-3.5" />
+                        <Plus className="me-1.5 size-3.5" />
                       )}
                       {t("add_access")}
                     </Button>

@@ -144,7 +144,7 @@ const DuplicatePatientDialog = ({
               disabled={!action}
               variant={"primary"}
             >
-              <CareIcon icon="l-check" className="text-lg mr-1" />
+              <CareIcon icon="l-check" className="text-lg me-1" />
               {t("continue")}
             </Button>
           </div>

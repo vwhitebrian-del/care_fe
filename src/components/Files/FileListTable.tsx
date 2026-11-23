@@ -184,7 +184,7 @@ export function FileListTable({
                 <div className="flex min-w-0 items-start sm:items-center gap-3">
                   <span
                     className={cn(
-                      "flex size-9 shrink-0 items-center justify-center rounded-xs ml-0.5",
+                      "flex size-9 shrink-0 items-center justify-center rounded-xs ms-0.5",
                       isImage
                         ? "bg-indigo-100 text-indigo-600"
                         : "bg-red-100 text-red-600",
@@ -204,7 +204,7 @@ export function FileListTable({
                     </span>
                   </div>
                 </div>
-                <div className="flex shrink-0 items-center justify-end gap-3 pl-12 sm:pl-0">
+                <div className="flex shrink-0 items-center justify-end gap-3 ps-12 sm:ps-0">
                   {file.is_archived ? (
                     getArchivedMessage(file)
                   ) : (
@@ -217,7 +217,7 @@ export function FileListTable({
                 </div>
               </div>
               {!file.is_archived && (
-                <div className="flex shrink-0 items-center justify-center border-l border-border bg-muted/30 px-2">
+                <div className="flex shrink-0 items-center justify-center border-s border-border bg-muted/30 px-2">
                   <ActionsMenu
                     file={file}
                     fileManager={fileManager}

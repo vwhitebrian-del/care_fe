@@ -77,7 +77,7 @@ export function FillSessionTabs({
         <Badge
           size={contained ? "xs" : "sm"}
           className={cn(
-            "ml-1 rounded-sm border-transparent bg-indigo-100 px-1.5 text-indigo-900",
+            "ms-1 rounded-sm border-transparent bg-indigo-100 px-1.5 text-indigo-900",
             contained && "py-0",
           )}
         >

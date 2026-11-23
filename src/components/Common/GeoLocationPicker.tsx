@@ -82,9 +82,9 @@ export default function GeoLocationPicker({
             className="flex items-center gap-2"
           >
             {isGettingLocation ? (
-              <CareIcon icon="l-spinner" className="size-4 animate-spin mr-1" />
+              <CareIcon icon="l-spinner" className="size-4 animate-spin me-1" />
             ) : (
-              <CareIcon icon="l-location-point" className="size-4 mr-1" />
+              <CareIcon icon="l-location-point" className="size-4 me-1" />
             )}
             {isGettingLocation
               ? t("getting_location")

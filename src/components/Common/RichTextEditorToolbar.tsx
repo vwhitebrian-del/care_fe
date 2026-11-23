@@ -259,7 +259,7 @@ export function RichTextEditorToolbar() {
                 type="button"
                 variant="ghost"
                 size="icon"
-                className="ml-auto size-8 shrink-0"
+                className="ms-auto size-8 shrink-0"
               />
             }
             aria-label={t("rich_text_editor.toolbar.moreFormatting")}

@@ -62,7 +62,7 @@ export function CollectedSpecimenHeader({
     useState<SpecimenStatus | null>(null);
   return (
     <div className="w-full space-y-3">
-      <CollapsibleTrigger className="flex w-full items-start justify-between gap-3 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+      <CollapsibleTrigger className="flex w-full items-start justify-between gap-3 text-start focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
         <div className="min-w-0 space-y-1">
           <span className="text-sm text-muted-foreground">
             {t("collected_specimen")}:
@@ -160,7 +160,7 @@ export function CollectedSpecimenHeader({
             <Button
               variant="ghost"
               size="icon"
-              className="ml-auto"
+              className="ms-auto"
               aria-label={t("actions")}
             >
               <MoreVertical className="size-4" />
@@ -177,7 +177,7 @@ export function CollectedSpecimenHeader({
                   }}
                   disabled={disableEdit}
                 >
-                  <Trash2 className="size-4 mr-2" />
+                  <Trash2 className="size-4 me-2" />
                   {t("discard")}
                 </DropdownMenuItem>
               </AlertDialogTrigger>

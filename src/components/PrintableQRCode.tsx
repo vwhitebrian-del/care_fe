@@ -47,7 +47,7 @@ export function PrintableQRCode({
               level="H"
             />
           </div>
-          <div className="text-center print:text-left sm:text-left">
+          <div className="text-center print:text-start sm:text-start">
             {title && (
               <div className="text-lg font-semibold pt-2.5">{title}</div>
             )}

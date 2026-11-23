@@ -402,7 +402,7 @@ export default function PublicPatientRegistration(
           </div>
 
           <div className="bg-secondary-200 pt-3 pb-8">
-            <div className="flex flex-row gap-2 justify-center sm:ml-64 mt-4">
+            <div className="flex flex-row gap-2 justify-center sm:ms-64 mt-4">
               <Button
                 variant="white"
                 className="sm:w-1/5"

@@ -520,30 +520,30 @@ export function MedicationStatementQuestion({
             >
               {/* Header - Only show on desktop */}
               <div className="hidden lg:grid grid-cols-[300px_180px_170px_250px_450px_190px_300px_48px] bg-gray-50 border-b border-gray-200 text-sm font-medium text-gray-500">
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("medicine")}
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("source")}
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("status")}
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("dosage_instructions")}
-                  <span className="text-red-500 ml-0.5">*</span>
+                  <span className="text-red-500 ms-0.5">*</span>
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("medication_taken_between")}
-                  <span className="text-red-500 ml-0.5">*</span>
+                  <span className="text-red-500 ms-0.5">*</span>
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("reason")}
                 </div>
-                <div className="font-semibold text-gray-600 p-3 border-r border-gray-200">
+                <div className="font-semibold text-gray-600 p-3 border-e border-gray-200">
                   {t("note")}
                 </div>
-                <div className="font-semibold text-gray-600 p-3 sticky right-0 bg-gray-50 shadow-[-12px_0_15px_-4px_rgba(0,0,0,0.15)] w-12" />
+                <div className="font-semibold text-gray-600 p-3 sticky end-0 bg-gray-50 shadow-[-12px_0_15px_-4px_rgba(0,0,0,0.15)] w-12" />
               </div>
 
               {/* Body */}
@@ -586,7 +586,7 @@ export function MedicationStatementQuestion({
                             >
                               <div className="flex flex-col space-y-1">
                                 <div className="flex items-center justify-between">
-                                  <div className="flex-1 min-w-0 mr-2">
+                                  <div className="flex-1 min-w-0 me-2">
                                     <CardTitle
                                       className="text-base text-gray-950 break-words"
                                       title={medication.medication?.display}
@@ -790,7 +790,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       )}
     >
       {desktopLayout && (
-        <div className="lg:p-4 lg:px-2 lg:py-1 flex items-center justify-between lg:justify-start lg:col-span-1 lg:border-r border-gray-200 font-medium overflow-hidden text-sm">
+        <div className="lg:p-4 lg:px-2 lg:py-1 flex items-center justify-between lg:justify-start lg:col-span-1 lg:border-e border-gray-200 font-medium overflow-hidden text-sm">
           <h4 className="text-base font-semibold break-words line-clamp-2">
             {index + 1}. {medication.medication?.display}
           </h4>
@@ -798,7 +798,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       )}
 
       {/* Source */}
-      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-r border-gray-200 overflow-hidden">
+      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-e border-gray-200 overflow-hidden">
         <Label className="mb-1.5 block text-sm lg:hidden">{t("source")}</Label>
         <Select
           value={medication.information_source}
@@ -836,7 +836,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
                 value={source.value}
                 className="capitalize"
               >
-                <CareIcon icon={source.icon} className="mr-2" />
+                <CareIcon icon={source.icon} className="me-2" />
                 {t(`${source.value}`)}
               </SelectItem>
             ))}
@@ -845,7 +845,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       </div>
 
       {/* Status */}
-      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-r border-gray-200 overflow-hidden">
+      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-e border-gray-200 overflow-hidden">
         <Label className="mb-1.5 block text-sm lg:hidden">{t("status")}</Label>
         <Select
           value={medication.status}
@@ -871,10 +871,10 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       </div>
 
       {/* Dosage Instructions */}
-      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-r border-gray-200 overflow-hidden">
+      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-e border-gray-200 overflow-hidden">
         <Label className="mb-1.5 block text-sm lg:hidden">
           {t("dosage_instructions")}
-          <span className="text-red-500 ml-0.5">*</span>
+          <span className="text-red-500 ms-0.5">*</span>
         </Label>
         <Input
           value={medication.dosage_text || ""}
@@ -896,10 +896,10 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       </div>
 
       {/* Period */}
-      <div className="lg:px-2 lg:py-1 px-2 py-1 lg:border-r border-gray-200 overflow-hidden bg-gray-100 rounded-md lg:bg-transparent lg:rounded-none lg:p-0">
+      <div className="lg:px-2 lg:py-1 px-2 py-1 lg:border-e border-gray-200 overflow-hidden bg-gray-100 rounded-md lg:bg-transparent lg:rounded-none lg:p-0">
         <Label className="mb-1.5 block text-sm lg:hidden">
           {t("medication_taken_between")}
-          <span className="text-red-500 ml-0.5">*</span>
+          <span className="text-red-500 ms-0.5">*</span>
         </Label>
         <div
           className={cn(
@@ -962,7 +962,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       </div>
 
       {/* Reason */}
-      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-r border-gray-200 overflow-hidden">
+      <div className="lg:px-2 lg:py-1 px-1 py-1 lg:border-e border-gray-200 overflow-hidden">
         <Label className="mb-1.5 block text-sm lg:hidden">{t("reason")}</Label>
         <Input
           maxLength={100}
@@ -975,7 +975,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
       </div>
 
       {/* Notes */}
-      <div className="lg:px-2 lg:py-1 p-1 lg:border-r border-gray-200 overflow-hidden">
+      <div className="lg:px-2 lg:py-1 p-1 lg:border-e border-gray-200 overflow-hidden">
         <Label className="mb-1.5 block text-sm lg:hidden">{t("note")}</Label>
         <Input
           value={medication.note || ""}
@@ -988,7 +988,7 @@ const MedicationStatementGridRow: React.FC<MedicationStatementGridRowProps> = ({
 
       {/* Remove Button */}
       {desktopLayout && (
-        <div className="hidden lg:flex lg:px-2 lg:py-1 items-center justify-center sticky right-0 bg-white shadow-[-12px_0_15px_-4px_rgba(0,0,0,0.15)] w-12">
+        <div className="hidden lg:flex lg:px-2 lg:py-1 items-center justify-center sticky end-0 bg-white shadow-[-12px_0_15px_-4px_rgba(0,0,0,0.15)] w-12">
           <Button
             variant="ghost"
             size="icon"

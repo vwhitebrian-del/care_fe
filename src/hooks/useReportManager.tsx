@@ -292,7 +292,7 @@ export default function useReportManager({
             <div className="space-y-2">
               <Label htmlFor="archive-reason">
                 {t("reason")}
-                <span className="text-destructive ml-1">*</span>
+                <span className="text-destructive ms-1">*</span>
               </Label>
               <Textarea
                 id="archive-reason"

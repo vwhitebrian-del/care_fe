@@ -225,7 +225,7 @@ const DateColumn = ({
       {!isFullyBooked && (
         <div
           className={cn(
-            "absolute bottom-0 left-0 w-full transition-all",
+            "absolute bottom-0 start-0 w-full transition-all",
             bookedPercentage > 0.8
               ? "bg-red-100"
               : bookedPercentage > 0.5

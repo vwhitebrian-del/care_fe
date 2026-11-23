@@ -154,7 +154,7 @@ export function ValueSetPreview({
                   <div className="relative">
                     <Search
                       aria-hidden
-                      className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-gray-500"
+                      className="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 text-gray-500"
                     />
                     <Input
                       id={searchId}
@@ -163,14 +163,14 @@ export function ValueSetPreview({
                       onChange={(event) => setSearch(event.target.value)}
                       placeholder={t("valueset_preview_search_placeholder")}
                       aria-describedby={`${searchId}-hint`}
-                      className="h-12 pr-11 pl-9 md:h-10"
+                      className="h-12 pe-11 ps-9 md:h-10"
                     />
                     {search && (
                       <Button
                         type="button"
                         variant="ghost"
                         size="icon"
-                        className="absolute top-1/2 right-1 -translate-y-1/2"
+                        className="absolute top-1/2 end-1 -translate-y-1/2"
                         onClick={() => setSearch("")}
                         aria-label={t("clear_search")}
                       >

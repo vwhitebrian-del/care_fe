@@ -451,7 +451,7 @@ export function ResourceDefinitionCategoryPicker<T>({
 
     return (
       <div className="flex items-center min-w-0 gap-1">
-        <span className="text-left truncate" title={selectedDefinition.title}>
+        <span className="text-start truncate" title={selectedDefinition.title}>
           {selectedDefinition.title}
         </span>
       </div>
@@ -484,7 +484,7 @@ export function ResourceDefinitionCategoryPicker<T>({
             onClick={handleBackToRoot}
             className="h-6 px-2 text-xs hover:bg-white"
           >
-            <Home className="mr-1 size-3" />
+            <Home className="me-1 size-3" />
             {t("root")}
           </Button>
           {breadcrumbs.length <= 2 || breadcrumbsExpanded ? (
@@ -676,7 +676,7 @@ export function ResourceDefinitionCategoryPicker<T>({
               type="button"
               variant="ghost"
               size="icon-sm"
-              className="mr-2 shrink-0"
+              className="me-2 shrink-0"
               aria-label={t(
                 favorite ? "remove_from_favorites" : "add_to_favorites",
               )}
@@ -707,7 +707,7 @@ export function ResourceDefinitionCategoryPicker<T>({
       <Button
         type="button"
         variant="ghost"
-        className="h-auto min-w-0 flex-1 flex-col items-start gap-0.5 px-3 py-2 text-left whitespace-normal"
+        className="h-auto min-w-0 flex-1 flex-col items-start gap-0.5 px-3 py-2 text-start whitespace-normal"
         onClick={() => handleDefinitionSelect(definition)}
       >
         <span className="w-full text-sm font-medium break-all">
@@ -808,7 +808,7 @@ export function ResourceDefinitionCategoryPicker<T>({
       aria-expanded={open}
       className={cn(
         "min-w-0 flex-1 justify-between font-normal",
-        "rounded-l-md! border-l!",
+        "rounded-s-md! border-l!",
         disabled && "opacity-50 cursor-not-allowed",
         className,
       )}
@@ -857,7 +857,7 @@ export function ResourceDefinitionCategoryPicker<T>({
           </ButtonGroup>
 
           <DrawerContent height="fixed" className="p-1.5">
-            <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+            <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
               <DrawerTitle>
                 {t(`select_${translationBaseKey}`) || t("select_item")}
               </DrawerTitle>
@@ -951,7 +951,7 @@ export function ResourceDefinitionCategoryPicker<T>({
                         className="h-4 px-2 text-xs text-gray-500 hover:text-gray-700"
                         type="button"
                       >
-                        <X className="mr-1" />
+                        <X className="me-1" />
                         {t("clear")}
                       </Button>
                     )}
@@ -963,7 +963,7 @@ export function ResourceDefinitionCategoryPicker<T>({
 
               {/* Favorites panel */}
               {enableFavorites && (
-                <div className="flex flex-col w-full border-l border-gray-200 max-w-72">
+                <div className="flex flex-col w-full border-s border-gray-200 max-w-72">
                   <div className="px-4 py-1 border-b bg-gray-50 shrink-0">
                     <Tabs value={favSubTab} onValueChange={setFavSubTab}>
                       <TabsList className="grid w-full grid-cols-2">

@@ -30,7 +30,7 @@ function ClearCacheButton() {
       className="rounded-md bg-primary-700 text-white shadow-sm hover:bg-primary-600 hover:text-white disabled:opacity-70"
     >
       <RotateCwIcon className="text-2xl" />
-      <span className="ml-1">{t("clear_cache")}</span>
+      <span className="ms-1">{t("clear_cache")}</span>
     </Button>
   );
 }

@@ -44,7 +44,7 @@ export const BillMedicationsFooter = ({
   const exceedsLimit = dispensesCount > MAX_DISPENSES_PER_DISPENSE_ORDER;
 
   return (
-    <div className="flex flex-col gap-3 bg-white px-6 py-4 fixed bottom-0 left-0 right-0 z-10 border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)]">
+    <div className="flex flex-col gap-3 bg-white px-6 py-4 fixed bottom-0 start-0 end-0 z-10 border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)]">
       {exceedsLimit && (
         <Alert variant="destructive">
           <AlertTriangleIcon />

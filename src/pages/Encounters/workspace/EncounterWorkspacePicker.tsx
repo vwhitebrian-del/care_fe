@@ -79,7 +79,7 @@ export function EncounterWorkspacePicker({
           }
           aria-busy={isLoading || isSaving}
           title={isLoading ? undefined : currentName}
-          className="min-h-11 max-w-full min-w-0 shrink justify-start gap-2 rounded-lg border-gray-200 bg-white pr-2 pl-1.5 text-sm font-normal tracking-normal text-gray-700 shadow-none md:min-h-8"
+          className="min-h-11 max-w-full min-w-0 shrink justify-start gap-2 rounded-lg border-gray-200 bg-white pe-2 ps-1.5 text-sm font-normal tracking-normal text-gray-700 shadow-none md:min-h-8"
         >
           <span
             aria-hidden="true"

@@ -140,14 +140,14 @@ const ProcedureCard = ({
 
           <Button
             variant="link"
-            className="absolute top-0 right-2 flex items-center gap-1 p-0 text-sm"
+            className="absolute top-0 end-2 flex items-center gap-1 p-0 text-sm"
             onClick={() => setShowNote(false)}
           >
             <X />
             <span className="underline">{t("hide_note")}</span>
           </Button>
 
-          <p className="text-sm text-gray-700 whitespace-pre-wrap pr-8 max-w-full break-words mt-2">
+          <p className="text-sm text-gray-700 whitespace-pre-wrap pe-8 max-w-full break-words mt-2">
             {procedure.note}
           </p>
         </div>
@@ -170,7 +170,7 @@ export const ProcedureTable = ({
   const { t } = useTranslation();
   const { facilityId } = useCurrentFacilitySilently();
   const baseHeaderClasses =
-    "text-center border-y border-l border-gray-200 bg-gray-50 p-1 text-gray-700 text-sm";
+    "text-center border-y border-s border-gray-200 bg-gray-50 p-1 text-gray-700 text-sm";
   const viewEncounter = (procedure: Procedure) =>
     showViewEncounter
       ? () =>
@@ -215,7 +215,7 @@ export const ProcedureTable = ({
           >
             <div
               className={cn(
-                "px-3 border border-r-0 border-gray-200 rounded-tl-lg bg-gray-50 py-1 text-gray-700 text-sm",
+                "px-3 border border-e-0 border-gray-200 rounded-ss-lg bg-gray-50 py-1 text-gray-700 text-sm",
                 compact && "rounded-none",
               )}
             >
@@ -226,13 +226,13 @@ export const ProcedureTable = ({
 
             <div className={cn(baseHeaderClasses)}>{t("outcome")}</div>
 
-            <div className={cn(baseHeaderClasses, "border-r")}>
+            <div className={cn(baseHeaderClasses, "border-e")}>
               {t("date_performed")}
             </div>
 
             <div
               className={cn(
-                "text-center border border-l-0 border-gray-200 rounded-tr-lg bg-gray-50",
+                "text-center border border-s-0 border-gray-200 rounded-se-lg bg-gray-50",
                 compact && "rounded-none",
               )}
             ></div>
@@ -248,7 +248,7 @@ export const ProcedureTable = ({
                   {
                     key: "display",
                     className:
-                      "bg-gray-100 break-words whitespace-normal text-base font-semibold text-gray-900 rounded-l",
+                      "bg-gray-100 break-words whitespace-normal text-base font-semibold text-gray-900 rounded-s",
                     render: () => procedure.code.display,
                   },
                   {

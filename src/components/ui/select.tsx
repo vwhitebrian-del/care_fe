@@ -80,7 +80,7 @@ function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
   return (
     <SelectPrimitive.Value
       data-slot="select-value"
-      className={cn("flex flex-1 text-left", className)}
+      className={cn("flex flex-1 text-start", className)}
       {...props}
     />
   );
@@ -100,7 +100,7 @@ function SelectTrigger({
       data-size={size}
       className={cn(
         fieldTriggerSurface,
-        "data-placeholder:text-placeholder-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 flex h-(--select-trigger-height) w-fit items-center justify-between gap-1.5 py-2 pr-(--select-trigger-pr) pl-(--select-trigger-pl) text-sm whitespace-nowrap transition-[color,box-shadow] outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [--select-trigger-pr:--spacing(2.5)] [--select-trigger-pl:--spacing(3)] md:[--select-trigger-pr:--spacing(2)] md:[--select-trigger-pl:--spacing(2.5)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "data-placeholder:text-placeholder-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 flex h-(--select-trigger-height) w-fit items-center justify-between gap-1.5 py-2 pe-(--select-trigger-pr) ps-(--select-trigger-pl) text-sm whitespace-nowrap transition-[color,box-shadow] outline-none focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 [--select-trigger-pr:--spacing(2.5)] [--select-trigger-pl:--spacing(3)] md:[--select-trigger-pr:--spacing(2)] md:[--select-trigger-pl:--spacing(2.5)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         size === "sm"
           ? "[--select-trigger-height:--spacing(10)] md:[--select-trigger-height:--spacing(9)]"
           : "[--select-trigger-height:--spacing(12)] md:[--select-trigger-height:--spacing(10)]",
@@ -202,7 +202,7 @@ function SelectItem({
       data-slot="select-item"
       label={textValue}
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-(--select-item-py) pr-8 pl-(--select-item-pl) text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [--select-item-py:--spacing(2.5)] [--select-item-pl:--spacing(2.5)] md:[--select-item-py:--spacing(1.5)] md:[--select-item-pl:--spacing(2)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-(--select-item-py) pe-8 ps-(--select-item-pl) text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [--select-item-py:--spacing(2.5)] [--select-item-pl:--spacing(2.5)] md:[--select-item-py:--spacing(1.5)] md:[--select-item-pl:--spacing(2)] [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className,
       )}
       {...props}
@@ -212,7 +212,7 @@ function SelectItem({
       </SelectPrimitive.ItemText>
       <SelectPrimitive.ItemIndicator
         render={
-          <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center" />
+          <span className="pointer-events-none absolute end-2 flex size-4 items-center justify-center" />
         }
       >
         <CheckIcon className="pointer-events-none" />

@@ -245,7 +245,7 @@ export default function LinkDepartmentsSheet({
       <SheetTrigger asChild>
         {trigger || (
           <Button variant="outline" size="sm">
-            <Building className="mr-2 size-4" />
+            <Building className="me-2 size-4" />
             {t("manage_organization", {
               count: entityType === "device" ? 1 : 0,
             })}
@@ -330,7 +330,7 @@ export default function LinkDepartmentsSheet({
             onClick={handleAddOrganizations}
             disabled={!selectedOrgs?.length || isAdding}
           >
-            {isAdding && <Spinner className="mr-2 size-4 animate-spin" />}
+            {isAdding && <Spinner className="me-2 size-4 animate-spin" />}
             {t("add_organization", {
               count: entityType === "device" ? 1 : 0,
             })}

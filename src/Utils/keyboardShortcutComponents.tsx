@@ -15,10 +15,10 @@ const keyboardShortcutBadgeVariants = cva("", {
       destructive: "",
     },
     position: {
-      "top-right": "absolute top-1 right-1",
-      "bottom-right": "absolute bottom-1 right-1",
-      "top-left": "absolute top-1 left-1",
-      "bottom-left": "absolute bottom-1 left-1",
+      "top-right": "absolute top-1 end-1",
+      "bottom-right": "absolute bottom-1 end-1",
+      "top-left": "absolute top-1 start-1",
+      "bottom-left": "absolute bottom-1 start-1",
     },
   },
   defaultVariants: {

@@ -52,11 +52,11 @@ export function DiagnosticReportHeader({
       <div className="flex items-start sm:items-center justify-between gap-3 sm:gap-2 rounded-md">
         <CollapsibleTrigger
           aria-label={`${t(isExpanded ? "collapse" : "expand")} ${title ?? t("diagnostic_report")}`}
-          className="flex flex-1 items-center justify-between gap-2 min-w-0 text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          className="flex flex-1 items-center justify-between gap-2 min-w-0 text-start cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
         >
           <div className="flex flex-1 items-center gap-2 min-w-0">
             <CardTitle className="min-w-0 w-full">
-              <div className="flex items-start sm:items-center gap-2 min-w-0 w-full text-left">
+              <div className="flex items-start sm:items-center gap-2 min-w-0 w-full text-start">
                 <span
                   className={cn(
                     "flex items-center justify-center bg-muted p-2.5 rounded-lg",

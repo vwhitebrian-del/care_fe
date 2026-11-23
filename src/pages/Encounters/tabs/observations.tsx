@@ -167,7 +167,7 @@ export const EncounterObservationsTab = () => {
                   </div>
                 );
                 const cardClassName =
-                  "flex w-full items-center justify-between rounded-lg border border-gray-200 bg-gray-50 p-4 text-left";
+                  "flex w-full items-center justify-between rounded-lg border border-gray-200 bg-gray-50 p-4 text-start";
                 return (
                   <div key={item.id} className="flex gap-4">
                     <div className="p-1 h-fit text-sm text-gray-700 bg-gray-100 rounded-md font-medium text-nowrap">

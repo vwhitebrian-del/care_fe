@@ -48,7 +48,7 @@ export const CreateDiagnosticReportForm = ({
     >
       <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
         <CardHeader className="p-2">
-          <CollapsibleTrigger className="flex w-full flex-row justify-between items-start sm:items-center gap-4 sm:gap-2 rounded-md text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+          <CollapsibleTrigger className="flex w-full flex-row justify-between items-start sm:items-center gap-4 sm:gap-2 rounded-md text-start cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
             <div className="flex items-center gap-2">
               <CardTitle className="flex items-center gap-1.5">
                 <span
@@ -105,7 +105,7 @@ export const CreateDiagnosticReportForm = ({
                       disabled={disableEdit || !hasCollectedSpecimens}
                       className="w-full sm:w-auto"
                     >
-                      <Plus className="size-4 mr-2" />
+                      <Plus className="size-4 me-2" />
                       {t("create_report")}
                     </Button>
                   )}

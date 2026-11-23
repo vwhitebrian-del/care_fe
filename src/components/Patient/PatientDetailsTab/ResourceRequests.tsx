@@ -54,7 +54,7 @@ export const ResourceRequests = (props: PatientProps) => {
               params={{ facilityId }}
               search={{ related_patient: patientData.id }}
             >
-              <CareIcon icon="l-plus" className="mr-2" />
+              <CareIcon icon="l-plus" className="me-2" />
               {t("create_resource_request")}
             </Link>
           </Button>
@@ -73,7 +73,7 @@ export const ResourceRequests = (props: PatientProps) => {
                 <TableHead>{t("status")}</TableHead>
                 <TableHead>{t("created_on")}</TableHead>
                 <TableHead>{t("modified_on")}</TableHead>
-                <TableHead className="text-right">{t("actions")}</TableHead>
+                <TableHead className="text-end">{t("actions")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -103,7 +103,7 @@ export const ResourceRequests = (props: PatientProps) => {
                     <TableCell>
                       {formatDateTime(request.modified_date)}
                     </TableCell>
-                    <TableCell className="text-right">
+                    <TableCell className="text-end">
                       <Button variant="outline" size="sm" asChild>
                         <Link
                           to="/facility/$facilityId/resource/$id"
@@ -112,7 +112,7 @@ export const ResourceRequests = (props: PatientProps) => {
                             id: request.id,
                           }}
                         >
-                          <CareIcon icon="l-eye" className="mr-2" />
+                          <CareIcon icon="l-eye" className="me-2" />
                           {t("view")}
                         </Link>
                       </Button>

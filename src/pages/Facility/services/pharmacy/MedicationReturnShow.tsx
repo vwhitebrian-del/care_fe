@@ -511,7 +511,7 @@ export default function MedicationReturnShow({
                       }}
                     >
                       {t("view_invoice")}
-                      <ExternalLink className="ml-1 size-4" />
+                      <ExternalLink className="ms-1 size-4" />
                     </Button>
                   </div>
                 </div>

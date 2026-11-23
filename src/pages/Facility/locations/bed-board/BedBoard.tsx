@@ -184,12 +184,12 @@ export function BedBoard({
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
           <div className="relative min-w-0 flex-1 basis-56 sm:max-w-sm">
             <Search
-              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
+              className="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 text-muted-foreground"
               aria-hidden="true"
             />
             <Input
               type="search"
-              className="pl-9"
+              className="ps-9"
               aria-label={t("search_beds_or_patients")}
               placeholder={t("search_beds_or_patients")}
               value={search}

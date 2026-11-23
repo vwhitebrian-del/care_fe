@@ -672,7 +672,7 @@ function AppointmentColumn(props: {
                 className="bg-white"
               >
                 {t(status)}
-                <Button variant="ghost" size="icon" className="size-6 -mr-2">
+                <Button variant="ghost" size="icon" className="size-6 -me-2">
                   <CareIcon icon="l-times" />
                 </Button>
               </Badge>
@@ -754,7 +754,7 @@ function AppointmentCard({
           )}
           {appointment.token && (
             <div className="flex">
-              <div className="bg-gray-100 px-2 py-1 ml-px text-center rounded-md">
+              <div className="bg-gray-100 px-2 py-1 ms-px text-center rounded-md">
                 <p className="text-[10px] uppercase">{t("token")}</p>
                 <p className="font-bold text-lg uppercase">
                   {renderTokenNumber(appointment.token)}
@@ -784,7 +784,7 @@ function AppointmentCard({
       </div>
       {showPractitioner &&
         appointment.resource_type === SchedulableResourceType.Practitioner && (
-          <div className="flex items-center justify-start gap-1 pr-2 bg-gray-100 w-fit rounded-full mt-1">
+          <div className="flex items-center justify-start gap-1 pe-2 bg-gray-100 w-fit rounded-full mt-1">
             <ScheduleResourceIcon
               resource={appointment}
               className="size-5 rounded-full"
@@ -911,7 +911,7 @@ function AppointmentRow(props: {
           <Table className="p-2 border-separate border-gray-200 border-spacing-y-3">
             <TableHeader>
               <TableRow>
-                <TableHead className="pl-8 font-semibold text-black text-xs">
+                <TableHead className="ps-8 font-semibold text-black text-xs">
                   {t("patient")}
                 </TableHead>
                 {props.resourceType ===
@@ -963,7 +963,7 @@ function AppointmentRowItem({ appointment }: { appointment: Appointment }) {
 
   return (
     <>
-      <TableCell className="flex flex-row gap-2 py-6 group-hover:bg-gray-100 bg-white rounded-l-lg">
+      <TableCell className="flex flex-row gap-2 py-6 group-hover:bg-gray-100 bg-white rounded-s-lg">
         <span className="flex flex-row items-center gap-2">
           <CareIcon
             icon="l-draggabledots"
@@ -994,7 +994,7 @@ function AppointmentRowItem({ appointment }: { appointment: Appointment }) {
       <TableCell className="py-6 group-hover:bg-gray-100 bg-white">
         {t(appointment.status)}
       </TableCell>
-      <TableCell className="py-6 group-hover:bg-gray-100 bg-white rounded-r-lg">
+      <TableCell className="py-6 group-hover:bg-gray-100 bg-white rounded-e-lg">
         {appointment.token ? renderTokenNumber(appointment.token) : "--"}
       </TableCell>
     </>

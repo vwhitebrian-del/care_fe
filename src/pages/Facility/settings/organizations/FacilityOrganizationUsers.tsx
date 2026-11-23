@@ -101,7 +101,7 @@ export default function FacilityOrganizationUsers({
         <div className="relative w-full md:w-auto">
           <CareIcon
             icon="l-search"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
+            className="absolute start-3 top-1/2 -translate-y-1/2 text-gray-500 size-4"
           />
           <Input
             placeholder={t("search_by_username")}
@@ -109,7 +109,7 @@ export default function FacilityOrganizationUsers({
             onChange={(e) => {
               updateQuery({ search: e.target.value || undefined });
             }}
-            className="w-full pl-8"
+            className="w-full ps-8"
           />
         </div>
         <div className="flex gap-2 w-full md:w-auto justify-end">

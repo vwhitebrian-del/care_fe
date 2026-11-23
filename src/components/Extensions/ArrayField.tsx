@@ -94,7 +94,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
         <div className="flex justify-between items-center">
           <FormLabel>
             {metadata.label}
-            {metadata.required && <span className="text-red-500 ml-1">*</span>}
+            {metadata.required && <span className="text-red-500 ms-1">*</span>}
           </FormLabel>
           <Button
             type="button"
@@ -107,7 +107,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
                 fields.length >= metadata.maxItems)
             }
           >
-            <Plus className="h-4 w-4 mr-1" />
+            <Plus className="h-4 w-4 me-1" />
             {t("add")}
           </Button>
         </div>
@@ -126,7 +126,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
                     <TableHead key={fieldMeta.name}>
                       {fieldMeta.label}
                       {fieldMeta.required && (
-                        <span className="text-red-500 ml-1">*</span>
+                        <span className="text-red-500 ms-1">*</span>
                       )}
                     </TableHead>
                   ))}
@@ -213,7 +213,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
       <div className="flex justify-between items-center">
         <FormLabel>
           {metadata.label}
-          {metadata.required && <span className="text-red-500 ml-1">*</span>}
+          {metadata.required && <span className="text-red-500 ms-1">*</span>}
         </FormLabel>
         <Button
           type="button"
@@ -226,7 +226,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
               fields.length >= metadata.maxItems)
           }
         >
-          <Plus className="h-4 w-4 mr-1" />
+          <Plus className="h-4 w-4 me-1" />
           {t("add")}
         </Button>
       </div>
@@ -251,7 +251,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
                 aria-label={t("remove_item", {
                   name: `${metadata.label} ${index + 1}`,
                 })}
-                className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -266,7 +266,7 @@ function ObjectArrayField<TFieldValues extends FieldValues>({
                 <Trash2 className="h-4 w-4 text-red-500" />
               </Button>
               {itemMeta?.type === "object" && nestedFields.length > 0 ? (
-                <div className="space-y-4 pr-8">
+                <div className="space-y-4 pe-8">
                   {nestedFields.map((fieldMeta) => (
                     <SchemaField
                       key={fieldMeta.name}
@@ -346,7 +346,7 @@ function PrimitiveArrayField<TFieldValues extends FieldValues>({
       <div className="flex justify-between items-center">
         <FormLabel>
           {metadata.label}
-          {metadata.required && <span className="text-red-500 ml-1">*</span>}
+          {metadata.required && <span className="text-red-500 ms-1">*</span>}
         </FormLabel>
         <Button
           type="button"
@@ -359,7 +359,7 @@ function PrimitiveArrayField<TFieldValues extends FieldValues>({
               values.length >= metadata.maxItems)
           }
         >
-          <Plus className="h-4 w-4 mr-1" />
+          <Plus className="h-4 w-4 me-1" />
           {t("add")}
         </Button>
       </div>

@@ -179,7 +179,7 @@ export function RoleSelect({
       >
         <span
           className={cn(
-            "min-w-0 flex-1 truncate text-left",
+            "min-w-0 flex-1 truncate text-start",
             !selectedRole && "text-placeholder-foreground",
           )}
         >
@@ -198,7 +198,7 @@ export function RoleSelect({
         <span className={cn(!selectedRole && "text-placeholder-foreground")}>
           {selectedRole ? selectedRole.name : placeholder || t("select_role")}
         </span>
-        <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+        <CaretSortIcon className="ms-2 size-4 shrink-0 opacity-50" />
       </Button>
     );
 
@@ -211,7 +211,7 @@ export function RoleSelect({
           height="fixed"
           className="p-1.5"
         >
-          <DrawerHeader className="pl-1 md:pb-2" showCloseButton>
+          <DrawerHeader className="ps-1 md:pb-2" showCloseButton>
             <DrawerTitle>{placeholder || t("select_role")}</DrawerTitle>
           </DrawerHeader>
           <div className="flex min-h-0 flex-1 flex-col pb-[env(safe-area-inset-bottom)]">

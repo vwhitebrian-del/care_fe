@@ -167,7 +167,7 @@ export default function ChangePaymentAccountSheet({
             onClick={handleSubmit}
             disabled={!selectedAccountId || isPending}
           >
-            <ArrowRightLeft className="size-4 mr-2" />
+            <ArrowRightLeft className="size-4 me-2" />
             {isPending ? t("moving") : t("change_account")}
           </Button>
         </SheetFooter>

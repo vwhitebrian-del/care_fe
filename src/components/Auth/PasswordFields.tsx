@@ -96,7 +96,7 @@ export function PasswordFields({
           <FieldError id={passwordErrorId}>{errors.password}</FieldError>
         )}
         {isPasswordFieldFocused && (
-          <div id={passwordHintsId} className="pl-2" aria-live="polite">
+          <div id={passwordHintsId} className="ps-2" aria-live="polite">
             <ValidationHelper
               isInputEmpty={!password}
               successMessage={t("password_success_message")}

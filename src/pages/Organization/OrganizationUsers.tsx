@@ -296,7 +296,7 @@ export default function OrganizationUsers({
                               <Skeleton className="h-5 w-16 rounded-full" />
                             </TableCell>
                             <TableCell className="px-4 py-3">
-                              <Skeleton className="ml-auto h-12 w-44 md:h-10" />
+                              <Skeleton className="ms-auto h-12 w-44 md:h-10" />
                             </TableCell>
                           </TableRow>
                         ))

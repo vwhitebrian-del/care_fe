@@ -273,7 +273,7 @@ export default function OrganizationLayout({
                 >
                   <div className="flex items-center py-2">
                     {activeNavItem && (
-                      <div className="mr-2 size-5">{activeNavItem.icon}</div>
+                      <div className="me-2 size-5">{activeNavItem.icon}</div>
                     )}
                     <span className="font-medium text-base">
                       {activeNavItem ? activeNavItem.name : t("navigation")}
@@ -281,7 +281,7 @@ export default function OrganizationLayout({
                   </div>
                   <CareIcon
                     icon={isMobileMenuOpen ? "l-angle-up" : "l-angle-down"}
-                    className="ml-2 size-4"
+                    className="ms-2 size-4"
                   />
                 </Button>
               </DropdownMenuTrigger>
@@ -307,13 +307,13 @@ export default function OrganizationLayout({
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <div className="flex items-center text-base">
-                        <div className="mr-2">{item.icon}</div>
+                        <div className="me-2">{item.icon}</div>
                         {item.name}
                       </div>
                       {activeNavItem?.url === item.url && (
                         <DropdownMenuCheckboxItem
                           checked
-                          className="pointer-events-none pr-1"
+                          className="pointer-events-none pe-1"
                         />
                       )}
                     </HrefLink>

@@ -162,7 +162,7 @@ const TokenCard = ({
                 <p className="font-semibold wrap-break-word text-sm">
                   {patient.name || "--"}
                 </p>
-                <p className="pl-1 text-sm text-gray-600 font-medium">
+                <p className="ps-1 text-sm text-gray-600 font-medium">
                   <PatientAge patient={patient} />,{" "}
                   {t(`GENDER__${patient.gender}`)}
                 </p>
@@ -289,7 +289,7 @@ const TokenCard = ({
               <QRCodeSVG
                 size={isLargeScreen ? 96 : 60}
                 value={patient?.id || ""}
-                className="ml-2"
+                className="ms-2"
               />
             </div>
           </div>
@@ -313,7 +313,7 @@ const TokenCard = ({
                 onClick={() => print()}
                 className="text-base text-gray-950 font-semibold"
               >
-                <PrinterIcon className="size-4 mr-2" />
+                <PrinterIcon className="size-4 me-2" />
                 {t("print_token")}
                 <ShortcutBadge actionId="print-button" />
               </Button>

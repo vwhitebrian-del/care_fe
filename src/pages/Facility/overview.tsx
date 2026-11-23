@@ -159,7 +159,7 @@ export function FacilityOverview({ facilityId }: FacilityOverviewProps) {
 
         {/* Quick Actions Section */}
         <div className="">
-          <h2 className="text-lg pl-1 font-semibold text-foreground">
+          <h2 className="text-lg ps-1 font-semibold text-foreground">
             {t("quick_links")}
           </h2>
           <div
@@ -236,7 +236,7 @@ export function FacilityOverview({ facilityId }: FacilityOverviewProps) {
                     variant="ghost"
                     size="icon"
                     onClick={() => removeCustomLink(link.link)}
-                    className="absolute -top-2 -right-2 z-10 size-6 rounded-full bg-muted-background p-0 text-soft-foreground shadow-sm transition-opacity hover:bg-red-100 hover:text-red-600 focus-visible:opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100"
+                    className="absolute -top-2 -end-2 z-10 size-6 rounded-full bg-muted-background p-0 text-soft-foreground shadow-sm transition-opacity hover:bg-red-100 hover:text-red-600 focus-visible:opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100"
                     aria-label={t("remove")}
                   >
                     <X className="size-4" />

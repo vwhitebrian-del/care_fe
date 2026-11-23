@@ -432,7 +432,7 @@ function ImmunizationRecordForm({
                       placeholder={t("immunization_select_vaccine")}
                       aria-label={t("immunization_vaccine")}
                       disabled={isEdit || isPending}
-                      className="h-9 w-full justify-between text-left font-normal"
+                      className="h-9 w-full justify-between text-start font-normal"
                     />
                   </FormControl>
                   <FormMessage />
@@ -643,7 +643,7 @@ function ImmunizationRecordForm({
                             placeholder={t("select_route")}
                             aria-label={t("route")}
                             disabled={isPending}
-                            className="h-9 w-full justify-between text-left font-normal"
+                            className="h-9 w-full justify-between text-start font-normal"
                           />
                         </FormControl>
                       </FormItem>
@@ -663,7 +663,7 @@ function ImmunizationRecordForm({
                             placeholder={t("select_site")}
                             aria-label={t("site")}
                             disabled={isPending}
-                            className="h-9 w-full justify-between text-left font-normal"
+                            className="h-9 w-full justify-between text-start font-normal"
                           />
                         </FormControl>
                       </FormItem>

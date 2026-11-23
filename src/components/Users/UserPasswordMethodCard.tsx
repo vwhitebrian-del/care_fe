@@ -57,7 +57,7 @@ export function UserPasswordMethodCard({
         // The inputs sit inside the radio group, which moves between options
         // with the arrow keys. Keep arrows for caret movement.
         <div
-          className="pr-3 pb-3 pl-9"
+          className="pe-3 pb-3 ps-9"
           onKeyDown={(event) => {
             if (event.key.startsWith("Arrow")) event.stopPropagation();
           }}
