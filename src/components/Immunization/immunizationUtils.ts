@@ -1,4 +1,5 @@
-import { addDays, format } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { addDays } from "date-fns";
 import { TFunction } from "i18next";
 
 import {

@@ -1,7 +1,7 @@
+import { format } from "@/Utils/dateFns";
 import {
   addMinutes,
   differenceInMinutes,
-  format,
   isSameDay,
   isWithinInterval,
   parse,

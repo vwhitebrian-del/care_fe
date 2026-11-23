@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 import type { TFunction } from "i18next";
 
 import type { DetailsTablePrintContent } from "@/print/detailsTable";

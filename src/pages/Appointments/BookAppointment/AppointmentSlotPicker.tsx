@@ -4,7 +4,8 @@ import {
   SchedulableResourceType,
   TokenSlot,
 } from "@/types/scheduling/schedule";
-import { format, isWithinInterval } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { isWithinInterval } from "date-fns";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";

@@ -3,8 +3,8 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { format } from "@/Utils/dateFns";
 import { useQuery } from "@tanstack/react-query";
-import { format } from "date-fns";
 import { t } from "i18next";
 import { ChevronsDownUp, ChevronsUpDown, Clock, Files } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";

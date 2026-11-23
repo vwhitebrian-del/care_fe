@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 

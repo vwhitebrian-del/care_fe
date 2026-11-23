@@ -1,4 +1,5 @@
-import { format, parseISO } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { parseISO } from "date-fns";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";

@@ -1,4 +1,5 @@
-import { format, formatDistanceToNow } from "date-fns";
+import { format, timeAgo } from "@/Utils/dateFns";
+
 import { ChevronDown, ChevronRight, CircleStop } from "lucide-react";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -456,8 +457,7 @@ export const GroupedMedicationRow: React.FC<GroupedMedicationRowProps> = ({
               {group.lastAdministeredTime && (
                 <div className="text-xs text-gray-500 mt-1 text-wrap wrap-break-word">
                   {t("last_administered")}:{" "}
-                  {formatDistanceToNow(new Date(group.lastAdministeredTime))}{" "}
-                  {t("ago")}
+                  {timeAgo(new Date(group.lastAdministeredTime))}
                 </div>
               )}
             </div>

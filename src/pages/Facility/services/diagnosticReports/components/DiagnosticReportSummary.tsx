@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 import { useTranslation } from "react-i18next";
 
 import { Badge } from "@/components/ui/badge";

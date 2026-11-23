@@ -1,5 +1,6 @@
+import { format, timeAgo } from "@/Utils/dateFns";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { format, formatDistanceToNow } from "date-fns";
+
 import { Pill, Utensils } from "lucide-react";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -559,8 +560,7 @@ export const AdministrationTab: React.FC<AdministrationTabProps> = ({
                   <div className="flex items-center gap-2 whitespace-break-spaces">
                     {lastModifiedDate && (
                       <div className="text-xs text-gray-500">
-                        {t("last_modified")}{" "}
-                        {formatDistanceToNow(lastModifiedDate)} {t("ago")}
+                        {t("last_modified")} {timeAgo(lastModifiedDate)}
                       </div>
                     )}
                   </div>

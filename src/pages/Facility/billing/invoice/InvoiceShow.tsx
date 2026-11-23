@@ -93,6 +93,7 @@ import {
 import patientApi from "@/types/emr/patient/patientApi";
 import facilityApi from "@/types/facility/facilityApi";
 import { PatientIdentifierUse } from "@/types/patient/patientIdentifierConfig/patientIdentifierConfig";
+import { format } from "@/Utils/dateFns";
 import dayjs from "@/Utils/dayjs";
 import { add, multiply, round, subtract } from "@/Utils/decimal";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
@@ -100,7 +101,6 @@ import { formatPhoneNumberIntl } from "@/Utils/phone";
 import mutate from "@/Utils/request/mutate";
 import query from "@/Utils/request/query";
 import { formatDateTime, formatName, goBack } from "@/Utils/utils";
-import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 

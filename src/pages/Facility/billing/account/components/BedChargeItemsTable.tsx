@@ -45,6 +45,7 @@ import {
 } from "@/types/billing/chargeItem/chargeItem";
 import chargeItemApi from "@/types/billing/chargeItem/chargeItemApi";
 
+import { format } from "@/Utils/dateFns";
 import { round } from "@/Utils/decimal";
 import queryClient from "@/Utils/request/queryClient";
 import { formatName } from "@/Utils/utils";
@@ -52,7 +53,7 @@ import { EditInvoiceDialog } from "@/components/Billing/Invoice/EditInvoiceDialo
 import AddMultipleChargeItemsSheet from "@/pages/Facility/services/serviceRequests/components/AddMultipleChargeItemsSheet";
 import { AccountRead } from "@/types/billing/account/Account";
 import { LocationAssociationRead } from "@/types/location/association";
-import { differenceInDays, differenceInHours, format } from "date-fns";
+import { differenceInDays, differenceInHours } from "date-fns";
 import ChargeItemActionsMenu from "./ChargeItemActions";
 
 interface PriceComponentRowProps {

@@ -1,5 +1,6 @@
+import { format } from "@/Utils/dateFns";
 import { Link } from "@tanstack/react-router";
-import { differenceInMinutes, format } from "date-fns";
+import { differenceInMinutes } from "date-fns";
 import { CalendarDays, CalendarOff } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

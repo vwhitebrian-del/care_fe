@@ -50,12 +50,13 @@ import {
   formatScheduleResourceName,
 } from "@/types/scheduling/schedule";
 import scheduleApis from "@/types/scheduling/scheduleApi";
+import { format } from "@/Utils/dateFns";
 import { hasMarkdownContent } from "@/Utils/markdown";
 import mutate from "@/Utils/request/mutate";
 import query from "@/Utils/request/query";
 import { formatName, getReadableDuration, goBack } from "@/Utils/utils";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { addDays, format, isBefore, isWithinInterval, subDays } from "date-fns";
+import { addDays, isBefore, isWithinInterval, subDays } from "date-fns";
 import {
   CircleUserRound as AvatarIcon,
   BanIcon,

@@ -1,4 +1,5 @@
-import { format, isToday } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { isToday } from "date-fns";
 import { Pin } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";

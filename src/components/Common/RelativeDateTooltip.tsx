@@ -1,4 +1,5 @@
-import { format, isValid } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { isValid } from "date-fns";
 import { useTranslation } from "react-i18next";
 
 import { TooltipComponent } from "@/components/ui/tooltip";

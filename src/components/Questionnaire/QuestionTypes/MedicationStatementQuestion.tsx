@@ -1,6 +1,6 @@
+import { format } from "@/Utils/dateFns";
 import { Avatar } from "@/components/Common/Avatar";
 import { useQuery } from "@tanstack/react-query";
-import { format } from "date-fns";
 import { t } from "i18next";
 import {
   ChevronsDownUp,

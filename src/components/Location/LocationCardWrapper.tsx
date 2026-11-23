@@ -1,5 +1,5 @@
 import { Spinner } from "@/components/ui/spinner";
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";

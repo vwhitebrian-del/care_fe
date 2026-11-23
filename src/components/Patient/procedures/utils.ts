@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 
 import { ProcedureOccurrence } from "@/types/emr/procedure/procedure";
 

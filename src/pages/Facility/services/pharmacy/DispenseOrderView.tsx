@@ -75,10 +75,10 @@ import { AddDispenseMedicationRow } from "@/pages/Facility/services/pharmacy/com
 import { createAndIssueInvoice } from "@/pages/Facility/services/pharmacy/utils/createAndIssueInvoice";
 import { extractInvoicesFromDispenses } from "@/pages/Facility/services/pharmacy/utils/extractInvoicesFromDispenses";
 import usePatientDefaultBillingAccount from "@/types/billing/account/hooks/useDefaultBillingAccount";
+import { format } from "@/Utils/dateFns";
 import query from "@/Utils/request/query";
 import { PaginatedResponse } from "@/Utils/request/types";
 import { formatName } from "@/Utils/utils";
-import { format } from "date-fns";
 
 export function DispenseOrderView({
   facilityId,

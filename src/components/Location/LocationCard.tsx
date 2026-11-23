@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 import { ArrowRight, BedSingle, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

@@ -30,11 +30,11 @@ import {
 } from "@/types/emr/prescription/prescription";
 import prescriptionApi from "@/types/emr/prescription/prescriptionApi";
 import { getLocationPath } from "@/types/location/utils";
+import { format } from "@/Utils/dateFns";
 import mutate from "@/Utils/request/mutate";
 import { formatName } from "@/Utils/utils";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
-import { format } from "date-fns";
 import {
   CheckCircleIcon,
   EllipsisVertical as DotsVerticalIcon,

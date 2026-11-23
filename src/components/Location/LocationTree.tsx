@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "@/Utils/dateFns";
 import { Check, Circle, Lock, MapPin } from "lucide-react";
 import React from "react";
 

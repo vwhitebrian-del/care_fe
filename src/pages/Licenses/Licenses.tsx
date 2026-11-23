@@ -1,6 +1,6 @@
+import { format } from "@/Utils/dateFns";
 import careConfig from "@careConfig";
 import { useQuery } from "@tanstack/react-query";
-import { format } from "date-fns";
 import { CopyIcon } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";

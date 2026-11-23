@@ -56,11 +56,11 @@ import useBreakpoints from "@/hooks/useBreakpoints";
 import { useInfiniteList } from "@/hooks/useInfiniteList";
 import { cn } from "@/lib/utils";
 import encounterApi from "@/types/emr/encounter/encounterApi";
+import { format } from "@/Utils/dateFns";
 import query from "@/Utils/request/query";
 import { PaginatedResponse } from "@/Utils/request/types";
 import { dateTimeQueryString, formatName } from "@/Utils/utils";
 import { useQuery } from "@tanstack/react-query";
-import { format } from "date-fns";
 import { useAtom } from "jotai";
 import { useTranslation } from "react-i18next";
 

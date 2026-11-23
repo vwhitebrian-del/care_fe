@@ -1,5 +1,6 @@
+import { format } from "@/Utils/dateFns";
 import { formatPhoneNumberIntl } from "@/Utils/phone";
-import { format, formatDate } from "date-fns";
+import { formatDate } from "date-fns";
 import type { TFunction } from "i18next";
 
 import { formatSlotTimeRange } from "@/pages/Appointments/utils";

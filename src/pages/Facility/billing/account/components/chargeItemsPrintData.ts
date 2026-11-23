@@ -1,5 +1,5 @@
+import { format } from "@/Utils/dateFns";
 import { formatPhoneNumberIntl } from "@/Utils/phone";
-import { format } from "date-fns";
 import type Decimal from "decimal.js";
 import type { TFunction } from "i18next";
 

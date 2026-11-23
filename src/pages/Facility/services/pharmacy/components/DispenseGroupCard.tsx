@@ -22,10 +22,10 @@ import {
   MedicationDispenseStatus,
 } from "@/types/emr/medicationDispense/medicationDispense";
 import medicationDispenseApi from "@/types/emr/medicationDispense/medicationDispenseApi";
+import { format } from "@/Utils/dateFns";
 import { roundWhole } from "@/Utils/decimal";
 import mutate from "@/Utils/request/mutate";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { format } from "date-fns";
 import { BadgeInfo } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Fragment } from "react/jsx-runtime";

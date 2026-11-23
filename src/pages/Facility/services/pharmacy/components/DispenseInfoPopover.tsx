@@ -30,9 +30,9 @@ import {
   MEDICATION_REQUEST_STATUS_COLORS,
   MedicationRequestRead,
 } from "@/types/emr/medicationRequest/medicationRequest";
+import { format } from "@/Utils/dateFns";
 import { roundWhole } from "@/Utils/decimal";
 import { formatName } from "@/Utils/utils";
-import { format } from "date-fns";
 import { X } from "lucide-react";
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";

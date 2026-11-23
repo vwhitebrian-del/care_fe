@@ -1,4 +1,5 @@
-import { formatDistanceToNow, startOfMinute, subDays } from "date-fns";
+import { timeAgo } from "@/Utils/dateFns";
+import { startOfMinute, subDays } from "date-fns";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -584,17 +585,14 @@ export const MedicineAdminForm: React.FC<MedicineAdminFormProps> = ({
         </h3>
         {lastAdministeredDate && (
           <p className="text-sm text-gray-500">
-            {t("last_administered")}{" "}
-            {formatDistanceToNow(new Date(lastAdministeredDate))} {t("ago")}{" "}
+            {t("last_administered")} {timeAgo(new Date(lastAdministeredDate))}{" "}
             {t("by")} {formatName(medication.created_by)}
           </p>
         )}
         <p className="text-sm text-gray-500">
           {t("prescribed")}{" "}
-          {formatDistanceToNow(
-            new Date(medication.authored_on || medication.created_date),
-          )}{" "}
-          {t("ago")} {t("by")} {lastAdministeredBy}
+          {timeAgo(new Date(medication.authored_on || medication.created_date))}{" "}
+          {t("by")} {lastAdministeredBy}
         </p>
       </div>
 

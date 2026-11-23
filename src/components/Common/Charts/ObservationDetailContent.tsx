@@ -1,4 +1,5 @@
-import { format, isToday } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { isToday } from "date-fns";
 import { useEffect, useEffectEvent, useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";

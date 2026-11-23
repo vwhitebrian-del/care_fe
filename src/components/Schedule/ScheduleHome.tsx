@@ -41,6 +41,7 @@ import {
   ScheduleTemplate,
 } from "@/types/scheduling/schedule";
 import scheduleApi from "@/types/scheduling/scheduleApi";
+import { format } from "@/Utils/dateFns";
 import query from "@/Utils/request/query";
 import {
   dateQueryString,
@@ -48,7 +49,7 @@ import {
   humanizeStrings,
 } from "@/Utils/utils";
 import { useQuery } from "@tanstack/react-query";
-import { endOfMonth, format, startOfMonth } from "date-fns";
+import { endOfMonth, startOfMonth } from "date-fns";
 import dayjs from "dayjs";
 import { ExternalLinkIcon } from "lucide-react";
 import { useState } from "react";

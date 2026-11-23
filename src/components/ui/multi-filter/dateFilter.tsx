@@ -1,4 +1,5 @@
-import { format, isSameDay, isValid } from "date-fns";
+import { format } from "@/Utils/dateFns";
+import { isSameDay, isValid } from "date-fns";
 import { Check, ChevronRight } from "lucide-react";
 import {
   type Ref,
