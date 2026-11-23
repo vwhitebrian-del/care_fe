@@ -245,7 +245,7 @@ export default function UserDashboard() {
                     id={`${tab.toLowerCase()}-tab`}
                     aria-controls={`${tab.toLowerCase()}-panel`}
                   >
-                    {tab}
+                    {t(tab.toLowerCase())}
                   </TabsTrigger>
                 ))}
               </TabsList>

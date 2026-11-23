@@ -2145,6 +2145,7 @@
   "go_to_dispenses": "Go to Dispenses",
   "go_to_encounter": "Go to Encounter",
   "go_to_page": "Go to {{page}}",
+  "governance": "Governance",
   "govt": "Governance",
   "govt_organization_required_depth_validation": "At least {{depth}} levels geo-organization should be selected",
   "graph": "Graph",

@@ -535,7 +535,7 @@ export default function PaymentsData({
                     </TableCell>
                     <TableCell>{t(payment.issuer_type)}</TableCell>
                     <TableCell>
-                      {PAYMENT_RECONCILIATION_METHOD_MAP[payment.method]}
+                      {t(PAYMENT_RECONCILIATION_METHOD_MAP[payment.method])}
                     </TableCell>
                     <TableCell>
                       <MonetaryDisplay

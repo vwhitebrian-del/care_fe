@@ -654,7 +654,7 @@ export function EncounterList({
             ? t("loading")
             : t("entity_count", {
                 count: queryEncounters?.count ?? 0,
-                entity: "Encounter",
+                entity: t("encounter", { count: queryEncounters?.count ?? 0 }),
               })}
         </Badge>
       }

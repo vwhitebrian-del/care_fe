@@ -108,7 +108,7 @@ export default function ResourceList({ facilityId }: { facilityId: string }) {
             ? t("loading")
             : t("entity_count", {
                 count: queryResources?.count ?? 0,
-                entity: "Resource",
+                entity: t("resource", { count: queryResources?.count ?? 0 }),
               })}
         </Badge>
       }

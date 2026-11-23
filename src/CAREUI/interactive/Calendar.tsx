@@ -23,7 +23,10 @@ export default function Calendar(props: Props) {
   const currentMonth = props.month ?? new Date();
   const highlightToday = props.highlightToday ?? true;
   const currentMonthRange = getMonthStartAndEnd(currentMonth);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const intlLocale = i18n.language?.startsWith("ar")
+    ? "ar-SY-u-nu-latn"
+    : "default";
   const todayRef = useRef<HTMLDivElement>(null);
 
   // Calculate days to display from previous month
@@ -66,13 +69,17 @@ export default function Calendar(props: Props) {
     props.setSelectedDate?.(today);
   };
 
-  const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  const weekDays = [0, 1, 2, 3, 4, 5, 6].map((d) =>
+    new Intl.DateTimeFormat(intlLocale, { weekday: "short" })
+      .format(new Date(2023, 0, 1 + d))
+      .toUpperCase(),
+  );
 
   return (
     <div className={`${props.className} w-full`}>
       <div className="mb-4 flex items-center justify-between">
         <span className="sm:text-lg font-semibold text-gray-950">
-          {currentMonth.toLocaleString("default", {
+          {currentMonth.toLocaleString(intlLocale, {
             month: "long",
             year: "numeric",
           })}
