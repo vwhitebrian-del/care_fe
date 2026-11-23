@@ -1,9 +1,9 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
 import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { Button } from "@/components/ui/button";
 import { Frame, FrameHeader, FramePanel } from "@/components/ui/frame";

@@ -1,8 +1,8 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useQueryClient } from "@tanstack/react-query";
 import dayjs from "dayjs";
 import { Fragment, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
 
@@ -13,7 +13,6 @@ import { PatientProps } from "@/components/Patient/PatientDetailsTab";
 import TagAssignmentSheet from "@/components/Tags/TagAssignmentSheet";
 
 import { getPermissions } from "@/common/Permissions";
-import { GENDER_TYPES } from "@/common/constants";
 
 import { PLUGIN_Component } from "@/PluginEngine";
 import { formatPatientAge } from "@/Utils/utils";
@@ -46,9 +45,7 @@ export const Demography = (props: PatientProps) => {
   );
 
   const [activeSection, _setActiveSection] = useState<string | null>(null);
-  const patientGender = GENDER_TYPES.find(
-    (i) => i.id === patientData.gender,
-  )?.text;
+  const patientGender = t(`GENDER__${patientData.gender}`);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);

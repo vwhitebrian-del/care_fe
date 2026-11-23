@@ -791,7 +791,7 @@ export default function UserForm({
                           inputRef={field.ref}
                           className="grid-cols-2 sm:grid-cols-[repeat(4,max-content)]"
                         >
-                          {GENDER_TYPES.map(({ id, text }) => (
+                          {GENDER_TYPES.map(({ id }) => (
                             <FieldLabel
                               key={id}
                               htmlFor={`${genderLabelId}-${id}`}
@@ -802,7 +802,7 @@ export default function UserForm({
                                   id={`${genderLabelId}-${id}`}
                                   value={id}
                                 />
-                                <FieldTitle>{text}</FieldTitle>
+                                <FieldTitle>{t(`GENDER__${id}`)}</FieldTitle>
                               </Field>
                             </FieldLabel>
                           ))}

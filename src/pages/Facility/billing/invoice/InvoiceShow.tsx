@@ -96,12 +96,12 @@ import { PatientIdentifierUse } from "@/types/patient/patientIdentifierConfig/pa
 import dayjs from "@/Utils/dayjs";
 import { add, multiply, round, subtract } from "@/Utils/decimal";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import mutate from "@/Utils/request/mutate";
 import query from "@/Utils/request/query";
 import { formatDateTime, formatName, goBack } from "@/Utils/utils";
 import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { toast } from "sonner";
 
 function InvoiceShow({

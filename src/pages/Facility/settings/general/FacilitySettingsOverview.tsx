@@ -1,7 +1,7 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { ImagePlus } from "lucide-react";
 import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { cn } from "@/lib/utils";
 

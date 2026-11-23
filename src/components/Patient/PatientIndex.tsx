@@ -1,9 +1,9 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useQuery } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";
 import { ChevronDown } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { toast } from "sonner";
 
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -36,7 +36,6 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SearchInput from "@/components/Common/SearchInput";
 
 import { getPermissions } from "@/common/Permissions";
-import { GENDER_TYPES } from "@/common/constants";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
 import { PLUGIN_Component } from "@/PluginEngine";
@@ -408,11 +407,7 @@ export default function PatientIndex({ facilityId }: { facilityId: string }) {
                                     )}
                                   </TableCell>
                                   <TableCell>
-                                    {
-                                      GENDER_TYPES.find(
-                                        (g) => g.id === patient.gender,
-                                      )?.text
-                                    }
+                                    {t(`GENDER__${patient.gender}`)}
                                   </TableCell>
                                   <TableCell>
                                     <ButtonGroup
@@ -545,12 +540,7 @@ export default function PatientIndex({ facilityId }: { facilityId: string }) {
                                     )}
                                   </TableCell>
                                   <TableCell>
-                                    {
-                                      GENDER_TYPES.find(
-                                        (g) =>
-                                          g.id === encounter.patient.gender,
-                                      )?.text
-                                    }
+                                    {t(`GENDER__${encounter.patient.gender}`)}
                                   </TableCell>
                                   <TableCell>
                                     <ButtonGroup

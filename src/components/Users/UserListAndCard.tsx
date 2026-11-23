@@ -1,6 +1,6 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { navigate } from "@/lib/router/navigate";
 import { cn } from "@/lib/utils";

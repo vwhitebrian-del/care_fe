@@ -1,6 +1,6 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { LucideIcon, Mail, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { cn } from "@/lib/utils";
 import { renderGeoOrganizations } from "@/types/organization/organization";

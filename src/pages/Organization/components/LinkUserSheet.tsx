@@ -1,7 +1,7 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { toast } from "sonner";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";

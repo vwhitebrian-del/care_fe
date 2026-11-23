@@ -1,6 +1,6 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { format } from "date-fns";
 import type { TFunction } from "i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { formatValue } from "@/components/Facility/ConsultationDetails/QuestionnaireResponsesList";
 

@@ -117,7 +117,7 @@ import useCurrentFacility from "@/pages/Facility/utils/useCurrentFacility";
 import { ChargeItemServiceResource } from "@/types/billing/chargeItem/chargeItem";
 import { FacilityRead } from "@/types/facility/facility";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { toast } from "sonner";
 
 interface Props {

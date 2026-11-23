@@ -1,6 +1,6 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Markdown } from "@/components/ui/markdown";

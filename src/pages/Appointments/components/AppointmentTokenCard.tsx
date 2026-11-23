@@ -13,6 +13,7 @@ import {
 import { Label } from "@/components/ui/label";
 
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { PatientAge } from "@/components/Patient/PatientAge";
 import { resourceTypeToResourcePathSlug } from "@/components/Schedule/useScheduleResource";
 import TagBadge from "@/components/Tags/TagBadge";
@@ -42,7 +43,6 @@ import {
 } from "@/types/tokens/token/token";
 import { formatDate } from "date-fns";
 import { MoreVertical, OctagonX, PrinterIcon } from "lucide-react";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 interface BaseProps {
   id?: string;

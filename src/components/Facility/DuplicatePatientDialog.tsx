@@ -1,6 +1,6 @@
+import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { formatPhoneNumberIntl } from "react-phone-number-input";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
 

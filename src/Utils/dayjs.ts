@@ -43,7 +43,19 @@ export const displayDayjs = (date?: Parameters<typeof dayjs>[0]) => {
   const language = (i18next.language || "en").split("-")[0];
   const locale = DISPLAY_LOCALES[language];
   const obj = dayjs(date);
-  return locale ? obj.locale(locale) : obj;
+  if (!locale) return obj;
+  const localised = obj.locale(locale);
+  if (language !== "ar") return localised;
+  // Arabic dates read year/month/day in digits (٢٠٠٠/١٠/١٦), never month names.
+  const format = localised.format.bind(localised);
+  localised.format = (template?: string) =>
+    format(template === undefined ? undefined : numericArabicDate(template));
+  return localised;
 };
+
+const DATE_ORDERS =
+  /\b(?:DD?\/MM?\/YYYY|MMMM? DD?, YYYY|DD? MMMM? YYYY|DD?-MMMM?-YYYY|DD?-MM?-YYYY)\b/g;
+const numericArabicDate = (template: string) =>
+  template.replace(DATE_ORDERS, "YYYY/MM/DD");
 
 export default dayjs;
