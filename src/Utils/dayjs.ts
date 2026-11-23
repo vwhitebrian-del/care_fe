@@ -31,6 +31,9 @@ dayjs.locale(
     months: levantineMonths,
     monthsShort: levantineMonths,
     meridiem: (hour: number) => (hour < 12 ? "ص" : "م"),
+    // Keep Latin digits (the base "ar" locale converts to Eastern Arabic ones).
+    preparse: (value: string) => value,
+    postformat: (value: string) => value,
   } as ILocale,
   undefined,
   true,
@@ -46,7 +49,7 @@ export const displayDayjs = (date?: Parameters<typeof dayjs>[0]) => {
   if (!locale) return obj;
   const localised = obj.locale(locale);
   if (language !== "ar") return localised;
-  // Arabic dates read year/month/day in digits (٢٠٠٠/١٠/١٦), never month names.
+  // Arabic dates read year/month/day in Latin digits (2000/10/16), never month names.
   const format = localised.format.bind(localised);
   localised.format = (template?: string) =>
     format(template === undefined ? undefined : numericArabicDate(template));
@@ -54,7 +57,7 @@ export const displayDayjs = (date?: Parameters<typeof dayjs>[0]) => {
 };
 
 const DATE_ORDERS =
-  /\b(?:DD?\/MM?\/YYYY|MMMM? DD?, YYYY|DD? MMMM? YYYY|DD?-MMMM?-YYYY|DD?-MM?-YYYY)\b/g;
+  /\b(?:DD?\/MM?\/YY(?:YY)?|MMMM? DD?, YYYY|DD? MMMM? YYYY|DD?-MMMM?-YYYY|DD?-MM?-YYYY)\b/g;
 const numericArabicDate = (template: string) =>
   template.replace(DATE_ORDERS, "YYYY/MM/DD");
 

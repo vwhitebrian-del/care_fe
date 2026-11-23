@@ -1,7 +1,7 @@
 import { format } from "@/Utils/dateFns";
 import careConfig from "@careConfig";
 import { differenceInMinutes, isValid, parseISO } from "date-fns";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 
 import dayjs, { displayDayjs } from "@/Utils/dayjs";
 import { Time } from "@/Utils/types";
@@ -40,6 +40,10 @@ export const formatDateTime = (date: DateLike, format?: string) => {
     return obj.format(DATE_FORMAT);
   }
 
+  // Arabic reads date first: 2026/11/23 09:59 م
+  if ((i18next.language || "").startsWith("ar")) {
+    return obj.format(`${DATE_FORMAT} ${TIME_FORMAT}`);
+  }
   return obj.format(DATE_TIME_FORMAT);
 };
 
