@@ -19,6 +19,9 @@ const DEFAULT_NAMESPACE = "care_fe";
 
 const RTL_LANGUAGES = ["ar"];
 
+/** Used until the user picks a language; the browser language is ignored. */
+export const DEFAULT_LANGUAGE = "ar";
+
 export const isRTLLanguage = (language?: string) =>
   !!language && RTL_LANGUAGES.includes(language.split("-")[0]);
 
@@ -31,6 +34,15 @@ export function applyDocumentLanguage(language?: string) {
 }
 
 i18n.on("languageChanged", applyDocumentLanguage);
+
+function storedLanguage() {
+  try {
+    const stored = localStorage.getItem("i18nextLng")?.split("-")[0];
+    return stored && stored in LANGUAGES ? stored : undefined;
+  } catch {
+    return undefined;
+  }
+}
 
 let pluginConfigs: PlugConfig[] = [];
 
@@ -163,7 +175,14 @@ export async function initI18n() {
       }),
     )
     .init({
-      fallbackLng: "en",
+      // Only a language the user chose (stored by the detector) overrides
+      // DEFAULT_LANGUAGE. English stays the fallback for untranslated keys.
+      detection: {
+        order: ["localStorage"],
+        caches: ["localStorage"],
+      },
+      fallbackLng: { default: ["en"] },
+      lng: storedLanguage() ?? DEFAULT_LANGUAGE,
       ns: namespaces,
       fallbackNS: pluginNamespaces,
       load: "currentOnly",
