@@ -15,7 +15,7 @@ import {
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
 import query from "@/Utils/request/query";
-import { formatName } from "@/Utils/utils";
+import { formatDateTime, formatName } from "@/Utils/utils";
 import diagnosticReportApi from "@/types/emr/diagnosticReport/diagnosticReportApi";
 import { ObservationStatus } from "@/types/emr/observation/observation";
 
@@ -93,9 +93,7 @@ export function ObservationHistorySheet({
                         <p className="text-gray-500">{t("modified_date")}</p>
                         <p>
                           {observation.effective_datetime
-                            ? new Date(
-                                observation.effective_datetime,
-                              ).toLocaleString()
+                            ? formatDateTime(observation.effective_datetime)
                             : "-"}
                         </p>
                       </div>

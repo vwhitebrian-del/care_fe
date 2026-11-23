@@ -67,6 +67,7 @@ import chargeItemApi from "@/types/billing/chargeItem/chargeItemApi";
 
 import { isPositive, isZero, roundWhole } from "@/Utils/decimal";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
+import { formatDateTime } from "@/Utils/utils";
 import BackButton from "@/components/Common/BackButton";
 import { ReportSubTab } from "@/components/Files/ReportSubTab";
 import { PatientHeader } from "@/components/Patient/PatientHeader";
@@ -690,14 +691,7 @@ function AccountShow({
             {account.calculated_at && (
               <span
                 className="text-xs text-gray-500 cursor-default"
-                title={new Date(account.calculated_at).toLocaleString("en-IN", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                  hour: "numeric",
-                  minute: "2-digit",
-                  second: "2-digit",
-                })}
+                title={formatDateTime(account.calculated_at)}
               >
                 {t("last_calculated_at", {
                   time: formatDistanceToNow(new Date(account.calculated_at), {

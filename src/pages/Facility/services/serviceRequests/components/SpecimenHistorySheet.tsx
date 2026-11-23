@@ -20,6 +20,7 @@ import {
   SpecimenRead,
 } from "@/types/emr/specimen/specimen";
 import { round } from "@/Utils/decimal";
+import { formatDateTime } from "@/Utils/utils";
 
 // Processing entries are embedded values without IDs. Count identical signatures
 // separately so duplicate events retain unique keys without depending on list order.
@@ -94,9 +95,9 @@ export function SpecimenHistorySheet({
                         </p>
                         <p>
                           {specimen.collection?.collected_date_time
-                            ? new Date(
+                            ? formatDateTime(
                                 specimen.collection.collected_date_time,
-                              ).toLocaleString()
+                              )
                             : "-"}
                         </p>
                       </div>

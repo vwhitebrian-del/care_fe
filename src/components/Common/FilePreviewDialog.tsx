@@ -29,6 +29,7 @@ import {
   getVideoMimeType,
 } from "@/types/files/file";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
+import { formatDateTime } from "@/Utils/utils";
 import { Printer } from "lucide-react";
 
 const PDFViewer = lazy(() => import("@/components/Common/PDFViewer"));
@@ -244,12 +245,7 @@ export default function FilePreviewDialog(props: FilePreviewProps) {
                   uploadedFiles[index].created_date && (
                     <p className="mt-1 text-sm text-gray-600">
                       {t("created_on")}{" "}
-                      {new Date(
-                        uploadedFiles[index].created_date!,
-                      ).toLocaleString("en-US", {
-                        dateStyle: "long",
-                        timeStyle: "short",
-                      })}
+                      {formatDateTime(uploadedFiles[index].created_date!)}
                     </p>
                   )}
               </div>
