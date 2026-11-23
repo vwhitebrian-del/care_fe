@@ -194,7 +194,7 @@ export function PatientHeader({
       )}
     >
       <div className="flex flex-col md:flex-row gap-4 xl:gap-8 xl:items-center">
-        <div className="flex min-w-0 md:max-w-1/2 md:shrink-0">
+        <div className="flex md:max-w-1/2 md:shrink-0 md:min-w-fit">
           <PatientHoverCard
             key={`${patient.id}:${isPatientPage || !showDetails}`}
             patient={patient}
