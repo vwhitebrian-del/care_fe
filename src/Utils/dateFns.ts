@@ -7,6 +7,7 @@ type DateArg = Parameters<typeof formatDateFns>[0];
 type FormatOptions = NonNullable<Parameters<typeof formatDateFns>[2]>;
 
 const ORDERS: [RegExp, string][] = [
+  [/P{1,4}(?=p)/g, "yyyy/MM/dd "],
   [/P{1,4}/g, "yyyy/MM/dd"],
   [/MMMM?,? d{1,2},? yyyy/g, "yyyy/MM/dd"],
   [/d{1,2} MMMM?,? yyyy/g, "yyyy/MM/dd"],
@@ -19,6 +20,8 @@ const ORDERS: [RegExp, string][] = [
 
 /** Arabic dates are numeric, year first (2000/10/16); no month names. */
 const toArabicPattern = (pattern: string) => {
+  // English connector words such as 'at' don't belong in numeric Arabic dates.
+  pattern = pattern.replace(/\s*'at'\s*/g, " ");
   // Text in [brackets] or 'quotes' is literal and must stay untouched.
   return pattern
     .split(/('[^']*')/)
