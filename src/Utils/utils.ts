@@ -2,7 +2,7 @@ import careConfig from "@careConfig";
 import { differenceInMinutes, format, isValid, parseISO } from "date-fns";
 import { t } from "i18next";
 
-import dayjs from "@/Utils/dayjs";
+import dayjs, { displayDayjs } from "@/Utils/dayjs";
 import { Time } from "@/Utils/types";
 import { navigate } from "@/lib/router/navigate";
 import { getRouter } from "@/lib/router/routerRef";
@@ -28,7 +28,7 @@ export function parseValidISO(value: string | undefined) {
 type DateLike = Parameters<typeof dayjs>[0];
 
 export const formatDateTime = (date: DateLike, format?: string) => {
-  const obj = dayjs(date);
+  const obj = displayDayjs(date);
 
   if (format) {
     return obj.format(format);
@@ -50,7 +50,7 @@ export const relativeDate = (date: DateLike, withoutSuffix = false) => {
   const obj = dayjs(date);
   const isToday = obj.isSame(dayjs(), "day");
 
-  const relative = obj.fromNow(withoutSuffix);
+  const relative = displayDayjs(date).fromNow(withoutSuffix);
 
   const hasTime = !!(obj.hour() || obj.minute() || obj.second());
 
@@ -85,7 +85,7 @@ export const formatName = (
 };
 
 export const relativeTime = (time?: DateLike) => {
-  return dayjs(time).fromNow();
+  return displayDayjs(time).fromNow();
 };
 
 export const dateQueryString = (date: DateLike) => {

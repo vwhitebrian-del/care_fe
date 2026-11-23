@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: light;
-  --font-figtree: "Figtree Variable", sans-serif;
+  --font-figtree: "Figtree Variable", "IBM Plex Sans Arabic", sans-serif;
   --font-geist-mono: "Geist Mono Variable", monospace;
   --font-size-scale: 1;
 
@@ -324,7 +324,7 @@
 }
 
 @theme inline {
-  --font-sans: "Figtree Variable", sans-serif;
+  --font-sans: "Figtree Variable", "IBM Plex Sans Arabic", sans-serif;
   --font-mono:
     "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;

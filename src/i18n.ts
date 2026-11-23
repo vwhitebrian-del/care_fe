@@ -11,6 +11,7 @@ import { initReactI18next } from "react-i18next";
 import { z } from "zod";
 
 export const LANGUAGES = {
+  ar: "العربية",
   en: "English",
   ta: "தமிழ்",
   ml: "മലയാളം",
@@ -20,6 +21,21 @@ export const LANGUAGES = {
 } as const;
 
 const DEFAULT_NAMESPACE = "care_fe";
+
+const RTL_LANGUAGES = ["ar"];
+
+export const isRTLLanguage = (language?: string) =>
+  !!language && RTL_LANGUAGES.includes(language.split("-")[0]);
+
+/** Keeps <html lang> and <html dir> in step with the active language. */
+export function applyDocumentLanguage(language?: string) {
+  if (!language || typeof document === "undefined") return;
+  const root = document.documentElement;
+  root.setAttribute("lang", language);
+  root.setAttribute("dir", isRTLLanguage(language) ? "rtl" : "ltr");
+}
+
+i18n.on("languageChanged", applyDocumentLanguage);
 
 let pluginConfigs: PlugConfig[] = [];
 

@@ -1,4 +1,4 @@
-import dayjs from "@/Utils/dayjs";
+import dayjs, { displayDayjs } from "@/Utils/dayjs";
 
 const DATE_FORMAT = "MMM DD, YYYY";
 const TIME_FORMAT = "hh:mm A";
@@ -6,7 +6,7 @@ const DATE_TIME_FORMAT = `${DATE_FORMAT}, ${TIME_FORMAT}`;
 
 type DateLike = Parameters<typeof dayjs>[0];
 export const formatDateTime = (date: DateLike, format?: string) => {
-  const obj = dayjs(date);
+  const obj = displayDayjs(date);
 
   if (format) {
     return obj.format(format);

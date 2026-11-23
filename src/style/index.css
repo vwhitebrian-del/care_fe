@@ -4,6 +4,11 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/figtree";
 @import "@fontsource-variable/geist-mono";
+/* Arabic glyphs fall back to IBM Plex Sans Arabic; Latin stays Figtree */
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
 @import "./typeset.css";
 
 @config "../../tailwind.config.js";
