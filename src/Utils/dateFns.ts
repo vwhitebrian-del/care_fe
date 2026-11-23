@@ -1,12 +1,13 @@
+import { displayDayjs } from "@/Utils/dayjs";
 import { format as formatDateFns } from "date-fns";
 import { ar } from "date-fns/locale";
 import i18n from "i18next";
-import { displayDayjs } from "@/Utils/dayjs";
 
 type DateArg = Parameters<typeof formatDateFns>[0];
 type FormatOptions = NonNullable<Parameters<typeof formatDateFns>[2]>;
 
 const ORDERS: [RegExp, string][] = [
+  [/P{1,4}/g, "yyyy/MM/dd"],
   [/MMMM?,? d{1,2},? yyyy/g, "yyyy/MM/dd"],
   [/d{1,2} MMMM? yyyy/g, "yyyy/MM/dd"],
   [/dd?\/MM?\/yyyy/g, "yyyy/MM/dd"],
@@ -45,3 +46,27 @@ export function format(
 /** "2 hours ago" / "منذ ساعتين" in the UI language. */
 export const timeAgo = (date: Parameters<typeof displayDayjs>[0]) =>
   displayDayjs(date).fromNow();
+
+/** Drop-in for `Date#toLocaleDateString`; Arabic gives numeric year-first dates. */
+export function toLocaleDate(
+  date: Date | string | number,
+  locales?: Intl.LocalesArgument,
+  options?: Intl.DateTimeFormatOptions,
+) {
+  const d = date instanceof Date ? date : new Date(date);
+  if (!(i18n.language || "").startsWith("ar"))
+    return d.toLocaleDateString(locales, options);
+  const noYear = options && options.month && options.year === undefined;
+  return formatDateFns(d, noYear ? "MM/dd" : "yyyy/MM/dd");
+}
+
+/** Short date for pickers: "Nov 23, 2026" in English, "2026/11/23" in Arabic. */
+export function shortDate(date: Date, year = true) {
+  if (!(i18n.language || "").startsWith("ar"))
+    return new Intl.DateTimeFormat(i18n.language, {
+      day: "numeric",
+      month: "short",
+      ...(year ? { year: "numeric" } : {}),
+    }).format(date);
+  return formatDateFns(date, year ? "yyyy/MM/dd" : "MM/dd");
+}

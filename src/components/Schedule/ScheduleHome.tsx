@@ -41,7 +41,7 @@ import {
   ScheduleTemplate,
 } from "@/types/scheduling/schedule";
 import scheduleApi from "@/types/scheduling/scheduleApi";
-import { format } from "@/Utils/dateFns";
+import { format, toLocaleDate } from "@/Utils/dateFns";
 import query from "@/Utils/request/query";
 import {
   dateQueryString,
@@ -310,7 +310,7 @@ function DayDetailsPopover({
     <PopoverContent className="p-6" align="center" sideOffset={5}>
       <div className="flex items-center justify-between">
         <p className="text-sm text-gray-600">
-          {date.toLocaleDateString("default", {
+          {toLocaleDate(date, "default", {
             day: "numeric",
             month: "short",
             year: "numeric",

@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import careConfig from "@careConfig";
 import { QRCodeSVG } from "qrcode.react";
 import { useTranslation } from "react-i18next";
@@ -85,7 +86,7 @@ export function PrintableQRCodeArea({
       {/* Footer */}
       <div className="mt-8 space-y-1 pt-2 text-[10px] text-gray-500 flex justify-between print:text-gray-600">
         <p>
-          {t("generated_on")} {new Date().toLocaleDateString()}
+          {t("generated_on")} {toLocaleDate(new Date())}
         </p>
         <p className="print:hidden">
           {t("total_qr_codes")}: {specimens.length}

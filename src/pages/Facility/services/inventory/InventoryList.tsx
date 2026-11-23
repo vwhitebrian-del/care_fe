@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { TriangleAlertIcon } from "lucide-react";
@@ -249,9 +250,9 @@ export function InventoryList({ facilityId, locationId }: InventoryListProps) {
                     {inventory.product.expiration_date ? (
                       <div className="flex items-center gap-2">
                         <span>
-                          {new Date(
-                            inventory.product.expiration_date,
-                          ).toLocaleDateString()}
+                          {toLocaleDate(
+                            new Date(inventory.product.expiration_date),
+                          )}
                         </span>
                         <ExpiryStatusBadge
                           expirationDate={inventory.product.expiration_date}

@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ExternalLink } from "lucide-react";
 import React, { useState } from "react";
@@ -171,13 +172,15 @@ export function AccountSheetButton({
                           <span className="font-medium">
                             {accounts[0].service_period &&
                             accounts[0].service_period.start
-                              ? new Date(
-                                  accounts[0].service_period.start,
-                                ).toLocaleDateString(undefined, {
-                                  day: "numeric",
-                                  month: "long",
-                                  year: "numeric",
-                                })
+                              ? toLocaleDate(
+                                  new Date(accounts[0].service_period.start),
+                                  undefined,
+                                  {
+                                    day: "numeric",
+                                    month: "long",
+                                    year: "numeric",
+                                  },
+                                )
                               : "-"}
                           </span>
 
@@ -185,13 +188,15 @@ export function AccountSheetButton({
                           <span className="font-medium">
                             {accounts[0].service_period &&
                             accounts[0].service_period.end
-                              ? new Date(
-                                  accounts[0].service_period.end,
-                                ).toLocaleDateString(undefined, {
-                                  day: "numeric",
-                                  month: "long",
-                                  year: "numeric",
-                                })
+                              ? toLocaleDate(
+                                  new Date(accounts[0].service_period.end),
+                                  undefined,
+                                  {
+                                    day: "numeric",
+                                    month: "long",
+                                    year: "numeric",
+                                  },
+                                )
                               : "-"}
                           </span>
                         </div>

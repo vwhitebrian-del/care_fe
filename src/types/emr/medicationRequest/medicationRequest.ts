@@ -6,6 +6,7 @@ import {
 import { InventoryRead } from "@/types/inventory/product/inventory";
 import { ProductKnowledgeBase } from "@/types/inventory/productKnowledge/productKnowledge";
 import { UserReadMinimal } from "@/types/user/user";
+import { toLocaleDate } from "@/Utils/dateFns";
 import { add, divide, isZero, multiply } from "@/Utils/decimal";
 import Decimal from "decimal.js";
 
@@ -211,7 +212,7 @@ function periodBoundToLocalDate(iso: string, endOfDay = false): Date {
 
 function formatBoundDate(iso?: string): string {
   if (!iso) return "—";
-  return periodBoundToLocalDate(iso).toLocaleDateString("en-US", {
+  return toLocaleDate(periodBoundToLocalDate(iso), "en-US", {
     day: "2-digit",
     month: "short",
     year: "numeric",

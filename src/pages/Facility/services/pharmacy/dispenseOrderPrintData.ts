@@ -1,4 +1,4 @@
-import { format } from "@/Utils/dateFns";
+import { format, toLocaleDate } from "@/Utils/dateFns";
 import type { TFunction } from "i18next";
 
 import {
@@ -81,7 +81,7 @@ export function buildDispenseOrderPrintContent({
                 "dd/MM/yyyy",
               )
             : "-",
-          new Date(dispense.when_prepared).toLocaleDateString(),
+          toLocaleDate(new Date(dispense.when_prepared)),
         ];
       }),
     },

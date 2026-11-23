@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import {
   Dialog,
   DialogContent,
@@ -84,7 +85,7 @@ import ChargeItemsTable from "./components/ChargeItemsTable";
 
 function formatDate(date?: string) {
   if (!date) return "-";
-  return new Date(date).toLocaleDateString("en-IN", {
+  return toLocaleDate(new Date(date), "en-IN", {
     month: "short",
     day: "numeric",
     year: "numeric",

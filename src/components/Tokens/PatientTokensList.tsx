@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -100,7 +101,7 @@ export default function PatientTokensList({
             className="border-gray-300"
             dateFormat={
               selectedDate.toDateString() === new Date().toDateString()
-                ? `'Today (${selectedDate.toLocaleDateString("default", {
+                ? `'Today (${toLocaleDate(selectedDate, "default", {
                     day: "2-digit",
                     month: "short",
                     year: "numeric",

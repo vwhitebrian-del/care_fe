@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React, { useMemo } from "react";
@@ -360,7 +361,7 @@ function AccountSheet({
                                     key={encounter.id}
                                     value={encounter.id}
                                   >
-                                    {`${t(encounter.encounter_class)} - ${t(encounter.status)} (${new Date(encounter.period.start || "").toLocaleDateString("en-IN")})`}
+                                    {`${t(encounter.encounter_class)} - ${t(encounter.status)} (${toLocaleDate(new Date(encounter.period.start || ""), "en-IN")})`}
                                   </SelectItem>
                                 ))}
                               </SelectContent>

@@ -1,4 +1,4 @@
-import { format } from "@/Utils/dateFns";
+import { format, toLocaleDate } from "@/Utils/dateFns";
 import { useTranslation } from "react-i18next";
 
 import { Card } from "@/components/ui/card";
@@ -37,7 +37,7 @@ function formatDisplayDate(dateStr: string) {
   yesterday.setHours(0, 0, 0, 0);
   date.setHours(0, 0, 0, 0);
 
-  const formattedDate = date.toLocaleDateString("default", {
+  const formattedDate = toLocaleDate(date, "default", {
     year: "numeric",
     month: "long",
     day: "numeric",

@@ -1,4 +1,4 @@
-import { format } from "@/Utils/dateFns";
+import { format, shortDate } from "@/Utils/dateFns";
 import {
   addMonths,
   differenceInCalendarDays,
@@ -162,12 +162,7 @@ export function DateRangePicker({
     [],
   );
   const valueId = useId();
-  const dateLabel = (date: Date, year = true) =>
-    new Intl.DateTimeFormat(i18n.language, {
-      day: "numeric",
-      month: "short",
-      ...(year ? { year: "numeric" } : {}),
-    }).format(date);
+  const dateLabel = (date: Date, year = true) => shortDate(date, year);
   const { from, to } = props.value ?? {};
   const label =
     from && to
@@ -322,11 +317,7 @@ function RangePanel({
   const keepMonth = useRef(false);
 
   const dateLabel = (date: Date, includeYear = true) =>
-    new Intl.DateTimeFormat(i18n.language, {
-      day: "numeric",
-      month: "short",
-      ...(includeYear ? { year: "numeric" } : {}),
-    }).format(date);
+    shortDate(date, includeYear);
   const validate = (input: string) => {
     if (!input.trim()) return "";
     const date = parseDate(input);

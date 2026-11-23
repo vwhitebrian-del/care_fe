@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowUpRightSquare, PlusIcon } from "lucide-react";
 import React from "react";
@@ -62,7 +63,7 @@ import AccountSheet from "./AccountSheet";
 
 function formatDate(date?: string) {
   if (!date) return "-";
-  return new Date(date).toLocaleDateString("en-IN", {
+  return toLocaleDate(new Date(date), "en-IN", {
     month: "short",
     day: "numeric",
     year: "numeric",

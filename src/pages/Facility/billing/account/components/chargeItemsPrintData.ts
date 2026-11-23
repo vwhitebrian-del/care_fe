@@ -1,4 +1,4 @@
-import { format } from "@/Utils/dateFns";
+import { format, toLocaleDate } from "@/Utils/dateFns";
 import { formatPhoneNumberIntl } from "@/Utils/phone";
 import type Decimal from "decimal.js";
 import type { TFunction } from "i18next";
@@ -362,7 +362,7 @@ export function buildChargeItemsPrintContent({
   const patient = account?.patient;
   const encounter = account?.primary_encounter;
   const localDate = (date?: string | null) =>
-    date ? new Date(date).toLocaleDateString("en-IN") : null;
+    date ? toLocaleDate(new Date(date), "en-IN") : null;
 
   return {
     warning: null,

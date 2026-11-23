@@ -1,3 +1,4 @@
+import { toLocaleDate } from "@/Utils/dateFns";
 import { Link } from "@tanstack/react-router";
 import {
   ChevronRight,
@@ -136,7 +137,7 @@ export default function UserDashboard() {
                   />
                 </h1>
                 <p className="text-sm text-gray-600">
-                  {new Date().toLocaleDateString("en-US", {
+                  {toLocaleDate(new Date(), "en-US", {
                     weekday: "long",
                     year: "numeric",
                     month: "long",
