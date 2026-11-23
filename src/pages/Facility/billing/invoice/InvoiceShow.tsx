@@ -1289,11 +1289,11 @@ function InvoiceShow({
                                 <TableCell
                                   className={cn(tableCellClass, "text-start")}
                                 >
-                                  {
+                                  {t(
                                     PAYMENT_RECONCILIATION_METHOD_MAP[
                                       payment.method
-                                    ]
-                                  }
+                                    ],
+                                  )}
                                 </TableCell>
                                 <TableCell className={tableCellClass}>
                                   {payment.reference_number}
@@ -1447,11 +1447,11 @@ function InvoiceShow({
                               <TableCell
                                 className={cn(tableCellClass, "text-start")}
                               >
-                                {
+                                {t(
                                   PAYMENT_RECONCILIATION_METHOD_MAP[
                                     creditNote.method
-                                  ]
-                                }
+                                  ],
+                                )}
                               </TableCell>
                               <TableCell className={tableCellClass}>
                                 {creditNote.reference_number}

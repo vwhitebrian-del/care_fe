@@ -209,7 +209,7 @@ export function useInvoiceStatusActions({
                             {payment.id}
                           </span>
                           {" - "}
-                          {PAYMENT_RECONCILIATION_METHOD_MAP[payment.method]}
+                          {t(PAYMENT_RECONCILIATION_METHOD_MAP[payment.method])}
                           {payment.reference_number &&
                             ` (${payment.reference_number})`}
                         </span>
@@ -243,7 +243,11 @@ export function useInvoiceStatusActions({
                             {creditNote.id}
                           </span>
                           {" - "}
-                          {PAYMENT_RECONCILIATION_METHOD_MAP[creditNote.method]}
+                          {t(
+                            PAYMENT_RECONCILIATION_METHOD_MAP[
+                              creditNote.method
+                            ],
+                          )}
                           {creditNote.reference_number &&
                             ` (${creditNote.reference_number})`}
                         </span>

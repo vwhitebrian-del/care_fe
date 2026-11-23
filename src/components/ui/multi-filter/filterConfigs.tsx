@@ -508,10 +508,11 @@ export const paymentMethodFilter = (
       renderSelected: (selected: FilterValues) => {
         const selectedStatus = selected as string[];
         if (typeof selectedStatus[0] === "string") {
-          const option =
+          const option = t(
             PAYMENT_RECONCILIATION_METHOD_MAP[
               selectedStatus[0] as PaymentReconciliationPaymentMethod
-            ];
+            ],
+          );
           return (
             <GenericSelectedBadge
               selectedValue={option}

@@ -251,7 +251,7 @@ function PaymentReconciliationShow({
                 <div className="space-y-4">
                   <InfoItem
                     label={t("payment_method")}
-                    value={PAYMENT_RECONCILIATION_METHOD_MAP[payment.method]}
+                    value={t(PAYMENT_RECONCILIATION_METHOD_MAP[payment.method])}
                   />
                   {payment.reference_number && (
                     <InfoItem
@@ -280,10 +280,13 @@ function PaymentReconciliationShow({
                   />
                 </div>
                 <div className="space-y-4">
-                  <InfoItem label={t("kind")} value={humanize(payment.kind)} />
+                  <InfoItem
+                    label={t("kind")}
+                    value={t(`payment_kind_${payment.kind}`)}
+                  />
                   <InfoItem
                     label={t("issuer_type")}
-                    value={humanize(payment.issuer_type)}
+                    value={t(`payment_issuer_${payment.issuer_type}`)}
                   />
                   {payment.disposition && (
                     <InfoItem
@@ -369,7 +372,7 @@ function PaymentReconciliationShow({
                         {t("view_invoice")}
                       </Link>
                       <Badge variant="outline">
-                        {payment.target_invoice.status}
+                        {t(payment.target_invoice.status)}
                       </Badge>
                     </div>
                     <p className="text-sm text-gray-500 mt-1">

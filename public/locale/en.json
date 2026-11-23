@@ -18,6 +18,11 @@
   "BLOOD_GROUP_SHORT__B_positive": "B+ve",
   "BLOOD_GROUP_SHORT__O_negative": "O-ve",
   "BLOOD_GROUP_SHORT__O_positive": "O+ve",
+  "Cash": "Cash",
+  "Check": "Check",
+  "Credit Account": "Credit Account",
+  "Credit Card": "Credit Card",
+  "Credit Check": "Credit Check",
   "Customize how this service appears in the UI": "Customize how this service appears in the UI",
   "DAYS_OF_WEEK_SHORT__0": "Mon",
   "DAYS_OF_WEEK_SHORT__1": "Tue",
@@ -34,8 +39,10 @@
   "DAYS_OF_WEEK__5": "Saturday",
   "DAYS_OF_WEEK__6": "Sunday",
   "DD/MM/YYYY": "DD/MM/YYYY",
+  "Debit Card": "Debit Card",
   "Diagnosis_chronic_condition__title": "Chronic Condition",
   "Diagnosis_encounter_diagnosis__title": "Diagnosis",
+  "Direct Deposit": "Direct Deposit",
   "ENCOUNTER_TAB__abdm": "ABDM Records",
   "ENCOUNTER_TAB__accounts": "Accounts",
   "ENCOUNTER_TAB__claims": "Insurance Claims",
@@ -3505,6 +3512,12 @@
   "payment_details": "Payment Details",
   "payment_has_been_collected": "Payment has been collected.",
   "payment_id": "Payment ID",
+  "payment_issuer_insurer": "Insurer",
+  "payment_issuer_patient": "Patient",
+  "payment_kind_deposit": "Deposit",
+  "payment_kind_kiosk": "Kiosk",
+  "payment_kind_online": "Online",
+  "payment_kind_preriodic_payment": "Periodic payment",
   "payment_may_not_exist": "The payment you are looking for may not exist.",
   "payment_method": "Payment Method",
   "payment_not_found": "Payment Not Found",
@@ -4474,30 +4487,30 @@
   "revoking": "Revoking...",
   "rich_text_editor": {
     "toolbar": {
+      "blockTypeSelect": {
+        "placeholder": "Block type",
+        "selectBlockTypeTooltip": "Select block type"
+      },
+      "blockTypes": {
+        "heading": "Heading {{level}}",
+        "paragraph": "Paragraph",
+        "quote": "Quote"
+      },
       "bold": "Bold",
       "bulletedList": "Bulleted list",
       "checkList": "Check list",
+      "highlight": "Highlight",
       "italic": "Italic",
+      "moreFormatting": "More formatting options",
       "numberedList": "Numbered list",
       "redo": "Redo {{shortcut}}",
       "removeBold": "Remove bold",
-      "removeItalic": "Remove italic",
-      "toggleGroup": "Formatting options",
-      "undo": "Undo {{shortcut}}",
-      "underline": "Underline",
-      "removeUnderline": "Remove underline",
-      "highlight": "Highlight",
       "removeHighlight": "Remove highlight",
-      "blockTypes": {
-        "paragraph": "Paragraph",
-        "quote": "Quote",
-        "heading": "Heading {{level}}"
-      },
-      "blockTypeSelect": {
-        "selectBlockTypeTooltip": "Select block type",
-        "placeholder": "Block type"
-      },
-      "moreFormatting": "More formatting options"
+      "removeItalic": "Remove italic",
+      "removeUnderline": "Remove underline",
+      "toggleGroup": "Formatting options",
+      "underline": "Underline",
+      "undo": "Undo {{shortcut}}"
     }
   },
   "rich_text_plain_text_fallback": "Formatting could not be loaded. You can still edit the text below.",

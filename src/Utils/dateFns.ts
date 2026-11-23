@@ -9,11 +9,12 @@ type FormatOptions = NonNullable<Parameters<typeof formatDateFns>[2]>;
 const ORDERS: [RegExp, string][] = [
   [/P{1,4}/g, "yyyy/MM/dd"],
   [/MMMM?,? d{1,2},? yyyy/g, "yyyy/MM/dd"],
-  [/d{1,2} MMMM? yyyy/g, "yyyy/MM/dd"],
+  [/d{1,2} MMMM?,? yyyy/g, "yyyy/MM/dd"],
   [/dd?\/MM?\/yyyy/g, "yyyy/MM/dd"],
   [/MMMM? d{1,2}(?![a-z])/g, "MM/dd"],
   [/d{1,2} MMMM?(?![a-z])/g, "MM/dd"],
   [/MMMM?/g, "MM"],
+  [/(yyyy\/MM\/dd|MM\/dd),\s*/g, "$1 "],
 ];
 
 /** Arabic dates are numeric, year first (2000/10/16); no month names. */
