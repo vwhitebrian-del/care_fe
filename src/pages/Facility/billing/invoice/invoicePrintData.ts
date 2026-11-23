@@ -237,7 +237,7 @@ export function buildInvoicePrintContent({
       : "-",
     patient: {
       name: patient.name,
-      gender_age: `${t(`GENDER__${patient.gender}`)}, ${formatPatientAge(patient, true)}`,
+      gender_age: `${t(`GENDER__${patient.gender}`)} - ${formatPatientAge(patient, true)}`,
       identifiers: getPatientIdentifiers(verifiedPatient, {
         use: PatientIdentifierUse.official,
       }).map((identifier) => ({

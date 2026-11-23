@@ -23,9 +23,6 @@ export interface PaymentReceiptPrintContent {
   footer: { left: string; right: string | null };
 }
 
-const capitalize = (value: string) =>
-  value.charAt(0).toUpperCase() + value.slice(1);
-
 export function buildPaymentReceiptPrintContent({
   payment,
   t,
@@ -41,13 +38,13 @@ export function buildPaymentReceiptPrintContent({
   return {
     labels: { notes: t("notes") },
     title,
-    outcome: capitalize(payment.outcome),
+    outcome: t(`payment_outcome_${payment.outcome}`),
     details: {
       left: [
         { label: t("name"), value: patient.name },
         {
           label: `${t("age")} / ${t("sex")}`,
-          value: `${formatPatientAge(patient, true)}, ${t(`GENDER__${patient.gender}`)}`,
+          value: `${formatPatientAge(patient, true)} - ${t(`GENDER__${patient.gender}`)}`,
         },
         { label: t("address"), value: patient.address ?? null },
       ],
@@ -65,7 +62,7 @@ export function buildPaymentReceiptPrintContent({
         })),
         {
           label: t("payment_method"),
-          value: PAYMENT_RECONCILIATION_METHOD_MAP[payment.method] ?? null,
+          value: t(PAYMENT_RECONCILIATION_METHOD_MAP[payment.method]) ?? null,
         },
       ],
     },
@@ -74,7 +71,7 @@ export function buildPaymentReceiptPrintContent({
           header: [t("invoice_no"), t("status"), t("amount")],
           row: [
             payment.target_invoice.number,
-            payment.target_invoice.status,
+            t(payment.target_invoice.status),
             formatAmount(payment.target_invoice.total_gross),
           ],
         }
@@ -88,8 +85,8 @@ export function buildPaymentReceiptPrintContent({
             payment.is_credit_note,
           ),
         ),
-        capitalize(payment.kind),
-        capitalize(payment.issuer_type),
+        t(`payment_kind_${payment.kind}`),
+        t(`payment_issuer_${payment.issuer_type}`),
         formatAmount(payment.amount),
       ],
     },
