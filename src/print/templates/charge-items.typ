@@ -6,7 +6,7 @@
 #show: document.with(data.layout)
 #set text(size: text-size.xs)
 
-#let alignments = (left: left, center: center, right: right)
+#let alignments = (left: start, center: center, right: end)
 #let rule = px(1) + gray(300)
 
 #let section-table(section) = {
@@ -26,12 +26,12 @@
       if row.type == "group" {
         (
           table.cell(colspan: n - 1, text(weight: "bold", row.cells.at(0))),
-          table.cell(align: right, text(weight: "bold", row.cells.at(1))),
+          table.cell(align: end, text(weight: "bold", row.cells.at(1))),
         )
       } else if row.type == "total" {
         (
-          table.cell(colspan: n - 1, fill: gray(50), align: right, text(weight: "semibold", row.cells.at(0))),
-          table.cell(fill: gray(50), align: right, text(weight: "semibold", row.cells.at(1))),
+          table.cell(colspan: n - 1, fill: gray(50), align: end, text(weight: "semibold", row.cells.at(0))),
+          table.cell(fill: gray(50), align: end, text(weight: "semibold", row.cells.at(1))),
         )
       } else {
         row.cells.map(cell => table.cell(fill: fill, text(fill: ink, cell)))

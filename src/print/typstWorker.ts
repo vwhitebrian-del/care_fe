@@ -31,6 +31,8 @@ export interface TypstCompileRequest {
   /** Available to the template as `/data.json`. */
   data: unknown;
   theme: Record<string, string>;
+  /** UI language; Arabic switches the page to right-to-left. */
+  lang?: string;
   /** Extra files (e.g. images) by virtual path. */
   files: Record<string, Uint8Array>;
 }
@@ -87,7 +89,7 @@ let compiler: Promise<TypstCompiler> | undefined;
 
 async function compile(
   assets: TypstAssets,
-  { template, data, theme, files }: TypstCompileRequest,
+  { template, data, theme, files, lang }: TypstCompileRequest,
 ): Promise<Uint8Array> {
   const mainFilePath = `/templates/${template}.typ`;
   if (!SOURCES.some(([path]) => path === mainFilePath)) {
@@ -114,7 +116,11 @@ async function compile(
     const result = await typst.runWithWorld(
       {
         mainFilePath,
-        inputs: { data: "/data.json", theme: JSON.stringify(theme) },
+        inputs: {
+          data: "/data.json",
+          theme: JSON.stringify(theme),
+          lang: lang ?? "en",
+        },
       },
       async (world) => {
         const compiled = await world.compile({ diagnostics: "unix" });

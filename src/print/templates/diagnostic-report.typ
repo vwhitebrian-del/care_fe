@@ -23,7 +23,7 @@
     columns: (1fr,) * n,
     inset: px(6),
     stroke: border,
-    align: left + top,
+    align: start + top,
     table.header(..results.header.map(h => table.cell(
       fill: soft-background,
       text(weight: "medium", fill: gray(600), h),

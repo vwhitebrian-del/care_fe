@@ -26,8 +26,8 @@
 }
 #data-table(
   columns: (1fr,) + (auto,) * (c.table.header.len() - 1),
-  align: (left,) + (center,) * (c.table.header.len() - 1),
-  header-align: (left,) + (center,) * (c.table.header.len() - 1),
+  align: (start,) + (center,) * (c.table.header.len() - 1),
+  header-align: (start,) + (center,) * (c.table.header.len() - 1),
   header: c.table.header,
   rows: c.table.rows,
   outer: (stroke: px(1) + border-color, radius: px(6)),

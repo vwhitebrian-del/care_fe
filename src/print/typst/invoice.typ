@@ -38,7 +38,7 @@
 
   grid(
     columns: (1fr, auto),
-    align: (left + horizon, right + horizon),
+    align: (start + horizon, end + horizon),
     {
       set text(size: text-size.base)
       upper(l.invoice)
@@ -62,8 +62,8 @@
 
   data-table(
     columns: (auto, 1fr, auto, auto, auto) + taxes.map(_ => auto) + (auto,),
-    align: (center, left, right, center, right) + taxes.map(_ => right) + (right,),
-    header-align: (center, left, center, center, center)
+    align: (center, start, end, center, end) + taxes.map(_ => end) + (end,),
+    header-align: (center, start, center, center, center)
       + taxes.map(_ => center)
       + (center,),
     header: ("#", l.item, l.unit_price, l.qty, l.discount) + taxes + (l.total,),
@@ -100,8 +100,8 @@
 
   let transactions-table(rows, outer) = data-table(
     columns: (auto, 1fr, auto, auto, auto),
-    align: (center, left, left, left, right),
-    header-align: (center, left, left, left, right),
+    align: (center, start, start, start, end),
+    header-align: (center, start, start, start, end),
     header: ("#", l.date_and_time, l.payment_method, l.reference, l.amount),
     rows: rows.map(row => (
       str(row.index),

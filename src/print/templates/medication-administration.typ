@@ -41,7 +41,7 @@
   table(
     columns: (px(150),) + (1fr,) * (days.len() * per-day),
     inset: px(3),
-    align: left + horizon,
+    align: start + horizon,
     fill: (x, y) => if y == 0 { gray(100) } else if y == 1 { gray(50) } else if prn { palette("pink", 50) },
     stroke: (x, y) => (
       left: if x == 0 { none } else if x == 1 or calc.rem(x - 1, per-day) == 0 { heavy } else { thin },
@@ -57,7 +57,7 @@
       ..days.map(_ => slots).flatten().map(slot => table.cell(align: center + horizon, text(size: px(9), slot))),
     ),
     ..week.rows.map(row => (
-      table.cell(inset: px(6), align: left + top, {
+      table.cell(inset: px(6), align: start + top, {
         text(size: text-size.xs, weight: "bold", row.name)
         for summary in row.summaries {
           linebreak()

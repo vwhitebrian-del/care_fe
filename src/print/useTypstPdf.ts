@@ -79,7 +79,8 @@ export function useTypstPdf<TContent>({
   statusWatermark,
   files,
 }: TypstPdfOptions<TContent>) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language?.startsWith("ar") ? "ar" : "en";
   const watermarkText = statusWatermark?.text;
   const watermarkColor = statusWatermark?.color;
 
@@ -136,6 +137,7 @@ export function useTypstPdf<TContent>({
   const pdf = useQuery({
     queryKey: [
       "typst-pdf",
+      lang,
       template,
       layout,
       contentKey,
@@ -154,6 +156,7 @@ export function useTypstPdf<TContent>({
         template,
         data: document,
         theme: resolvePrintTheme(),
+        lang,
         files: { ...assets.data!.files, ...files },
       });
     },

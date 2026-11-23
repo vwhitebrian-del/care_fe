@@ -99,8 +99,8 @@
     if rx.medications.len() > 0 {
       data-table(
         columns: (auto, auto, auto, auto, auto, 1fr),
-        align: (center, left, left, left, left, left),
-        header-align: (center, left, left, left, left, left),
+        align: (center, start, start, start, start, start),
+        header-align: (center, start, start, start, start, start),
         header: c.table_header,
         rows: rx.medications.map(medication-cells),
         outer: (stroke: (top: border), radius: 0pt),
@@ -108,7 +108,7 @@
     }
   })
 
-  align(right, pad(top: px(80), bottom: px(8), text(
+  align(end, pad(top: px(80), bottom: px(8), text(
     weight: "medium",
     fill: gray(950),
     rx.prescribed_by,

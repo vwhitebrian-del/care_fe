@@ -12,7 +12,7 @@
 })
 #v(px(24))
 
-#align(right, text(weight: "semibold", c.date))
+#align(end, text(weight: "semibold", c.date))
 #v(px(8))
 
 #labelled(c.from.label, c.from.value)

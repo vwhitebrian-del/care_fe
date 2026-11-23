@@ -102,7 +102,7 @@
 
 /// Right-aligned "label  value" rows, like an invoice's totals. A row is
 /// (label, value, muted?: bool, strong?: bool).
-#let summary(rows, width: px(256)) = align(right, block(width: width, stack(
+#let summary(rows, width: px(256)) = align(end, block(width: width, stack(
   spacing: px(8),
   ..rows.map(row => {
     let muted = row.at("muted", default: false)
@@ -193,6 +193,14 @@
 )
 
 /// "Label : value" rows. Each row is `(label, value)`; a missing value is "-".
+/// Keeps numbers, ids and phone numbers left-to-right inside right-to-left
+/// text; values containing Arabic letters are left to the normal bidi rules.
+#let _ltr(value) = if value.contains(regex("[\u{0600}-\u{06FF}]")) {
+  value
+} else {
+  "\u{2066}" + value + "\u{2069}"
+}
+
 #let detail-rows(rows, label-width: px(128)) = stack(
   spacing: px(8),
   ..rows.map(row => grid(
@@ -203,7 +211,7 @@
       row.value == none or row.value == ""
     ) { "-" } else {
       // A zero-width space lets long ids wrap; Typst won't break a hyphen before a digit.
-      row.value.replace("-", "-\u{200B}")
+      _ltr(row.value.replace("-", "-\u{200B}"))
     })),
   )),
 )
@@ -226,7 +234,7 @@
   text(size: text-size.xxl, weight: "semibold", facility.name)
   set text(size: text-size.xs, fill: gray(500))
   if facility.address != none { linebreak(); facility.address }
-  if facility.phone != none { linebreak(); facility.phone }
+  if facility.phone != none { linebreak(); _ltr(facility.phone) }
 }
 
 #let _logo(logo) = {
@@ -266,7 +274,7 @@
       grid(
         columns: (auto, 1fr),
         column-gutter: px(12),
-        logo, align(right, info),
+        logo, align(end, info),
       )
     } else {
       grid(
@@ -319,7 +327,7 @@
   grid(
     columns: (1fr, auto),
     column-gutter: px(16),
-    align: (left + bottom, right + bottom),
+    align: (start + bottom, end + bottom),
     [#label: #patient.name],
     patient.identifiers.map(id => id.label + ": " + id.value).join(" | "),
   )
@@ -375,6 +383,8 @@
     fill: foreground,
     top-edge: "ascender",
     bottom-edge: "descender",
+    // "ar" also sets the text direction, mirroring tables and grids.
+    lang: sys.inputs.at("lang", default: "en"),
   )
   set par(leading: 0.25em, spacing: px(8))
   show strong: set text(weight: "semibold")

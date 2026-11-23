@@ -7,7 +7,7 @@
 #set text(size: text-size.xs)
 
 #let section-title(title) = block(below: px(2), text(weight: "semibold", fill: gray(950), title))
-#let total-line(total) = align(right, pad(top: px(4), right: px(4), {
+#let total-line(total) = align(end, pad(top: px(4), right: px(4), {
   text(fill: gray(950), total.label)
   h(px(8))
   text(weight: "semibold", fill: gray(950), total.value)
@@ -20,7 +20,7 @@
   stroke: (bottom: px(1) + gray(300)),
   grid(
     columns: (1fr, auto),
-    align: (left + top, right + top),
+    align: (start + top, end + top),
     text(size: text-size.base, weight: "semibold", fill: gray(950), c.title),
     stack(
       spacing: px(2),
@@ -39,7 +39,7 @@
     column-gutter: px(12),
     align: top,
     if c.token != none {
-      align(right, stack(
+      align(end, stack(
         spacing: px(2),
         text(fill: gray(600), c.token.label),
         text(size: text-size.xl, weight: "bold", fill: gray(950), c.token.value),
@@ -59,8 +59,8 @@
   section-title(c.charges.title)
   data-table(
     columns: (auto, 1fr, auto, auto),
-    align: (center, left, center, center),
-    header-align: (center, left, center, center),
+    align: (center, start, center, center),
+    header-align: (center, start, center, center),
     header: c.charges.header,
     rows: c.charges.rows.map(row => (
       row.index,
@@ -78,8 +78,8 @@
   section-title(c.payments.title)
   data-table(
     columns: (auto, 1fr, 1fr, auto),
-    align: (center, left, left, right),
-    header-align: (center, left, left, right),
+    align: (center, start, start, end),
+    header-align: (center, start, start, end),
     header: c.payments.header,
     rows: c.payments.rows.map(row => (
       row.index,

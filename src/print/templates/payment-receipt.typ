@@ -28,8 +28,8 @@
 #if c.invoice != none {
   data-table(
     columns: (1fr, auto, auto),
-    align: (left, left, right),
-    header-align: (left, left, right),
+    align: (start, start, end),
+    header-align: (start, start, end),
     header: c.invoice.header,
     rows: (c.invoice.row,),
   )
@@ -38,8 +38,8 @@
 
 #data-table(
   columns: (1fr, auto, auto, auto),
-  align: (left, left, left, right),
-  header-align: (left, left, left, right),
+  align: (start, start, start, end),
+  header-align: (start, start, start, end),
   header: c.breakdown.header,
   rows: (c.breakdown.row,),
 )
