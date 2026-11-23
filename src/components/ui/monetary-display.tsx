@@ -12,19 +12,21 @@ import {
 } from "@/Utils/decimal";
 import Decimal from "decimal.js";
 
-// Currency configuration
-export const CURRENCY_CODE = "INR";
-export const CURRENCY_SYMBOL = "₹";
+// Currency configuration: Syrian pound, Latin digits, standard thousands grouping.
+export const CURRENCY_CODE = "SYP";
+export const CURRENCY_SYMBOL = "ل.س";
 
-export const numberFormatter = new Intl.NumberFormat("en-IN", {
-  style: "currency",
-  currency: CURRENCY_CODE,
-});
-
-export const numberFormatterWithoutCurrency = new Intl.NumberFormat("en-IN", {
+export const numberFormatterWithoutCurrency = new Intl.NumberFormat("en-US", {
   style: "decimal",
-  minimumFractionDigits: ACCOUNTING_PRECISION,
+  minimumFractionDigits: 0,
+  maximumFractionDigits: ACCOUNTING_PRECISION,
 });
+
+// The number is bidi-isolated so it keeps its order inside Arabic text.
+export const numberFormatter = {
+  format: (value: number) =>
+    `\u2066${numberFormatterWithoutCurrency.format(value)}\u2069 ${CURRENCY_SYMBOL}`,
+};
 
 // Helper function to get currency symbol
 export const getCurrencySymbol = () => CURRENCY_SYMBOL;
