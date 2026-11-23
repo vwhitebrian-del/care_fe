@@ -41,7 +41,7 @@ const brandLogo = hasInstanceLogo
   : {
       onLight: "/images/soued_logo.png",
       onDark: "/images/soued_logo.png",
-      className: "h-auto w-28",
+      className: "h-auto w-20",
     };
 
 const deploymentLogos = [careConfig.stateLogo, careConfig.customLogo].filter(
@@ -166,6 +166,9 @@ export function AuthLayout({ children }: { children: ReactNode }) {
           {customDescriptionHtml && (
             <div dangerouslySetInnerHTML={{ __html: customDescriptionHtml }} />
           )}
+          <p className="text-xs">
+            {t("developed_by", { name: t("developer_name") })}
+          </p>
           <Link
             to="/licenses"
             target="_blank"
