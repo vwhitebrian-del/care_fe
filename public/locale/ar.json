@@ -864,7 +864,7 @@
   "cap": "الغطاء",
   "capacity": "السعة",
   "card": "بطاقة",
-  "care": "CARE",
+  "care": "مستشفى سويد",
   "care_backend": "الخادم الخلفي لـ Care",
   "care_frontend": "الواجهة الأمامية لـ Care",
   "care_icons": "أيقونات Care",
@@ -4710,30 +4710,30 @@
   "revoking": "جارٍ الإلغاء...",
   "rich_text_editor": {
     "toolbar": {
+      "blockTypeSelect": {
+        "placeholder": "نوع الكتلة",
+        "selectBlockTypeTooltip": "اختر نوع الكتلة"
+      },
+      "blockTypes": {
+        "heading": "عنوان {{level}}",
+        "paragraph": "فقرة",
+        "quote": "اقتباس"
+      },
       "bold": "غامق",
       "bulletedList": "قائمة نقطية",
       "checkList": "قائمة تحقق",
+      "highlight": "تمييز",
       "italic": "مائل",
+      "moreFormatting": "مزيد من خيارات التنسيق",
       "numberedList": "قائمة مرقّمة",
       "redo": "إعادة {{shortcut}}",
       "removeBold": "إزالة الغامق",
-      "removeItalic": "إزالة المائل",
-      "toggleGroup": "خيارات التنسيق",
-      "undo": "تراجع {{shortcut}}",
-      "underline": "تسطير",
-      "removeUnderline": "إزالة التسطير",
-      "highlight": "تمييز",
       "removeHighlight": "إزالة التمييز",
-      "blockTypes": {
-        "paragraph": "فقرة",
-        "quote": "اقتباس",
-        "heading": "عنوان {{level}}"
-      },
-      "blockTypeSelect": {
-        "selectBlockTypeTooltip": "اختر نوع الكتلة",
-        "placeholder": "نوع الكتلة"
-      },
-      "moreFormatting": "مزيد من خيارات التنسيق"
+      "removeItalic": "إزالة المائل",
+      "removeUnderline": "إزالة التسطير",
+      "toggleGroup": "خيارات التنسيق",
+      "underline": "تسطير",
+      "undo": "تراجع {{shortcut}}"
     }
   },
   "rich_text_plain_text_fallback": "تعذّر تحميل التنسيق. ما زال بإمكانك تعديل النص أدناه.",

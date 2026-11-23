@@ -51,7 +51,7 @@ export function PrintableQRCodeArea({
                   size={printSize}
                   className="bg-white"
                   imageSettings={{
-                    src: "/images/care_logo_mark.svg",
+                    src: "/images/soued_logo.png",
                     height: logoSize,
                     width: logoSize,
                     excavate: true,

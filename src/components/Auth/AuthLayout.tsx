@@ -30,7 +30,7 @@ const availableLocales = keysOf(LANGUAGES).filter((locale) =>
 // logos are often square emblems, so they get more height than the wordmark.
 const { mainLogo } = careConfig;
 const hasInstanceLogo = [mainLogo?.dark, mainLogo?.light].some(
-  (source) => source && source !== "/images/care_logo.svg",
+  (source) => source && source !== "/images/soued_logo.png",
 );
 const brandLogo = hasInstanceLogo
   ? {
@@ -39,8 +39,8 @@ const brandLogo = hasInstanceLogo
       className: "h-16 w-auto max-w-56 object-contain",
     }
   : {
-      onLight: "/images/care_logo_on_light.svg",
-      onDark: "/images/care_logo_on_dark.svg",
+      onLight: "/images/soued_logo.png",
+      onDark: "/images/soued_logo.png",
       className: "h-auto w-28",
     };
 

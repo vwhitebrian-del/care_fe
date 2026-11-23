@@ -116,13 +116,13 @@ export function AuthCard({
             {!back && (
               <>
                 <img
-                  src="/images/care_icon_on_light.svg"
+                  src="/images/soued_logo.png"
                   alt=""
                   aria-hidden="true"
                   className="mt-1 size-8 shrink-0 object-contain dark:hidden"
                 />
                 <img
-                  src="/images/care_icon_on_dark.svg"
+                  src="/images/soued_logo.png"
                   alt=""
                   aria-hidden="true"
                   className="mt-1 hidden size-8 shrink-0 object-contain dark:block"

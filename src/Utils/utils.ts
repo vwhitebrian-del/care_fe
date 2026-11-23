@@ -32,7 +32,9 @@ export const formatDateTime = (date: DateLike, format?: string) => {
   const obj = displayDayjs(date);
 
   if (format) {
-    return obj.format(format);
+    // Arabic: "2026/11/23 09:59 م", without the Latin comma between parts
+    const isArabic = (i18next.language || "").startsWith("ar");
+    return obj.format(isArabic ? format.replace(/,\s*/g, " ") : format);
   }
 
   // If time is 00:00:00 of local timezone, format as date only

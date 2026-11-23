@@ -12,8 +12,8 @@ import { TooltipComponent } from "@/components/ui/tooltip";
 import { ShortcutBadge } from "@/Utils/keyboardShortcutComponents";
 
 // Like the sidebar wordmark, the collapsed-rail icon is always Care's.
-const iconOnLight = "/images/care_icon_on_light.svg";
-const iconOnDark = "/images/care_icon_on_dark.svg";
+const iconOnLight = "/images/soued_logo.png";
+const iconOnDark = "/images/soued_logo.png";
 
 export function AppSidebarToggle({
   className,

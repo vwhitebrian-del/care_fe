@@ -78,8 +78,8 @@ const careConfig = {
   },
 
   mainLogo: logo(env.REACT_MAIN_LOGO, {
-    light: "/images/care_logo.svg",
-    dark: "/images/care_logo.svg",
+    light: "/images/soued_logo.png",
+    dark: "/images/soued_logo.png",
   }),
   stateLogo: logo(env.REACT_STATE_LOGO),
   customLogo: logo(env.REACT_CUSTOM_LOGO),
