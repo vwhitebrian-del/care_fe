@@ -367,8 +367,8 @@ function InvoiceShow({
       message={t("loading_medication_details")}
     >
       <div className="space-y-8 relative">
-        <div className="flex items-start justify-between flex-col sm:flex-row gap-4 sm:items-center border-b-3 border-double pb-4">
-          <div className="flex gap-3 sm:gap-6 flex-col md:flex-row">
+        <div className="flex items-start justify-between flex-col xl:flex-row gap-4 xl:items-center border-b-3 border-double pb-4">
+          <div className="flex gap-3 sm:gap-6 flex-col md:flex-row md:flex-wrap md:items-center">
             <BackButton variant="link" className="px-0 justify-start">
               <ChevronLeft />
               <span>{t("back")}</span>
@@ -433,7 +433,7 @@ function InvoiceShow({
             </div>
           </div>
 
-          <div className="flex gap-2 flex-col sm:flex-row w-full sm:w-auto">
+          <div className="flex gap-2 flex-col sm:flex-row w-full xl:w-auto">
             {invoice?.status === InvoiceStatus.draft && (
               <Button
                 variant="outline_primary"
