@@ -13,11 +13,6 @@ import { z } from "zod";
 export const LANGUAGES = {
   ar: "العربية",
   en: "English",
-  ta: "தமிழ்",
-  ml: "മലയാളം",
-  mr: "मराठी",
-  kn: "ಕನ್ನಡ",
-  hi: "हिन्दी",
 } as const;
 
 const DEFAULT_NAMESPACE = "care_fe";
