@@ -28,6 +28,12 @@ if (-not (Test-Path .env)) {
   $dbpw = Rand 24
   $env = (Get-Content .env.example -Raw -Encoding UTF8)
   $env = $env.Replace("CHANGE_ME_DB", $dbpw).Replace("CHANGE_ME_LONG_RANDOM", (Rand 60)).Replace("CHANGE_ME_MINIO_USER", "minio" + (Rand 8)).Replace("CHANGE_ME_MINIO_PASS", (Rand 24)).Replace("192.168.1.10", $lan)
+  # قرص التخزين (الملفات والنسخ) إن وُجد؛ اتركه فارغاً لاستخدام مجلدات المشروع
+  $drive = (Read-Host "حرف قرص التخزين الكبير (مثلاً D) أو Enter للمجلد الافتراضي").Trim().TrimEnd(":")
+  if ($drive -match "^[A-Za-z]$") {
+    $env = $env.Replace("HMS_STORAGE_DIR=", "HMS_STORAGE_DIR=$($drive.ToUpper()):/hms-data").Replace("HMS_BACKUP_DIR=", "HMS_BACKUP_DIR=$($drive.ToUpper()):/hms-backups")
+    New-Item -ItemType Directory -Force -Path "$($drive.ToUpper()):\hms-data", "$($drive.ToUpper()):\hms-backups" | Out-Null
+  }
   [IO.File]::WriteAllText("$deploy\.env", $env, (New-Object Text.UTF8Encoding($false)))
   Say "عنوان الجهاز في الشبكة: $lan  (به تفتح النظام من التابلت)"
 }

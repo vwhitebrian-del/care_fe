@@ -42,7 +42,7 @@ services:
       MINIO_ROOT_PASSWORD: ${BUCKET_SECRET}
       AWS_DEFAULT_REGION: ap-south-1
     volumes:
-      - minio-data:/data
+      - "${HMS_STORAGE_DIR:-./data}/minio:/data"
       - ./minio/init-script.sh:/init-script.sh:ro
       - ./minio/entrypoint.sh:/entrypoint.sh:ro
     entrypoint: ["/bin/sh", "/entrypoint.sh"]
@@ -81,9 +81,8 @@ services:
       KEEP_DAYS: ${BACKUP_KEEP_DAYS:-14}
       BACKUP_EVERY_HOURS: ${BACKUP_EVERY_HOURS:-4}
       TZ: Asia/Damascus
-    volumes: [./backups:/backups, ./secrets:/secrets:ro]
+    volumes: ["${HMS_BACKUP_DIR:-./backups}:/backups", "./secrets:/secrets:ro"]
 
 volumes:
   db-data:
   redis-data:
-  minio-data:
