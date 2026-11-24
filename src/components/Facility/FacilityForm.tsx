@@ -35,6 +35,7 @@ import {
   FACILITY_FEATURE_TYPES,
   FACILITY_TYPES,
   FacilityRead,
+  facilityTypeLabel,
 } from "@/types/facility/facility";
 import facilityApi from "@/types/facility/facilityApi";
 import { Organization } from "@/types/organization/organization";
@@ -240,7 +241,7 @@ export default function FacilityForm({
                   <Autocomplete
                     {...field}
                     options={FACILITY_TYPES.map((type) => ({
-                      label: type.text,
+                      label: facilityTypeLabel(type.text),
                       value: type.text,
                     }))}
                     value={field.value || ""}

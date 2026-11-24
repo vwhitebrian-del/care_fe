@@ -11,7 +11,7 @@ S=[("Fasting Blood Glucose Test","تحليل سكر الدم الصيامي"),("
 ("Pathology Lab","مخبر التحاليل"),("Main Pharmacy","الصيدلية الرئيسية"),("Bio-Chemistry Lab","مخبر الكيمياء الحيوية"),
 ("Default Availability","التوفر الافتراضي"),("Consultation Room 1","غرفة المعاينة 1"),("Default Queue","الطابور الافتراضي"),("General Consultation","معاينة عامة"),("Doctor Consultation Schedule","جدول معاينات الطبيب"),
 ("Initial Stock Request","طلب مخزون أولي"),("Initial Stock Delivery","تسليم مخزون أولي"),("Ward Top-up Request","طلب تعبئة الجناح"),("Ward Top-up Delivery","تسليم تعبئة الجناح"),
-("Old Age Discount","خصم كبار السن"),("Child Discount","خصم الأطفال"),("IGST","ضريبة الخدمات"),("GST","ضريبة المبيعات")]
+("Old Age Discount","خصم كبار السن"),("Student Discount","خصم الطلاب"),("Child Discount","خصم الأطفال"),("IGST","ضريبة الخدمات"),("GST","ضريبة المبيعات")]
 SUP=["مورّد الشرق للأدوية","مورّد الساحل الطبي","مورّد سورية للمستلزمات"]
 NAMECOLS=[("emr_activitydefinition","title"),("emr_chargeitemdefinition","title"),("emr_chargeitem","title"),("emr_observationdefinition","title"),("emr_specimendefinition","title"),("emr_productknowledge","name"),("emr_resourcecategory","title"),("emr_healthcareservice","name"),("emr_facilitylocation","name"),("emr_availability","name"),("emr_tokensubqueue","name"),("emr_tokenqueue","name"),("emr_tokencategory","name"),("emr_schedule","name"),("emr_requestorder","name"),("emr_deliveryorder","name"),("emr_dispenseorder","name"),("emr_organization","name")]
 ROLES={"Volunteer":"متطوع","Doctor":"طبيب","Staff":"موظف","Nurse":"ممرض","Administrator":"مدير","Facility Admin":"مدير المستشفى","Health Department":"مديرية الصحة"}

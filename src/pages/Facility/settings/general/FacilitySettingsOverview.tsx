@@ -13,7 +13,10 @@ import { Markdown } from "@/components/ui/markdown";
 import ContactLink from "@/components/Common/ContactLink";
 import { FacilityMapsLink } from "@/components/Facility/FacilityMapLink";
 
-import { type FacilityRead } from "@/types/facility/facility";
+import {
+  type FacilityRead,
+  facilityTypeLabel,
+} from "@/types/facility/facility";
 import { renderGeoOrganizations } from "@/types/organization/organization";
 
 interface FacilitySettingsOverviewProps {
@@ -97,7 +100,7 @@ export function FacilitySettingsOverview({
                   variant="secondary"
                   className="max-w-full whitespace-normal"
                 >
-                  {facility.facility_type}
+                  {facilityTypeLabel(facility.facility_type)}
                 </Badge>
               </div>
             </div>

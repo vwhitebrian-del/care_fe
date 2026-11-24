@@ -118,6 +118,7 @@ if fac is None:
     print("أُنشئ المستشفى:", fac.name)
 fid = str(fac.external_id)
 
+FacilityOrganization.objects.filter(facility=fac, name="Administration").update(name="الإدارة العامة")
 existing = {o.name: o for o in FacilityOrganization.objects.filter(facility=fac)}
 depts = {}
 for name, children in DEPARTMENTS:

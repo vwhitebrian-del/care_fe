@@ -10,7 +10,7 @@ import { Avatar } from "@/components/Common/Avatar";
 
 import { cn } from "@/lib/utils";
 
-import { FacilityListRead } from "@/types/facility/facility";
+import { FacilityListRead, facilityTypeLabel } from "@/types/facility/facility";
 import { renderGeoOrganizations } from "@/types/organization/organization";
 
 interface Props {
@@ -68,9 +68,9 @@ export function OrganizationFacilityCard({ facility, showSettings }: Props) {
             <Badge
               variant="secondary"
               className="max-w-1/2"
-              title={facility.facility_type}
+              title={facilityTypeLabel(facility.facility_type)}
             >
-              <span>{facility.facility_type}</span>
+              <span>{facilityTypeLabel(facility.facility_type)}</span>
             </Badge>
           )}
         </div>

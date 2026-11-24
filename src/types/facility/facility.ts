@@ -1,4 +1,5 @@
 import { VariantProps } from "class-variance-authority";
+import i18next from "i18next";
 
 import { IconName } from "@/CAREUI/icons/CareIcon";
 
@@ -224,3 +225,15 @@ export const FACILITY_TYPES: Array<FacilityType> = [
   { id: 3001, text: "Non Clinical Non Governmental Organization" },
   { id: 4000, text: "Community Based Organization" },
 ];
+
+/** Localised label for a facility type stored as its English text. */
+export const facilityTypeLabel = (type?: string | null) =>
+  type
+    ? i18next.t(
+        `facility_type_${type
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "_")
+          .replace(/^_+|_+$/g, "")}`,
+        { defaultValue: type },
+      )
+    : "";

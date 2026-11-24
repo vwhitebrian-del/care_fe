@@ -9,7 +9,11 @@ import { Avatar } from "@/components/Common/Avatar";
 import { FacilityMapsLink } from "@/components/Facility/FacilityMapLink";
 
 import { FeatureBadge } from "@/pages/Facility/Utils";
-import { FacilityPublicRead, FacilityRead } from "@/types/facility/facility";
+import {
+  FacilityPublicRead,
+  FacilityRead,
+  facilityTypeLabel,
+} from "@/types/facility/facility";
 import { useTranslation } from "react-i18next";
 
 interface Props {
@@ -36,7 +40,7 @@ export function FacilityCard({ facility, className }: Props) {
                 {facility.name}
               </h3>
               <p className="text-sm text-gray-600 mt-1">
-                {facility.facility_type}
+                {facilityTypeLabel(facility.facility_type)}
               </p>
               <p className="text-sm text-gray-500 truncate">
                 {[facility.address].filter(Boolean).join(", ")}

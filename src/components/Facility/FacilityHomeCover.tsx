@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
+import { facilityTypeLabel } from "@/types/facility/facility";
 
 import { Button } from "@/components/ui/button";
 import { TooltipComponent } from "@/components/ui/tooltip";
@@ -54,13 +55,13 @@ export function FacilityHomeCover({
                 </h1>
               </TooltipComponent>
               <TooltipComponent
-                content={facilityData.facility_type}
+                content={facilityTypeLabel(facilityData.facility_type)}
                 side="right"
                 align="center"
                 sideOffset={4}
               >
                 <h2 className="text-xs sm:text-sm md:text-base lg:text-base text-white/70 inline-block">
-                  {facilityData.facility_type}
+                  {facilityTypeLabel(facilityData.facility_type)}
                 </h2>
               </TooltipComponent>
             </div>
