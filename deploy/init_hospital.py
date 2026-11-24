@@ -48,20 +48,43 @@ DEPARTMENTS = [
     ("الفحوص الوظيفية (تخطيط القلب والإيكو)", []),
     ("بنك الدم", []),
     ("الصيدلية", []),
+    ("التنويم", []),
 ]
 
-# (اسم الموقع، النوع، القسم المسؤول)
-LOCATIONS = [
-    ("الإسعاف", "wa", "الإسعاف والطوارئ"),
-    ("العناية المشددة", "wa", "العناية المشددة"),
-    ("جناح الباطنية", "wa", "الطب الباطني"),
-    ("جناح الجراحة", "wa", "الجراحة العامة"),
-    ("جناح النسائية والتوليد", "wa", "النسائية والتوليد"),
-    ("جناح الأطفال", "wa", "الأطفال وحديثي الولادة"),
-    ("غرف العمليات", "wa", "غرف العمليات والإنعاش"),
-    ("المخبر", "wa", "المخبر"),
-    ("قسم الأشعة", "wa", "الأشعة"),
-    ("الصيدلية", "wa", "الصيدلية"),
+# هيكل المواقع: مبنى > طوابق > غرف/أجنحة > أسرّة. (الاسم، النوع، القسم، [الأبناء] أو عدد الأسرّة)
+# النوع: lvl طابق، wa جناح/قسم، ro غرفة، bd سرير. كل شيء قابل للتوسعة لاحقاً من الواجهة.
+def beds(n):
+    return [(f"سرير {i}", "bd", None, None) for i in range(1, n + 1)]
+
+def room(num, n, dept):
+    return (f"غرفة {num}", "ro", dept, beds(n))
+
+TREE = [
+    ("الطابق الأرضي", "lvl", "الإسعاف والطوارئ", [
+        ("الإسعاف", "wa", "الإسعاف والطوارئ", beds(2)),
+        ("العناية المشددة", "wa", "العناية المشددة", beds(4)),
+    ]),
+    ("الطابق الأول", "lvl", "التنويم", [
+        ("تنويم الطابق الأول", "wa", "التنويم", [room(105, 1, "التنويم"), room(106, 1, "التنويم")]),
+    ]),
+    ("الطابق الثاني", "lvl", "التنويم", [
+        ("تنويم الطابق الثاني", "wa", "التنويم", [room(n, 1, "التنويم") for n in (202, 203, 204, 205, 206, 207)]
+            + [("جناح 211", "ro", "التنويم", beds(1)), ("جناح 212", "ro", "التنويم", beds(1))]),
+    ]),
+    ("الطابق الثالث", "lvl", "غرف العمليات والإنعاش", [
+        (f"غرفة عمليات جراحية {i}", "ro", "غرف العمليات والإنعاش", []) for i in (1, 2, 3)
+    ]),
+    ("الطابق الرابع", "lvl", "القلبية", [
+        ("عناية إكليلية", "wa", "القلبية", beds(4)),
+        ("عناية قلبية", "wa", "القلبية", beds(4)),
+        room(401, 2, "القلبية"),
+        room(402, 2, "القلبية"),
+        ("غرفة عمليات قلبية", "ro", "غرف العمليات والإنعاش", []),
+        ("غرفة قثطرة قلبية", "ro", "القلبية", []),
+    ]),
+    ("المخبر", "wa", "المخبر", []),
+    ("قسم الأشعة", "wa", "الأشعة", []),
+    ("الصيدلية", "wa", "الصيدلية", []),
 ]
 
 call_command("sync_permissions_roles")
@@ -110,10 +133,24 @@ for name, children in DEPARTMENTS:
             existing[ch] = FacilityOrganization.objects.get(external_id=r["id"])
 print("الأقسام:", FacilityOrganization.objects.filter(facility=fac, org_type="dept").count())
 
-have = set(FacilityLocation.objects.filter(facility=fac).values_list("name", flat=True))
-for name, form, dept in LOCATIONS:
-    if name in have:
-        continue
-    base.create_location(fid, name=name, description="", form=form, mode="kind", organizations=[str(depts[dept].external_id)])
-print("المواقع:", FacilityLocation.objects.filter(facility=fac).count())
+def ensure(name, form, dept, parent_obj, parent_id):
+    q = FacilityLocation.objects.filter(facility=fac, name=name, parent=parent_obj)
+    if q.exists():
+        return q.first()
+    kw = {"parent": parent_id} if parent_id else {}
+    mode = "instance" if form == "bd" else "kind"
+    org = [str(depts[dept].external_id)] if dept in depts else []
+    r = base.create_location(fid, name=name, description="", form=form, mode=mode, organizations=org, **kw)
+    return FacilityLocation.objects.get(external_id=r["id"])
+
+def build(items, parent_obj=None, parent_dept=None):
+    for name, form, dept, kids in items:
+        dept = dept or parent_dept
+        obj = ensure(name, form, dept, parent_obj, str(parent_obj.external_id) if parent_obj else None)
+        if kids:
+            build(kids, obj, dept)
+
+build(TREE)
+print("المواقع:", FacilityLocation.objects.filter(facility=fac).count(),
+      "| الأسرّة:", FacilityLocation.objects.filter(facility=fac, form="bd").count())
 print("تمت التهيئة.")
