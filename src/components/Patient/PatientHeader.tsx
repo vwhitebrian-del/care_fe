@@ -22,7 +22,8 @@ import {
   PatientRead,
   PublicPatientRead,
 } from "@/types/emr/patient/patient";
-import dayjs from "dayjs";
+
+import { displayDayjs } from "@/Utils/dayjs";
 
 interface PatientHeaderProps {
   patient:
@@ -239,8 +240,10 @@ export const PatientDeceasedInfo = ({
         <Trans
           i18nKey="passed_away_on"
           values={{
-            date: dayjs(patient.deceased_datetime).format("MMMM DD, YYYY"),
-            time: dayjs(patient.deceased_datetime).format("hh:mm A"),
+            date: displayDayjs(patient.deceased_datetime).format(
+              "MMMM DD, YYYY",
+            ),
+            time: displayDayjs(patient.deceased_datetime).format("hh:mm A"),
           }}
         ></Trans>
       </div>

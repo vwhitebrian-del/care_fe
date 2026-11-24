@@ -1,6 +1,7 @@
 import { formatPhoneNumberIntl } from "@/Utils/phone";
 import { useQueryClient } from "@tanstack/react-query";
-import dayjs from "dayjs";
+
+import { displayDayjs } from "@/Utils/dayjs";
 import { Fragment, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -193,7 +194,7 @@ export const Demography = (props: PatientProps) => {
           ),
           value: patientData.date_of_birth ? (
             <>
-              {dayjs(patientData.date_of_birth).format("DD MMM YYYY")} (
+              {displayDayjs(patientData.date_of_birth).format("DD MMM YYYY")} (
               {formatPatientAge(patientData, true)})
             </>
           ) : (

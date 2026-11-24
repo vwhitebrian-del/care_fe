@@ -1,6 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";
 import dayjs from "dayjs";
+
+import { displayDayjs } from "@/Utils/dayjs";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -188,7 +190,7 @@ export default function PatientSelect({
 
   const getPatienDobOrAge = (patient: PublicPatientRead) => {
     if (patient.date_of_birth) {
-      return dayjs(patient.date_of_birth).format("DD MMM YYYY");
+      return displayDayjs(patient.date_of_birth).format("DD MMM YYYY");
     }
     const yearOfBirth = patient.year_of_birth;
     const age = dayjs().year() - yearOfBirth!;

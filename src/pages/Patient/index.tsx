@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import dayjs from "dayjs";
+
+import { displayDayjs } from "@/Utils/dayjs";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -84,7 +86,9 @@ function PatientPortalIndex() {
 
   const getAppointmentCard = (appointment: PublicAppointment) => {
     const appointmentTime = dayjs(appointment.token_slot.start_datetime);
-    const appointmentDate = appointmentTime.format("DD MMMM YYYY");
+    const appointmentDate = displayDayjs(
+      appointment.token_slot.start_datetime,
+    ).format("DD MMMM YYYY");
     const appointmentTimeSlot = appointmentTime.format("hh:mm a");
     return (
       <Card key={appointment.id} className="shadow-sm overflow-hidden">
