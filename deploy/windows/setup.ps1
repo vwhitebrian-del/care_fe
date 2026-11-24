@@ -60,6 +60,9 @@ if (-not (Test-Path $marker)) {
 Say "إنشاء المستشفى والأقسام"
 docker compose cp init_hospital.py backend:/tmp/init_hospital.py
 docker compose exec -T backend python manage.py shell -c "exec(open('/tmp/init_hospital.py', encoding='utf-8').read())"
+docker compose cp templates backend:/tmp/templates
+docker compose cp init_templates.py backend:/tmp/init_templates.py
+docker compose exec -T backend python manage.py shell -c "exec(open('/tmp/init_templates.py', encoding='utf-8').read())"
 
 Say "جاهز! افتح http://localhost  (ومن التابلت: http://عنوان-الجهاز)"
 Start-Process "http://localhost"

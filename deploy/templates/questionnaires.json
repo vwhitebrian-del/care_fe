@@ -1,0 +1,1058 @@
+[
+  {
+    "slug": "clinic-visit",
+    "title": "زيارة عيادة",
+    "questions": [
+      {
+        "link_id": "chief-complaint",
+        "text": "الشكوى الرئيسية",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "d44eace6-7019-5092-a671-f425be23467b"
+      },
+      {
+        "link_id": "history",
+        "text": "التاريخ المرضي",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "5cb09140-81f9-5e64-b590-3d36f280443c"
+      },
+      {
+        "link_id": "exam",
+        "text": "الفحص السريري",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "298f5bb5-4e0e-5bd4-b086-b3b42b3d98c7"
+      },
+      {
+        "link_id": "diagnosis",
+        "text": "التشخيص",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "89710d4a-e39f-5643-b603-9bc9fbbcf468"
+      },
+      {
+        "link_id": "plan",
+        "text": "الخطة العلاجية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "ba29f610-3c8a-5163-a734-49165bb42084"
+      },
+      {
+        "link_id": "prescriptions",
+        "text": "الوصفات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "c07b50e2-1cd9-5be2-a2f2-cfb4083115a9"
+      },
+      {
+        "link_id": "follow-up-date",
+        "text": "موعد المتابعة",
+        "type": "date",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "80827161-6d2f-5bb2-957c-e6cf697a2119"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "chronic-followup",
+    "title": "متابعة ضغط وسكري",
+    "questions": [
+      {
+        "link_id": "bp-systolic",
+        "text": "الضغط الانقباضي (ملم زئبق)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "50be9ec2-2ca1-5c7b-9289-baa8ce332372"
+      },
+      {
+        "link_id": "bp-diastolic",
+        "text": "الضغط الانبساطي (ملم زئبق)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "ff44bd05-7653-56ca-b781-f30969885d10"
+      },
+      {
+        "link_id": "fasting-glucose",
+        "text": "السكر الصائم (ملغ/دل)",
+        "type": "decimal",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "1a99b9ae-0856-5433-bab3-d917f5af6429"
+      },
+      {
+        "link_id": "random-glucose",
+        "text": "السكر العشوائي (ملغ/دل)",
+        "type": "decimal",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "de3a6470-24e7-5a8f-8ddc-affd2aed0575"
+      },
+      {
+        "link_id": "weight",
+        "text": "الوزن (كغ)",
+        "type": "decimal",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "370870a5-ddd0-5967-8f8f-9746236d3582"
+      },
+      {
+        "link_id": "current-meds",
+        "text": "الأدوية الحالية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "49c8b0c5-f929-5950-8b0f-94fcd9bbc3b8"
+      },
+      {
+        "link_id": "symptoms",
+        "text": "الأعراض الجديدة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "32fe9649-238d-5317-b0d1-ac377cfcd85e"
+      },
+      {
+        "link_id": "notes",
+        "text": "ملاحظات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "cd9bdf56-7371-5d29-bb2a-b823e9cf8949"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "patient-instructions",
+    "title": "تعليمات المريض",
+    "questions": [
+      {
+        "link_id": "instructions",
+        "text": "التعليمات",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "b8ec1d01-a929-59d1-960e-641bd4ce60a0"
+      },
+      {
+        "link_id": "warning-signs",
+        "text": "علامات تستوجب العودة فوراً",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "f60a4fa3-a429-5a5d-90fb-33c5718ad435"
+      },
+      {
+        "link_id": "next-visit",
+        "text": "موعد المراجعة",
+        "type": "date",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "1e23ec38-a4f9-5df9-af0f-32b3a78fd38c"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "er-exam",
+    "title": "فحص الطوارئ",
+    "questions": [
+      {
+        "link_id": "arrival-time",
+        "text": "وقت الوصول",
+        "type": "dateTime",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "e2fdd31c-5256-593b-afad-611a382d364c"
+      },
+      {
+        "link_id": "arrival-mode",
+        "text": "طريقة الوصول",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "مشياً"
+          },
+          {
+            "value": "إسعاف"
+          },
+          {
+            "value": "نقل خاص"
+          },
+          {
+            "value": "أخرى"
+          }
+        ],
+        "id": "d36d127c-0c76-5af4-a6a1-2e5af42d27ff"
+      },
+      {
+        "link_id": "chief-complaint",
+        "text": "الشكوى الرئيسية",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "39d51d9c-031e-5f74-9132-5832e5f045b1"
+      },
+      {
+        "link_id": "bp",
+        "text": "الضغط (ملم زئبق)",
+        "type": "string",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "2e760ea2-6e9f-5bf3-9ff5-463207699f3b"
+      },
+      {
+        "link_id": "pulse",
+        "text": "النبض (نبضة/دقيقة)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "5af7de94-2b50-5450-97eb-ce022cdce53e"
+      },
+      {
+        "link_id": "resp-rate",
+        "text": "معدل التنفس (نفس/دقيقة)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "e243bd32-533f-5a62-b978-1762a61fdb07"
+      },
+      {
+        "link_id": "temperature",
+        "text": "الحرارة (°م)",
+        "type": "decimal",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "3b7064f5-adf5-5292-b69b-ff49d03f3227"
+      },
+      {
+        "link_id": "spo2",
+        "text": "تشبع الأكسجين (%)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "34d8c092-467e-5f25-9ff2-86ffb9a859b9"
+      },
+      {
+        "link_id": "consciousness",
+        "text": "مستوى الوعي",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "واعٍ"
+          },
+          {
+            "value": "يستجيب للكلام"
+          },
+          {
+            "value": "يستجيب للألم"
+          },
+          {
+            "value": "فاقد الاستجابة"
+          }
+        ],
+        "id": "338123eb-4b87-5b0c-8ab4-2a3fb9a70abe"
+      },
+      {
+        "link_id": "triage",
+        "text": "تصنيف الفرز",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "حرج"
+          },
+          {
+            "value": "عاجل"
+          },
+          {
+            "value": "متوسط"
+          },
+          {
+            "value": "غير عاجل"
+          }
+        ],
+        "id": "5b3ae530-6ba3-58d9-9f9e-03e59354e4c8"
+      },
+      {
+        "link_id": "initial-exam",
+        "text": "الفحص الأولي",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "c34c8272-4efa-55b8-b2bf-4021e442c09b"
+      },
+      {
+        "link_id": "immediate-actions",
+        "text": "الإجراءات المبدئية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "b4a310f7-ed17-5b0e-92da-7ac117797748"
+      },
+      {
+        "link_id": "disposition",
+        "text": "القرار النهائي",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "خروج"
+          },
+          {
+            "value": "تنويم"
+          },
+          {
+            "value": "تحويل"
+          }
+        ],
+        "id": "58b5ad02-913e-5dc0-ad36-c97d3d358949"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "ecg-report",
+    "title": "تخطيط القلب",
+    "questions": [
+      {
+        "link_id": "indication",
+        "text": "سبب الطلب",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "f53619fc-d508-59d3-885b-2f184b760dab"
+      },
+      {
+        "link_id": "rhythm",
+        "text": "الإيقاع",
+        "type": "string",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "e7404daf-3b25-584d-abe8-4220361260e7"
+      },
+      {
+        "link_id": "heart-rate",
+        "text": "معدل القلب (نبضة/دقيقة)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "010479d2-5550-57af-896c-bc5a4700e467"
+      },
+      {
+        "link_id": "axis",
+        "text": "المحور",
+        "type": "string",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "1af5d1d9-46ce-5fcc-8f9d-8a6dcf83dc26"
+      },
+      {
+        "link_id": "pr",
+        "text": "فترة PR (ms)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "ce9c180e-b38d-5ee8-9cb2-1ab8c240615c"
+      },
+      {
+        "link_id": "qrs",
+        "text": "عرض QRS (ms)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "f5e707d4-100e-570e-bc93-bd4b0f435c42"
+      },
+      {
+        "link_id": "qt",
+        "text": "فترة QT (ms)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "c7970b05-97dc-5f55-a76a-1d3bd1b779b9"
+      },
+      {
+        "link_id": "st-changes",
+        "text": "تغيرات قطعة ST",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "ab537f03-7f99-54c2-8b33-48033a5600f5"
+      },
+      {
+        "link_id": "t-changes",
+        "text": "تغيرات الموجة T",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "d52dd6a6-c7e3-569f-af53-10f4ad340c35"
+      },
+      {
+        "link_id": "conclusion",
+        "text": "الاستنتاج",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "e553ce01-d3fb-5e81-834c-bb88f6917069"
+      },
+      {
+        "link_id": "recommendation",
+        "text": "التوصية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "80ce75c9-020a-58b1-b2f3-cba4b05fdc02"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "admission",
+    "title": "قبول التنويم",
+    "questions": [
+      {
+        "link_id": "admission-reason",
+        "text": "سبب الدخول",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "e30b70d4-1c61-59eb-8533-52368caadf7d"
+      },
+      {
+        "link_id": "history-brief",
+        "text": "التاريخ المرضي المختصر",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "6c230f89-7e71-50b6-8bdc-26df008e4598"
+      },
+      {
+        "link_id": "allergies",
+        "text": "الحساسية",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "ccd6d143-2af7-527f-85cf-aa119d1d12fd"
+      },
+      {
+        "link_id": "current-meds",
+        "text": "الأدوية الحالية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "dbba9cc0-c015-51db-b72e-a2f59764acae"
+      },
+      {
+        "link_id": "department",
+        "text": "القسم",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "9943fa9c-c42c-56cb-aabe-c0eae4fa012f"
+      },
+      {
+        "link_id": "bed",
+        "text": "السرير",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "5d262d56-a77e-5ac2-bd40-8ec214e4a298"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "nursing-note",
+    "title": "ملاحظة تمريض (نوبة)",
+    "questions": [
+      {
+        "link_id": "vitals",
+        "text": "العلامات الحيوية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "1bc32fbc-d813-56f3-b0f3-3ba16b46a4d1"
+      },
+      {
+        "link_id": "meds-given",
+        "text": "الأدوية المعطاة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "9dbaa80a-e2e7-5364-9809-d986e54320df"
+      },
+      {
+        "link_id": "changes",
+        "text": "التغيرات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "13426b8a-09c5-53ed-92ba-de3bf798a1ba"
+      },
+      {
+        "link_id": "handover",
+        "text": "تعليمات للنوبة التالية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "e0a1ae57-4f69-52cc-bcf3-9c35c2237309"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "shift-handover",
+    "title": "تسليم مناوبة",
+    "questions": [
+      {
+        "link_id": "condition",
+        "text": "الحالة الحالية",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "8d88cc0e-b9b5-5364-ac1c-c3c3d057ca45"
+      },
+      {
+        "link_id": "ongoing",
+        "text": "الإجراءات الجارية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "bac4fd63-63c7-51eb-990a-efbc7f7ac2c6"
+      },
+      {
+        "link_id": "pending",
+        "text": "المهام المعلّقة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "08d87ebd-5b15-56a6-bfa4-d6b4b1597149"
+      },
+      {
+        "link_id": "urgent-followup",
+        "text": "متابعة عاجلة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "b923f2a4-d2a6-5227-9928-c6b122e7a5fe"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "medication-administration",
+    "title": "جدول إعطاء الأدوية",
+    "questions": [
+      {
+        "link_id": "drug",
+        "text": "الدواء",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "caf2ac2b-4b0f-5124-b740-912049cf0e4b"
+      },
+      {
+        "link_id": "dose",
+        "text": "الجرعة",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "b7f1ef65-7d7f-5442-92d7-d6a243b3b892"
+      },
+      {
+        "link_id": "route",
+        "text": "طريقة الإعطاء",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "فموي"
+          },
+          {
+            "value": "وريدي"
+          },
+          {
+            "value": "عضلي"
+          },
+          {
+            "value": "تحت الجلد"
+          },
+          {
+            "value": "موضعي"
+          },
+          {
+            "value": "أخرى"
+          }
+        ],
+        "id": "af76edf3-6ca9-59fa-a698-525341a86aec"
+      },
+      {
+        "link_id": "time-given",
+        "text": "وقت الإعطاء",
+        "type": "dateTime",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "8a434699-d788-5d12-938f-28ff7b23cbd8"
+      },
+      {
+        "link_id": "given-by",
+        "text": "المُعطي",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "c1fcf588-066d-5c78-8621-1a38431ec69c"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "operation-report",
+    "title": "تقرير عملية",
+    "questions": [
+      {
+        "link_id": "procedure",
+        "text": "نوع العملية",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "7ffaa9a8-0b49-5313-85e8-b4f973d8f3a6"
+      },
+      {
+        "link_id": "date",
+        "text": "التاريخ",
+        "type": "date",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "18632475-8977-5aa9-a784-3735611dbe18"
+      },
+      {
+        "link_id": "surgeon",
+        "text": "الجراح",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "533d4618-c503-5318-946d-f662ce6a0720"
+      },
+      {
+        "link_id": "anesthesiologist",
+        "text": "المخدِّر",
+        "type": "string",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "ba4bcba6-559f-5416-8a42-754b79ee1b1d"
+      },
+      {
+        "link_id": "duration-min",
+        "text": "المدة (دقيقة)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "014478d2-5582-5312-95ff-b10b63432d5b"
+      },
+      {
+        "link_id": "procedure-details",
+        "text": "وصف الإجراء",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "4bfa57e6-3b9b-5bf1-b946-b87f2e22a22c"
+      },
+      {
+        "link_id": "complications",
+        "text": "المضاعفات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "3fdc71c2-9095-568e-9e51-a2b97e551ddc"
+      },
+      {
+        "link_id": "post-op-recommendations",
+        "text": "التوصيات بعد العملية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "101e2e2a-2d06-5117-923d-7cdbf132bed9"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "consent",
+    "title": "موافقة على إجراء",
+    "questions": [
+      {
+        "link_id": "procedure-explained",
+        "text": "الإجراء الذي تم شرحه",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "e695f9ad-5144-5541-91f5-da348fccabd9"
+      },
+      {
+        "link_id": "risks-explained",
+        "text": "المخاطر التي تم شرحها",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "c19be8f8-d29b-587b-abce-61dac7d7e8f1"
+      },
+      {
+        "link_id": "consent-given",
+        "text": "أوافق على الإجراء",
+        "type": "boolean",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "cf296f86-8be3-52d1-a398-7322ce43f7cc"
+      },
+      {
+        "link_id": "signer-name",
+        "text": "اسم الموقّع",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "7512baff-d018-577e-885b-419ee14573cd"
+      },
+      {
+        "link_id": "signer-relation",
+        "text": "صفة الموقّع",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "المريض نفسه"
+          },
+          {
+            "value": "الوليّ"
+          },
+          {
+            "value": "الوصي"
+          }
+        ],
+        "id": "2e52040a-9722-518c-b5e5-16e0128dbbb5"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "post-op-followup",
+    "title": "متابعة ما بعد العملية",
+    "questions": [
+      {
+        "link_id": "pain-score",
+        "text": "الألم (من 10)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "4a2fca36-b0a4-56d6-91bc-f07746baacc6"
+      },
+      {
+        "link_id": "bleeding",
+        "text": "النزيف",
+        "type": "choice",
+        "required": false,
+        "answer_constraint": "optional",
+        "answer_option": [
+          {
+            "value": "لا يوجد"
+          },
+          {
+            "value": "قليل"
+          },
+          {
+            "value": "متوسط"
+          },
+          {
+            "value": "شديد"
+          }
+        ],
+        "id": "452607e7-1343-53bd-9e2a-5f0485af0962"
+      },
+      {
+        "link_id": "wound",
+        "text": "الجرح",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "c00b6cee-4fe3-54da-9e93-b5f0d5eebed0"
+      },
+      {
+        "link_id": "medications",
+        "text": "الأدوية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "fe3719ed-4f5a-54d5-b722-ec4c4d0fd820"
+      },
+      {
+        "link_id": "warning-signs",
+        "text": "علامات تستوجب العودة فوراً",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "b2cc9e73-a3ca-5161-a2b3-42235403e448"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "discharge-summary",
+    "title": "ملخص الخروج",
+    "questions": [
+      {
+        "link_id": "discharge-diagnosis",
+        "text": "التشخيص عند الخروج",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "578b952d-a405-5f79-8a67-c7e3e24646ea"
+      },
+      {
+        "link_id": "course",
+        "text": "ما أُجري خلال الإقامة",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "01eee60d-bf70-5b35-aa23-4be5478bd6e3"
+      },
+      {
+        "link_id": "discharge-meds",
+        "text": "الأدوية عند الخروج",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "dca1341e-9c9c-5880-8547-a6d7f4961fd1"
+      },
+      {
+        "link_id": "follow-up",
+        "text": "المتابعة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "2abcfff3-4768-53eb-9926-f8357f308b03"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "labor-delivery",
+    "title": "مخاض وولادة",
+    "questions": [
+      {
+        "link_id": "labor-duration",
+        "text": "مدة المخاض (ساعة)",
+        "type": "decimal",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "facc4b97-c0fe-5f9e-8bde-ec2efd5c5eb1"
+      },
+      {
+        "link_id": "stages",
+        "text": "المراحل",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "f1a6b345-a67a-526b-bc91-9fe428217204"
+      },
+      {
+        "link_id": "fetal-indicators",
+        "text": "المؤشرات الجنينية",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "279c8e73-aa6c-5add-943b-2dbbc1af435d"
+      },
+      {
+        "link_id": "delivery-method",
+        "text": "طريقة الولادة",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "طبيعية"
+          },
+          {
+            "value": "قيصرية"
+          },
+          {
+            "value": "أداتية"
+          }
+        ],
+        "id": "4340fbde-4faa-5de3-a36c-2add660fbf36"
+      },
+      {
+        "link_id": "complications",
+        "text": "المضاعفات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "fefe288d-14e2-5c3d-86cb-ca2e2a4d7cfe"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "newborn-assessment",
+    "title": "حديثو الولادة",
+    "questions": [
+      {
+        "link_id": "weight-g",
+        "text": "الوزن (غرام)",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "86d3f090-3ec6-5c56-9e4c-535a679cdc6a"
+      },
+      {
+        "link_id": "apgar-1",
+        "text": "APGAR دقيقة 1",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "cc9716e8-009f-596c-a2fb-bf90b75b6e9f"
+      },
+      {
+        "link_id": "apgar-5",
+        "text": "APGAR دقيقة 5",
+        "type": "integer",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "a625b9e1-ac36-595f-814d-38f722048e4b"
+      },
+      {
+        "link_id": "initial-exam",
+        "text": "الفحص الأولي",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "adb30a7c-df30-5660-9c52-a5249ea8707b"
+      },
+      {
+        "link_id": "vaccinations",
+        "text": "التطعيمات",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "7897250d-7b3b-5969-a747-337a677d77f5"
+      },
+      {
+        "link_id": "follow-up",
+        "text": "المتابعة",
+        "type": "text",
+        "required": false,
+        "answer_constraint": "optional",
+        "id": "1ff32424-2d15-56c6-a2e1-ad555dce73a9"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  },
+  {
+    "slug": "lab-imaging-request",
+    "title": "طلب فحوص مخبرية وأشعة",
+    "questions": [
+      {
+        "link_id": "test-type",
+        "text": "نوع الفحص",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "مخبري"
+          },
+          {
+            "value": "أشعة"
+          },
+          {
+            "value": "أخرى"
+          }
+        ],
+        "id": "cf9a262d-d91d-5ec0-a765-f2b537ddb1bd"
+      },
+      {
+        "link_id": "test-name",
+        "text": "اسم الفحص",
+        "type": "string",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "fe3784e4-2792-5324-a0fc-877f0713608c"
+      },
+      {
+        "link_id": "clinical-reason",
+        "text": "السبب السريري",
+        "type": "text",
+        "required": true,
+        "answer_constraint": "required",
+        "id": "80a11acb-123e-5cdd-a5a6-d0f41f6883d1"
+      },
+      {
+        "link_id": "priority",
+        "text": "الأولوية",
+        "type": "choice",
+        "required": true,
+        "answer_constraint": "required",
+        "answer_option": [
+          {
+            "value": "عاجل"
+          },
+          {
+            "value": "عادي"
+          }
+        ],
+        "id": "14eef0fb-2583-5f18-87ce-6b2f57204cca"
+      }
+    ],
+    "status": "active",
+    "description": "",
+    "styling_metadata": {}
+  }
+]
