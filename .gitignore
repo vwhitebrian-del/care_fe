@@ -81,3 +81,8 @@ dump.rdb
 # backup secrets and generated backups (never commit)
 deploy/secrets/
 deploy/backups/
+
+# Deployment: Python bytecode and the real staff list (contains credentials)
+__pycache__/
+*.pyc
+deploy/staff.csv
