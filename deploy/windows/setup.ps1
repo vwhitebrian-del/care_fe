@@ -34,6 +34,17 @@ if (-not (Test-Path .env)) {
 
 # 3) التشغيل
 Say "بناء وتشغيل النظام (أول مرة تستغرق 10-20 دقيقة)"
+# 0) Backup encryption key (AES-256). Generated once; never overwritten.
+$keyDir = Join-Path $PSScriptRoot "..\secrets"
+$keyPath = Join-Path $keyDir "backup.key"
+if (-not (Test-Path $keyPath)) {
+  New-Item -ItemType Directory -Force -Path $keyDir | Out-Null
+  $bytes = New-Object byte[] 32
+  [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+  [Convert]::ToBase64String($bytes) | Set-Content -Path $keyPath -Encoding ASCII
+  Say "أُنشئ مفتاح التشفير: deploy\secrets\backup.key"
+  Write-Host "مهم جداً: انسخ هذا الملف إلى مكان آمن خارج الجهاز (فلاشة مثلاً). بدونه لا تُستعاد النسخ المشفّرة." -ForegroundColor Yellow
+}
 docker compose up -d --build
 if ($LASTEXITCODE -ne 0) { Write-Host "فشل التشغيل. أرسل لي مخرجات: docker compose logs" -ForegroundColor Red; exit 1 }
 

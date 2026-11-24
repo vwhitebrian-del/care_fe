@@ -77,3 +77,7 @@ dump.rdb
 
 # Local migration codemods (not shared)
 /scripts/codemods/
+
+# backup secrets and generated backups (never commit)
+deploy/secrets/
+deploy/backups/

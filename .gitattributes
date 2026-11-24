@@ -1,3 +1,6 @@
 * text=auto
 
 .github/workflows/*.lock.yml linguist-generated=true
+# shell scripts run inside Linux containers: never convert to CRLF
+*.sh text eol=lf
+deploy/backup/* text eol=lf

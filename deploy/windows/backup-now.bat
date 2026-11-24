@@ -1,5 +1,6 @@
+@echo off
+rem Creates an encrypted, verified backup now.
 cd /d "%~dp0.."
-if not exist backups mkdir backups
-docker compose exec -T db sh -c "pg_dump -U $POSTGRES_USER --no-owner $POSTGRES_DB | gzip" > backups\manual-backup.sql.gz
-echo Backup saved in deploy\backups
+docker compose exec -T backup /usr/local/bin/hms-backup.sh
+if errorlevel 1 (echo [خطأ] فشلت النسخة الاحتياطية.) else (echo تم حفظ النسخة مشفّرة في مجلد backups.)
 pause
