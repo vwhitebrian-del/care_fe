@@ -9,7 +9,7 @@ function Say($m) { Write-Host "==> $m" -ForegroundColor Cyan }
 # 1) Docker
 if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
   Say "Docker غير مثبّت. جاري التثبيت عبر winget (قد يطلب إعادة تشغيل الجهاز)"
-  winget install -e --id Docker.DockerDesktop --accept-package-agreements --accept-source-agreements
+  winget install -e --id Docker.DockerDesktop --source winget --accept-package-agreements --accept-source-agreements
   Write-Host "بعد انتهاء التثبيت: أعد تشغيل الجهاز، افتح Docker Desktop مرة واحدة، ثم شغّل setup.bat من جديد." -ForegroundColor Yellow
   exit 0
 }
