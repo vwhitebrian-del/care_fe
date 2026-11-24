@@ -50,9 +50,14 @@ docker compose exec -T backend python manage.py migrate --noinput
 $marker = ".admin_created"
 if (-not (Test-Path $marker)) {
   $pw = Read-Host "اختر كلمة مرور لمدير النظام (المستخدم: admin)"
-  docker compose exec -T -e DJANGO_SUPERUSER_PASSWORD=$pw backend python manage.py createsuperuser --noinput --username admin --email admin@soued.local
+  docker compose exec -T -e DJANGO_SUPERUSER_PASSWORD=$pw backend python manage.py createsuperuser --noinput --username admin --email admin@soued.local --phone_number +963947110110
   if ($LASTEXITCODE -eq 0) { New-Item $marker -ItemType File | Out-Null }
 }
+
+# 5) تهيئة المستشفى والأقسام (تُتخطّى إن وُجدت)
+Say "إنشاء المستشفى والأقسام"
+docker compose cp init_hospital.py backend:/tmp/init_hospital.py
+docker compose exec -T backend python manage.py shell -c "exec(open('/tmp/init_hospital.py', encoding='utf-8').read())"
 
 Say "جاهز! افتح http://localhost  (ومن التابلت: http://عنوان-الجهاز)"
 Start-Process "http://localhost"
