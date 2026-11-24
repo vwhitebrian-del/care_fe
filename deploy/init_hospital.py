@@ -63,6 +63,9 @@ TREE = [
     ("الطابق الأرضي", "lvl", "الإسعاف والطوارئ", [
         ("الإسعاف", "wa", "الإسعاف والطوارئ", beds(2)),
         ("العناية المشددة", "wa", "العناية المشددة", beds(4)),
+        ("المخبر", "wa", "المخبر", []),
+        ("قسم الأشعة", "wa", "الأشعة", []),
+        ("الصيدلية", "wa", "الصيدلية", []),
     ]),
     ("الطابق الأول", "lvl", "التنويم", [
         ("تنويم الطابق الأول", "wa", "التنويم", [room(105, 1, "التنويم"), room(106, 1, "التنويم")]),
@@ -70,6 +73,7 @@ TREE = [
     ("الطابق الثاني", "lvl", "التنويم", [
         ("تنويم الطابق الثاني", "wa", "التنويم", [room(n, 1, "التنويم") for n in (202, 203, 204, 205, 206, 207)]
             + [("جناح 211", "ro", "التنويم", beds(1)), ("جناح 212", "ro", "التنويم", beds(1))]),
+        ("غرفة الحواضن", "ro", "الأطفال وحديثي الولادة", [("حاضنة 1", "bd", None, None), ("حاضنة 2", "bd", None, None)]),
     ]),
     ("الطابق الثالث", "lvl", "غرف العمليات والإنعاش", [
         (f"غرفة عمليات جراحية {i}", "ro", "غرف العمليات والإنعاش", []) for i in (1, 2, 3)
@@ -82,9 +86,6 @@ TREE = [
         ("غرفة عمليات قلبية", "ro", "غرف العمليات والإنعاش", []),
         ("غرفة قثطرة قلبية", "ro", "القلبية", []),
     ]),
-    ("المخبر", "wa", "المخبر", []),
-    ("قسم الأشعة", "wa", "الأشعة", []),
-    ("الصيدلية", "wa", "الصيدلية", []),
 ]
 
 call_command("sync_permissions_roles")
@@ -149,6 +150,15 @@ def build(items, parent_obj=None, parent_dept=None):
         obj = ensure(name, form, dept, parent_obj, str(parent_obj.external_id) if parent_obj else None)
         if kids:
             build(kids, obj, dept)
+
+ROLE_ORGS = {"Doctor": "طبيب", "Nurse": "ممرض", "Staff": "موظف", "Pharmacist": "صيدلي", "Facility Admin": "مدير المستشفى"}
+for _, ar in ROLE_ORGS.items():
+    if not Organization.objects.filter(name=ar, org_type="role").exists():
+        base.create_organization(org_type="role", name=ar)
+
+if not su.first_name:
+    su.first_name, su.last_name = "فراس", "المفتي"
+    su.save(update_fields=["first_name", "last_name"])
 
 build(TREE)
 print("المواقع:", FacilityLocation.objects.filter(facility=fac).count(),

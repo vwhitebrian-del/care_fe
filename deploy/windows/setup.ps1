@@ -49,8 +49,10 @@ docker compose exec -T backend python manage.py migrate --noinput
 # 4) مستخدم المدير
 $marker = ".admin_created"
 if (-not (Test-Path $marker)) {
-  $pw = Read-Host "اختر كلمة مرور لمدير النظام (المستخدم: admin)"
-  docker compose exec -T -e DJANGO_SUPERUSER_PASSWORD=$pw backend python manage.py createsuperuser --noinput --username admin --email admin@soued.local --phone_number +963947110110
+  $un = Read-Host "اسم دخول مدير النظام (إنكليزي، مثل feras)"
+  if (-not $un) { $un = "feras" }
+  $pw = Read-Host "كلمة مرور مدير النظام"
+  docker compose exec -T -e DJANGO_SUPERUSER_PASSWORD=$pw backend python manage.py createsuperuser --noinput --username $un --email admin@soued.local --phone_number +963947110110
   if ($LASTEXITCODE -eq 0) { New-Item $marker -ItemType File | Out-Null }
 }
 
