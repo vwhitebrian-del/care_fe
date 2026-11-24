@@ -59,6 +59,6 @@ export const displayDayjs = (date?: Parameters<typeof dayjs>[0]) => {
 const DATE_ORDERS =
   /\b(?:DD?\/MM?\/YY(?:YY)?|MMMM? DD?, YYYY|DD? MMMM? YYYY|DD?-MMMM?-YYYY|DD?-MM?-YYYY)\b/g;
 const numericArabicDate = (template: string) =>
-  template.replace(DATE_ORDERS, "YYYY/MM/DD");
+  template.replace(/\s*\[at\]\s*/g, " ").replace(DATE_ORDERS, "YYYY/MM/DD");
 
 export default dayjs;

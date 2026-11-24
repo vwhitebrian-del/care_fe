@@ -1,4 +1,5 @@
 import Decimal from "decimal.js";
+import i18next from "i18next";
 
 import {
   computeTotalDoseQuantity,
@@ -66,17 +67,17 @@ export function formatSig(instruction?: MedicationRequestDosageInstruction) {
 
   // Add route if present
   if (instruction.route?.display) {
-    parts.push(`Via ${instruction.route.display}`);
+    parts.push(i18next.t("sig_via", { value: instruction.route.display }));
   }
 
   // Add method if present
   if (instruction.method?.display) {
-    parts.push(`by ${instruction.method.display}`);
+    parts.push(i18next.t("sig_by", { value: instruction.method.display }));
   }
 
   // Add site if present
   if (instruction.site?.display) {
-    parts.push(`to ${instruction.site.display}`);
+    parts.push(i18next.t("sig_to", { value: instruction.site.display }));
   }
 
   return parts.join(" ");

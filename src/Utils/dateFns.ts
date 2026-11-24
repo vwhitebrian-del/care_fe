@@ -12,6 +12,7 @@ const ORDERS: [RegExp, string][] = [
   [/MMMM?,? d{1,2},? yyyy/g, "yyyy/MM/dd"],
   [/d{1,2} MMMM?,? yyyy/g, "yyyy/MM/dd"],
   [/dd?\/MM?\/yyyy/g, "yyyy/MM/dd"],
+  [/dd?-MM?-yyyy/g, "yyyy/MM/dd"],
   [/MMMM? d{1,2}(?![a-z])/g, "MM/dd"],
   [/d{1,2} MMMM?(?![a-z])/g, "MM/dd"],
   [/MMMM?/g, "MM"],

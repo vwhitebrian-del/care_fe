@@ -34,7 +34,8 @@ export const formatDateTime = (date: DateLike, format?: string) => {
   if (format) {
     // Arabic: "2026/11/23 09:59 م", without the Latin comma between parts
     const isArabic = (i18next.language || "").startsWith("ar");
-    return obj.format(isArabic ? format.replace(/,\s*/g, " ") : format);
+    const out = obj.format(format);
+    return isArabic ? out.replace(/,\s*/g, " ") : out;
   }
 
   // If time is 00:00:00 of local timezone, format as date only
