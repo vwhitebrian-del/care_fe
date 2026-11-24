@@ -204,9 +204,8 @@
 #let detail-rows(rows, label-width: px(128)) = stack(
   spacing: px(8),
   ..rows.map(row => grid(
-    columns: (label-width, auto, 1fr),
-    text(fill: gray(600), row.label),
-    text(fill: gray(600), ":"),
+    columns: (label-width, 1fr),
+    text(fill: gray(600), row.label + ":"),
     pad(left: px(4), text(weight: "semibold", if (
       row.value == none or row.value == ""
     ) { "-" } else {
